@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+    margin: 1.5em;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/castelPeles.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 5em;
+    height: 3em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 8em;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: .75em 2em;
+    display: block;
+    width: 100%;
+
+}
+
+a:hover {
+     background: rgb(235, 235, 235);
+ }
+
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 2;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+
+}
+
+svg {
+    width: 3em;
+    margin-top: -.6em;
+    cursor: pointer;
+}
+
+.close {
+    float: right;
+    margin: 2em;
+    width: 2.5em;
+}
+
+@media only screen and (min-width: 680px) {
+    body {
+        margin: 1.5em 5em;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+    }
+
+    a {
+        color: white;
+        padding: .5em 1.5em;
+        font-size: 1rem;
+    }
+
+    a:hover {
+        background: none;
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+   .wrapper {
+        width: 1200px;
+       margin: 0 auto;
+   }
+}
