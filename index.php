@@ -17,21 +17,39 @@
                 </svg>
 
                 <ul>
-                    <li><a href = "html/home.html">Home</a></li>
-                    <li><a href = "html/hotels.html">Hotels</a></li>
-                    <li><a href = "html/attractions.html">Attractions</a></li>
-                    <li><a href = "html/activitis.html">Activities</a></li>
-                    <li><a href = "html/about.html">About</a></li>
+                    <li><a href = "index.php">Home</a></li>
+                    <li><a href = "hotels.php">Hotels</a></li>
+                    <li><a href = "attractions.php">Attractions</a></li>
+                    <li><a href = "activities.php">Activities</a></li>
+                    <li><a href = "about.php">About</a></li>
                 </ul>
             </nav>
 
             <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
             </svg>
-
         </header>
     </div>
 
-<script src = "js/main.js"></script>
+    <section>
+        <h1>Do you want to travel to Romania?</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad, alias commodi dolores error eum eveniet fugit impedit ipsam laborum minus modi natus omnis quisquam quo, ratione similique vel vero.</p>
+    </section>
+
+    <section>
+        <h2>You recently searched</h2>
+        <div class = "searches">
+
+        </div>
+
+    </section>
+
+    <footer>
+            <div class = "copyright">
+               © 2022 Beniamin Pulhac
+            </div>
+    </footer>
 </body>
 </html>
+<script src = "js/main.js"></script>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Travel to Romania</title>
-    <link rel = "stylesheet" href = "../css/main.css">
+    <link rel = "stylesheet" href = "css/main.css">
 </head>
 <body>
 <div class = "hero-img"></div>
 <div class = "wrapper">
     <header>
-        <img src = "../images/flagLogo.jpg" class = "logo" alt = "Romania">
+        <img src = "images/flagLogo.jpg" class = "logo" alt = "Romania">
 
         <nav>
             <svg class="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,11 +17,11 @@
             </svg>
 
             <ul>
-                <li><a href = "../index.html">Home</a></li>
-                <li><a href = "hotels.html">Hotels</a></li>
-                <li><a href = "attractions.html">Attractions</a></li>
-                <li><a href = "activitis.html">Activities</a></li>
-                <li><a href = "about.html">About</a></li>
+                <li><a href = "index.php">Home</a></li>
+                <li><a href = "hotels.php">Hotels</a></li>
+                <li><a href = "attractions.php">Attractions</a></li>
+                <li><a href = "activities.php">Activities</a></li>
+                <li><a href = "about.php">About</a></li>
             </ul>
         </nav>
 
@@ -31,7 +31,13 @@
 
     </header>
 </div>
-<h1>This is Hotel tab!</h1>
-<script src = "../js/main.js"></script>
+<h1>This is Attractions tab!</h1>
+
+    <footer>
+        <div class = "copyright">
+            © 2022 Beniamin Pulhac
+        </div>
+    </footer>
 </body>
 </html>
+<script src = "js/main.js"></script>
