@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Travel to Romania</title>
-    <link rel = "stylesheet" href = "css/main.css">
+    <link rel = "stylesheet" href = "css/attractions.css">
 </head>
 <body>
 <div class = "hero-img"></div>
@@ -20,7 +20,7 @@
                 <li><a href = "index.php">Home</a></li>
                 <li><a href = "hotels.php">Hotels</a></li>
                 <li><a href = "attractions.php">Attractions</a></li>
-                <li><a href = "activities.php">Activities</a></li>
+                <li><a href = "contact.php">Contact</a></li>
                 <li><a href = "about.php">About</a></li>
             </ul>
         </nav>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Travel to Romania</title>
-    <link rel = "stylesheet" href = "css/main.css">
+    <link rel = "stylesheet" href = "css/hotels.css">
 </head>
 <body>
 <div class = "hero-img"></div>
@@ -20,7 +20,7 @@
                 <li><a href = "index.php">Home</a></li>
                 <li><a href = "hotels.php">Hotels</a></li>
                 <li><a href = "attractions.php">Attractions</a></li>
-                <li><a href = "activities.php">Activities</a></li>
+                <li><a href = "contact.php">Contact</a></li>
                 <li><a href = "about.php">About</a></li>
             </ul>
         </nav>
@@ -31,7 +31,78 @@
 
     </header>
 </div>
-<h1>This is Hotel tab!</h1>
+    <div class = "tab_checkIn">
+        <div class="checkIn">
+            <button id = "checkIn">Check In</button>
+
+            <div class="calendar">
+                <div class="header_calendar">
+                    <span>Select a date to Check In</span>
+                    <hr>
+                    <div class="top_calendar">
+                        <button id = "left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button>
+                        <div class="calendar_month" id = "calendar_month" aria-live="polite">
+                            Aprilie 2022
+                        </div>
+                        <button id = "right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button>
+                    </div>
+                    <div class="calendar_checkIn">
+                        <table class = "calendar_dates" aria-labelledby="calendar_month">
+                            <thead class = "calendar_row">
+                                <tr>
+                                    <th scope = "col" class = "calendar_day_name">Mo</th>
+                                    <th scope = "col" class = "calendar_day_name">Tu</th>
+                                    <th scope = "col" class = "calendar_day_name">We</th>
+                                    <th scope = "col" class = "calendar_day_name">Th</th>
+                                    <th scope = "col" class = "calendar_day_name">Fr</th>
+                                    <th scope = "col" class = "calendar_day_name">Sa</th>
+                                    <th scope = "col" class = "calendar_day_name">Su</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                            </tbody>
+                        </table>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="checkOut">
+            <button id = "checkOut">Check Out</button>
+
+            <div class="calendar">
+                <div class="top_calendar">
+                    <span>Select a date to Check Out</span>
+                    <hr>
+                    <div class="calendar_checkIn">
+
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="buests">
+            <button id = "guests">Guests</button>
+
+        </div>
+
+        <div class="search">
+            <button id = "search">Search</button>
+        </div>
+    </div>
+
+    <div class="destinations">
+
+    </div>
+
+    <div class="top_picks">
+
+    </div>
 
     <footer>
         <div class = "copyright">

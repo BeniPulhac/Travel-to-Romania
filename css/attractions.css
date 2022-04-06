@@ -5,7 +5,7 @@ html, body {
 
 body {
     background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
-
+    /*margin: 1.5em;*/
 }
 
 .hero-img {
@@ -64,6 +64,11 @@ nav {
 
 }
 
+.close {
+    float: right;
+    margin: 2em;
+    width: 2.5em;
+}
 svg {
     width: 3em;
     margin-top: -.6em;
@@ -74,10 +79,6 @@ svg {
     float: right;
     margin: 2em;
     width: 2.5em;
-}
-
-section {
-
 }
 
 footer {
@@ -95,10 +96,13 @@ footer {
     text-align: center;
 }
 
+.open-nav {
+    transform: translateX(0%);
+    background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+}
+
 @media only screen and (min-width: 680px) {
-    body {
-        /*margin: 1.5em 5em;*/
-    }
+
 }
 
 @media only screen and (min-width: 920px) {

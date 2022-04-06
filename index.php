@@ -20,7 +20,7 @@
                     <li><a href = "index.php">Home</a></li>
                     <li><a href = "hotels.php">Hotels</a></li>
                     <li><a href = "attractions.php">Attractions</a></li>
-                    <li><a href = "activities.php">Activities</a></li>
+                    <li><a href = "contact.php">Contact</a></li>
                     <li><a href = "about.php">About</a></li>
                 </ul>
             </nav>
@@ -30,7 +30,14 @@
             </svg>
         </header>
     </div>
-
+    <section>
+        <div class="logIn">
+            <button id = "review">Review</button>
+            <button id = "logIn">Log In</button>
+            <button id = "signUp">Sign Up</button>
+        </div>
+    </section>
+<h1>Hello World!</h1>
     <section>
         <h1>Do you want to travel to Romania?</h1>
         <hr>
