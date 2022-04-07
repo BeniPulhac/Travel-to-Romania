@@ -1,0 +1,54 @@
+@media only screen and (min-width: 600px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+    }
+
+    a {
+        color: black;
+        padding: .5em 1.5em;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    a:hover {
+        background: none;
+        text-decoration: underline;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        width: 100%;
+        margin: 0 auto;
+   } 
+}

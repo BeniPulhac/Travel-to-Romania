@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel to Romania</title>
     <link rel = "stylesheet" href = "css/main.css">
+    <link rel = "stylesheet" href = "css/header.css">
+    <link rel = "stylesheet" href = "css/footer.css">
+    <link rel = "stylesheet" href = "css/media-quarry.css">
 </head>
 <body>
     <div class = "hero-img"></div>
-    <div class = "wrapper">
+    
         <header>
             <img src = "images/flagLogo.jpg" class = "logo" alt = "Romania">
 
@@ -29,15 +33,15 @@
                 <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
             </svg>
         </header>
-    </div>
+    
+    <h1>Hello World!</h1>
     <section>
-        <div class="logIn">
-            <button id = "review">Review</button>
+        <div class="log-in">
             <button id = "logIn">Log In</button>
             <button id = "signUp">Sign Up</button>
         </div>
     </section>
-<h1>Hello World!</h1>
+
     <section>
         <h1>Do you want to travel to Romania?</h1>
         <hr>
@@ -55,6 +59,13 @@
     <footer>
             <div class = "copyright">
                © 2022 Beniamin Pulhac
+            </div>
+            <div class="footer-meniu">
+                <li><a href = "index.php">Home</a></li>
+                <li><a href = "hotels.php">Hotels</a></li>
+                <li><a href = "attractions.php">Attractions</a></li>
+                <li><a href = "contact.php">Contact</a></li>
+                <li><a href = "about.php">About</a></li>
             </div>
     </footer>
 </body>

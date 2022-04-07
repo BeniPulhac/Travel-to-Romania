@@ -1,0 +1,30 @@
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(23, 29, 38, 1);
+}
+
+
+
+.copyright {
+    margin-top: auto;
+    font-size: 1rem;
+    color: rgba(134, 152, 182, 1);
+    text-align: center;
+}
+
+.footer-meniu {
+    list-style-type: none;  
+    font-size: 1rem;    
+    color: rgba(134, 152, 182, 1); 
+    text-align: center; 
+    padding: .5em;  
+    display: block; 
+    width: 100%;    
+}
+
