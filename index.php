@@ -57,15 +57,21 @@
     </section>
 
     <footer>
+
+            <div class="footer-text">
+                <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+            </div>
+
             <div class = "copyright">
                © 2022 Beniamin Pulhac
             </div>
+
             <div class="footer-meniu">
-                <li><a href = "index.php">Home</a></li>
-                <li><a href = "hotels.php">Hotels</a></li>
-                <li><a href = "attractions.php">Attractions</a></li>
-                <li><a href = "contact.php">Contact</a></li>
-                <li><a href = "about.php">About</a></li>
+                <a href = "index.php">Home</a>
+                <a href = "hotels.php">Hotels</a>
+                <a href = "attractions.php">Attractions</a>
+                <a href = "contact.php">Contact</a>
+                <a href = "about.php">About</a>
             </div>
     </footer>
 </body>

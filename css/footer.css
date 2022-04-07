@@ -9,7 +9,12 @@ footer {
     background-color: rgba(23, 29, 38, 1);
 }
 
-
+.footer-text {
+    color: rgba(134, 152, 182, 1);
+    font-size: 1rem;
+    padding-top: 1em;
+    width: 33%;
+}
 
 .copyright {
     margin-top: auto;
@@ -18,13 +23,14 @@ footer {
     text-align: center;
 }
 
-.footer-meniu {
+a.footer-meniu {
     list-style-type: none;  
     font-size: 1rem;    
-    color: rgba(134, 152, 182, 1); 
+    color: rgba(134, 152, 182, 1);
     text-align: center; 
     padding: .5em;  
     display: block; 
     width: 100%;    
 }
+
 

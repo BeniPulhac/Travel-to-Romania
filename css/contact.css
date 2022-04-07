@@ -20,17 +20,6 @@ body {
     z-index: -1;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.wrapper {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(77, 218, 194, 0.5);
-}
-
 .logo {
     width: 5em;
     height: 3em;
@@ -87,69 +76,8 @@ svg {
     width: 2.5em;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-
-}
-
-.copyright {
-    padding-top: 1em;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-}
-
 .open-nav {
     transform: translateX(0%);
     background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
 }
 
-@media only screen and (min-width: 680px) {
-
-}
-
-@media only screen and (min-width: 920px) {
-    .menu {
-        display: none;
-    }
-
-    nav {
-        transform: translateX(0);
-        position: unset;
-        display: block;
-        width: auto;
-        height: auto;
-        background: none;
-    }
-
-    .close {
-        display: none;
-    }
-
-    ul {
-        display: flex;
-        margin: 0;
-    }
-
-    a {
-        color: white;
-        padding: .5em 1.5em;
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    a:hover {
-        background: none;
-        text-decoration: underline;
-    }
-}
-
-@media only screen and (min-width: 1350px) {
-    .wrapper {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
