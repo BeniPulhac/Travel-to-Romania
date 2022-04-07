@@ -46,7 +46,7 @@
         <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
     </div>
 </main>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer>
     <div class="footer-text">
         <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>

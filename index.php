@@ -53,23 +53,25 @@
 
         </div>
     </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer>
-            <div class="footer-text">
-                <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
-            </div>
+        <div class="footer-text">
+            <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+        </div>
 
-            <div class = "copyright">
-               © 2022 Beniamin Pulhac
-            </div>
+        <div class = "copyright">© 2022 Beniamin Pulhac</div>
 
-            <div class="footer-meniu">
-                <a href = "index.php">Home</a>
-                <a href = "hotels.php">Hotels</a>
-                <a href = "attractions.php">Attractions</a>
-                <a href = "contact.php">Contact</a>
-                <a href = "about.php">About</a>
-            </div>
+        <div class="footer-nav">
+            <ul class="footer-ul">
+                <li><a href = "index.php" class="footer-link">Home</a></li>
+                <li><a href = "hotels.php" class="footer-link">Hotels</a></li>
+                <li><a href = "attractions.php" class="footer-link">Attractions</a></li>
+                <li><a href = "contact.php" class="footer-link">Contact</a></li>
+                <li><a href = "about.php" class="footer-link">About</a></li>
+            </ul>
+        </div>
+
     </footer>
 </body>
 </html>

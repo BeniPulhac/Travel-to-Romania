@@ -9,6 +9,7 @@
     <link rel = "stylesheet" href = "css/footer.css">
 </head>
 <body>
+<div class = "hero-img"></div>
     <header>
         <img src = "images/flag-logo.jpg" class = "logo" alt = "Romania">
 
@@ -33,13 +34,14 @@
     </header>
 
     <div class="hero">
-        <div class = "hero-img"></div>
+
         <h1>See the Beautiful Romania!</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse maiores minima nam necessitatibus, officiis perferendis perspiciatis quaerat similique temporibus! Asperiores autem nemo nihil nobis sit. Consequatur itaque numquam reprehenderit?</p>
     </div>
 
     <main>
+<!--        <div class = "hero-img"></div>-->
         <div class="content-right">
             <div class="content">
                 <p class="title">Cities</p>
@@ -50,10 +52,26 @@
 
         <div class="content-left">
             <div class="content">
-                <p class="title">Landscapes</p>
+                <p class="title">Restaurants</p>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
             </div>
-            <img src="" alt="landscapes">
+            <img src="images/restaurants.jpg" alt="restaurants">
+        </div>
+
+        <div class="content-right">
+            <div class="content">
+                <p class="title">Landscapes</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
+            </div>
+            <img src="images/landscapes.jpg" alt="landscapes">
+        </div>
+
+        <div class="content-left">
+            <div class="content">
+                <p class="title">Places to Visit</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
+            </div>
+            <img src="images/places-to-visit.jpg" alt="visit">
         </div>
     </main>
 
