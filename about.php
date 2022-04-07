@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel to Romania</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "css/about.css">
     <link rel = "stylesheet" href = "css/header.css">
     <link rel = "stylesheet" href = "css/footer.css">
@@ -52,16 +55,16 @@
         <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
     </div>
 
-    <div class = "copyright">
-        © 2022 Beniamin Pulhac
-    </div>
+    <div class = "copyright">© 2022 Beniamin Pulhac</div>
 
-    <div class="footer-meniu">
-        <a href = "index.php">Home</a>
-        <a href = "hotels.php">Hotels</a>
-        <a href = "attractions.php">Attractions</a>
-        <a href = "contact.php">Contact</a>
-        <a href = "about.php">About</a>
+    <div class="footer-nav">
+        <ul class="footer-ul">
+            <li><a href = "index.php" class="footer-link">Home</a></li>
+            <li><a href = "hotels.php" class="footer-link">Hotels</a></li>
+            <li><a href = "attractions.php" class="footer-link">Attractions</a></li>
+            <li><a href = "contact.php" class="footer-link">Contact</a></li>
+            <li><a href = "about.php" class="footer-link">About</a></li>
+        </ul>
     </div>
 </footer>
 </body>

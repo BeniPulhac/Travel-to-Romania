@@ -32,6 +32,8 @@ footer {
 .footer-link {
     text-decoration: none;
     color: rgba(134, 152, 182, 1);
+    display: flex;
+    padding-top: .5em;
 }
 
 
