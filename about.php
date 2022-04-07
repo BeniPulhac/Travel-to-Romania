@@ -10,9 +10,9 @@
 </head>
 <body>
 <div class = "hero-img"></div>
-<div class = "wrapper">
+
     <header>
-        <img src = "images/flagLogo.jpg" class = "logo" alt = "Romania">
+        <img src = "images/flag-logo.jpg" class = "logo" alt = "Romania">
 
         <nav>
             <svg class="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,6 @@
         </svg>
 
     </header>
-</div>
 
 <main>
     <div class="review">

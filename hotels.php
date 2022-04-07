@@ -10,9 +10,8 @@
 </head>
 <body>
 <div class = "hero-img"></div>
-<div class = "wrapper">
     <header>
-        <img src = "images/flagLogo.jpg" class = "logo" alt = "Romania">
+        <img src = "images/flag-logo.jpg" class = "logo" alt = "Romania">
 
         <nav>
             <svg class="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,33 +32,33 @@
         </svg>
 
     </header>
-</div>
-    <div class = "tab_checkIn">
-        <div class="checkIn">
+
+    <div class = "tab-check-in">
+        <div class="check-in">
             <button id = "checkIn">Check In</button>
 
             <div class="calendar">
-                <div class="header_calendar">
+                <div class="header-calendar">
                     <span>Select a date to Check In</span>
                     <hr>
-                    <div class="top_calendar">
+                    <div class="top-calendar">
                         <button id = "left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button>
-                        <div class="calendar_month" id = "calendar_month" aria-live="polite">
+                        <div class="calendar-month" id = "calendarMonth" aria-live="polite">
                             Aprilie 2022
                         </div>
                         <button id = "right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button>
                     </div>
-                    <div class="calendar_checkIn">
-                        <table class = "calendar_dates" aria-labelledby="calendar_month">
-                            <thead class = "calendar_row">
+                    <div class="calendar-check-in">
+                        <table class = "calendar-dates" aria-labelledby="calendar-month">
+                            <thead class = "calendar-row">
                                 <tr>
-                                    <th scope = "col" class = "calendar_day_name">Mo</th>
-                                    <th scope = "col" class = "calendar_day_name">Tu</th>
-                                    <th scope = "col" class = "calendar_day_name">We</th>
-                                    <th scope = "col" class = "calendar_day_name">Th</th>
-                                    <th scope = "col" class = "calendar_day_name">Fr</th>
-                                    <th scope = "col" class = "calendar_day_name">Sa</th>
-                                    <th scope = "col" class = "calendar_day_name">Su</th>
+                                    <th scope = "col" class = "calendar-day-name">Mo</th>
+                                    <th scope = "col" class = "calendar-day-name">Tu</th>
+                                    <th scope = "col" class = "calendar-day-name">We</th>
+                                    <th scope = "col" class = "calendar-day-name">Th</th>
+                                    <th scope = "col" class = "calendar-day-name">Fr</th>
+                                    <th scope = "col" class = "calendar-day-name">Sa</th>
+                                    <th scope = "col" class = "calendar-day-name">Su</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,10 +76,10 @@
             <button id = "checkOut">Check Out</button>
 
             <div class="calendar">
-                <div class="top_calendar">
+                <div class="top-calendar">
                     <span>Select a date to Check Out</span>
                     <hr>
-                    <div class="calendar_checkIn">
+                    <div class="calendar-check-in">
 
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
@@ -89,7 +88,7 @@
 
         </div>
 
-        <div class="buests">
+        <div class="guests">
             <button id = "guests">Guests</button>
 
         </div>
@@ -103,7 +102,7 @@
 
     </div>
 
-    <div class="top_picks">
+    <div class="top-picks">
 
     </div>
 

@@ -23,7 +23,7 @@ footer {
     text-align: center;
 }
 
-a.footer-meniu {
+.footer-meniu {
     list-style-type: none;  
     font-size: 1rem;    
     color: rgba(134, 152, 182, 1);
@@ -32,5 +32,7 @@ a.footer-meniu {
     display: block; 
     width: 100%;    
 }
+
+
 
 

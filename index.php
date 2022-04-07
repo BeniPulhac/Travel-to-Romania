@@ -12,7 +12,7 @@
     <div class = "hero-img"></div>
     
         <header>
-            <img src = "images/flagLogo.jpg" class = "logo" alt = "Romania">
+            <img src = "images/flag-logo.jpg" class = "logo" alt = "Romania">
 
             <nav>
                 <svg class="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,11 +52,9 @@
         <div class = "searches">
 
         </div>
-
     </section>
 
     <footer>
-
             <div class="footer-text">
                 <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
             </div>

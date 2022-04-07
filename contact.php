@@ -10,9 +10,9 @@
 </head>
 <body>
 <div class = "hero-img"></div>
-<div class = "wrapper">
+
     <header>
-        <img src = "images/flagLogo.jpg" class = "logo" alt = "Romania">
+        <img src = "images/flag-logo.jpg" class = "logo" alt = "Romania">
 
         <nav>
             <svg class="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,9 +31,7 @@
         <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
         </svg>
-
     </header>
-</div>
 
 <main>
     <div class="contact-title">
