@@ -7,7 +7,6 @@
     <link rel = "stylesheet" href = "css/hotels.css">
     <link rel = "stylesheet" href = "css/header.css">
     <link rel = "stylesheet" href = "css/footer.css">
-    <link rel = "stylesheet" href = "css/media-quarry.css">
 </head>
 <body>
 <div class = "hero-img"></div>

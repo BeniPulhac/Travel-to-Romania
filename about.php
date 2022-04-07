@@ -7,7 +7,6 @@
     <link rel = "stylesheet" href = "css/about.css">
     <link rel = "stylesheet" href = "css/header.css">
     <link rel = "stylesheet" href = "css/footer.css">
-    <link rel = "stylesheet" href = "css/media-quarry.css">
 </head>
 <body>
 <div class = "hero-img"></div>
@@ -35,12 +34,19 @@
 
     </header>
 </div>
-<div class="review">
-    <h1>Leave us a reviw</h1>
-    <button id = "review">Review</button>
-</div>
 
-
+<main>
+    <div class="review">
+        <h1>Leave us a reviw</h1>
+        <button id = "review">Review</button>
+    </div>
+    <div class="about-us">
+        <h1>A Little About Us</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur culpa dolore et illum laboriosam molestiae odio omnis placeat praesentium, quasi quod rerum sunt temporibus tenetur vitae voluptatibus voluptatum.</p>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
+    </div>
+</main>
 
 <footer>
     <div class="footer-text">

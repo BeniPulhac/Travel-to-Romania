@@ -7,7 +7,6 @@
     <link rel = "stylesheet" href = "css/contact.css">
     <link rel = "stylesheet" href = "css/header.css">
     <link rel = "stylesheet" href = "css/footer.css">
-    <link rel = "stylesheet" href = "css/media-quarry.css">
 </head>
 <body>
 <div class = "hero-img"></div>
@@ -38,11 +37,12 @@
 
 <main>
     <div class="contact-title">
-        <h1 class = ""></h1>
+        <h1 class = "contact-us" >Contact Us</h1>
+        <hr>
     </div>
 
-    <div class="contact-form">
-        <form action="">
+    <div class="container-form">
+        <form>
             <label for="name">Your Name</label><br>
             <input type="text" id="name" name="name" autocomplete="off"><br>
             <label for="email">Your Email Address</label><br>
