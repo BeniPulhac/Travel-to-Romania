@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel to Romania">
+    <meta name="keywords" content="travel, romania">
+
     <title>Travel to Romania</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel = "stylesheet" href = "assets/css/nav-bar.css">
+    <link rel="stylesheet" href = "assets/css/nav-bar.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
     <header>
-        <img src="assets/images/flag-logo.jpg" class="logo" alt="Romania">
+        <img src="assets/images/flag-logo.jpg" class="logo" alt="Logo">
 
         <div class="log-in">
-            <!--            Change this div later, using JavaScript-->
-            <!--        <button id="logIn" >Log In / Register</button>-->
-            <form action="log-in.php">
-                <input type="submit" value="Log In">
-            </form>
-
-            <form action="log-in.php">
-                <input type="submit" value="Sign Up">
-            </form>
+            <button type="button" id="logIn"><a href="log-in.php">Log In</a></button>
         </div>
 
         <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">

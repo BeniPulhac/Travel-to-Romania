@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotels in Romania">
+    <meta name="keywords" content="hotel, romania, booking, check in">
+
     <title>Travel to Romania</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,17 +21,7 @@
     <header>
         <img src="assets/images/flag-logo.jpg" class="logo" alt="Romania">
 
-        <div class="log-in">
-            <!--            Change this div later, using JavaScript-->
-            <!--        <button id="logIn" >Log In / Register</button>-->
-            <form action="log-in.php">
-                <input type="submit" value="Log In">
-            </form>
-
-            <form action="log-in.php">
-                <input type="submit" value="Sign Up">
-            </form>
-        </div>
+        <button type="button" id="logIn"><a href="log-in.php">Log In</a></button>
 
         <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="black"/>
