@@ -37,36 +37,36 @@
 
     </header>
 
-<main>
-    <div class="review">
-        <h1>Leave us a reviw</h1>
-        <button id = "review">Review</button>
-    </div>
-    <div class="about-us">
-        <h1>A Little About Us</h1>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur culpa dolore et illum laboriosam molestiae odio omnis placeat praesentium, quasi quod rerum sunt temporibus tenetur vitae voluptatibus voluptatum.</p>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
-    </div>
-</main>
+    <main>
+        <div class="review">
+            <h1>Leave us a reviw</h1>
+            <button id = "review">Review</button>
+        </div>
+        <div class="about-us">
+            <h1>A Little About Us</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur culpa dolore et illum laboriosam molestiae odio omnis placeat praesentium, quasi quod rerum sunt temporibus tenetur vitae voluptatibus voluptatum.</p>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
+        </div>
+    </main>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<footer>
-    <div class="footer-text">
-        <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
-    </div>
+    <footer>
+        <div class="footer-text">
+            <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+        </div>
 
-    <div class = "copyright">© 2022 Beniamin Pulhac</div>
+        <div class = "copyright">© 2022 Beniamin Pulhac</div>
 
-    <div class="footer-nav">
-        <ul class="footer-ul">
-            <li><a href = "index.php" class="footer-link">Home</a></li>
-            <li><a href = "hotels.php" class="footer-link">Hotels</a></li>
-            <li><a href = "attractions.php" class="footer-link">Attractions</a></li>
-            <li><a href = "contact.php" class="footer-link">Contact</a></li>
-            <li><a href = "about.php" class="footer-link">About</a></li>
-        </ul>
-    </div>
-</footer>
+        <div class="footer-nav">
+            <ul class="footer-ul">
+                <li><a href = "index.php" class="footer-link">Home</a></li>
+                <li><a href = "hotels.php" class="footer-link">Hotels</a></li>
+                <li><a href = "attractions.php" class="footer-link">Attractions</a></li>
+                <li><a href = "contact.php" class="footer-link">Contact</a></li>
+                <li><a href = "about.php" class="footer-link">About</a></li>
+            </ul>
+        </div>
+    </footer>
+<script src = "js/main.js"></script>
 </body>
 </html>
-<script src = "js/main.js"></script>

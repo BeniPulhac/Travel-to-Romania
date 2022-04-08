@@ -36,24 +36,24 @@
         </svg>
     </header>
 
-<main>
-    <div class="contact-title">
-        <h1 class = "contact-us" >Contact Us</h1>
-        <hr>
-    </div>
+    <main>
+        <div class="contact-title">
+            <h1 class = "contact-us" >Contact Us</h1>
+            <hr>
+        </div>
 
-    <div class="container-form">
-        <form>
-            <label for="name">Your Name</label><br>
-            <input type="text" id="name" name="name" autocomplete="off"><br>
-            <label for="email">Your Email Address</label><br>
-            <input type="text" id="email" name="email" autocomplete="off"><br>
-            <label for="message">Your Message</label><br>
-            <textarea name="message" id="message" rows="5"></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-</main>
+        <div class="container-form">
+            <form>
+                <label for="name">Your Name</label><br>
+                <input type="text" id="name" name="name" autocomplete="off"><br>
+                <label for="email">Your Email Address</label><br>
+                <input type="text" id="email" name="email" autocomplete="off"><br>
+                <label for="message">Your Message</label><br>
+                <textarea name="message" id="message" rows="5"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
 
     <footer>
 
@@ -73,6 +73,6 @@
             </ul>
         </div>
     </footer>
+<script src = "js/main.js"></script>
 </body>
 </html>
-<script src = "js/main.js"></script>

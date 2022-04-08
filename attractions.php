@@ -12,7 +12,7 @@
     <link rel = "stylesheet" href = "css/footer.css">
 </head>
 <body>
-<div class = "hero-img"></div>
+    <div class = "hero-img"></div>
     <header>
         <img src = "images/flag-logo.jpg" class = "logo" alt = "Romania">
 
@@ -35,14 +35,14 @@
         </svg>
 
     </header>
-
+<br><br>
     <div class="hero">
 
         <h1>See the Beautiful Romania!</h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse maiores minima nam necessitatibus, officiis perferendis perspiciatis quaerat similique temporibus! Asperiores autem nemo nihil nobis sit. Consequatur itaque numquam reprehenderit?</p>
     </div>
-
+<br><br>
     <main>
         <div class="content-right">
             <div class="content">
@@ -78,7 +78,6 @@
     </main>
 <br><br><br><br><br><br><br><br><br><br>
     <footer>
-
         <div class="footer-text">
             <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
         </div>
@@ -95,6 +94,6 @@
             </ul>
         </div>
     </footer>
+<script src = "js/main.js"></script>
 </body>
 </html>
-<script src = "js/main.js"></script>
