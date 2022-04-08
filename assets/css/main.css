@@ -8,7 +8,6 @@
 body {
     background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
     position: relative;
-
 }
 
 .hero-img {
@@ -23,22 +22,37 @@ body {
     height: 100%;
     z-index: -1;
 }
+
 main {
     display: flex;
     flex-direction: column;
-    padding-left: 5em;
+    padding: 5em;
+    justify-content: space-around;
 }
 
-
+.travel-title {
+    padding-bottom: 1rem;
+}
 
 .travel-safe {
-    padding-top: 6em;
+    padding-top: 6rem;
+
 }
 
 .sub-title {
-    padding-bottom: 6px;
+    padding: 1rem;
 }
 
 .list {
     padding-bottom: 6px;
+}
+
+.travel-ul {
+    margin: 20px;
+}
+
+.container-travel {
+    display: flex;
+    width: 100%;
+    border: 5px ridge black;
 }

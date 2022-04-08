@@ -23,3 +23,12 @@ body {
     z-index: -1;
 }
 
+.sub-meniu-bar {
+
+    position: center;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20em;
+}
