@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav>
-        <img src="assets/images/flag-logo.jpg" class="logo" alt="Romania">
+        <img src="assets/images/logo.png" class="logo" alt="Romania">
 
         <img src="assets/images/close-menu.png" alt="Close Menu" class="close">
 

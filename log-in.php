@@ -18,7 +18,7 @@
 <body>
 <!--    <div class="hero-img"></div>-->
     <nav>
-        <img src="assets/images/flag-logo.jpg" class="logo" alt="Logo">
+        <img src="assets/images/logo.png" class="logo" alt="Logo">
 
         <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
 

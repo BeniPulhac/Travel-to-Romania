@@ -14,9 +14,10 @@ nav {
 }
 
 .logo {
-    width: 5em;
+    width: 3em;
     height: 3em;
     justify-content: flex-start;
+    padding: .5em;
 }
 
 .nav-link {
