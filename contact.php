@@ -60,20 +60,22 @@
     </main>
 
     <footer>
-
-        <div class="footer-text">
+        <div class="footer-left">
             <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
         </div>
 
-        <div class = "copyright">© 2022 Beniamin Pulhac</div>
+        <div class="footer-middle">
+            <button class="scroll-up" id="scrollUp" type="button">Scroll Up</button>
+            <span>© 2022 Travel to Romania</span>
+        </div>
 
-        <div class="footer-nav">
+        <div class="footer-right">
             <ul class="footer-ul">
-                <li><a href = "index.php" class="footer-link">Home</a></li>
-                <li><a href = "hotels.php" class="footer-link">Hotels</a></li>
-                <li><a href = "attractions.php" class="footer-link">Attractions</a></li>
-                <li><a href = "contact.php" class="footer-link">Contact</a></li>
-                <li><a href = "about.php" class="footer-link">About</a></li>
+                <li><a href="index.php" class="footer-link">Home</a></li>
+                <li><a href="hotels.php" class="footer-link">Hotels</a></li>
+                <li><a href="attractions.php" class="footer-link">Attractions</a></li>
+                <li><a href="contact.php" class="footer-link">Contact</a></li>
+                <li><a href="about.php" class="footer-link">About</a></li>
             </ul>
         </div>
     </footer>

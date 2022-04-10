@@ -44,15 +44,11 @@
 
     <div class="hero-img"></div>
 
-
-
-
-
     <main>
         <div class="recently-search">
             <h2>You recently searched</h2>
             <div class="container-search">
-
+                <p>Use css to creat the bos</p>
             </div>
         </div>
 
@@ -87,13 +83,16 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer>
-        <div class="footer-text">
+        <div class="footer-left">
             <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
         </div>
 
-        <div class="copyright">© 2022 Beniamin Pulhac</div>
+        <div class="footer-middle">
+            <button class="scroll-up" id="scrollUp" type="button">Scroll Up</button>
+            <span>© 2022 Travel to Romania</span>
+        </div>
 
-        <div class="footer-nav">
+        <div class="footer-right">
             <ul class="footer-ul">
                 <li><a href="index.php" class="footer-link">Home</a></li>
                 <li><a href="hotels.php" class="footer-link">Hotels</a></li>

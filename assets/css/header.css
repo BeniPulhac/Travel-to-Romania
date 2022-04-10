@@ -2,6 +2,12 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
+.header-left {
+    width: 50%;
+    margin: 1em;
+}
+
 .presentation {
     padding: 1rem;
     width: 70%;
@@ -10,6 +16,7 @@ header {
 }
 
 #logIn {
-    padding: 1em;
-    margin: .5em;
+    width: 7em;
+    height: 3em;
+    margin: 0.5em;
 }

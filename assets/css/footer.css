@@ -9,18 +9,24 @@ footer {
     background-color: rgba(23, 29, 38, 1);
 }
 
-.footer-text {
+.footer-left {
     color: rgba(134, 152, 182, 1);
     font-size: 1rem;
     padding-top: 1em;
     width: 33%;
 }
 
-.copyright {
+.footer-middle {
     margin-top: auto;
     font-size: 1rem;
     color: rgba(134, 152, 182, 1);
     text-align: center;
+}
+
+.scroll-up {
+    display: flex;
+    padding: 1em;
+    margin: 3vh;
 }
 
 .footer-ul {
