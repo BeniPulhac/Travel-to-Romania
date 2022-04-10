@@ -9,16 +9,15 @@
     <title>Travel to Romania</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/log-in.css">
     <link rel = "stylesheet" href = "assets/css/nav-bar.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 
 </head>
 <body>
-<!--    <div class="hero-img"></div>-->
     <nav>
-        <img src="assets/images/logo.png" class="logo" alt="Logo">
+        <img src="assets/images/logo.png" class="logo" alt="Logo" id="anchor-scroll-up">
 
         <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
 
@@ -37,7 +36,7 @@
         <h1>This is the Header</h1>
         <button type="button" id="logIn"><a href="log-in.php">Log In</a></button>
     </header>
-
+        <div class="hero-img"></div>
     <main>
         <h2>Hello World!</h2>
     </main>
@@ -50,7 +49,7 @@
         </div>
 
         <div class="footer-middle">
-            <button class="scroll-up" id="scrollUp" type="button">Scroll Up</button>
+            <button class="scroll-up" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="scroll-up-text">Scroll Up</a></button>
             <span>© 2022 Travel to Romania</span>
         </div>
 

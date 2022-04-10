@@ -39,7 +39,6 @@ main {
 
 .travel-safe {
     padding-top: 6rem;
-
 }
 
 .sub-title {
@@ -58,4 +57,5 @@ main {
     display: flex;
     width: 100%;
     border: 5px ridge black;
+    background-color: white;
 }

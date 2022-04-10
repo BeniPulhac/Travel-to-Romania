@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav>
-        <img src="assets/images/logo.png" class="logo" alt="Romania">
+        <img src="assets/images/logo.png" class="logo" alt="Logo" id="anchor-scroll-up">
 
         <img src="assets/images/close-menu.png" alt="Close Menu" class="close">
 
@@ -85,7 +85,7 @@
         </div>
 
         <div class="footer-middle">
-            <button class="scroll-up" id="scrollUp" type="button">Scroll Up</button>
+            <button class="scroll-up" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="scroll-up-text">Scroll Up</a></button>
             <span>© 2022 Travel to Romania</span>
         </div>
 

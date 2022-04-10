@@ -21,12 +21,18 @@ footer {
     font-size: 1rem;
     color: rgba(134, 152, 182, 1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .scroll-up {
-    display: flex;
     padding: 1em;
     margin: 3vh;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.scroll-up-text {
+    text-decoration: none;
 }
 
 .footer-ul {
