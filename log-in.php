@@ -18,6 +18,7 @@
 </head>
 <body>
     <nav>
+        <div>
             <img src="assets/images/logo.png" class="logo" alt="Logo" id="anchor-scroll-up">
 
             <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
@@ -32,14 +33,39 @@
             </ul>
 
             <img src="assets/images/close-menu.png" alt="Close Menu" class="close">
+        </div>
+
     </nav>
 
     <header>
-        <h1>This is the Header</h1>
+        <p class="header-prg"> Here you can log in or sign up</p>
     </header>
         <div class="hero-img"></div>
     <main>
-        <h2>Hello World!</h2>
+        <section class="testing">
+            <div class="container-log-in">
+                <h4>Sign In</h4>
+                <form>
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" autocomplete="off" placeholder="Email"><br>
+                    <label for="password"></label>
+                    <input type="text" id="password" name="password" autocomplete="off" placeholder="Password"><br>
+                </form>
+                <div class="remeber-forget">
+                    <form action="">
+                        <input type="checkbox" id="keepSignIn" name="keep-sing-in" value="Remember">
+                        <label for="keepSignIn">Keep me signed in</label>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <section class="sign-up-tab">
+
+        </section>
     </main>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

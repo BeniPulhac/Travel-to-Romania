@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+    background-color: #f2f2f2;
     position: relative;
     /*margin: 1.5em;*/
 }
@@ -14,7 +14,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../images/bkg-about.jpg");
+    /*background-image: url("../images/bkg-about.jpg");*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -26,6 +26,14 @@ body {
                 /*Main Content*/
 main {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     text-align: center;
+    padding: 5em;
+    background-color: #fff;
+    width: 75%;
 }
+
+.review {
+    padding: 1em;
+}
+

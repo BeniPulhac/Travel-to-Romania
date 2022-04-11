@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+    background-color: #f2f2f2;
     position: relative;
     /*margin: 1.5em;*/
 }
@@ -14,7 +14,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../images/bkg-contact.jpg");
+    /*background-image: url("../images/bkg-contact.jpg");*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -24,6 +24,90 @@ body {
 }
 
 main {
-    text-align: center;
-    padding: 30vh;
+    display: flex;
+    justify-content: center;
+    padding: 5em 0;
 }
+
+.help-center {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: #fff;
+    text-align: left;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+
+}
+
+.help-center-title {
+    text-align: center;
+}
+
+.help-center-subtitle {
+    width: 50%;
+}
+
+.ways-of-contact {
+    display: flex;
+}
+
+.contact-email {
+    padding: 1em;
+    width: 50%;
+}
+
+.contact-email-top {
+    display: flex;
+}
+
+.help-center-title {
+    text-align: center;
+}
+
+.contact-email-text {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-phone {
+    padding: 1em;
+    width: 50%;
+}
+
+.contact-phone-top {
+    display: flex;
+}
+
+.contact-phone-text {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-days {
+    font-weight: 550;
+}
+                /*Contact Button*/
+.contact-log-in {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-contact-log-in {
+    margin-top: 1em;
+    width: 100%;
+    height: 3em;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+                /*Contact Email Box*/
+.contact-email-box {
+    display: none;
+}
+
+                /*Contact Phone Box*/
+.contact-phone-box {
+    display: none;
+}
+

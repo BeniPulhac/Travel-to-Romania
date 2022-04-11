@@ -29,10 +29,14 @@
             <li><a href = "about.php" class="nav-link">About</a></li>
             <li><button class="log-in"><a href="log-in.php" class="log-in-text">Log In</a></button></li>
         </ul>
+
     </nav>
 
     <header>
-        <h1>This is the header</h1>
+        <div class="header-text">
+            <h1>Wanna learn more about us?</h1>
+            <p>Travel to Romania provides you with <br>amazing diversity and breadth of choice - all in one place.</p>
+        </div>
 
         <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
     </header>
@@ -40,16 +44,24 @@
     <div class = "hero-img"></div>
 
     <main>
-        <div class="review">
-            <h1>Leave us a review</h1>
-            <button id = "review">Review</button>
-        </div>
-        <div class="about-us">
-            <h1>A Little About Us</h1>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur culpa dolore et illum laboriosam molestiae odio omnis placeat praesentium, quasi quod rerum sunt temporibus tenetur vitae voluptatibus voluptatum.</p>
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
-        </div>
+        <section class="about-us">
+            <div class="container-about-us">
+                <h2>A Little About Us</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur culpa dolore et illum laboriosam molestiae odio omnis placeat praesentium, quasi quod rerum sunt temporibus tenetur vitae voluptatibus voluptatum.</p>
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
+            </div>
+        </section>
+
+        <section class="review">
+            <div class="review">
+                <h4>Leave us a review</h4>
+                <button id = "review">Review</button>
+            </div>
+        </section>
+
+
+
     </main>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
