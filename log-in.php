@@ -7,6 +7,7 @@
     <meta name="keywords" content="romania, register, log in, log out, sign up">
 
     <title>Travel to Romania</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/log-in.css">
@@ -17,24 +18,24 @@
 </head>
 <body>
     <nav>
-        <img src="assets/images/logo.png" class="logo" alt="Logo" id="anchor-scroll-up">
+            <img src="assets/images/logo.png" class="logo" alt="Logo" id="anchor-scroll-up">
 
-        <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
+            <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
 
-        <ul class="nav-ul">
-            <li><a href="index.php" class="nav-link">Home</a></li>
-            <li><a href="hotels.php" class="nav-link">Hotels</a></li>
-            <li><a href="attractions.php" class="nav-link">Attractions</a></li>
-            <li><a href="contact.php" class="nav-link">Contact</a></li>
-            <li><a href="about.php" class="nav-link">About</a></li>
-        </ul>
+            <ul class="nav-ul">
+                <li><a href="index.php" class="nav-link">Home</a></li>
+                <li><a href="hotels.php" class="nav-link">Hotels</a></li>
+                <li><a href="attractions.php" class="nav-link">Attractions</a></li>
+                <li><a href="contact.php" class="nav-link">Contact</a></li>
+                <li><a href="about.php" class="nav-link">About</a></li>
+                <li><button class="log-in"><a href="log-in.php" class="log-in-text">Log In</a></button></li>
+            </ul>
 
-        <img src="assets/images/close-menu.png" alt="Close Menu" class="close">
+            <img src="assets/images/close-menu.png" alt="Close Menu" class="close">
     </nav>
 
     <header>
         <h1>This is the Header</h1>
-        <button type="button" id="logIn"><a href="log-in.php">Log In</a></button>
     </header>
         <div class="hero-img"></div>
     <main>

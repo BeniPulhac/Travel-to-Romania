@@ -57,6 +57,18 @@ nav {
     background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
 }
 
+.log-in {
+    text-decoration: none;
+    margin: .75em 0.5em;
+}
+
+.log-in-text {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1em;
+}
+
+
 @media only screen and (min-width: 600px) {
     /*.nav {*/
     /*    display: flex;*/

@@ -7,6 +7,7 @@
     <meta name="keywords" content="hotel, romania, booking, check in">
 
     <title>Travel to Romania</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel = "stylesheet" href = "assets/css/hotels.css">
@@ -27,6 +28,7 @@
             <li><a href="attractions.php" class="nav-link">Attractions</a></li>
             <li><a href="contact.php" class="nav-link">Contact</a></li>
             <li><a href="about.php" class="nav-link">About</a></li>
+            <li><button class="log-in"><a href="log-in.php" class="log-in-text">Log In</a></button></li>
         </ul>
         <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
 
@@ -35,7 +37,6 @@
 
     <header>
         <h1>This is the header</h1>
-        <button type="button" id="logIn"><a href="log-in.php">Log In</a></button>
     </header>
 
 
