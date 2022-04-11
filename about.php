@@ -11,34 +11,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel = "stylesheet" href = "assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/general.css">
     <link rel = "stylesheet" href = "assets/css/nav-bar.css">
     <link rel = "stylesheet" href = "assets/css/header.css">
     <link rel = "stylesheet" href = "assets/css/footer.css">
 </head>
 <body>
-    <nav>
-        <img src="assets/images/logo.png" class="logo" alt="Logo" id="anchor-scroll-up">
+    <nav class="navigation">
+        <div class="navigation__container">
+            <img src="assets/images/logo.png" class="navigation__logo" alt="Logo">
 
-        <img src="assets/images/close-menu.png" alt="Close Menu" class="close">
+            <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="navigation__menu">
 
-        <ul class="nav-ul">
-            <li><a href = "index.php" class="nav-link">Home</a></li>
-            <li><a href = "hotels.php" class="nav-link">Hotels</a></li>
-            <li><a href = "attractions.php" class="nav-link">Attractions</a></li>
-            <li><a href = "contact.php" class="nav-link">Contact</a></li>
-            <li><a href = "about.php" class="nav-link">About</a></li>
-            <li><button class="log-in"><a href="log-in.php" class="log-in-text">Log In</a></button></li>
-        </ul>
-
+            <ul class="navigation__ul">
+                <li><a class="navigation__link" href="index.php">Home</a></li>
+                <li><a class="navigation__link" href="hotels.php">Hotels</a></li>
+                <li><a class="navigation__link" href="attractions.php">Attractions</a></li>
+                <li><a class="navigation__link" href="contact.php">Contact</a></li>
+                <li><a class="navigation__link" href="about.php">About</a></li>
+                <li><button class="navigation__button"><a href="log-in.php" class="navigation__log-in">Log In</a></button></li>
+            </ul>
+            <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation__close">
+        </div>
     </nav>
 
-    <header>
+    <header  id="anchor-scroll-up">
         <div class="header-text">
             <h1>Wanna learn more about us?</h1>
             <p>Travel to Romania provides you with <br>amazing diversity and breadth of choice - all in one place.</p>
         </div>
 
-        <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="menu">
     </header>
 
     <div class = "hero-img"></div>
@@ -64,24 +66,26 @@
 
     </main>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer>
-        <div class="footer-left">
-            <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
-        </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__left">
+                <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+            </div>
 
-        <div class="footer-middle">
-            <button class="scroll-up" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="scroll-up-text">Scroll Up</a></button>
-            <span>© 2022 Travel to Romania</span>
-        </div>
+            <div class="footer__middle">
+                <button class="footer__scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="footer__scroll--modifier">Scroll Up</a></button>
+                <span class="footer__copyright">© 2022 Travel to Romania</span>
+            </div>
 
-        <div class="footer-right">
-            <ul class="footer-ul">
-                <li><a href="index.php" class="footer-link">Home</a></li>
-                <li><a href="hotels.php" class="footer-link">Hotels</a></li>
-                <li><a href="attractions.php" class="footer-link">Attractions</a></li>
-                <li><a href="contact.php" class="footer-link">Contact</a></li>
-                <li><a href="about.php" class="footer-link">About</a></li>
-            </ul>
+            <div class="footer__right">
+                <ul class="footer__ul">
+                    <li class="footer__link"><a class="footer__link-modifier" href="index.php">Home</a></li>
+                    <li class="footer__link"><a class="footer__link-modifier" href="hotels.php">Hotels</a></li>
+                    <li class="footer__link"><a class="footer__link-modifier" href="attractions.php">Attractions</a></li>
+                    <li class="footer__link"><a class="footer__link-modifier" href="contact.php">Contact</a></li>
+                    <li class="footer__link"><a class="footer__link-modifier" href="about.php">About</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 <script src = "assets/js/main.js"></script>

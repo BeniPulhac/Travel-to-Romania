@@ -1,122 +1,68 @@
-
-nav {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    text-transform: uppercase;
-    transform: translateX(100%);
-    transition: transform .5s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    /*width: 100%;*/
+                /*General*/
+.navigation {
     background-color: hsla(163, 22%, 51%, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
 }
 
-.logo {
+.navigation__container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    /*background-color: white;  ---testing*/
+    position: relative;         /*For the header positioning*/
+}
+
+                /*The Icons*/
+.navigation__logo {
     width: 3em;
     height: 3em;
     justify-content: flex-start;
     padding: .5em;
 }
 
-.nav-link {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    padding: .75em 0.5em;
-    display: block;
-    /*width: 100%;*/
-}
-
-.nav-ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 8em;
-    justify-content: flex-end;
-}
-
-.nav-link:hover {
-    background: rgb(235, 235, 235);
-}
-
-.close {
-    float: right;
-    margin: 2em;
-    width: 2.5em;
-}
-
-.menu, .close {
+.navigation__menu {
     width: 3em;
+    height: 3em;
     cursor: pointer;
+    display: none;
 }
 
-.open-nav {
-    transform: translateX(0%);
-    transition: transform 1s ease-in-out;
-    background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+.navigation__close {
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    display: none;
 }
 
-.log-in {
-    text-decoration: none;
-    margin: .75em 0.5em;
+                /*Navigation bar*/
+.navigation__ul {
+    list-style-type: none;
+    display: flex;
+    margin: auto 0;
 }
 
-.log-in-text {
-    text-decoration: none;
+.navigation__link {
+    font-size: 1.2rem;
+    color: black;
+    padding: .75em .5em;
+}
+
+.navigation__link:hover {
+    background: rgba(231, 231, 231, 0.6);
+    border-radius: 5px;
+}
+
+.navigation__button {
+    padding: .2em 1em;
+    border-radius: 10px;
+    margin: 0 .5em;
+}
+
+.navigation__log-in {
+    color: black;
     font-size: 1rem;
-    padding: 1em;
-}
-
-
-@media only screen and (min-width: 576px) {
-    /*.nav {*/
-    /*    display: flex;*/
-    /*    justify-content: space-between;*/
-    /*}*/
-}
-
-@media only screen and (min-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    nav {
-        transform: translateX(0);
-        position: unset;
-        height: auto;
-        background: none;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        background-color: hsla(163, 22%, 51%, 0.5);
-    }
-
-    .close {
-        display: none;
-    }
-
-    .nav-ul {
-        display: flex;
-        margin: 0;
-    }
-
-    .nav-link {
-        color: black;
-        padding: .5em 1.5em;
-        font-size: 1rem;
-        text-align: left;
-    }
-
-    .nav-link:hover {
-        background: none;
-        text-decoration: underline;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    /*.header {*/
-    /*    width: 100%;*/
-    /*    margin: 0 auto;*/
-    /*}*/
+    padding: .5em;
 }
