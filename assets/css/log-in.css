@@ -21,8 +21,3 @@ body {
     border-radius: 1em;
     text-align: center;
 }
-
-.testing {
-    display: flex;
-    justify-content: center;
-}
