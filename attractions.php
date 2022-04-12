@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel = "stylesheet" href = "assets/css/attractions.css">
-    <link rel="stylesheet" href="assets/css/general.css">
     <link rel = "stylesheet" href = "assets/css/nav-bar.css">
     <link rel = "stylesheet" href = "assets/css/header.css">
     <link rel = "stylesheet" href = "assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/general.css">
 </head>
 <body>
     <nav class="navigation">
@@ -35,56 +35,54 @@
         </div>
     </nav>
 
-    <header  id="anchor-scroll-up">
-        <div class="header-left">
-
-            <h1>See the Beautiful Romania!</h1>
+    <header class="head" id="anchor-scroll-up">
+        <div class="head-container">
+            <h1 class="head-title">See the Beautiful Romania!</h1>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse maiores minima nam necessitatibus, officiis perferendis perspiciatis quaerat similique temporibus! Asperiores autem nemo nihil nobis sit. Consequatur itaque numquam reprehenderit?</p>
+            <p class="head-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse maiores minima nam necessitatibus, officiis perferendis perspiciatis quaerat similique temporibus! Asperiores autem nemo nihil nobis sit. Consequatur itaque numquam reprehenderit?</p>
         </div>
-
     </header>
 
-<br><br>
     <div class="hero-img"></div>
-<br><br>
-    <main>
-        <section class="list-elements">
-            <div class="content-right">
-                <div class="content">
-                    <p class="title">Cities</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
+
+    <main class="ctn">
+        <section class="ctn-container">
+
+            <div class="container-right">
+                <div class="container-right-text">
+                    <p class="container-title">Cities</p>
+                    <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
                 </div>
-                <img src="assets/images/cities-small.jpg" alt="cities">
+                <img src="assets/images/cities-small.jpg" alt="cities" class="container-img">
             </div>
 
-            <div class="content-left">
-                <div class="content">
-                    <p class="title">Restaurants</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
+            <div class="container-left">
+                <div class="container-left-text">
+                    <p class="container-title">Restaurants</p>
+                    <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
                 </div>
-                <img src="assets/images/restaurants-small.jpg" alt="restaurants">
+                <img src="assets/images/restaurants-small.jpg" alt="restaurants" class="container-img">
             </div>
 
-            <div class="content-right">
-                <div class="content">
-                    <p class="title">Landscapes</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
+            <div class="container-right">
+                <div class="container-right-text">
+                    <p class="container-title">Landscapes</p>
+                    <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
                 </div>
-                <img src="assets/images/landscapes-small.jpg" alt="landscapes">
+                <img src="assets/images/landscapes-small.jpg" alt="landscapes" class="container-img">
             </div>
 
-            <div class="content-left">
-                <div class="content">
-                    <p class="title">Places to Visit</p>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
+            <div class="container-left">
+                <div class="container-left-text">
+                    <p class="container-title">Places to Visit</p>
+                    <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
                 </div>
-                <img src="assets/images/places-to-visit-small.jpg" alt="visit">
+                <img src="assets/images/places-to-visit-small.jpg" alt="visit" class="container-img">
             </div>
+
         </section>
-
     </main>
-<br><br><br><br><br><br><br><br><br><br>
+
     <footer class="bottom">
         <div class="bottom-container">
             <div class="bottom-left bottom-center">
