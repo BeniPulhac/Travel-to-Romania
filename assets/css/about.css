@@ -1,39 +1,159 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
+/*
+                General
+*/
 body {
     background-color: #f2f2f2;
-    position: relative;
-    /*margin: 1.5em;*/
 }
-
-.hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /*background-image: url("../images/bkg-about.jpg");*/
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+/*
+                Header
+*/
+.head {
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    padding-top: 71px;
 }
 
-                /*Main Content*/
-main {
+.head-container {
+    width: 90%;
+    margin: auto;
+    padding: 1em 0;
+    /*background-color: antiquewhite; !*Test*!*/
+}
+
+.head-title {
+    padding: .5rem;
+    margin-left: 5%;
+    font-size: larger;
+    border-bottom: 1px solid black;
+}
+
+.head-prg {
+    text-indent: 3em;
+    text-align: justify;
+    letter-spacing: .1rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 5em;
-    background-color: #fff;
-    width: 75%;
+    border-bottom: 1px solid black;
 }
 
-.review {
-    padding: 1em;
+.new-line {
+    display: flex;
+    justify-content: center;
 }
+/*
+                Main Content
+*/
+.ctn {
+    width: 100%;
+}
+
+.ctn-container {
+    width: 90%;
+    background-color: #d9dacb; /*Test*/
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*
+                Left
+*/
+.container-left{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: auto 0;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.about-title {
+    width: 100px;
+    height: 100%;
+    /*transform: rotate(-90deg);*/
+    margin: auto;
+}
+
+.about-title-left {
+    transform: rotate(-90deg);
+    font-size: xx-large;
+    font-weight: lighter;
+    margin: 100% 0;
+}
+
+.about-prg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em .5em;
+    border-left: 1px solid black;
+}
+
+.prg-right {
+    text-align: right;
+    padding: 10px;
+    border-bottom: 1px dotted;
+}
+
+.prg-left {
+    text-align: left;
+    padding: 10px;
+
+}
+/*
+                Right
+*/
+.container-right{
+
+}
+
+
+
+
+
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*}*/
+
+/*body {*/
+/*    background-color: #f2f2f2;*/
+/*    position: relative;*/
+/*    !*margin: 1.5em;*!*/
+/*}*/
+
+/*.hero-img {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    !*background-image: url("../images/bkg-about.jpg");*!*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*    background-size: cover;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    z-index: -1;*/
+/*}*/
+
+/*                !*Main Content*!*/
+/*main {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    padding: 5em;*/
+/*    background-color: #fff;*/
+/*    width: 75%;*/
+/*}*/
+
+/*.review {*/
+/*    padding: 1em;*/
+/*}*/
 

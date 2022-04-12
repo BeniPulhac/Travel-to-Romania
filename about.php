@@ -35,35 +35,49 @@
         </div>
     </nav>
 
-    <header  id="anchor-scroll-up">
-        <div class="header-text">
-            <h1>Wanna learn more about us?</h1>
-            <p>Travel to Romania provides you with <br>amazing diversity and breadth of choice - all in one place.</p>
+    <header  id="anchor-scroll-up" class="head">
+        <div class="head-container">
+            <h1 class="head-title">Wanna learn more about us?</h1>
+            <p class="head-prg">Travel to Romania provides you with <span class="new-line">amazing diversity and breadth of choice - all in one place.</span></p>
         </div>
 
     </header>
 
     <div class = "hero-img"></div>
 
-    <main>
-        <section class="about-us">
-            <div class="container-about-us">
-                <h2>A Little About Us</h2>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aspernatur culpa dolore et illum laboriosam molestiae odio omnis placeat praesentium, quasi quod rerum sunt temporibus tenetur vitae voluptatibus voluptatum.</p>
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid amet consequatur delectus, doloremque, dolorum fuga harum impedit in inventore necessitatibus nemo, nesciunt nihil nostrum omnis repellat sed tempore ullam.</span><span>Asperiores debitis eum facere id in porro quibusdam quis sunt tempora. Culpa eaque excepturi maiores minima sed tenetur veritatis vero. Animi culpa earum laborum molestias natus nulla omnis saepe similique?</span>0</p>
+    <main class="ctn">
+        <div class="ctn-container">
+
+            <div class="container">
+                <div class="container-left">
+                    <div class="about-title">
+                        <h2 class="about-title-left">About us</h2>
+                    </div>
+
+                    <div class="about-prg">
+                        <p class="prg-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magnam qui sequi. Amet dolores excepturi expedita, minus molestias nulla perferendis quaerat, quos rerum saepe sed sint temporibus tenetur, ullam veritatis.</p>
+                        <p class="prg-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cupiditate debitis earum est harum id iste, odit perferendis porro provident quae ratione repudiandae, sit sunt ullam vitae? Amet, possimus.</p>
+                    </div>
+                </div>
+
+                <div class="container-right">
+                    <div class="review-title">
+                        
+                    </div>
+                    
+                    <div class="review-prg">
+                        
+                    </div>
+
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
             </div>
-        </section>
 
-        <section class="review">
-            <div class="review">
-                <h4>Leave us a review</h4>
-                <button id = "review">Review</button>
+            <div class="others-review">
+
             </div>
-        </section>
 
-
-
+        </div>
     </main>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer class="bottom">
