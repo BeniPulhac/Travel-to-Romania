@@ -36,38 +36,45 @@
         </div>
     </nav>
 
-    <header id="anchor-scroll-up">
-        <p class="header-prg"> Here you can log in or sign up</p>
+    <header id="anchor-scroll-up" class="head">
+        <div class="head-container">
+            <p class="head-prg"> Creat an account so you can use more functions</p>
+        </div>
     </header>
+
         <div class="hero-img"></div>
-    <main>
-        <section class="testing">
+
+    <main class="ctn">
+        <section class="ctn-container">
             <div class="container-log-in">
-                <h4>Sign In</h4>
-                <form>
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email" autocomplete="off" placeholder="Email"><br>
-                    <label for="password"></label>
-                    <input type="password" id="password" name="password" autocomplete="off" placeholder="Password"><br>
-                </form>
-                <div class="remeber-forget">
-                    <form action="">
-                        <input type="checkbox" id="keepSignIn" name="keep-sing-in" value="Remember">
-                        <label for="keepSignIn">Keep me signed in</label>
-                    </form>
+                <div class="container-aligne">
+                    <div class="container-title">
+                        <span class="container-title-modifier">Sing In</span>
+                    </div>
+
+                    <div class="container-box">
+                        <div class="container-box-input">
+                            <input type="email" autocomplete="off" placeholder="  Email" class="input-sign-in">
+                            <input type="password" autocomplete="off" placeholder="  Password" class="input-sign-in">
+                        </div>
+
+                        <div class="container-box-remember">
+                            <div class="remember">
+                                <input type="checkbox" id="keepSignIn" value="Remember">
+                                <label for="keepSignIn">Keep me signed in</label>
+                            </div>
+
+                            <a href="#" onclick="showResetPasswordForm(); return false" id="new-password-link" class="forget-password">Forget Password?</a>
+                        </div>
+                    </div>
                 </div>
 
-
-
             </div>
-        </section>
 
-        <section class="sign-up-tab">
+<!--I need a Sign Up form-->
 
         </section>
     </main>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer class="bottom">
         <div class="bottom-container">
