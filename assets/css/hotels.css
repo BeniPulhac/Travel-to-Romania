@@ -44,11 +44,37 @@ body {
     flex-direction: column;
     margin: auto;
     background-color: white;
+    height: 100vh;
 }
 /*
                 Search Bar
 */
+.ctn-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    width: 70%;
+    margin: 0 auto;
+}
 
+.testing {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #febb02;
+    padding: 5px;
+}
+.test {
+    background-color: white;
+    padding: 10px;
+    width: fit-content;
+    height: auto;
+
+}
+.search-check-in {
+}
 
 /*.sub-meniu-bar {*/
 

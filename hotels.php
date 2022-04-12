@@ -47,67 +47,20 @@
     <main class="ctn">
         <div class="ctn-container">
             <div class = "ctn-search">
-                <div class="check-in">
-                    <button id = "checkIn">Check In</button>
-
-                    <!--                <div class="calendar">-->
-                    <!--                    <div class="header-calendar">-->
-                    <!--                        <span>Select a date to Check In</span>-->
-                    <!--                        <hr>-->
-                    <!--                        <div class="top-calendar">-->
-                    <!--                            <button id = "left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button>-->
-                    <!--                            <div class="calendar-month" id = "calendarMonth" aria-live="polite">-->
-                    <!--                                Aprilie 2022-->
-                    <!--                            </div>-->
-                    <!--                            <button id = "right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="calendar-check-in">-->
-                    <!--                            <table class = "calendar-dates" aria-labelledby="calendar-month">-->
-                    <!--                                <thead class = "calendar-row">-->
-                    <!--                                    <tr>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">Mo</th>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">Tu</th>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">We</th>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">Th</th>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">Fr</th>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">Sa</th>-->
-                    <!--                                        <th scope = "col" class = "calendar-day-name">Su</th>-->
-                    <!--                                    </tr>-->
-                    <!--                                </thead>-->
-                    <!--                                <tbody>-->
-                    <!--                                    <tr></tr>-->
-                    <!--                                </tbody>-->
-                    <!--                            </table>-->
-                    <!--                        </div>-->
-                    <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-
+                <div class="search-check-in testing">
+                    <input type="date" value="Check In">
                 </div>
 
-                <div class="check-out">
-                    <button id = "checkOut">Check Out</button>
-
-                    <!--                <div class="calendar">-->
-                    <!--                    <div class="top-calendar">-->
-                    <!--                        <span>Select a date to Check Out</span>-->
-                    <!--                        <hr>-->
-                    <!--                        <div class="calendar-check-in">-->
-                    <!---->
-                    <!--                        </div>-->
-                    <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-
+                <div class="search-check-out testing">
+                    <input type="date" value="Check Out">
                 </div>
 
-                <div class="guests">
-                    <button id = "guests">Guests</button>
-
+                <div class="search-guests testing">
+                    <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
                 </div>
 
-                <div class="search">
-                    <button id = "search">Search</button>
+                <div class="search-btn testing">
+                    <input type="button" onclick="alert('Work in progress')" value="Search">
                 </div>
             </div>
 
@@ -120,7 +73,7 @@
             </div>
         </div>
     </main>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
     <footer class="bottom">
         <div class="bottom-container">

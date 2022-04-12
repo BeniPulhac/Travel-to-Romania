@@ -46,9 +46,9 @@
                 <h4>Sign In</h4>
                 <form>
                     <label for="email"></label>
-                    <input type="text" id="email" name="email" autocomplete="off" placeholder="Email"><br>
+                    <input type="email" id="email" name="email" autocomplete="off" placeholder="Email"><br>
                     <label for="password"></label>
-                    <input type="text" id="password" name="password" autocomplete="off" placeholder="Password"><br>
+                    <input type="password" id="password" name="password" autocomplete="off" placeholder="Password"><br>
                 </form>
                 <div class="remeber-forget">
                     <form action="">
