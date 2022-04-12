@@ -46,31 +46,32 @@
 
     <main class="ctn">
         <div class="ctn-container">
-            <div class = "ctn-search">
-                <div class="search-check-in testing">
-                    <input type="date" value="Check In">
+<!--            -->
+            <div class="search-bar">
+                <div class="search-nav">
+
+                        <div class="search-check-in search-equal"><span>Check In</span></div>
+
+                        <div class="search-check-out search-equal"><span>Check Out</span></div>
+
+                        <div class="search-guest search-equal"><span>Guests</span></div>
+
                 </div>
 
-                <div class="search-check-out testing">
-                    <input type="date" value="Check Out">
-                </div>
-
-                <div class="search-guests testing">
-                    <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
-                </div>
-
-                <div class="search-btn testing">
-                    <input type="button" onclick="alert('Work in progress')" value="Search">
+                <div class="search-btn">
+                    <div class="testing">
+                        <span>Search</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="ctn-search-results">
-
-            </div>
-
-            <div class="ctn-top-picks">
-
-            </div>
+<!--            <div class="ctn-search-results">-->
+<!---->
+<!--            </div>-->
+<!---->
+<!--            <div class="ctn-top-picks">-->
+<!---->
+<!--            </div>-->
         </div>
     </main>
 
