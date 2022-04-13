@@ -47,15 +47,15 @@
     <main class="ctn">
         <section class="ctn-container">
             <div class="container-log-in">
-                <div class="container-aligne">
+                <div class="container-align">
                     <div class="container-title">
                         <span class="container-title-modifier">Sing In</span>
                     </div>
 
                     <div class="container-box">
                         <div class="container-box-input">
-                            <input type="email" autocomplete="off" placeholder="  Email" class="input-sign-in">
-                            <input type="password" autocomplete="off" placeholder="  Password" class="input-sign-in">
+                            <input type="email" autocomplete="off" placeholder="  Email" class="input-sign-in first">
+                            <input type="password" autocomplete="off" placeholder="  Password" class="input-sign-in second">
                         </div>
 
                         <div class="container-box-remember">
@@ -67,9 +67,13 @@
                             <a href="#" onclick="showResetPasswordForm(); return false" id="new-password-link" class="forget-password">Forget Password?</a>
                         </div>
 
-                        <div class="testing">
+                        <div class="button-box">
+                            <button class="button-text" type="submit">Sign In</button>
+                        </div>
+
+                        <div class="line">
                             <hr>
-                            <span class="testing2">or</span>
+                            <span class="line-text">or</span>
                         </div>
                     </div>
                 </div>

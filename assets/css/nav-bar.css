@@ -73,13 +73,13 @@
 }
 
                 /*Media Quarry*/
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 576px) {     /*important*/
     .navigation-container {
         width: 576px;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {     /*important*/
     .navigation-container {
         width: 768px;
     }
@@ -96,7 +96,7 @@
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {        /*important*/
     .navigation-container {
         width: 1200px;
     }
