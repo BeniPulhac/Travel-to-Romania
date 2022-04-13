@@ -66,6 +66,11 @@
 
                             <a href="#" onclick="showResetPasswordForm(); return false" id="new-password-link" class="forget-password">Forget Password?</a>
                         </div>
+
+                        <div class="testing">
+                            <hr>
+                            <span class="testing2">or</span>
+                        </div>
                     </div>
                 </div>
 

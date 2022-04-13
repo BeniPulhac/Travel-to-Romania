@@ -74,7 +74,7 @@ body {
     display: flex;
     flex-direction: column;
     /*justify-content: space-between;*/
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
 }
 
 .container-box-input {
@@ -99,4 +99,17 @@ body {
     justify-content: space-between;
     padding: 7px 0;
     margin: 0 10px;
+}
+
+.testing {
+    position: relative;
+}
+
+.testing2 {
+    position: absolute;
+    width: 5%;
+    background-color: white;
+    text-align: center;
+    top: -13px;
+    margin: 0 47.5%;
 }

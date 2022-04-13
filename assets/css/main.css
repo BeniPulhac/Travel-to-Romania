@@ -137,9 +137,23 @@ body {
 
 .travel-ul {
     padding: 1em;
+    /*list-style-type: none;*/
 }
+
+/*.trave-ul .ctn-list:before {*/
+/*    content: "";*/
+/*    background: url("../images/checkmark.png");*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    position: absolute;*/
+/*}*/
 
 .ctn-list {
     font-size: .75rem;
     padding-bottom: .5em;
+    display: flex;
+}
+
+.p-absolute {
+    padding: 2px 5px;
 }

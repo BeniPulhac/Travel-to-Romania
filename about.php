@@ -67,15 +67,15 @@
                     </div>
 
                     <form class="feedback" action="">
-                        <div class="pers-subtitle">Your personal info</div>
+                        <div class="prs-subtitle">Your personal info</div>
                         <div class="group-box">
-                            <input type="text" class="name" name="name" placeholder="Your Name">
-                            <input type="email" class="email" name="email" placeholder="Email">
+                            <input type="text" class="prs-info" name="name" placeholder="Your Name">
+                            <input type="email" class="prs-info" name="email" placeholder="Email">
                         </div>
 
                         <div class="rate-subtitle">Rate our overall services</div>
                         <div class="rate-box">
-                            <input class="rate-input" type="number" min="1" max="5">
+                            <input class="rate-input" type="number" min="1" max="5" placeholder="1-5">
                         </div>
 
                         <div class="write-feedback">Write your feedback</div>

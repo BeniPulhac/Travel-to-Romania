@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/general.css">
+
+    <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navigation">
@@ -64,9 +66,18 @@
                         <p class="ctn-sub-title">Keep yourself and others safe</p>
 
                         <ul class="travel-ul">
-                            <li class="ctn-list">If you develop symptoms or test positive for COVID-19, self-isolate until you recover.</li>
-                            <li class="ctn-list">Wear a properly fitted mask when physical distancing is not possible and in poorly ventilated settings.</li>
-                            <li class="ctn-list">Keep physical distance of at least 1 metre from others, even if they don’t appear to be sick. Avoid crowds and close contact.</li>
+                            <li class="ctn-list p-relative">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                If you develop symptoms or test positive for COVID-19, self-isolate until you recover.
+                            </li>
+                            <li class="ctn-list">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                Wear a properly fitted mask when physical distancing is not possible and in poorly ventilated settings.
+                            </li>
+                            <li class="ctn-list">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                Keep physical distance of at least 1 metre from others, even if they don’t appear to be sick. Avoid crowds and close contact.
+                            </li>
                         </ul>
                     </div>
 
@@ -74,18 +85,28 @@
                         <p class="ctn-sub-title">What to do if you feel unwell</p>
 
                         <ul class="travel-ul">
-                            <li class="ctn-list">If you have a fever, cough and difficulty breathing, seek medical attention immediately. Call by telephone first and follow the directions of your local health authority.</li>
-                            <li class="ctn-list">Know the full range of symptoms of COVID-19. The most common symptoms of COVID-19 are fever, dry cough, tiredness and loss of taste or smell. Less common symptoms include aches and pains, headache, sore throat, red or irritated eyes, diarrhoea,  a skin rash or discolouration of fingers or toes.</li>
-                            <li class="ctn-list">Stay home and self-isolate for 10 days from symptom onset, plus three days after symptoms cease. Call your health care provider or hotline for advice. Have someone bring you supplies. If you need to leave your house or have someone near you, wear a properly fitted mask to avoid infecting others</li>
-                            <li class="ctn-list">Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Local and national authorities and public health units are best placed to advise on what people in your area should be doing to protect themselves.</li>
+                            <li class="ctn-list p-relative">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                If you have a fever, cough and difficulty breathing, seek medical attention immediately. Call by telephone first and follow the directions of your local health authority.
+                            </li>
+                            <li class="ctn-list">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                Know the full range of symptoms of COVID-19. The most common symptoms of COVID-19 are fever, dry cough, tiredness and loss of taste or smell. Less common symptoms include aches and pains, headache, sore throat, red or irritated eyes, diarrhoea,  a skin rash or discolouration of fingers or toes.
+                            </li>
+                            <li class="ctn-list">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                Stay home and self-isolate for 10 days from symptom onset, plus three days after symptoms cease. Call your health care provider or hotline for advice. Have someone bring you supplies. If you need to leave your house or have someone near you, wear a properly fitted mask to avoid infecting others
+                            </li>
+                            <li class="ctn-list">
+                                <i class="fa-solid fa-check p-absolute"></i>
+                                Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Local and national authorities and public health units are best placed to advise on what people in your area should be doing to protect themselves.
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer class="bottom">
         <div class="bottom-container">
