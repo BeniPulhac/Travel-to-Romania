@@ -1,112 +1,144 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
+/*
+                General
+*/
 body {
     background-color: #f2f2f2;
     position: relative;
     /*margin: 1.5em;*/
 }
-
-.hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /*background-image: url("../images/bkg-contact.jpg");*/
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+/*
+                Head
+*/
+.head {
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    padding-top: 71px;
 }
 
-main {
+.head-title {
+    width: 90%;
+    margin: auto;
+    padding: 1em 0;
+    background-color: white;        /*Test*/
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+.ctn {
+    width: 100%;
+    height: 70vh;
+}
+
+.container {
+    width: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 5em 0;
+    margin: auto;
 }
 
 .help-center {
     display: flex;
     flex-direction: column;
     padding: 3em;
-    background-color: #fff;
-    text-align: left;
-    border: 1px solid #e6e6e6;
-    border-radius: 2px;
-
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 50%;
+    margin: 20px auto;
 }
 
 .help-center-title {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .help-center-subtitle {
     width: 50%;
+    padding: 10px 0;
 }
 
 .ways-of-contact {
     display: flex;
+    flex-direction: row;
+    border: 1px solid black;
 }
 
 .contact-email {
     padding: 1em;
     width: 50%;
+    border-right: 1px solid black;
+    cursor: pointer;
 }
 
 .contact-email-top {
     display: flex;
+    align-items: center;
 }
 
-.help-center-title {
-    text-align: center;
+.contact-email-title {
+    margin: 0 5px;
+    border-bottom: 1px solid black;
 }
 
 .contact-email-text {
     display: flex;
     justify-content: center;
+    padding: 5px 0;
 }
 
 .contact-phone {
     padding: 1em;
     width: 50%;
+    cursor: pointer;
 }
 
 .contact-phone-top {
     display: flex;
+    align-items: center;
+}
+
+.contact-phone-title {
+    margin: 0 5px;
+    border-bottom: 1px solid black;
 }
 
 .contact-phone-text {
     display: flex;
     justify-content: center;
+    padding: 5px 0;
 }
 
 .contact-days {
     font-weight: 550;
 }
-                /*Contact Button*/
+/*
+                Contact Button
+*/
 .contact-log-in {
     display: flex;
     justify-content: space-around;
+
 }
 
 .btn-contact-log-in {
-    margin-top: 1em;
+    margin: 1em 0;
     width: 100%;
     height: 3em;
     font-size: 1.2rem;
     cursor: pointer;
+
 }
 
-                /*Contact Email Box*/
+/*
+                Contact Email Box
+*/
 .contact-email-box {
     display: none;
 }
 
-                /*Contact Phone Box*/
+/*
+                Contact Phone Box
+*/
 .contact-phone-box {
     display: none;
 }

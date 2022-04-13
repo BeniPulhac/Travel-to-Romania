@@ -48,7 +48,7 @@ body {
 
 .ctn-container {
     width: 90%;
-    background-color: #d9dacb; /*Test*/
+    /*background-color: #d9dacb; !*Test*!*/
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -113,16 +113,14 @@ body {
 */
 .container-right{
     width: 40%;
-    background-color: #fbfbfb;
     margin: auto;
-    /*test*/
     display: flex;
     flex-direction: column;
 }
 
 .review-title {
     padding: 2px 15px;
-    color: #ff4d4d;
+    color: #d57d7d;
     text-align: center;
 }
 
@@ -143,9 +141,11 @@ body {
     box-shadow: #e6e6e6 0 0 4px ;
     border-radius: 0.25rem;
 }
-
-.prs-subtitle {
-    margin: 8px auto;
+/*
+                Your Info
+*/
+.title-equal {
+    margin: 4px auto;
     line-height: 1.5;
 }
 
@@ -154,4 +154,38 @@ body {
     flex-direction: column;
 }
 
-.
+.prs-info {
+    padding: 5px;
+    margin: 4px 0;
+}
+/*
+                Feedback Box
+*/
+.write-box {
+    padding: 4px 0;
+    display: block;
+    width: 100%;
+}
+
+.write-area {
+    width: 100%;
+    resize: vertical;
+}
+/*
+                Submit Button
+*/
+
+.feedback-btn {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+}
+
+.feedback-btn:hover {
+    color: #fff;
+    background-color: #025aa5;
+    border-color: #01549b;
+}

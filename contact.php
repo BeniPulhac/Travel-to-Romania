@@ -15,6 +15,8 @@
     <link rel = "stylesheet" href = "assets/css/nav-bar.css">
     <link rel = "stylesheet" href = "assets/css/header.css">
     <link rel = "stylesheet" href = "assets/css/footer.css">
+
+    <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navigation">
@@ -35,16 +37,13 @@
         </div>
     </nav>
 
-    <header  id="anchor-scroll-up">
-        <h1>We want to hear from you</h1>
+    <header  id="anchor-scroll-up" class="head">
+        <h1 class="head-title">We want to hear from you</h1>
 
     </header>
 
-
-
-    <div class = "hero-img"></div>
-
-    <main>
+    <main class="ctn">
+        <div class="container">
             <section class="help-center">
                 <h2 class="help-center-title">Help Center</h2>
                 <hr>
@@ -54,68 +53,68 @@
                     <h4>You have any problems within our website?</h4>
                     <p>Please sign in to contact Customer Service</p>
                 </div>
-                <hr>
+
                 <div class="ways-of-contact">
-                    <hr>
+
                     <div class="contact-email">
                         <div class="contact-email-top">
-                            <img src="assets/images/email.png" alt="Email Icon">
-                            <h4>Email Us</h4>
+                            <i class="fa-solid fa-envelope"></i>
+                            <h4 class="contact-email-title">Email Us</h4>
                         </div>
 
                         <div class="contact-email-text">
                             <p>Feel free to contact us via email at any time</p>
                         </div>
                     </div>
-                    <hr>
+
                     <div class="contact-phone">
                         <div class="contact-phone-top">
-                            <img src="assets/images/call.png" alt="Phone Icon">
-                            <h4>Call Us</h4>
+                            <i class="fa-solid fa-phone"></i>
+                            <h4 class="contact-phone-title">Call Us</h4>
                         </div>
 
                         <div class="contact-phone-text">
                             <p>For anything urgent, you can call us <br> <span class="contact-days">Mon-Fri</span> <br> 8:00 AM - 17:00 PM</p>
                         </div>
                     </div>
-                    <hr>
+
                 </div>
-                <hr>
+
 
                 <div class="contact-log-in">
-                    <button class="btn-contact-log-in">Log In</button>
+                    <button class="btn-contact-log-in" type="button">Log In</button>
                 </div>
             </section>
 
-        <section class="contact-email-box">
-            <div class="contact-title">
-                <h1 class = "contact-us" >Contact Us via Email</h1>
-                <hr>
-            </div>
+            <section class="contact-email-box">
+                <div class="contact-title">
+                    <h1 class = "contact-us" >Contact Us via Email</h1>
+                    <hr>
+                </div>
 
-            <div class="container-form">
-                <form>
-                    <label for="name">Your Name</label><br>
-                    <input type="text" id="name" name="name" autocomplete="off"><br>
-                    <label for="email">Your Email Address</label><br>
-                    <input type="text" id="email" name="email" autocomplete="off"><br>
-                    <label for="message">Your Message</label><br>
-                    <textarea name="message" id="message" rows="5"></textarea><br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
+                <div class="container-form">
+                    <form>
+                        <label for="name">Your Name</label><br>
+                        <input type="text" id="name" name="name" autocomplete="off"><br>
+                        <label for="email">Your Email Address</label><br>
+                        <input type="text" id="email" name="email" autocomplete="off"><br>
+                        <label for="message">Your Message</label><br>
+                        <textarea name="message" id="message" rows="5"></textarea><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
 
-        <section class="contact-phone-box">
-            <div class="contact-title">
-                <h1 class = "contact-us" >Contact Us via Phone</h1>
-                <hr>
-            </div>
-            <div class="cotainer-phone">
-                <p><span class="bold">Tel:</span>+447308352501</p>
-            </div>
-        </section>
-
+            <section class="contact-phone-box">
+                <div class="contact-title">
+                    <h1 class = "contact-us" >Contact Us via Phone</h1>
+                    <hr>
+                </div>
+                <div class="cotainer-phone">
+                    <p><span class="bold">Tel:</span>+447308352501</p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="bottom">
