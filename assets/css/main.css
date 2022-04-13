@@ -48,7 +48,7 @@ body {
 .head-para {
     text-indent: 3em;
     text-align: justify;
-    letter-spacing: .1rem;
+    letter-spacing: 2px;
 }
 
 /*              <--Main-->

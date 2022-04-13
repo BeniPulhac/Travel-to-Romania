@@ -55,21 +55,36 @@
                     </div>
 
                     <div class="about-prg">
-                        <p class="prg-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magnam qui sequi. Amet dolores excepturi expedita, minus molestias nulla perferendis quaerat, quos rerum saepe sed sint temporibus tenetur, ullam veritatis.</p>
-                        <p class="prg-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cupiditate debitis earum est harum id iste, odit perferendis porro provident quae ratione repudiandae, sit sunt ullam vitae? Amet, possimus.</p>
+                        <p class="prg-right prg-equal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magnam qui sequi. Amet dolores excepturi expedita, minus molestias nulla perferendis quaerat, quos rerum saepe sed sint temporibus tenetur, ullam veritatis.</p>
+                        <p class="prg-left prg-equal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cupiditate debitis earum est harum id iste, odit perferendis porro provident quae ratione repudiandae, sit sunt ullam vitae? Amet, possimus.</p>
                     </div>
                 </div>
 
                 <div class="container-right">
-                    <div class="review-title">
-                        
-                    </div>
-                    
-                    <div class="review-prg">
-                        
+                    <div class="review-title-container">
+                        <h2 class="review-title">WE APPRECIATE YOUR REVIEW!</h2>
+                        <h6 class="review-subtitle">Your review will help us to improve our web hosting quality products, and customer services.</h6>
                     </div>
 
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <form class="feedback" action="">
+                        <div class="pers-subtitle">Your personal info</div>
+                        <div class="group-box">
+                            <input type="text" class="name" name="name" placeholder="Your Name">
+                            <input type="email" class="email" name="email" placeholder="Email">
+                        </div>
+
+                        <div class="rate-subtitle">Rate our overall services</div>
+                        <div class="rate-box">
+                            <input class="rate-input" type="number" min="1" max="5">
+                        </div>
+
+                        <div class="write-feedback">Write your feedback</div>
+                        <div class="write-box">
+                            <textarea class="write-area" id="review" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="feedback-btn">Submit</button>
+                    </form>
                 </div>
             </div>
 
@@ -79,7 +94,7 @@
 
         </div>
     </main>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <footer class="bottom">
         <div class="bottom-container">
             <div class="bottom-left bottom-center">
