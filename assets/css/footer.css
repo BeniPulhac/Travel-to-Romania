@@ -67,7 +67,7 @@
 
 .bottom-ul {
     list-style-type: none;
-    padding: 0 2em;
+    /*padding: 0 2em;*/     /*Test*/
     width: fit-content;
 }
 
@@ -137,9 +137,18 @@
 }
 
 @media only screen and (min-width: 1600px) {
-
     .bottom-container {
         width: 1600px;
+    }
+
+    .bottom-ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bottom-link {
+        margin: 20px;
+        padding: 2em 0;
     }
 }
 

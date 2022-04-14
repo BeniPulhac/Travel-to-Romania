@@ -14,3 +14,36 @@ header {
     margin-left: 4em;
     margin-top: 2em;
 }
+
+/*
+                Media Quarry
+*/
+@media only screen and (min-width: 576px) {     /*important*/
+    .head-container {
+        width: 576px;
+    }
+}
+
+@media only screen and (min-width: 768px) {     /*important*/
+    .head-container {
+        width: 768px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .head-container {
+        width: 992px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {        /*important*/
+    .head-container {
+        width: 1200px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .head-container {
+        width: 1600px;
+    }
+}
