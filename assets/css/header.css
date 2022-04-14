@@ -18,21 +18,29 @@ header {
 /*
                 Media Quarry
 */
-@media only screen and (min-width: 576px) {     /*important*/
+@media only screen and (max-width: 576px) {     /*important*/
     .head-container {
-        width: 576px;
+        /*width: 576px;       Testing*/
+    }
+
+    .head-title {
+        font-size: 2rem;
+    }
+
+    .head-para {
+        font-size: .9rem;
     }
 }
 
-@media only screen and (min-width: 768px) {     /*important*/
+@media only screen and (max-width: 768px) {     /*important*/
     .head-container {
-        width: 768px;
+        /*width: 768px;       Testing*/
     }
 }
 
 @media only screen and (min-width: 992px) {
     .head-container {
-        width: 992px;
+        /*width: 992px;       Testing*/
     }
 }
 

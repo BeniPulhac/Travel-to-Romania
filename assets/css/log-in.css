@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    height: 100vh;
+    height: 1000vh;
 }
 /*
                 Log In
@@ -134,4 +134,16 @@ body {
     text-align: center;
     top: -13px;
     margin: 0 47.5%;
+}
+/*
+                Sign Up
+*/
+.container-sign-up {
+
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    width: 30%;
+
 }

@@ -58,7 +58,7 @@
 
             <div class="ctn-travel">
                 <div class="ctn-travel-title">
-                    <h2>Travel Safe during COVID-19</h2>
+                    <h3 class="change-font">Travel Safe during COVID-19</h3>
                 </div>
 
                 <div class="ctn-travel-container">

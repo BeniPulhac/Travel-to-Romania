@@ -74,15 +74,15 @@
 /*
                 Media Quarry
 */
-@media only screen and (min-width: 576px) {     /*important*/
+@media only screen and (max-width: 576px) {     /*important*/
     .navigation-container {
-        width: 576px;
+        /*width: 576px;*/
     }
 }
 
-@media only screen and (min-width: 768px) {     /*important*/
+@media only screen and (max-width: 768px) {     /*important*/
     .navigation-container {
-        width: 768px;
+        /*width: 768px;*/
     }
 
     .li {
@@ -90,9 +90,9 @@
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
     .navigation-container {
-        width: 992px;
+        /*width: 992px;*/
 
     }
 }
