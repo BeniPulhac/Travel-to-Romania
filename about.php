@@ -19,19 +19,20 @@
 <body>
     <nav class="navigation">
         <div class="navigation-container">
-            <a href="index.php">
-                <img src="assets/images/logo.png" class="navigation-logo" alt="Logo">
-            </a>
+            <a href="index.php"><img src="assets/images/logo.png" class="navigation-logo" alt="Logo"></a>
+
+            <div class="nav-bar">
+                <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close">
+
+                <ul class="navigation-ul">
+                    <li class="navigation-li"><a class="navigation-a" href="hotels.php">Hotels</a></li>
+                    <li class="navigation-li"><a class="navigation-a" href="attractions.php">Attractions</a></li>
+                    <li class="navigation-li active"><a class="navigation-a" href="about.php">About</a></li>
+                    <li class="navigation-li"><button class="navigation-button"><a href="log-in.php" class="navigation-log-in">Log In</a></button></li>
+                </ul>
+            </div>
 
             <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="navigation-menu">
-
-            <ul class="navigation-ul">
-                <li class="navigation-li"><a class="navigation-a" href="hotels.php">Hotels</a></li>
-                <li class="navigation-li"><a class="navigation-a" href="attractions.php">Attractions</a></li>
-                <li class="navigation-li"><a class="navigation-a active" href="about.php">About</a></li>
-                <li class="navigation-li"><button class="navigation-button"><a href="log-in.php" class="navigation-log-in">Log In</a></button></li>
-            </ul>
-            <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close">
         </div>
     </nav>
 

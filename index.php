@@ -21,19 +21,20 @@
 <body>
     <nav class="navigation">
         <div class="navigation-container">
-            <a href="index.php">
-                <img src="assets/images/logo.png" class="navigation-logo" alt="Logo">
-            </a>
+            <a href="index.php"><img src="assets/images/logo.png" class="navigation-logo" alt="Logo"></a>
+
+            <div class="nav-bar">
+                <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close">
+
+                <ul class="navigation-ul">
+                    <li class="navigation-li"><a class="navigation-a" href="hotels.php">Hotels</a></li>
+                    <li class="navigation-li"><a class="navigation-a" href="attractions.php">Attractions</a></li>
+                    <li class="navigation-li"><a class="navigation-a" href="about.php">About</a></li>
+                    <li class="navigation-li"><button class="navigation-button"><a href="log-in.php" class="navigation-log-in">Log In</a></button></li>
+                </ul>
+            </div>
 
             <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="navigation-menu">
-
-            <ul class="navigation-ul">
-                <li class="navigation-li"><a class="navigation-a" href="hotels.php">Hotels</a></li>
-                <li class="navigation-li"><a class="navigation-a" href="attractions.php">Attractions</a></li>
-                <li class="navigation-li"><a class="navigation-a" href="about.php">About</a></li>
-                <li class="navigation-li"><button class="navigation-button"><a href="log-in.php" class="navigation-log-in">Log In</a></button></li>
-            </ul>
-            <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close">
         </div>
     </nav>
 
@@ -110,24 +111,25 @@
 
     <footer class="bottom">
         <div class="bottom-container">
-            <div class="bottom-left bottom-center">
-                <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
-            </div>
 
-            <div class="bottom-middle bottom-center">
-                <button class="bottom-scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="bottom-scroll-modifier">Scroll Up</a></button>
-                <span class="bottom-copyright">© 2022 Travel to Romania</span>
-            </div>
+                <div class="bottom-left bottom-center">
+                    <span>Travel to Romania is a website design to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+                </div>
 
-            <div class="bottom-right bottom-center">
-                <ul class="bottom-ul">
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="index.php">Home</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="hotels.php">Hotels</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="attractions.php">Attractions</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="contact.php">Contact</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="about.php">About</a></li>
-                </ul>
-            </div>
+                <div class="bottom-middle bottom-center">
+                    <button class="bottom-scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="bottom-scroll-modifier">Scroll Up</a></button>
+                    <span class="bottom-copyright">© 2022 Travel to Romania</span>
+                </div>
+
+                <div class="bottom-right bottom-center">
+                    <ul class="bottom-ul">
+                        <li class="bottom-link"><a class="bottom-link-modifier" href="index.php">Home</a></li>
+                        <li class="bottom-link"><a class="bottom-link-modifier" href="hotels.php">Hotels</a></li>
+                        <li class="bottom-link"><a class="bottom-link-modifier" href="attractions.php">Attractions</a></li>
+                        <li class="bottom-link"><a class="bottom-link-modifier" href="contact.php">Contact</a></li>
+                        <li class="bottom-link"><a class="bottom-link-modifier" href="about.php">About</a></li>
+                    </ul>
+                </div>
         </div>
     </footer>
 <script src="assets/js/main.js"></script>

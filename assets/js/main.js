@@ -1,7 +1,7 @@
         //Declaretions
-const menu = document.querySelector('.menu')
-const close = document.querySelector('.close')
-const nav = document.querySelector('nav')
+const menu = document.querySelector('.navigation-menu')
+const close = document.querySelector('.navigation-close')
+const nav = document.querySelector('.nav-bar')
 
         //Events
 menu.addEventListener('click', () => {

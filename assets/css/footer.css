@@ -114,6 +114,8 @@
         margin: 0 auto;
         padding-top: .5em;
     }
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -145,10 +147,10 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .bottom-container {
-        /*width: 1200px;      Testing*/
+    /*.bottom-container {*/
+    /*    width: 90%;      !*Testing*!*/
 
-    }
+    /*}*/
 }
 
 @media only screen and (max-width: 1199px) {
@@ -160,6 +162,8 @@
 }
 
 @media only screen and (min-width: 1200px) {
+
+
     .bottom-container {
         width: 1200px;      /*Testing*/
     }
@@ -172,6 +176,7 @@
 }
 
 @media only screen and (min-width: 1600px) {
+
     .bottom-container {
         width: 1600px;      /*Testing*/
     }
