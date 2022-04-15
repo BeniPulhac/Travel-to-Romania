@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    height: 1000vh;
+    height: 100vh;
 }
 /*
                 Log In
@@ -112,7 +112,6 @@ body {
 .button-box {
     display: flex;
     justify-content: center;
-    background-color: blue;
     /*margin: 10px 0;*/  /*Testing*/
     border-radius: 7px;
 }
@@ -146,4 +145,216 @@ body {
     background-color: white;
     width: 30%;
 
+}
+
+@media only screen and (max-width: 439px) {
+    .container-log-in {
+        border: none;
+        border-radius: 0;
+        width: auto;
+    }
+
+    .container-align {
+        width: 80%;
+    }
+
+    .container-title {
+        padding: 0 0 .5em 0;
+        font-size: 1.5rem;
+    }
+
+    .container-box-input {
+        flex-direction: column;
+    }
+
+    .input-equal {
+        margin: 0 auto .5em auto;
+        width: 70%;
+    }
+
+    .container-box-remember {
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .remember {
+        padding-bottom: .5em;
+    }
+
+    .button-box {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .button-text {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 440px) and (max-width: 576px) {
+    /*
+                    Header
+    */
+    .head-container {
+        width: 100%;
+    }
+
+    .head-prg {
+        margin: 0;
+        text-indent: 1em;
+    }
+
+    /*
+                    Main
+    */
+    .container-log-in {
+        border: none;
+        border-radius: 0;
+        width: auto;
+    }
+
+    .container-align {
+        width: 80%;
+    }
+
+    .container-title {
+        padding: 0 0 .5em 0;
+        font-size: 1.5rem;
+    }
+
+    .container-box-input {
+        flex-direction: column;
+    }
+
+    .input-equal {
+        margin: 0 auto .5em auto;
+        width: 70%;
+    }
+
+    .container-box-remember {
+        padding: 1em 0;
+    }
+
+    .button-box {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .button-text {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    /*
+                    Header
+    */
+    .head-container {
+        width: 100%;
+    }
+
+    .head-prg {
+        margin: 0;
+        text-align: center;
+    }
+    /*
+                    Main
+    */
+    .container-log-in {
+        width: 70%;
+        margin-bottom: 5em;
+    }
+
+    .input-equal {
+        width: 45%;
+    }
+
+    .container-box-remember {
+        padding: 1em 0;
+    }
+
+    .button-box {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .container-title-modifier {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px){
+    .container-log-in {
+        width: 50%;
+        margin-bottom: 5em;
+    }
+
+    .input-equal {
+        width: 45%;
+    }
+
+    .container-box-remember {
+        padding: 1em 0;
+    }
+
+    .remember-equal {
+        width: 50%;
+    }
+
+    .remember {
+        text-align: center;
+    }
+
+    .forget-password {
+        text-align: center;
+    }
+
+    .button-box {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .container-title-modifier {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ctn {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .container-log-in {
+        width: 60%;
+        margin-bottom: 30vh;
+    }
+
+    .input-equal {
+        width: 45%;
+    }
+
+    .container-box-remember {
+        padding: 1em 0;
+    }
+
+    .button-box {
+        width: 60%;
+        margin: 0 auto .5em auto;
+    }
+    .container-title-modifier {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .ctn {
+        width: 1600px;
+    }
+
+    .container-log-in {
+        width: 40%;
+    }
 }

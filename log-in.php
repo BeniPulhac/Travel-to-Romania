@@ -46,7 +46,6 @@
         <div class="hero-img"></div>
 
     <main class="ctn">
-        <section class="ctn-container">
             <div class="container-log-in">
                 <div class="container-align">
                     <div class="container-title">
@@ -55,17 +54,17 @@
 
                     <div class="container-box">
                         <div class="container-box-input">
-                            <input type="email" autocomplete="off" placeholder="  Email" class="input-sign-in first">
-                            <input type="password" autocomplete="off" placeholder="  Password" class="input-sign-in second">
+                            <input type="email" autocomplete="off" placeholder="  Email" class="input-sign-in first input-equal">
+                            <input type="password" autocomplete="off" placeholder="  Password" class="input-sign-in second input-equal">
                         </div>
 
                         <div class="container-box-remember">
-                            <div class="remember">
+                            <div class="remember remember-equal">
                                 <input type="checkbox" id="keepSignIn" value="Remember">
                                 <label for="keepSignIn">Keep me signed in</label>
                             </div>
 
-                            <a href="#" onclick="showResetPasswordForm(); return false" id="new-password-link" class="forget-password">Forget Password?</a>
+                            <a href="#" onclick="showResetPasswordForm(); return false" id="new-password-link" class="forget-password remember-equal">Forget Password?</a>
                         </div>
 
                         <div class="button-box">
@@ -86,7 +85,6 @@
 <!---->
 <!--            </div>-->
 
-        </section>
     </main>
 
     <footer class="bottom">
