@@ -38,7 +38,7 @@ body {
 
 .ctn-container {
     width: 90%;
-    background-color: #b2c6b6; /*Test*/
+    background-color: rgb(178, 198, 182); /*Test*/
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -48,6 +48,7 @@ body {
     width: 60%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     /*justify-content: space-between;*/
     padding: 1em;
     background-color: white;
@@ -63,6 +64,7 @@ body {
     width: 60%;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     /*justify-content: space-between;*/
     padding: 1em;
     background-color: white;
@@ -101,7 +103,7 @@ body {
 .container-title {
     padding: .5rem;
     text-indent: 3em;
-    font-size: large;
+    font-size: 1.5rem;
 }
 
 .container-description {
@@ -109,4 +111,82 @@ body {
     text-align: justify;
     letter-spacing: .1rem;
     border-top: 1px solid black;
+}
+
+@media only screen and (max-width: 576px) {
+    /*
+                     Header
+     */
+    .head-container {
+        width: 100%;
+        padding: 0 .5em;
+    }
+
+    .head-title {
+        padding: 0;
+        margin: 0;
+        text-indent: .5em;
+    }
+    /*
+                    Main
+    */
+    .container-equal {
+        width: 100%;
+        padding: 0;
+        flex-direction: column-reverse;
+        margin: 1em auto;
+        border-radius: 0;
+        align-items: center;
+    }
+
+    .container-img {
+        object-fit: cover;
+        width: 70%;
+    }
+
+    .container-title {
+        text-indent: 0;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    /*
+                    Head
+    */
+    .head-title {
+        margin: 0;
+        text-align: center;
+    }
+    /*
+                    Main
+    */
+    .ctn-container {
+        width: 100%
+    }
+
+    .container-title {
+        font-size: 1.2rem;
+    }
+
+    .container-equal {
+        width: 70%;
+    }
+
+    .container-right-text {
+        padding: 0 1em 0 0;
+    }
+
+    .container-left-text {
+        padding: 0 0 0 1em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1600px) {
+
 }

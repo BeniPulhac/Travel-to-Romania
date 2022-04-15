@@ -44,12 +44,10 @@
         </div>
     </header>
 
-    <div class="hero-img"></div>
-
     <main class="ctn">
         <section class="ctn-container">
 
-            <div class="container-right">
+            <div class="container-right container-equal">
                 <div class="container-right-text">
                     <p class="container-title">Cities</p>
                     <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
@@ -57,7 +55,7 @@
                 <img src="assets/images/cities-small.jpg" alt="cities" class="container-img">
             </div>
 
-            <div class="container-left">
+            <div class="container-left container-equal">
                 <div class="container-left-text">
                     <p class="container-title">Restaurants</p>
                     <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
@@ -65,7 +63,7 @@
                 <img src="assets/images/restaurants-small.jpg" alt="restaurants" class="container-img">
             </div>
 
-            <div class="container-right">
+            <div class="container-right container-equal">
                 <div class="container-right-text">
                     <p class="container-title">Landscapes</p>
                     <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque dolorum enim est illo, in incidunt laudantium magni perspiciatis quae, quam quasi ratione rem reprehenderit sapiente, soluta unde ut? Similique?</p>
@@ -73,7 +71,7 @@
                 <img src="assets/images/landscapes-small.jpg" alt="landscapes" class="container-img">
             </div>
 
-            <div class="container-left">
+            <div class="container-left container-equal">
                 <div class="container-left-text">
                     <p class="container-title">Places to Visit</p>
                     <p class="container-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, autem culpa dolor esse incidunt pariatur sunt tempora tempore voluptatibus? Alias doloremque fuga fugiat incidunt ipsam minus perferendis recusandae rem tenetur!</p>
