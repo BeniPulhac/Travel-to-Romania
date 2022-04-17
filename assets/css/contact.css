@@ -25,7 +25,7 @@ body {
 
 .ctn {
     width: 100%;
-    height: 70vh;
+    height: auto;
 }
 
 .container {
@@ -142,4 +142,116 @@ body {
 .contact-phone-box {
     display: none;
 }
+/*
+                Media Quarry
+*/
 
+@media only screen and (max-width: 576px) {
+    /*
+                Head
+    */
+    .head-title {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        text-align: center;
+    }
+    /*
+                Main
+    */
+    .ctn {
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .help-center {
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        padding: 1em 0;
+    }
+
+    .help-center-subtitle {
+        width: 100%;
+        text-indent: 16px;
+    }
+
+    .ways-of-contact {
+        flex-direction: column;
+        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .contact-equal {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .5em;
+        text-indent: 1rem;
+    }
+
+    .contact-email {
+        border-bottom: 1px solid black;
+        border-right: none;
+    }
+
+    .contact-email-top {
+        justify-content: center;
+    }
+
+    .contact-phone-top {
+        justify-content: center;
+    }
+
+    .btn-contact-log-in {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .head-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ctn {
+        height: auto;
+    }
+
+    .help-center {
+        width: 70%;
+    }
+
+    .btn-contact-log-in {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .head {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .ctn {
+        width: 1200px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .head {
+        width: 1600px;
+        margin: auto;
+    }
+
+    .ctn {
+        width: 1600px;
+        margin: auto;
+    }
+}

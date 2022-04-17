@@ -57,7 +57,7 @@
 
                 <div class="ways-of-contact">
 
-                    <div class="contact-email">
+                    <div class="contact-email contact-equal">
                         <div class="contact-email-top">
                             <i class="fa-solid fa-envelope"></i>
                             <h4 class="contact-email-title">Email Us</h4>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-phone">
+                    <div class="contact-phone contact-equal">
                         <div class="contact-phone-top">
                             <i class="fa-solid fa-phone"></i>
                             <h4 class="contact-phone-title">Call Us</h4>
