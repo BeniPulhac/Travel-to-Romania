@@ -82,14 +82,136 @@
                     </div>
                 </div>
             </div>
+<!--Search Results-->
+            <div class="container-custom container border">
+                <div class="card-header-custom card-header"><h4>Search Results</h4></div>
 
-<!--            <div class="ctn-search-results">-->
-<!---->
-<!--            </div>-->
-<!---->
-<!--            <div class="ctn-top-picks">-->
-<!---->
-<!--            </div>-->
+                <div class="row-custom row row-cols-1 row-cols-md-2 g-4 m-auto align-content-center">
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus cumque deleniti, deserunt dolorem ducimus ipsa iste nihil non officia provident quidem recusandae, saepe, sequi soluta temporibus totam ullam velit?.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eos impedit quisquam reprehenderit sed tempore totam veritatis. A aliquam aut deleniti hic id minus necessitatibus voluptas voluptatem! Blanditiis, possimus, voluptas.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            -->
+
+ <!--Top Picks-->
+            <div class="container-custom container border">
+                <div class="card-header-custom card-header"><h4>Top Picks</h4></div>
+
+                <div class="row-custom row row-cols-1 row-cols-md-4 g-4 m-auto align-content-center">
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, provident quidem recusandae, saepe, sequi soluta temporibus totam ullam velit?.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="card-custom card text-dark bg-light mb-3 h-100">
+                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column justify-content-lg-between">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Insert km details</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            -->
+
         </div>
     </main>
 
