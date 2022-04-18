@@ -15,26 +15,41 @@
     <link rel = "stylesheet" href = "assets/css/nav-bar.css">
     <link rel = "stylesheet" href = "assets/css/header.css">
     <link rel = "stylesheet" href = "assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
 </head>
 <body>
-    <nav class="navigation">
-        <div class="navigation-container">
-            <a href="index.php"><img src="assets/images/logo.png" class="navigation-logo" alt="Logo"></a>
+    <div class="container fixed-top">
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.php">
+                    <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
+                </a>
 
-            <div class="nav-bar">
-                <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close">
+                <div class="navigation d-flex">
+                    <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close nav-icon-custom">
 
-                <ul class="navigation-ul">
-                    <li class="navigation-li"><a class="navigation-a" href="hotels.php">Hotels</a></li>
-                    <li class="navigation-li"><a class="navigation-a" href="attractions.php">Attractions</a></li>
-                    <li class="navigation-li active"><a class="navigation-a" href="about.php">About</a></li>
-                    <li class="navigation-li"><button class="navigation-button"><a href="log-in.php" class="navigation-log-in">Log In</a></button></li>
-                </ul>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item nav-item-custom">
+                            <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
+                        </li>
+                        <li class="nav-item nav-item-custom">
+                            <a class="nav-link nav-link-custom" href="attractions.php">Attractions</a>
+                        </li>
+                        <li class="nav-item nav-item-custom ">
+                            <a class="nav-link nav-link-custom active" aria-current="page" href="about.php">About</a>
+                        </li>
+                    </ul>
+
+                    <div class="navigation-btn btn-group">
+                        <button class="btn btn-light rounded-pill shadow-sm p-2 bg-body" data-bs-toggle="button" aria-pressed="true"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                        <button class="btn btn-light rounded-pill shadow p-2 bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
+                    </div>
+                </div>
+
+                <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="navigation-menu nav-icon-custom">
             </div>
-
-            <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="navigation-menu">
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <header  id="anchor-scroll-up" class="head">
         <div class="head-container">
@@ -49,7 +64,7 @@
     <main class="ctn">
         <div class="ctn-container">
 
-            <div class="container">
+            <div class="box">
                 <div class="container-left">
                     <div class="about-title">
                         <h2 class="about-title-left">About us</h2>
@@ -118,6 +133,7 @@
             </div>
         </div>
     </footer>
-<script src = "assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.js"></script>
 </body>
 </html>
