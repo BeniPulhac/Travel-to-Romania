@@ -21,16 +21,20 @@
 </head>
 <body>
     <div class="container fixed-top">
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-light navbar-expand-md">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
                     <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
                 </a>
 
-                <div class="navigation d-flex">
-                    <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close nav-icon-custom">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <ul class="nav justify-content-end">
+                <div class="navigation-custom collapse navbar-collapse navbar-light" id="navbarSupportedContent">
+                    <!--                    <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close nav-icon-custom">-->
+
+                    <ul class="nav-ul-custom nav justify-content-end">
                         <li class="nav-item nav-item-custom">
                             <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
                         </li>
@@ -43,12 +47,10 @@
                     </ul>
 
                     <div class="navigation-btn btn-group">
-                        <button class="btn btn-light rounded-pill shadow-sm p-2 bg-body" data-bs-toggle="button" aria-pressed="true"><a href="log-in.php" class="btn-custom">Log In</a></button>
-                        <button class="btn btn-light rounded-pill shadow p-2 bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                        <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
                     </div>
                 </div>
-
-                <img src="assets/images/hamburger-btn.png" alt="Open Menu" class="navigation-menu nav-icon-custom">
             </div>
         </nav>
     </div>
@@ -156,6 +158,7 @@
         </div>
     </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery.js"></script>
 </body>
 </html>

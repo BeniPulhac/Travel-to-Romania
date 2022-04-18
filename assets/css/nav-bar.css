@@ -8,15 +8,17 @@
 
 .navigation-custom {
     display: flex;
+    justify-content: flex-end;
 }
 
 .nav-link-custom {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .btn-custom {
     text-decoration: none;
     color: black;
+    font-size: 1rem;
 }
 
 .nav-icon-custom {
@@ -34,24 +36,16 @@
     display: none;
 }
 
+
+
 @media only screen and (max-width: 768px) {
     .navigation-custom {
-        display: none;
+        background-color: rgba(255, 255, 255, .6);
+        flex-direction: column;
     }
 
-    .navigation-menu {
-        display: unset;
-    }
-    /*
-                Side-Nav
-    */
-    .navigation-custom-right {
-        display: unset;
-        width: 50%;
-    }
-
-    .testing {
-        width: 50%;
+    .nav-ul-custom {
+        flex-direction: column;
     }
 }
 
