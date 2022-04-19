@@ -20,8 +20,8 @@
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-light fixed-top position-relative">
-        <div class="container-md">
+    <nav class="navbar navbar-light">
+        <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
                 <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
             </a>
@@ -74,7 +74,7 @@
         </div>
     </nav>
 
-    <header  id="anchor-scroll-up" class="head">
+    <header  id="anchor-scroll-up" class="head pt-5">
         <h1 class="head-title">We want to hear from you</h1>
 
     </header>

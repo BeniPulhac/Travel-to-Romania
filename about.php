@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 </head>
 <body>
-    <nav class="navbar navbar-light fixed-top position-relative">
-        <div class="container-md">
+    <nav class="navbar navbar-light">
+        <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
                 <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
             </a>
@@ -72,7 +72,7 @@
         </div>
     </nav>
 
-    <header  id="anchor-scroll-up" class="head">
+    <header  id="anchor-scroll-up" class="head pt-5">
         <div class="head-container">
             <h1 class="head-title">Wanna learn more about us?</h1>
             <p class="head-prg">Travel to Romania provides you with <span class="new-line">amazing diversity and breadth of choice - all in one place.</span></p>

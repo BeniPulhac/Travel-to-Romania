@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 </head>
 <body>
-    <nav class="navbar navbar-light fixed-top position-relative">
-        <div class="container-md">
+    <nav class="navbar navbar-light">
+        <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
                 <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
             </a>
@@ -74,7 +74,7 @@
 
     <div class = "hero-img"></div>
 
-    <header class="head" id="anchor-scroll-up">
+    <header class="head pt-5" id="anchor-scroll-up">
         <div class="head-container">
             <h1 class="head-title">Are you looking for a Hotel?</h1>
             <hr>
