@@ -20,28 +20,47 @@
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container fixed-top">
-        <nav class="navbar navbar-light navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">
-                    <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
-                </a>
+    <nav class="navbar navbar-light fixed-top position-relative">
+        <div class="container-md">
+            <a class="navbar-brand" href="index.php">
+                <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
+            </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="navigation-custom navbar-light d-none d-md-flex">
+                <ul class="nav-ul-custom nav justify-content-end">
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
+                    </li>
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="attractions.php">Attractions</a>
+                    </li>
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="about.php">About</a>
+                    </li>
+                </ul>
 
-                <div class="navigation-custom collapse navbar-collapse navbar-light" id="navbarSupportedContent">
-                    <!--                    <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close nav-icon-custom">-->
+                <div class="navigation-btn btn-group">
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                    <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
+                </div>
+            </div>
 
-                    <ul class="nav-ul-custom nav justify-content-end">
-                        <li class="nav-item nav-item-custom">
+            <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <button type="button" class="btn-close text-reset ms-auto p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                <div class="offcanvas-body">
+                    <ul class="nav-ul-custom nav justify-content-end pb-2 d-block">
+                        <li class="nav-item nav-item-custom ">
                             <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
                         </li>
-                        <li class="nav-item nav-item-custom">
+                        <li class="nav-item nav-item-custom ">
                             <a class="nav-link nav-link-custom" href="attractions.php">Attractions</a>
                         </li>
-                        <li class="nav-item nav-item-custom">
+                        <li class="nav-item nav-item-custom ">
                             <a class="nav-link nav-link-custom" href="about.php">About</a>
                         </li>
                     </ul>
@@ -52,8 +71,8 @@
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <header  id="anchor-scroll-up" class="head">
         <h1 class="head-title">We want to hear from you</h1>

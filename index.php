@@ -20,30 +20,47 @@
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!---->
-<!---->
-    <div class="container fixed-top">
-        <nav class="navbar navbar-light navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">
-                    <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
-                </a>
+    <nav class="navbar navbar-light fixed-top position-relative">
+        <div class="container-md">
+            <a class="navbar-brand" href="index.php">
+                <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
+            </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="navigation-custom navbar-light d-none d-md-flex">
+                <ul class="nav-ul-custom nav justify-content-end">
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
+                    </li>
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="attractions.php">Attractions</a>
+                    </li>
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="about.php">About</a>
+                    </li>
+                </ul>
 
-                <div class="navigation-custom collapse navbar-collapse navbar-light" id="navbarSupportedContent">
-<!--                    <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close nav-icon-custom">-->
+                <div class="navigation-btn btn-group">
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                    <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
+                </div>
+            </div>
 
-                    <ul class="nav-ul-custom nav justify-content-end">
+            <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <button type="button" class="btn-close text-reset ms-auto p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                <div class="offcanvas-body">
+                    <ul class="nav-ul-custom nav justify-content-end pb-2 d-block">
                         <li class="nav-item nav-item-custom">
                             <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
                         </li>
-                        <li class="nav-item nav-item-custom">
+                        <li class="nav-item nav-item-custom ">
                             <a class="nav-link nav-link-custom" href="attractions.php">Attractions</a>
                         </li>
-                        <li class="nav-item nav-item-custom">
+                        <li class="nav-item nav-item-custom ">
                             <a class="nav-link nav-link-custom" href="about.php">About</a>
                         </li>
                     </ul>
@@ -54,8 +71,41 @@
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+
+<!--        <nav class="navbar navbar-light navbar-expand-md container-md fixed-top">-->
+<!--            <div class="container-fluid">-->
+<!--                <a class="navbar-brand" href="index.php">-->
+<!--                    <img src="assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">-->
+<!--                </a>-->
+<!---->
+<!--                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                    <span class="navbar-toggler-icon"></span>-->
+<!--                </button>-->
+<!---->
+<!--                <div class="navigation-custom collapse navbar-collapse navbar-light" id="navbarSupportedContent">-->
+<!--                  <img src="assets/images/close-menu.png" alt="Close Menu" class="navigation-close nav-icon-custom">-->
+<!---->
+<!--                    <ul class="nav-ul-custom nav justify-content-end">-->
+<!--                        <li class="nav-item nav-item-custom">-->
+<!--                            <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item nav-item-custom">-->
+<!--                            <a class="nav-link nav-link-custom" href="attractions.php">Attractions</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item nav-item-custom">-->
+<!--                            <a class="nav-link nav-link-custom" href="about.php">About</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!---->
+<!--                    <div class="navigation-btn btn-group">-->
+<!--                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>-->
+<!--                        <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </nav>-->
 
     <header id="anchor-scroll-up" class="head">
         <div class="head-container">
@@ -69,62 +119,216 @@
 
     <main class="ctn">
         <div class="ctn-container">
-            <div class="ctn-search">
-                <h2 class="ctn-search-title">You recently searched</h2>
-                <div class="ctn-search-box">
-                    <p>Use php to creat import info</p>
-                </div>
-            </div>
 
-            <div class="ctn-travel">
-                <div class="ctn-travel-title">
-                    <h3 class="change-font">Travel Safe during COVID-19</h3>
-                </div>
+            <div class="search-box-custom">
+                <h2 class="search-title-custom">You recently searched</h2>
 
-                <div class="ctn-travel-container">
-                    <div class="ctn-travel-col1 ctn-equal">
-                        <p class="ctn-sub-title">Keep yourself and others safe</p>
+                <div class="card mb-3" style="max-width: 768px;">
+                    <div class="row g-1">
+                        <div class="column-left-custom testing col-md-4">
+                            <img src="assets/images/cities-small.jpg" class="search-img-custom img-fluid rounded-start" alt="...">
+                        </div>
 
-                        <ul class="travel-ul">
-                            <li class="ctn-list p-relative">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                If you develop symptoms or test positive for COVID-19, self-isolate until you recover.
-                            </li>
-                            <li class="ctn-list">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                Wear a properly fitted mask when physical distancing is not possible and in poorly ventilated settings.
-                            </li>
-                            <li class="ctn-list">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                Keep physical distance of at least 1 metre from others, even if they don’t appear to be sick. Avoid crowds and close contact.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="ctn-travel-col2 ctn-equal">
-                        <p class="ctn-sub-title">What to do if you feel unwell</p>
-
-                        <ul class="travel-ul">
-                            <li class="ctn-list p-relative">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                If you have a fever, cough and difficulty breathing, seek medical attention immediately. Call by telephone first and follow the directions of your local health authority.
-                            </li>
-                            <li class="ctn-list">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                Know the full range of symptoms of COVID-19. The most common symptoms of COVID-19 are fever, dry cough, tiredness and loss of taste or smell. Less common symptoms include aches and pains, headache, sore throat, red or irritated eyes, diarrhoea,  a skin rash or discolouration of fingers or toes.
-                            </li>
-                            <li class="ctn-list">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                Stay home and self-isolate for 10 days from symptom onset, plus three days after symptoms cease. Call your health care provider or hotline for advice. Have someone bring you supplies. If you need to leave your house or have someone near you, wear a properly fitted mask to avoid infecting others
-                            </li>
-                            <li class="ctn-list">
-                                <i class="fa-solid fa-check p-absolute"></i>
-                                Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Local and national authorities and public health units are best placed to advise on what people in your area should be doing to protect themselves.
-                            </li>
-                        </ul>
+                        <div class="column-right-custom testing col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+<!--------------------------->
+<div class="travel">
+    <div class="travel-title card-header">
+        <h3 class="change-font">Travel Safe during COVID-19</h3>
+    </div>
+
+    <div class="information d-flex">
+
+        <div class="accordion-custom accordion pb-3" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Keep yourself and others safe
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        If you develop symptoms or test positive for COVID-19, self-isolate until you recover.
+                    </div>
+
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        Wear a properly fitted mask when physical distancing is not possible and in poorly ventilated settings.
+                    </div>
+
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        Keep physical distance of at least 1 metre from others, even if they don’t appear to be sick. Avoid crowds and close contact.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-custom accordion pb-3" id="accordionExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        What to do if you feel unwell
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        If you have a fever, cough and difficulty breathing, seek medical attention immediately. Call by telephone first and follow the directions of your local health authority.
+                    </div>
+
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        Know the full range of symptoms of COVID-19. The most common symptoms of COVID-19 are fever, dry cough, tiredness and loss of taste or smell. Less common symptoms include aches and pains, headache, sore throat, red or irritated eyes, diarrhoea,  a skin rash or discolouration of fingers or toes.
+                    </div>
+
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        Stay home and self-isolate for 10 days from symptom onset, plus three days after symptoms cease. Call your health care provider or hotline for advice. Have someone bring you supplies. If you need to leave your house or have someone near you, wear a properly fitted mask to avoid infecting others
+                    </div>
+
+                    <div class="accordion-body">
+                        <i class="fa-solid fa-check p-absolute pe-1"></i>
+                        Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Local and national authorities and public health units are best placed to advise on what people in your area should be doing to protect themselves.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--------------------------->
+
+<!--            <div class="ctn-travel mt-5 mb-5">-->
+<!--                <div class="ctn-travel-title-custom card-header">-->
+<!--                    <h3 class="change-font">Travel Safe during COVID-19</h3>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="content d-flex">-->
+<!---->
+<!--                    <div class="left w-50">-->
+<!--                        <div class="accordion" id="accordionExample">-->
+<!--                            <div class="accordion-item">-->
+<!--                                <h2 class="accordion-header" id="headingOne">-->
+<!--                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--                                        Keep yourself and others safe-->
+<!--                                    </button>-->
+<!--                                </h2>-->
+<!---->
+<!--                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">-->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        If you develop symptoms or test positive for COVID-19, self-isolate until you recover.-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        Wear a properly fitted mask when physical distancing is not possible and in poorly ventilated settings.-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        Keep physical distance of at least 1 metre from others, even if they don’t appear to be sick. Avoid crowds and close contact.-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!---->
+<!--                    <div class="accordion right w-50">-->
+<!--                        <div class="accordion" id="accordionExample1">-->
+<!--                            <div class="accordion-item ">-->
+<!--                                <h2 class="accordion-header" id="heading1">-->
+<!--                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">-->
+<!--                                        What to do if you feel unwell-->
+<!--                                    </button>-->
+<!--                                </h2>-->
+<!---->
+<!--                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">-->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        If you have a fever, cough and difficulty breathing, seek medical attention immediately. Call by telephone first and follow the directions of your local health authority.-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        Know the full range of symptoms of COVID-19. The most common symptoms of COVID-19 are fever, dry cough, tiredness and loss of taste or smell. Less common symptoms include aches and pains, headache, sore throat, red or irritated eyes, diarrhoea,  a skin rash or discolouration of fingers or toes.-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        Stay home and self-isolate for 10 days from symptom onset, plus three days after symptoms cease. Call your health care provider or hotline for advice. Have someone bring you supplies. If you need to leave your house or have someone near you, wear a properly fitted mask to avoid infecting others-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="accordion-body">-->
+<!--                                        <i class="fa-solid fa-check p-absolute pe-1"></i>-->
+<!--                                        Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Local and national authorities and public health units are best placed to advise on what people in your area should be doing to protect themselves.-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!---->
+<!--                </div>-->
+
         </div>
     </main>
 
@@ -156,3 +360,13 @@
 <script src="assets/js/jquery.js"></script>
 </body>
 </html>
+<style>
+    button {
+        border: none !important;
+        outline: none !important;
+    }
+
+    button:focus {
+        box-shadow: none !important;
+    }
+</style>
