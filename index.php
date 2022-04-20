@@ -11,11 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href = "assets/css/nav-bar.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/general.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
@@ -55,6 +50,9 @@
                 <div class="offcanvas-body">
                     <ul class="nav-ul-custom nav justify-content-end pb-2 d-block">
                         <li class="nav-item nav-item-custom">
+                            <a class="nav-link nav-link-custom" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item nav-item-custom">
                             <a class="nav-link nav-link-custom" href="hotels.php">Hotels</a>
                         </li>
                         <li class="nav-item nav-item-custom ">
@@ -74,7 +72,8 @@
         </div>
     </nav>
 
-    <header id="anchor-scroll-up" class="head pt-5">
+    <header id="anchor-scroll-up" class="head pt-5 vh-100">
+        <div class="hero-img vh-100"></div>
         <div class="head-container">
             <h1 class="head-title">Do you want to travel <span class="head-title-2">to Romania?</span></h1>
             <hr>
@@ -82,12 +81,12 @@
         </div>
     </header>
 
-    <div class="hero-img"></div>
+
 
     <main class="ctn">
         <div class="ctn-container">
 <!--------------------------->
-            <div class="search-box-custom">
+            <div class="search-box-custom my-5">
                 <h2 class="search-title-custom">You recently searched</h2>
 
                 <div class="search-info-custom card d-flex flex-row">
@@ -101,7 +100,7 @@
                 </div>
             </div>
 <!--------------------------->
-            <div class="travel">
+            <div class="travel my-5">
                 <div class="travel-title card-header">
                     <h3 class="change-font">Travel Safe during COVID-19</h3>
                 </div>
@@ -115,7 +114,7 @@
                                     Keep yourself and others safe
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <i class="fa-solid fa-check p-absolute pe-1"></i>
                                     If you develop symptoms or test positive for COVID-19, self-isolate until you recover.
@@ -165,7 +164,7 @@
                                     What to do if you feel unwell
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample1">
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample1">
                                 <div class="accordion-body">
                                     <i class="fa-solid fa-check p-absolute pe-1"></i>
                                     If you have a fever, cough and difficulty breathing, seek medical attention immediately. Call by telephone first and follow the directions of your local health authority.
@@ -217,30 +216,72 @@
 <!--------------------------->
         </div>
     </main>
+<!--------------------------->
+    <footer class="footer-container-custom">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-3">
+                    <h5>Menu</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="hotels.php" class="nav-link p-0 text-muted">Hotels</a></li>
+                        <li class="nav-item mb-2"><a href="attractions.php" class="nav-link p-0 text-muted">Attractions</a></li>
+                        <li class="nav-item mb-2"><a href="contact.php" class="nav-link p-0 text-muted">Contact</a></li>
+                        <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
 
-    <footer class="bottom">
-        <div class="bottom-container">
-
-                <div class="bottom-left bottom-center">
+                <div class="col-4">
                     <span>Travel to Romania is a website design to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
                 </div>
 
-                <div class="bottom-middle bottom-center">
-                    <button class="bottom-scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="bottom-scroll-modifier">Scroll Up</a></button>
-                    <span class="bottom-copyright">© 2022 Travel to Romania</span>
+                <div class="col-5">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-block d-md-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
+                            <button class="btn btn-primary mb-2" type="button">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
+            </div>
 
-                <div class="bottom-right bottom-center">
-                    <ul class="bottom-ul">
-                        <li class="bottom-link"><a class="bottom-link-modifier" href="index.php">Home</a></li>
-                        <li class="bottom-link"><a class="bottom-link-modifier" href="hotels.php">Hotels</a></li>
-                        <li class="bottom-link"><a class="bottom-link-modifier" href="attractions.php">Attractions</a></li>
-                        <li class="bottom-link"><a class="bottom-link-modifier" href="contact.php">Contact</a></li>
-                        <li class="bottom-link"><a class="bottom-link-modifier" href="about.php">About</a></li>
-                    </ul>
-                </div>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2022 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+<!--------------------------->
+<!--    <footer class="bottom">-->
+<!--        <div class="bottom-container">-->
+<!---->
+<!--                <div class="bottom-left bottom-center">-->
+<!--                    <span>Travel to Romania is a website design to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="bottom-middle bottom-center">-->
+<!--                    <button class="bottom-scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="bottom-scroll-modifier">Scroll Up</a></button>-->
+<!--                    <span class="bottom-copyright">© 2022 Travel to Romania</span>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="bottom-right bottom-center">-->
+<!--                    <ul class="bottom-ul">-->
+<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="index.php">Home</a></li>-->
+<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="hotels.php">Hotels</a></li>-->
+<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="attractions.php">Attractions</a></li>-->
+<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="contact.php">Contact</a></li>-->
+<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="about.php">About</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--        </div>-->
+<!--    </footer>-->
 <script src="assets/js/main.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery.js"></script>
