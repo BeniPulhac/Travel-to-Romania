@@ -90,12 +90,13 @@
             <div class="search-box-custom">
                 <h2 class="search-title-custom">You recently searched</h2>
 
-                <div class="card d-flex flex-row w-50">
-                    <img src="assets/images/cities-small.jpg" class="card-img-top w-25" alt="...">
-                    <div class="card-body">
+                <div class="search-info-custom card d-flex flex-row">
+                    <img src="assets/images/cities-small.jpg" class="search-img-custom card-img-top" alt="Searched Icon">
+
+                    <div class="search-body-custom card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary w-50">Go somewhere</a>
+                        <a href="#" class="search-box-btn-custom btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
