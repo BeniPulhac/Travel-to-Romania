@@ -71,25 +71,24 @@
             </div>
         </div>
     </nav>
-
+<!--------------------------------------------------------------------------------->
     <header class="head pt-5 vh-100">
         <div class="hero-img vh-100"></div>
 
-        <div class="head-container container">
-                <h1 class="head-title">Do you want to travel <span class="head-title-2">to Romania?</span></h1>
+        <div class="head-container-custom container">
+                <h1 class="head-title-custom w-75 pt-5">Do you want to travel <span class="head-title-2">to Romania?</span></h1>
 
-                <p class="head-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad, alias commodi dolores error eum eveniet fugit impedit ipsam laborum minus modi natus omnis quisquam quo, ratione similique vel vero.</p>
+                <p class="head-para-custom w-md-75"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam consequatur consequuntur debitis dolor, eligendi enim et hic illo modi molestias, nihil obcaecati quo ratione soluta ut veritatis voluptatem, voluptatibus.</span><span> At enim modi natus quam unde.</span><span>Aliquam cum deserunt, dolor esse facere fugit iste iure nostrum quaerat repudiandae soluta, unde?</span></p>
         </div>
     </header>
 
 <!--    <main class="ctn">-->
 <!--        <div class="ctn-container">-->
-<!--------------------------->
-
-        <div class="search-box-custom my-5">
+<!--------------------------------------------------------------------------------->
+        <div class="search-box-custom container my-5">
             <h2 class="search-title-custom text-center py-1">You recently searched</h2>
 
-            <div id="carouselMainPage" class="carousel slide pb-5" data-bs-ride="carousel">
+            <div id="carouselMainPage" class="carousel carousel-dark slide pb-5" data-bs-ride="carousel">
                 <div class="carousel-indicators test">
                     <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -102,7 +101,7 @@
                         <div class="card m-auto" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="...">
+                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -119,7 +118,7 @@
                         <div class="card m-auto" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="...">
+                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -136,7 +135,7 @@
                         <div class="card m-auto" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="...">
+                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -153,7 +152,7 @@
                         <div class="card m-auto" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="...">
+                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -176,16 +175,16 @@
                     </button>
 
             </div>
-<!--------------------------->
-            <div class="travel">
+        </div>
+<!--------------------------------------------------------------------------------->
+            <div class="travel-container-custom">
                 <div class="travel-custom container my-5">
                     <div class="travel-title card-header">
                         <h3 class="change-font">Travel Safe during COVID-19</h3>
                     </div>
 
                     <div class="information d-flex">
-
-                        <div class="accordion-custom accordion pb-3" id="accordionExample">
+                        <div class="accordion-custom accordion-left-custom accordion pb-3" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -209,6 +208,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -221,6 +221,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -264,6 +265,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading2">
                                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
@@ -276,6 +278,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading3">
                                     <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
@@ -292,15 +295,13 @@
                     </div>
                 </div>
             </div>
-
-<!--------------------------->
+<!--------------------------------------------------------------------------------->
 <!--        </div>-->
 <!--    </main>-->
-<!--------------------------->
+<!--------------------------------------------------------------------------------->
     <footer class="footer-container-custom">
         <div class="container py-5">
             <div class="row">
-
                 <div class="col-12 col-md-5">
                     <span class="text-muted">Travel to Romania is a website design to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
                 </div>
@@ -327,7 +328,6 @@
                         <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted ps-2">About</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="d-flex justify-content-between py-4 my-4 border-top">
@@ -335,7 +335,7 @@
             </div>
         </div>
     </footer>
-<!--------------------------->
+<!--------------------------------------------------------------------------------->
 <!--    <footer class="bottom">-->
 <!--        <div class="bottom-container">-->
 <!---->

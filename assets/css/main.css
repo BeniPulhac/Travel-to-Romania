@@ -28,12 +28,13 @@ body {
 /*
                 Header
 */
-.head-container {
+.head-container-custom {
+    height: 70vh;
     display: flex;
     flex-direction: column;
 }
 
-.head-title {
+.head-title-custom {
     font-size: 3rem;
     font-weight: 600;
     /*background-image: conic-gradient(#553c9a 30%, #ee4b2b 40%, #ee4b2b 70%, #00c2cb 80%, #553c9a);*/
@@ -49,11 +50,11 @@ body {
     text-align: center;
 }
 
-.head-para {
-    text-indent: 3em;
+.head-para-custom {
     text-align: right;
     letter-spacing: 2px;
     font-weight: bold;
+    margin: auto;
 }
 
 /*!*
@@ -73,18 +74,12 @@ body {
 /*
                 Search Recently
 */
-.test {
-    /*background-color: grey;*/
-}
 
-.carousel-icon-custom {
-    background-color: black;        /*For Testing*/
-}
 
 /*
                 Travel
 */
-.travel {
+.travel-container-custom {
     background-color: white;
     width: 100%;
     display: flex;
@@ -113,9 +108,11 @@ body {
 @media only screen and (min-width: 769px) {
     .accordion-custom {
         width: 70%;
-        padding-right: 1em;
     }
 
+    .accordion-left-custom {
+        padding-right: 1em;
+    }
 }
 
 /*@media only screen and (min-width: 992px) {*/
