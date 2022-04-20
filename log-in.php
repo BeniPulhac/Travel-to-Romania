@@ -122,25 +122,41 @@
 
     </main>
 
-    <footer class="bottom">
-        <div class="bottom-container">
-            <div class="bottom-left bottom-center">
-                <span>Travel to Romania is a webside designe to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+    <footer class="footer-container-custom">
+        <div class="container py-5">
+            <div class="row">
+
+                <div class="col-12 col-md-5">
+                    <span class="text-muted">Travel to Romania is a website design to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>
+                </div>
+
+                <div class="col-12 col-md-5 my-3 my-md-0">
+                    <form>
+                        <h4>Subscribe to our newsletter</h4>
+                        <p class="text-muted">Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-block d-md-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
+                            <button class="btn btn-primary mb-2" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-12 col-md-2">
+                    <h4 class="ps-2">Menu</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted ps-2">Home</a></li>
+                        <li class="nav-item mb-2"><a href="hotels.php" class="nav-link p-0 text-muted ps-2">Hotels</a></li>
+                        <li class="nav-item mb-2"><a href="attractions.php" class="nav-link p-0 text-muted ps-2">Attractions</a></li>
+                        <li class="nav-item mb-2"><a href="contact.php" class="nav-link p-0 text-muted ps-2">Contact</a></li>
+                        <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted ps-2">About</a></li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div class="bottom-middle bottom-center">
-                <button class="bottom-scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="bottom-scroll-modifier">Scroll Up</a></button>
-                <span class="bottom-copyright">© 2022 Travel to Romania</span>
-            </div>
-
-            <div class="bottom-right bottom-center">
-                <ul class="bottom-ul">
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="index.php">Home</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="hotels.php">Hotels</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="attractions.php">Attractions</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="contact.php">Contact</a></li>
-                    <li class="bottom-link"><a class="bottom-link-modifier" href="about.php">About</a></li>
-                </ul>
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2022 Company, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
