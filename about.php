@@ -103,7 +103,7 @@
                         <h6 class="review-subtitle">Your review will help us to improve our web hosting quality products, and customer services.</h6>
                     </div>
 
-                    <form class="feedback" action="">
+                    <form id="myForm" class="feedback" action="">
                         <div class="title-equal">Your personal info</div>
                         <div class="group-box">
                             <input type="text" class="prs-info" name="name" placeholder="Your Name">
@@ -120,7 +120,7 @@
                             <textarea class="write-area" id="review" rows="3"></textarea>
                         </div>
 
-                        <button type="submit" class="feedback-btn">Submit</button>
+                        <button type="submit" class="feedback-btn" onclick="myFunction()" value="Submit form">Submit</button>
                     </form>
                 </div>
             </div>
@@ -170,7 +170,8 @@
             </div>
         </div>
     </footer>
-<script src="assets/js/main.js"></script>
+<!--<script src="assets/js/main.js"></script>-->
+<script src="assets/js/formSubmitted.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery.js"></script>
 </body>

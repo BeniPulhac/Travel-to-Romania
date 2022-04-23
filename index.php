@@ -14,7 +14,7 @@
 
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="testing">
     <nav class="navbar navbar-light">
         <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
@@ -64,7 +64,7 @@
                     </ul>
 
                     <div class="navigation-btn btn-group">
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" on>Log In</button>
                         <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
         <div class="head-container-custom container">
                 <h1 class="head-title-custom w-75 pt-5">Do you want to travel <span class="head-title-2">to Romania?</span></h1>
 
-                <p class="head-para-custom w-md-75"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam consequatur consequuntur debitis dolor, eligendi enim et hic illo modi molestias, nihil obcaecati quo ratione soluta ut veritatis voluptatem, voluptatibus.</span><span> At enim modi natus quam unde.</span><span>Aliquam cum deserunt, dolor esse facere fugit iste iure nostrum quaerat repudiandae soluta, unde?</span></p>
+                <p class="head-para-custom w-md-75"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum inventore maiores omnis pariatur rerum sequi voluptas. Accusamus accusantium, aliquam aut commodi eligendi, excepturi explicabo, facere fugit molestiae quas quod!</span></p>
         </div>
     </header>
 
@@ -86,24 +86,39 @@
 <!--        <div class="ctn-container">-->
 <!--------------------------------------------------------------------------------->
         <div class="search-box-custom container my-5">
-            <h2 class="search-title-custom text-center py-1">You recently searched</h2>
+            <h2 class="search-title-custom text-center py-1">Top Destinations</h2>
 
             <div id="carouselMainPage" class="carousel carousel-dark slide pb-5" data-bs-ride="carousel">
-                <div class="carousel-indicators test">
+                <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselMainPage" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
 
-                <div class="carousel-inner">
+                <div class="carousel-inner ">
                     <div class="carousel-item active">
-                        <div class="card m-auto" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
-                                </div>
-                                <div class="col-md-8">
+                        <div class="card-custom card m-auto">
+                            <div class="d-flex flex-column flex-sm-row g-0">
+                                    <div class="card-image-custom"></div>
+
+                                    <div class="testing">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title 1</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <a href="#" class="search-card-btn-custom btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card-custom card m-auto">
+                            <div class="d-flex flex-column flex-sm-row g-0">
+                                <div class="card-image-custom"></div>
+
+                                <div class="testing">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title 1</h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -115,14 +130,13 @@
                     </div>
 
                     <div class="carousel-item">
-                        <div class="card m-auto" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
-                                </div>
-                                <div class="col-md-8">
+                        <div class="card-custom card m-auto">
+                            <div class="d-flex flex-column flex-sm-row g-0">
+                                <div class="card-image-custom"></div>
+
+                                <div class="testing">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title 2</h5>
+                                        <h5 class="card-title">Card title 1</h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                         <a href="#" class="search-card-btn-custom btn btn-primary">Go somewhere</a>
                                     </div>
@@ -132,14 +146,13 @@
                     </div>
 
                     <div class="carousel-item">
-                        <div class="card m-auto" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
-                                </div>
-                                <div class="col-md-8">
+                        <div class="card-custom card m-auto">
+                            <div class="d-flex flex-column flex-sm-row g-0">
+                                <div class="card-image-custom"></div>
+
+                                <div class="testing">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title 3</h5>
+                                        <h5 class="card-title">Card title 1</h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                         <a href="#" class="search-card-btn-custom btn btn-primary">Go somewhere</a>
                                     </div>
@@ -148,29 +161,13 @@
                         </div>
                     </div>
 
-                    <div class="carousel-item">
-                        <div class="card m-auto" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="assets/images/cities-small.jpg" class="img-fluid rounded-start" alt="Icon">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 4</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <a href="#" class="search-card-btn-custom btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMainPage" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon carousel-icon-custom" aria-hidden="true"></span>
+                    <button class="carousel-control-prev " type="button" data-bs-target="#carouselMainPage" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon carousel-icon-custom me-auto mb-5" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselMainPage" data-bs-slide="next">
-                        <span class="carousel-control-next-icon carousel-icon-custom" aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon carousel-icon-custom ms-auto mb-5" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
 
@@ -364,3 +361,28 @@
 <script src="assets/js/jquery.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="card-custom card m-auto">-->
+<!--    <div class="row g-0">-->
+<!--        <div class="card-image-custom col-md-4"></div>-->
+<!--        <div class="col-md-8">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Card title 4</h5>-->
+<!--                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                <a href="#" class="search-card-btn-custom btn btn-primary">Go somewhere</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

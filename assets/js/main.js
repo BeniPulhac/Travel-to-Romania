@@ -11,3 +11,16 @@
 // close.addEventListener('click', () => {
 //     nav.classList.remove('open-nav')
 // })
+
+
+
+document.getElementById('testing').addEventListener('mouseleave', mouseLeave);
+
+function mouseLeave() {
+
+    alert('Mouse Left the Screen');
+
+}
+
+
+
