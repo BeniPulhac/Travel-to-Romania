@@ -6,7 +6,9 @@ function myFunction() {
     var c = document.getElementById('myForm').elements[2].value;
     var d = document.getElementById('myForm').elements[3].value;
 
-
-    document.getElementById('myForm').submit(alert(a + '\n' + b + '\n' + c + '\n' + d));
-
+    if(a == 0 && b == 0 && c == 0 && d == 0){
+        alert('Form Empty');
+    }else {
+        document.getElementById('myForm').submit(alert(a + '\n' + b + '\n' + c + '\n' + d));
+    }
 }
