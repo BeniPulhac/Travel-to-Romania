@@ -128,7 +128,146 @@
             <div class="others-review">
 
             </div>
+<!---->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <h2>Feedback</h2>-->
+<!--                    <table width="100%" border="0">-->
+<!--                        <div class="col-md-9 col-md-offset-0">-->
+<!--                            <tr><td width="77%">-->
+<!--                                    <div class="">-->
+<!--                                        <form class="form-horizontal" action="send.php" method="post">-->
+<!--                                            <fieldset>-->
+<!---->
+<!--                                                <!-- Name input-->-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <label class="col-md-3 control-label" for="name">Full Name</label>-->
+<!--                                                    <div class="col-md-9">-->
+<!--                                                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!---->
+<!--                                                <!-- Email input-->-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <label class="col-md-3 control-label" for="email">Your E-mail</label>-->
+<!--                                                    <div class="col-md-9">-->
+<!--                                                        <input id="email" name="email" type="text" placeholder="Your email" class="form-control">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!---->
+<!--                                                <!-- Message body -->-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <label class="col-md-3 control-label" for="message">Your message</label>-->
+<!--                                                    <div class="col-md-9">-->
+<!--                                                        <textarea class="form-control" id="message" name="message" placeholder="Please enter your feedback here..." rows="5"></textarea>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!---->
+<!---->
+<!--                                                <!-- Rating -->-->
+<!--                                                <div class="form-group">-->
+<!--                                                    <label class="col-md-3 control-label" for="message">Your rating</label>-->
+<!--                                                    <div class="col-md-9">-->
+<!--                                                        <input id="input-21e" value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                </td>-->
+<!--                                <td align="center" valign="top" width="23%">-->
+<!--                                    <!-- Form actions -->-->
+<!--                                    <div class="form-group">-->
+<!--                                        <div class="col-md-12 text-center">-->
+<!--                                            <img src="http://www.gohacking.com/wp-content/uploads/2010/06/captcha-300x171.jpg" height="140px" width="270px"/><br/>-->
+<!--                                            <button type="submit" class="btn btn-primary btn-md">Submit</button>-->
+<!--                                            <button type="reset" class="btn btn-default btn-md">Clear</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    </fieldset>-->
+<!--                                    </form>-->
+<!--                        </div>-->
+<!--                </div>-->
+<!--                </td>-->
+<!--                </tr>-->
+<!--                </table>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <h2>-->
+<!--                        Featured Testimonials</h2>-->
+<!--                    <div class="col-md-6">-->
+<!--                        <div class="blockquote-box clearfix">-->
+<!--                            <div class="square pull-left">-->
+<!--                                <img src="http://placehold.it/60/8e44ad/FFF&text=B" alt="" class="" />-->
+<!--                            </div>-->
+<!--                            <h4>-->
+<!--                                John Doe</h4>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+<!--                                ante.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <div class="blockquote-box blockquote-primary clearfix">-->
+<!--                            <div class="square pull-left">-->
+<!--                                <span class="glyphicon glyphicon-music glyphicon-lg"></span>-->
+<!--                            </div>-->
+<!--                            <h4>-->
+<!--                                John Doe</h4>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+<!--                                ante. <a href="http://www.jquery2dotnet.com/search/label/jquery">jquery2dotnet</a>-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <div class="blockquote-box blockquote-success clearfix">-->
+<!--                            <div class="square pull-left">-->
+<!--                                <span class="glyphicon glyphicon-tree-conifer glyphicon-lg"></span>-->
+<!--                            </div>-->
+<!--                            <h4>-->
+<!--                                John Doe</h4>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+<!--                                ante.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6">-->
+<!--                        <div class="blockquote-box blockquote-info clearfix">-->
+<!--                            <div class="square pull-left">-->
+<!--                                <span class="glyphicon glyphicon-info-sign glyphicon-lg"></span>-->
+<!--                            </div>-->
+<!--                            <h4>-->
+<!--                                John Doe</h4>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+<!--                                ante.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <div class="blockquote-box blockquote-warning clearfix">-->
+<!--                            <div class="square pull-left">-->
+<!--                                <span class="glyphicon glyphicon-warning-sign glyphicon-lg"></span>-->
+<!--                            </div>-->
+<!--                            <h4>-->
+<!--                                John Doe</h4>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+<!--                                ante.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <div class="blockquote-box blockquote-danger clearfix">-->
+<!--                            <div class="square pull-left">-->
+<!--                                <span class="glyphicon glyphicon-record glyphicon-lg"></span>-->
+<!--                            </div>-->
+<!--                            <h4>-->
+<!--                                John Doe</h4>-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+<!--                                ante.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
+            <!--            -->
         </div>
     </main>
 

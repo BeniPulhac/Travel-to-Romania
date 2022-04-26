@@ -13,15 +13,46 @@
 //     }
 // }
 
-// -----------------Second Way-----------------
+
+
+// -----------------Display/Close Form-----------------
+
+const btn = document.getElementById('showForm');
+
+
+btn.addEventListener('click', () => {
+    const form = document.getElementById('formContent');
+
+    if (getComputedStyle(form).display === 'none') {
+        form.style.display = 'block';
+        document.getElementById('testBlur').classList.add('blur');
+    } else {
+        form.style.display = 'none';
+        document.getElementById('testBlur').classList.remove('blur');
+    }
+})
+
+// -----------------Close Form-----------------
+const btnClose = document.getElementById('closeForm');
+
+btnClose.addEventListener('click', () => {
+    const toCloseForm = document.getElementById('formContent');
+
+    if(toCloseForm.style.display === 'block') {
+        toCloseForm.style.display = 'none';
+        document.getElementById('testBlur').classList.remove('blur');
+    }
+})
+
+// -----------------Show Input-----------------
 
 function myFunction () {
-    var x = document.getElementById('myForm');
+    var contactForm = document.getElementById('myForm');
     var text = "";
     var i;
 
-    for (i = 0; i < x.length - 1; i++) {
-            text = text + x.elements[i].value + '\n';
+    for (i = 0; i < contactForm.length - 1; i++) {
+            text = text + contactForm.elements[i].value + '\n';
     }
 
     if(text != 0){

@@ -11,6 +11,7 @@ body {
     position: relative;
 }
 
+
 .hero-img {
     position: absolute;
     top: 0;
@@ -25,6 +26,51 @@ body {
     opacity: 0.7;
     filter: blur(2px);
 }
+/*
+------------------Sign up------------------
+*/
+.sign-up-custom {
+    display: none;
+    /*position: absolute;*/
+    /*z-index: 999;*/
+    /*top: 5em;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*margin: auto;*/
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: -webkit-fill-available;
+    z-index: 999;
+}
+
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+.cascading-right-custom {
+    /*margin-right: -50px;*/
+    background: hsla(0, 0%, 100%, 0.55);
+    backdrop-filter: blur(30px);
+}
+
+.radius-pop-up {
+    border-radius: 30px;
+}
+
+@media (max-width: 991.98px) {
+    .cascading-right-custom {
+        margin-right: 0;
+    }
+}
+
 /*
                 Header
 */

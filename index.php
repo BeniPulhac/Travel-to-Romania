@@ -14,7 +14,8 @@
 
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
-<body id="testing">
+<body id="testing testBlur" class="trial-run">
+
     <nav class="navbar navbar-light">
         <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
@@ -35,8 +36,8 @@
                 </ul>
 
                 <div class="navigation-btn btn-group">
-                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
-                    <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                    <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Sign up</a></button>
                 </div>
             </div>
 
@@ -64,14 +65,113 @@
                     </ul>
 
                     <div class="navigation-btn btn-group">
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" on>Log In</button>
-                        <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                        <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Sign up</a></button>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
 <!--------------------------------------------------------------------------------->
+    <!-- Section: Design Block -->
+    <section class="sign-up-custom text-center text-lg-start" id="formContent">
+        <!-- Jumbotron -->
+        <div class="container py-4 d-flex justify-content-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="cascading-right-custom radius-pop-up card">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <div class="closing d-flex justify-content-end">
+                            <button class="btn btn-light" id="closeForm">
+                                <i class='fa fa-close fa-xl'></i>
+                            </button>
+                        </div>
+
+                        <div class="title">
+                            <h2 class="fw-bold mb-5">Sign In</h2>
+                        </div>
+
+                        <form id="myForm">
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form3Example1" class="form-control" placeholder="First name">
+                                        <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form3Example2" class="form-control" placeholder="Last name">
+                                        <!--                                            <label class="form-label" for="form3Example2">Last name</label>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
+                                <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Password">
+                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4 ">
+                                <div>
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                    <label class="form-check-label" for="form2Example33">
+                                        Remember Me
+                                    </label>
+                                </div>
+
+                                <!-- Simple link -->
+                                <div class="col ms-auto">
+                                    <a href="#!">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
+                                Sign In
+                            </button>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jumbotron -->
+    </section>
+    <!-- Section: Design Block -->
+<!--------------------------------------------------------------------------------->
+<div id="testBlur">
+
+
+<!--------------------------------------------header-------------------------------------------->
     <header class="head pt-5 vh-100">
         <div class="hero-img vh-100"></div>
 
@@ -81,9 +181,10 @@
                 <p class="head-para-custom w-md-75"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum inventore maiores omnis pariatur rerum sequi voluptas. Accusamus accusantium, aliquam aut commodi eligendi, excepturi explicabo, facere fugit molestiae quas quod!</span></p>
         </div>
     </header>
-
+<!--------------------------------------------/header-------------------------------------------->
 <!--    <main class="ctn">-->
 <!--        <div class="ctn-container">-->
+
 <!--------------------------------------------------------------------------------->
         <div class="search-box-custom container my-5">
             <h2 class="search-title-custom text-center py-1">Top Destinations</h2>
@@ -295,7 +396,9 @@
 <!--------------------------------------------------------------------------------->
 <!--        </div>-->
 <!--    </main>-->
-<!--------------------------------------------------------------------------------->
+</div>
+<!--------------------------------------------footer-------------------------------------------->
+
     <footer class="footer-container-custom">
         <div class="container py-5">
             <div class="row">
@@ -332,31 +435,9 @@
             </div>
         </div>
     </footer>
-<!--------------------------------------------------------------------------------->
-<!--    <footer class="bottom">-->
-<!--        <div class="bottom-container">-->
-<!---->
-<!--                <div class="bottom-left bottom-center">-->
-<!--                    <span>Travel to Romania is a website design to help people navigate easier through places to visit, hotels to stay in and all kind of activities to do all around Romania</span>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="bottom-middle bottom-center">-->
-<!--                    <button class="bottom-scroll" id="scrollUp" type="button"><a href="#anchor-scroll-up" class="bottom-scroll-modifier">Scroll Up</a></button>-->
-<!--                    <span class="bottom-copyright">© 2022 Travel to Romania</span>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="bottom-right bottom-center">-->
-<!--                    <ul class="bottom-ul">-->
-<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="index.php">Home</a></li>-->
-<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="hotels.php">Hotels</a></li>-->
-<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="attractions.php">Attractions</a></li>-->
-<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="contact.php">Contact</a></li>-->
-<!--                        <li class="bottom-link"><a class="bottom-link-modifier" href="about.php">About</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--        </div>-->
-<!--    </footer>-->
+<!--------------------------------------------/footer-------------------------------------------->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/formSubmitted.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery.js"></script>
 </body>
