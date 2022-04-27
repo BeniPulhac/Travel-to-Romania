@@ -13,3 +13,40 @@ a {
 ul {
     list-style-type: none;
 }
+
+.body-width {
+    width: 75%;
+}
+
+/*
+------------------Sign up------------------
+*/
+.sign-up-custom {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 9999;
+}
+
+.blur   {
+    filter: blur(2px);
+    opacity: 0.7;
+}
+
+.cascading-right-custom {
+    background: hsla(0, 0%, 100%, 0.55);
+    backdrop-filter: blur(30px);
+}
+
+.radius-pop-up {
+    border-radius: 30px;
+}
+
+@media (max-width: 992px) {
+    .cascading-right-custom {
+        margin-right: 0;
+    }
+}

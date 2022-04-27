@@ -15,9 +15,11 @@
     <link rel = "stylesheet" href = "assets/css/header.css">
     <link rel = "stylesheet" href = "assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/general.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.css">-->
+
+    <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="body-width testBlur">
     <nav class="navbar navbar-light">
         <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
@@ -38,7 +40,7 @@
                 </ul>
 
                 <div class="navigation-btn btn-group">
-                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
                     <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
                 </div>
             </div>
@@ -64,13 +66,110 @@
                     </ul>
 
                     <div class="navigation-btn btn-group">
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
                         <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!--------------------------------------------------------------------------------->
+    <!-- Section: Design Block -->
+    <section class="sign-up-custom text-center text-lg-start" id="formContent">
+        <!-- Jumbotron -->
+        <div class="container py-4 d-flex justify-content-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="cascading-right-custom radius-pop-up card">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <div class="closing d-flex justify-content-end">
+                            <button class="btn btn-light" id="closeForm">
+                                <i class='fa fa-close fa-xl'></i>
+                            </button>
+                        </div>
+
+                        <div class="title">
+                            <h2 class="fw-bold mb-5">Sign In</h2>
+                        </div>
+
+                        <form id="myForm">
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form3Example1" class="form-control" placeholder="First name">
+                                        <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form3Example2" class="form-control" placeholder="Last name">
+                                        <!--                                            <label class="form-label" for="form3Example2">Last name</label>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
+                                <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Password">
+                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4 ">
+                                <div>
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                    <label class="form-check-label" for="form2Example33">
+                                        Remember Me
+                                    </label>
+                                </div>
+
+                                <!-- Simple link -->
+                                <div class="col ms-auto">
+                                    <a href="#!">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
+                                Sign In
+                            </button>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jumbotron -->
+    </section>
+    <!-- Section: Design Block -->
+<!--------------------------------------------------------------------------------->
+<div id="testBlur">
 
     <header class="head pt-5" id="anchor-scroll-up">
         <div class="head-container">
@@ -156,6 +255,9 @@
             </div>
         </div>
     </footer>
+</div>
+
+<script src="assets/js/formSubmitted.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery.js"></script>

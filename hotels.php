@@ -15,9 +15,11 @@
     <link rel = "stylesheet" href = "assets/css/nav-bar.css">
     <link rel = "stylesheet" href = "assets/css/header.css">
     <link rel = "stylesheet" href = "assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.css">-->
+
+    <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="body-width testBlur">
     <nav class="navbar navbar-light">
         <div class="container-md fixed-top">
             <a class="navbar-brand" href="index.php">
@@ -38,7 +40,7 @@
                 </ul>
 
                 <div class="navigation-btn btn-group">
-                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
                     <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
                 </div>
             </div>
@@ -64,7 +66,7 @@
                     </ul>
 
                     <div class="navigation-btn btn-group">
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"><a href="log-in.php" class="btn-custom">Log In</a></button>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
                         <button class="btn btn-light rounded-pill shadow bg-body "><a href="log-in.php" class="btn-custom">Register</a></button>
                     </div>
                 </div>
@@ -72,6 +74,102 @@
         </div>
     </nav>
 
+    <!--------------------------------------------------------------------------------->
+    <!-- Section: Design Block -->
+    <section class="sign-up-custom text-center text-lg-start" id="formContent">
+        <!-- Jumbotron -->
+        <div class="container py-4 d-flex justify-content-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="cascading-right-custom radius-pop-up card">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <div class="closing d-flex justify-content-end">
+                            <button class="btn btn-light" id="closeForm">
+                                <i class='fa fa-close fa-xl'></i>
+                            </button>
+                        </div>
+
+                        <div class="title">
+                            <h2 class="fw-bold mb-5">Sign In</h2>
+                        </div>
+
+                        <form id="myForm">
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form3Example1" class="form-control" placeholder="First name">
+                                        <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="form3Example2" class="form-control" placeholder="Last name">
+                                        <!--                                            <label class="form-label" for="form3Example2">Last name</label>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
+                                <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Password">
+                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4 ">
+                                <div>
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                    <label class="form-check-label" for="form2Example33">
+                                        Remember Me
+                                    </label>
+                                </div>
+
+                                <!-- Simple link -->
+                                <div class="col ms-auto">
+                                    <a href="#!">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
+                                Sign In
+                            </button>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>or sign up with:</p>
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jumbotron -->
+    </section>
+    <!-- Section: Design Block -->
+<!--------------------------------------------------------------------------------->
+<div id="testBlur">
     <div class = "hero-img"></div>
 
     <header class="head pt-5" id="anchor-scroll-up">
@@ -84,23 +182,154 @@
     <main class="ctn">
         <div class="ctn-container">
 <!--            -->
-            <div class="search-bar">
-                <div class="search-nav">
 
-                        <div class="search-check-in search-equal"><span>Check In</span></div>
+<!--------------------------------------------------------------------------------->
 
-                        <div class="search-check-out search-equal"><span>Check Out</span></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 card-margin">
+                        <div class="card search-form">
+                            <div class="card-body p-0">
+                                <form id="search-form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                                    <input type="text" placeholder="Search..." class="form-control" id="search" name="search">
+                                                </div>
 
-                        <div class="search-guest search-equal"><span>Guests</span></div>
+                                                <div class="col-lg-3 col-md-3 col-sm-12 p-0 border-start border-end">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>Nr. Show</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                    </select>
+                                                </div>
 
+                                                <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                                    <button type="button" class="btn btn-base" id="searchButton">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="search-btn">
-                    <div class="testing">
-                        <span>Search</span>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-margin">
+                            <div class="card-body">
+                                <div class="row search-body">
+                                    <div class="col-lg-12">
+                                        <div class="search-result">
+                                            <div class="result-header">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="records">Showing: <b>1-20</b> of <b>200</b> result</div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="result-actions">
+                                                            <div class="result-sorting">
+                                                                <span>Sort By:</span>
+                                                                <select class="form-control border-0" id="exampleOption">
+                                                                    <option value="1">Relevance</option>
+                                                                    <option value="2">Names (A-Z)</option>
+                                                                    <option value="3">Names (Z-A)</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="result-views">
+                                                                <button type="button" class="btn btn-soft-base btn-icon">
+                                                                    <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24"
+                                                                            height="24"
+                                                                            viewBox="0 0 24 24"
+                                                                            fill="none"
+                                                                            stroke="currentColor"
+                                                                            stroke-width="2"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="feather feather-list"
+                                                                    >
+                                                                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                                                                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                                                                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                                                                        <line x1="3" y1="6" x2="3" y2="6"></line>
+                                                                        <line x1="3" y1="12" x2="3" y2="12"></line>
+                                                                        <line x1="3" y1="18" x2="3" y2="18"></line>
+                                                                    </svg>
+                                                                </button>
+                                                                <button type="button" class="btn btn-soft-base btn-icon">
+                                                                    <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24"
+                                                                            height="24"
+                                                                            viewBox="0 0 24 24"
+                                                                            fill="none"
+                                                                            stroke="currentColor"
+                                                                            stroke-width="2"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="feather feather-grid"
+                                                                    >
+                                                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="result-body">
+                                                <div class="table-responsive">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <nav class="d-flex justify-content-center">
+                                    <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
+                                        <li class="page-item">
+                                            <a class="page-link no-border" href="#">
+                                                <span aria-hidden="true">«</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link no-border" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link no-border" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link no-border" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link no-border" href="#">4</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link no-border" href="#">
+                                                <span aria-hidden="true">»</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+<!--------------------------------------------------------------------------------->
 <!--Search Results-->
             <div class="container-custom container border">
                 <div class="card-header-custom card-header"><h4>Search Results</h4></div>
@@ -273,7 +502,10 @@
             </div>
         </div>
     </footer>
+</div>
 
+<script src="assets/js/hotels.js"></script>
+<script src="assets/js/formSubmitted.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery.js"></script>

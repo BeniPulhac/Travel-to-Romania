@@ -14,7 +14,7 @@
 
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
-<body id="testing testBlur" class="trial-run">
+<body id="body-width testBlur">
 
     <nav class="navbar navbar-light">
         <div class="container-md fixed-top">
@@ -396,7 +396,7 @@
 <!--------------------------------------------------------------------------------->
 <!--        </div>-->
 <!--    </main>-->
-</div>
+
 <!--------------------------------------------footer-------------------------------------------->
 
     <footer class="footer-container-custom">
@@ -435,6 +435,7 @@
             </div>
         </div>
     </footer>
+</div>
 <!--------------------------------------------/footer-------------------------------------------->
 <script src="assets/js/main.js"></script>
 <script src="assets/js/formSubmitted.js"></script>
