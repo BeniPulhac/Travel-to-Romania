@@ -4,11 +4,16 @@ const infoContainer = document.getElementById('cardInfo');
 
 button.addEventListener('click', function () {
     var ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'https://raw.githubusercontent.com/BeniPulhac/API/main/hotelsAPI.json?token=GHSAT0AAAAAABUAKNOAPAW244LJJ6FDXFNOYTJY2IQ');
+
+    ourRequest.open('GET', '../json/hotelsAPI.json', true);
     ourRequest.onload = function () {
-        var ourData = JSON.parse(ourRequest.responseText);
+        if(ourRequest.status == 200){
+            console.log(ourRequest.responseText);
+        }
+
+        // var ourData = JSON.parse(ourRequest.responseText);
         // renderHtml(ourData);
-        console.log(ourData);
+
         // infoContainer.insertAdjacentHTML('beforeend', ourData[1].name);
     };
 
