@@ -296,7 +296,7 @@
                                             </div>
 
                                             <div class="result-body">
-                                                <div class="table-responsive">
+                                                <div class="table-responsive" id="cardInfo">
 
                                                 </div>
                                             </div>
