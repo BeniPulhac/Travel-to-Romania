@@ -296,21 +296,9 @@
                                             </div>
 
                                             <div class="result-body">
-                                                <div class="row-custom row row-cols-1 row-cols-md-2 g-4 m-auto align-content-center" >
+                                                <div class="row-custom row row-cols-1 row-cols-md-2 g-4 m-auto align-content-center" id="insertCard">
 
-                                                    <div class="col d-flex justify-content-center">
-                                                        <div class="card-custom card text-dark bg-light mb-3 h-100">
-                                                            <img src="assets/images/cities-small.jpg" class="card-img-top" alt="...">
-                                                            <div class="card-body d-flex flex-column justify-content-lg-between">
-                                                                <h5 class="card-title" id="cardInfo"></h5>
-                                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                                <a href="#" class="card-btn-custom btn btn-primary">Go somewhere</a>
-                                                            </div>
-                                                            <div class="card-footer">
-                                                                <small class="text-muted">Insert km details</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+<!--                                                    Insert cards with JS-->
 
                                                 </div>
                                             </div>

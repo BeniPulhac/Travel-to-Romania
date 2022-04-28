@@ -13,6 +13,17 @@
 .card-btn-custom {
     width: 50%;
 }
+/*----------------Image Card----------------*/
+
+.card-image-custom {
+    /*background-image: url("../images/cities-small.jpg");*/
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    height: 400px;
+}
+
+/*----------------/Image Card----------------*/
 
 
 
