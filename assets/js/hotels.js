@@ -3,6 +3,12 @@ const button = document.getElementById('searchButton');
 const infoContainer = document.getElementById('cardInfo');
 
 button.addEventListener('click', function () {
+    let filter = document.getElementById('search').value;
+    loadData(filter);
+});
+
+function loadData(filter) {
+    document.getElementById('insertCard').innerHTML = '';
     var ourRequest = new XMLHttpRequest();
 
     ourRequest.open('GET', 'assets/json/hotelsTesting.json', true);
@@ -18,15 +24,21 @@ button.addEventListener('click', function () {
                 myFile.push(ourData[key]);
                 i++;
             }
-            // console.log(myFile);
 
             for (i = 0; i < myFile.length; i++) {
-                creatCard(myFile[i]);
+                if (filter) {
+                    if(myFile[i].name.includes(filter) || myFile[i].query.includes(filter)) {
+                        creatCard(myFile[i]);
+                    }
+                } else {
+                    creatCard(myFile[i]);
+                }
             }
         }
     };
     ourRequest.send();
-});
+}
+
 
 function creatCard(myFile) {
     console.log(myFile);
