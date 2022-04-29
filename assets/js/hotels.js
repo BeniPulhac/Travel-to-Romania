@@ -1,10 +1,18 @@
 // ---------------------------------Hotels API---------------------------------
 const button = document.getElementById('searchButton');
 const infoContainer = document.getElementById('cardInfo');
+const inputSearch = document.getElementById('search');
 
 button.addEventListener('click', function () {
     let filter = document.getElementById('search').value;
     loadData(filter);
+});
+
+inputSearch.addEventListener('keypress', function (event) {
+    if(event.key === 'Enter') {
+        event.preventDefault();
+        button.click();
+    }
 });
 
 function loadData(filter) {
@@ -27,7 +35,14 @@ function loadData(filter) {
 
             for (i = 0; i < myFile.length; i++) {
                 if (filter) {
-                    if(myFile[i].name.includes(filter) || myFile[i].query.includes(filter)) {
+                    // console.log("First if working");
+                    let theInput = filter.toUpperCase();
+                    let theNameObject = myFile[i].name.toUpperCase();
+                        theNameObject = theNameObject.normalize('NFKD').replace(/[^\w]/g, '');
+                    let theQueryObject = myFile[i].query.toUpperCase();
+                        theQueryObject = theQueryObject.normalize('NFKD').replace(/[^\w]/g, '');
+
+                    if(theNameObject.includes(theInput) || theQueryObject.includes(theInput)) {
                         creatCard(myFile[i]);
                     }
                 } else {
@@ -41,7 +56,7 @@ function loadData(filter) {
 
 
 function creatCard(myFile) {
-    console.log(myFile);
+    // console.log(myFile);
     // console.log('working');
 
     const card = document.createElement('div');
