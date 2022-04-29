@@ -149,6 +149,11 @@
                                     <i class="fab fa-github"></i>
                                 </button>
                             </div>
+
+                            <!-- Go to Register -->
+                            <p class="text-center text-muted mt-5 mb-0">You don't have an account?
+                                <a type="button" id="goToRegister" class="fw-bold text-body"><u>Register</u></a>
+                            </p>
                         </form>
                     </div>
                 </div>
@@ -213,40 +218,20 @@
                                 <div>
                                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
                                     <label class="form-check-label" for="form2Example33">
-                                        Remember Me
+                                        I agree all statements in Terms of service
                                     </label>
-                                </div>
-
-                                <!-- Simple link -->
-                                <div class="col ms-auto">
-                                    <a href="#!">Forgot password?</a>
                                 </div>
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
-                                Sign In
+                            <button type="submit" class="btn btn-primary btn-block" onclick="myFunction()">
+                                Register
                             </button>
 
-                            <!-- Register buttons -->
-                            <div class="text-center">
-                                <p>or sign up with:</p>
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-google"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-github"></i>
-                                </button>
-                            </div>
+                            <!-- Go to Log in -->
+                            <p class="text-center text-muted mt-5 mb-0">Have already an account?
+                                <a type="button" id="goToLogIn" class="fw-bold text-body"><u>Login here</u></a>
+                            </p>
                         </form>
                     </div>
                 </div>
