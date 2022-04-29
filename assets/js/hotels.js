@@ -26,7 +26,7 @@ function loadData(filter) {
             var myFile = [];
             var i = 0;
             for (var key in ourData) {
-                if (i == 20) {
+                if (i == 40) {
                     break;
                 }
                 myFile.push(ourData[key]);

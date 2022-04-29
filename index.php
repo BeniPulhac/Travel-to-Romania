@@ -37,7 +37,7 @@
 
                 <div class="navigation-btn btn-group">
                     <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
-                    <button class="btn btn-light rounded-pill shadow bg-body" id="showRegister">Register</button>
+                    <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
 
                     <div class="navigation-btn btn-group">
                         <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
-                        <button class="btn btn-light rounded-pill shadow bg-body" id="showRegister">Register</button>
+                        <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 <div class="cascading-right-custom radius-pop-up card">
                     <div class="card-body p-5 shadow-5 text-center">
                         <div class="closing d-flex justify-content-end">
-                            <button class="btn btn-light" id="closeForm">
+                            <button class="btn" id="closeForm">
                                 <i class='fa fa-close fa-xl'></i>
                             </button>
                         </div>
@@ -151,7 +151,7 @@
                             </div>
 
                             <!-- Go to Register -->
-                            <p class="text-center text-muted mt-5 mb-0">You don't have an account?
+                            <p class="text-center mt-5 mb-0">You don't have an account?
                                 <a type="button" id="goToRegister" class="fw-bold text-body"><u>Register</u></a>
                             </p>
                         </form>
@@ -168,7 +168,7 @@
                 <div class="cascading-right-custom radius-pop-up card">
                     <div class="card-body p-5 shadow-5 text-center">
                         <div class="closing d-flex justify-content-end">
-                            <button class="btn btn-light" id="closeFormRegister">
+                            <button class="btn" id="closeFormRegister">
                                 <i class='fa fa-close fa-xl'></i>
                             </button>
                         </div>
@@ -229,7 +229,7 @@
                             </button>
 
                             <!-- Go to Log in -->
-                            <p class="text-center text-muted mt-5 mb-0">Have already an account?
+                            <p class="text-center mt-5 mb-0">Have already an account?
                                 <a type="button" id="goToLogIn" class="fw-bold text-body"><u>Login here</u></a>
                             </p>
                         </form>
