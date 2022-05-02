@@ -1,4 +1,4 @@
-// ---------------------------------Hotels API---------------------------------
+// ---------------------------------Search Hotels---------------------------------
 const button = document.getElementById('searchButton');
 const infoContainer = document.getElementById('cardInfo');
 const inputSearch = document.getElementById('search');
@@ -137,7 +137,19 @@ function creatCard(myFile) {
 
 
 
-// ---------------------------------/Hotels API---------------------------------
+// ---------------------------------/Search Hotels---------------------------------
+
+// ---------------------------------Top Hotels---------------------------------
+const indicatorsContainer = document.createElement('div');
+indicatorsContainer.setAttribute('class', 'carousel-indicators');
+
+const carouselTopHotels = document.getElementById('carouselTopHotels');
+carouselTopHotels.appendChild(indicatorsContainer);
+
+function crsIndicators () {
+
+}
+// ---------------------------------/Top Hotels---------------------------------
 
 
 

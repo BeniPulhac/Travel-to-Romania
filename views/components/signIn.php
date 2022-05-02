@@ -1,0 +1,165 @@
+<!-- Section: Sign in -->
+<section class="sign-up-custom text-center text-lg-start" id="formContent">
+    <div class="container py-4 d-flex justify-content-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="cascading-right-custom radius-pop-up card">
+                <div class="card-body p-5 shadow-5 text-center">
+                    <div class="closing d-flex justify-content-end">
+                        <button class="btn" id="closeForm">
+                            <i class='fa fa-close fa-xl'></i>
+                        </button>
+                    </div>
+
+                    <div class="title">
+                        <h2 class="fw-bold mb-5">Sign In</h2>
+                    </div>
+
+                    <form id="myLogIn">
+
+                        <!-- User name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form3Example1" class="form-control" placeholder="User name">
+                            <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
+                            <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="form3Example4" class="form-control" placeholder="Password">
+                            <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4 ">
+                            <div>
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <label class="form-check-label" for="form2Example33">
+                                    Remember Me
+                                </label>
+                            </div>
+
+                            <!-- Simple link -->
+                            <div class="col ms-auto">
+                                <a href="#!">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
+                            Sign In
+                        </button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>or sign up with:</p>
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+
+                        <!-- Go to Register -->
+                        <p class="text-center mt-5 mb-0">You don't have an account?
+                            <a type="button" id="goToRegister" class="fw-bold text-body"><u>Register</u></a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Section: Sign in -->
+<!-- Section: Register -->
+<section class="sign-up-custom text-center text-lg-start" id="formContentRegister">
+    <div class="container py-4 d-flex justify-content-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="cascading-right-custom radius-pop-up card">
+                <div class="card-body p-5 shadow-5 text-center">
+                    <div class="closing d-flex justify-content-end">
+                        <button class="btn" id="closeFormRegister">
+                            <i class='fa fa-close fa-xl'></i>
+                        </button>
+                    </div>
+
+                    <div class="title">
+                        <h2 class="fw-bold mb-5">Creat an account</h2>
+                    </div>
+
+                    <form id="myForm">
+
+                        <!-- Name input -->
+                        <div class="row">
+                            <div class="form-outline col-lg-6 mb-4">
+                                <input type="text" id="form3Example1" class="form-control" placeholder="First name">
+                                <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                            </div>
+
+                            <div class="form-outline col-lg-6 mb-4">
+                                <input type="text" id="form3Example1" class="form-control" placeholder="Last name">
+                                <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                            </div>
+                        </div>
+
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
+                            <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="row">
+                            <div class="form-outline  mb-4">
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Password">
+                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                            </div>
+
+                            <div class="form-outline  mb-4">
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Repeat your password">
+                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                            </div>
+                        </div>
+
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4 ">
+                            <div>
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <label class="form-check-label" for="form2Example33">
+                                    I agree all statements in Terms of service
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block" onclick="myFunction()">
+                            Register
+                        </button>
+
+                        <!-- Go to Log in -->
+                        <p class="text-center mt-5 mb-0">Have already an account?
+                            <a type="button" id="goToLogIn" class="fw-bold text-body"><u>Login here</u></a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Section: Register -->
