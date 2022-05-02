@@ -37,7 +37,7 @@
 
     </header>
 
-    <div class = "hero-img"></div>
+<!--    <div class = "hero-img"></div>-->
 
     <main class="ctn">
         <div class="ctn-container">
@@ -60,24 +60,28 @@
                         <h6 class="review-subtitle">Your review will help us to improve our web hosting quality products, and customer services.</h6>
                     </div>
 
-                    <form id="myForm" class="feedback" action="">
+                    <form id="reviewForm" class="feedback" action="components/reviewFormData.php" method="post">
                         <div class="title-equal">Your personal info</div>
                         <div class="group-box">
-                            <input type="text" class="prs-info" name="name" placeholder="Your Name">
-                            <input type="email" class="prs-info" name="email" placeholder="Email">
+                            <input type="text" class="prs-info" name="name" placeholder="Your Name" autocomplete="off" value="<?php echo $_POST["name"];?>">
+                            <span class="error">* <?php echo $_POST["nameErr"];?></span>
+
+                            <input type="email" class="prs-info" name="email" placeholder="Email" autocomplete="off" value="<?php echo $_POST["email"] ?>">
+                            <span class="error">* <?php echo $_POST["emailErr"];?></span>
+
                         </div>
 
                         <div class="title-equal">Rate our overall services</div>
                         <div class="rate-box">
-                            <input class="rate-input" type="number" min="1" max="5" placeholder="1-5">
+                            <input class="rate-input" type="number" name="rate" min="1" max="5" placeholder="1-5">
                         </div>
 
                         <div class="title-equal">Write your feedback</div>
                         <div class="write-box">
-                            <textarea class="write-area" id="review" rows="3"></textarea>
+                            <textarea class="write-area" name="comment" id="review" rows="3"></textarea>
                         </div>
-
-                        <button type="submit" class="feedback-btn" onclick="myFunction()" value="Submit form">Submit</button>
+                        <p><span class="error">* required field</span></p>
+                        <button type="submit" class="feedback-btn" value="Submit form">Submit</button>
                     </form>
                 </div>
             </div>
