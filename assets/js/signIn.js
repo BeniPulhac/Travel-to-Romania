@@ -38,25 +38,6 @@ btnClose.addEventListener('click', () => {
     }
 })
 
-// -----------------Show Input-----------------
-
-// function myFunction () {
-//     var contactForm = document.getElementById('myLogIn');
-//     var text = "";
-//     var i;
-//
-//     for (i = 0; i < contactForm.length - 1; i++) {
-//             text = text + contactForm.elements[i].value + '\n';
-//     }
-//
-//     if(text != 0){
-//         alert(text);
-//     } else {
-//         alert('Form Empty');
-//     }
-// }
-
-
 //----------------------Register-----------------------
 //-----------------Display/Close Form-----------------
 const btnRegister = document.getElementById('showRegister');
@@ -83,7 +64,6 @@ btnRegister.addEventListener('click', () => {
     }
 })
 
-
 //---------------------Close Form---------------------
 
 const btnCloseRegister = document.getElementById('closeFormRegister');
@@ -96,3 +76,23 @@ btnCloseRegister.addEventListener('click', () => {
         document.getElementById('testBlur').classList.remove('blur');
     }
 })
+
+
+
+//----------------------------------------------------------------------
+//---------------------------Take input---------------------------
+//---------------------------Sign in---------------------------
+
+const submitBtnS = document.getElementById('submitBtnS');
+const emailS = document.getElementById('emailS');
+const emailErrorS = document.getElementById('emailErrorS');
+const passwordS = document.getElementById('passwordS');
+const passwordErrorS = document.getElementById('passwordErrorS');
+
+submitBtnS.addEventListener('click', function () {
+   submitForm();
+});
+
+function submitForm () {
+
+}

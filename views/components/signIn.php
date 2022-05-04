@@ -16,28 +16,22 @@
 
                     <form id="myLogIn">
 
-                        <!-- User name input -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form3Example1" class="form-control" placeholder="User name">
-                            <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
-                        </div>
-
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
-                            <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                            <input type="email" id="emailS" class="form-control" placeholder="Email address">
+                            <span class="error" id="emailErrorS"> </span>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" id="form3Example4" class="form-control" placeholder="Password">
-                            <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                            <input type="password" id="passwordS" class="form-control" placeholder="Password">
+                            <span class="error" id="passwordErrorS"> </span>
                         </div>
 
                         <!-- Checkbox -->
                         <div class="form-check d-flex justify-content-center mb-4 ">
                             <div>
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33">
                                 <label class="form-check-label" for="form2Example33">
                                     Remember Me
                                 </label>
@@ -50,7 +44,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
+                        <button type="button" id="submitBtnS" class="btn btn-primary btn-block mb-4">
                             Sign In
                         </button>
 
@@ -140,7 +134,7 @@
                         <!-- Checkbox -->
                         <div class="form-check d-flex justify-content-center mb-4 ">
                             <div>
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33">
                                 <label class="form-check-label" for="form2Example33">
                                     I agree all statements in Terms of service
                                 </label>
@@ -148,7 +142,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block" onclick="myFunction()">
+                        <button type="button" class="btn btn-primary btn-block">
                             Register
                         </button>
 
@@ -163,3 +157,5 @@
     </div>
 </section>
 <!-- /Section: Register -->
+
+<script src="../../assets/js/signIn.js"></script>

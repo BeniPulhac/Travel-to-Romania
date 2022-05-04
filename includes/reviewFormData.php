@@ -1,5 +1,4 @@
 <?php
-
 $formData = $_POST;
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -60,13 +59,5 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
-//for(i = 0; i < $response.lenght; i++) {
-//    if($response[i]['isError'] === false){
-//         $response -= $response[i];
-//    } else {
-//          echo json_encode($response);
-//      }
-//}
 
 echo json_encode($response);

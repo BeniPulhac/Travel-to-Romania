@@ -80,7 +80,6 @@
 <!--------------------------------------------/footer-------------------------------------------->
 </div>
 
-<script src="../assets/js/formSubmitted.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/bootstrap.js"></script>
 <script src="../assets/js/jquery.js"></script>
