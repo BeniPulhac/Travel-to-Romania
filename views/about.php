@@ -105,7 +105,7 @@
 <!--                                        <form class="form-horizontal" action="send.php" method="post">-->
 <!--                                            <fieldset>-->
 <!---->
-<!--                                                <!-- Name input-->-->
+                                                <!-- Name input-->
 <!--                                                <div class="form-group">-->
 <!--                                                    <label class="col-md-3 control-label" for="name">Full Name</label>-->
 <!--                                                    <div class="col-md-9">-->
@@ -113,7 +113,7 @@
 <!--                                                    </div>-->
 <!--                                                </div>-->
 <!---->
-<!--                                                <!-- Email input-->-->
+                                                <!-- Email input-->
 <!--                                                <div class="form-group">-->
 <!--                                                    <label class="col-md-3 control-label" for="email">Your E-mail</label>-->
 <!--                                                    <div class="col-md-9">-->
@@ -121,7 +121,7 @@
 <!--                                                    </div>-->
 <!--                                                </div>-->
 <!---->
-<!--                                                <!-- Message body -->-->
+                                                <!-- Message body -->
 <!--                                                <div class="form-group">-->
 <!--                                                    <label class="col-md-3 control-label" for="message">Your message</label>-->
 <!--                                                    <div class="col-md-9">-->
@@ -130,7 +130,7 @@
 <!--                                                </div>-->
 <!---->
 <!---->
-<!--                                                <!-- Rating -->-->
+                                                <!-- Rating -->
 <!--                                                <div class="form-group">-->
 <!--                                                    <label class="col-md-3 control-label" for="message">Your rating</label>-->
 <!--                                                    <div class="col-md-9">-->
@@ -139,7 +139,7 @@
 <!--                                                </div>-->
 <!--                                </td>-->
 <!--                                <td align="center" valign="top" width="23%">-->
-<!--                                    <!-- Form actions -->-->
+                                    <!-- Form actions -->
 <!--                                    <div class="form-group">-->
 <!--                                        <div class="col-md-12 text-center">-->
 <!--                                            <img src="http://www.gohacking.com/wp-content/uploads/2010/06/captcha-300x171.jpg" height="140px" width="270px"/><br/>-->

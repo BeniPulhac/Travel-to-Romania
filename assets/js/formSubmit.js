@@ -35,15 +35,16 @@ function submitForm () {
     xmlhttp.onload = function() {
        let response = JSON.parse(xmlhttp.responseText);
 
+       var successStatus = true;
         for (key in response) {
-            if(response[key].isError === false) {
-                console.log('the if test is wroking');
-                success.innerText = 'Form Sent';
-
-            } else {
-                console.log('The form has errors');
+            if(response[key].isError === true){
+                successStatus = false;
                 checkError(response);
             }
+        }
+
+        if (successStatus == true){
+            success.innerText = 'Form Sent';
         }
     }
 }
