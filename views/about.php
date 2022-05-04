@@ -60,7 +60,7 @@
                         <h6 class="review-subtitle">Your review will help us to improve our web hosting quality products, and customer services.</h6>
                     </div>
 
-                    <?php require '../views/components/reviewFormData.php'?>
+
                     <form id="reviewForm" class="feedback" action="" method="POST">
                         <div class="title-equal">Your personal info</div>
                         <div class="group-box">
@@ -86,6 +86,7 @@
                         </div>
 <!--                        <p><span class="error">* required field</span></p>-->
                         <button type="button" class="feedback-btn" id="submitBtn" value="Submit form">Submit</button>
+                        <span class="d-flex justify-content-center" id="success"></span>
                     </form>
                 </div>
             </div>
