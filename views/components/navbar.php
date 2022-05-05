@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light">
     <div class="container-md fixed-top">
-        <a class="navbar-brand" href="../../views/home.php">
+
+        <a class="navbar-brand" href="../../index.php">
             <img src="../../assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
         </a>
 

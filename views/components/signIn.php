@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="../../assets/css/bootstrap.css">
 <!-- Section: Sign in -->
 <section class="sign-up-custom text-center text-lg-start" id="formContent">
     <div class="container py-4 d-flex justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="cascading-right-custom radius-pop-up card">
+            <div class="cascading-right-custom radius-pop-up">
                 <div class="card-body p-5 shadow-5 text-center">
                     <div class="closing d-flex justify-content-end">
                         <button class="btn" id="closeForm">
@@ -18,14 +19,14 @@
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="emailS" class="form-control" placeholder="Email address">
-                            <span class="error" id="emailErrorS"> </span>
+                            <input type="email" id="emailSignIn" class="form-control" placeholder="Email address">
+                            <span class="error" id="emailErrorSignIn"> </span>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" id="passwordS" class="form-control" placeholder="Password">
-                            <span class="error" id="passwordErrorS"> </span>
+                            <input type="password" id="passwordSignIn" class="form-control" placeholder="Password">
+                            <span class="error" id="passwordErrorSignIn"> </span>
                         </div>
 
                         <!-- Checkbox -->
@@ -39,12 +40,12 @@
 
                             <!-- Simple link -->
                             <div class="col ms-auto">
-                                <a href="#!">Forgot password?</a>
+                                <a href="#!" class="d-flex justify-content-end">Forgot password?</a>
                             </div>
                         </div>
 
                         <!-- Submit button -->
-                        <button type="button" id="submitBtnS" class="btn btn-primary btn-block mb-4">
+                        <button type="button" id="submitBtnSignIn" class="btn btn-primary btn-block mb-4">
                             Sign In
                         </button>
 
@@ -67,7 +68,7 @@
                                 <i class="fab fa-github"></i>
                             </button>
                         </div>
-
+                        <span class="d-flex justify-content-center" id="sendSignIn"></span>
                         <!-- Go to Register -->
                         <p class="text-center mt-5 mb-0">You don't have an account?
                             <a type="button" id="goToRegister" class="fw-bold text-body"><u>Register</u></a>
@@ -83,7 +84,7 @@
 <section class="sign-up-custom text-center text-lg-start" id="formContentRegister">
     <div class="container py-4 d-flex justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="cascading-right-custom radius-pop-up card">
+            <div class="cascading-right-custom radius-pop-up">
                 <div class="card-body p-5 shadow-5 text-center">
                     <div class="closing d-flex justify-content-end">
                         <button class="btn" id="closeFormRegister">
