@@ -24,20 +24,20 @@ $responseSignIn = [
 
 if(empty($emailSignIn)) {
     $responseSignIn['emailSignIn']['isErrorSignIn'] = true;
-    $responseSignIn['emailSignIn']['errorMsgSignIn'] = 'Email is required';
+    $responseSignIn['emailSignIn']['errorMsgSignIn'] = '*Email is required';
 } else {
     $emailSignIn = testInput($emailSignIn);
 
     if(!filter_var($emailSignIn, FILTER_VALIDATE_EMAIL)) {
         $responseSignIn['emailSignIn']['isErrorSignIn'] = true;
-        $responseSignIn['emailSignIn']['errorMsgSignIn'] = 'Invalid email format';
+        $responseSignIn['emailSignIn']['errorMsgSignIn'] = '*Invalid email format';
     }
 }
 
 if(empty($passwordSignIn)) {
     $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
     $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-    $responseSignIn['passwordSignIn']['errorMsgSignIn']['customError'] = 'Password is required';
+    $responseSignIn['passwordSignIn']['errorMsgSignIn']['customError'] = '*Password is required' . "\r\n" . "*Should be at least 8 characters in length and at least one lower case letter". "\r\n" . '*Should include at least one upper case letter ' . "\r\n" . '*Should include at least one number' . "\r\n";
 } else {
         $uppercase = preg_match('@[A-Z]@', $passwordSignIn);
         $lowercase = preg_match('@[a-z]@', $passwordSignIn);
@@ -47,19 +47,19 @@ if(empty($passwordSignIn)) {
         if(!$uppercase) {
             $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
             $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-            $responseSignIn['passwordSignIn']['errorMsgSignIn']['uppercase'] = 'Should include at least one upper case letter ' . "\r\n";
+            $responseSignIn['passwordSignIn']['errorMsgSignIn']['uppercase'] = '*Should include at least one upper case letter ' . "\r\n";
         } else if(!$lowercase || strlen($passwordSignIn) < 8) {
             $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
             $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-            $responseSignIn['passwordSignIn']['errorMsgSignIn']['lowercase'] = "Should be at least 8 characters in length and at least one lower case letter". "\r\n";
+            $responseSignIn['passwordSignIn']['errorMsgSignIn']['lowercase'] = "*Should be at least 8 characters in length and at least one lower case letter". "\r\n";
         } else if(!$number) {
             $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
             $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-            $responseSignIn['passwordSignIn']['errorMsgSignIn']['number'] = 'Should include at least one number' . "\r\n";
+            $responseSignIn['passwordSignIn']['errorMsgSignIn']['number'] = '*Should include at least one number' . "\r\n";
         } else if(!$specialChars) {
             $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
             $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-            $responseSignIn['passwordSignIn']['errorMsgSignIn']['specialChars'] = 'Should include at least one special character' . "\r\n";
+            $responseSignIn['passwordSignIn']['errorMsgSignIn']['specialChars'] = '*Should include at least one special character' . "\r\n";
         } else {
             $passwordSignIn = testInput($passwordSignIn);
         }

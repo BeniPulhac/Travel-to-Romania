@@ -20,13 +20,13 @@
                         <!-- Email input -->
                         <div class="form-outline mb-4">
                             <input type="email" id="emailSignIn" class="form-control" placeholder="Email address">
-                            <span class="error" id="emailErrorSignIn"> </span>
+                            <span class="d-flex text-start text-danger" id="emailErrorSignIn"> </span>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
                             <input type="password" id="passwordSignIn" class="form-control" placeholder="Password">
-                            <span class="error" id="passwordErrorSignIn"> </span>
+                            <span class=" d-flex text-start text-danger" id="passwordErrorSignIn"> </span>
                         </div>
 
                         <!-- Checkbox -->
