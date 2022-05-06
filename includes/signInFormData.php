@@ -3,6 +3,8 @@
 $formDataSignIn = $_POST;
 $emailSignIn = $_POST['emailSignIn'];
 $passwordSignIn = $_POST['passwordSignIn'];
+$verificationEmail = false;
+$verificationPassword = false;
 
 $responseSignIn = [
     'emailSignIn' => [
@@ -23,22 +25,32 @@ $responseSignIn = [
 ];
 
 if(empty($emailSignIn)) {
+
     $responseSignIn['emailSignIn']['isErrorSignIn'] = true;
     $responseSignIn['emailSignIn']['errorMsgSignIn'] = '*Email is required';
 } else {
-    $emailSignIn = testInput($emailSignIn);
 
     if(!filter_var($emailSignIn, FILTER_VALIDATE_EMAIL)) {
         $responseSignIn['emailSignIn']['isErrorSignIn'] = true;
         $responseSignIn['emailSignIn']['errorMsgSignIn'] = '*Invalid email format';
+    } else {
+
+        if($verificationEmail === false) {
+            $emailSignIn = testInput($emailSignIn);
+            $verificationEmail = true;
+        }
     }
 }
 
+
+
 if(empty($passwordSignIn)) {
+
     $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
     $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
     $responseSignIn['passwordSignIn']['errorMsgSignIn']['customError'] = '*Password is required' . "\r\n" . "*Should be at least 8 characters in length and at least one lower case letter". "\r\n" . '*Should include at least one upper case letter ' . "\r\n" . '*Should include at least one number' . "\r\n";
 } else {
+
         $uppercase = preg_match('@[A-Z]@', $passwordSignIn);
         $lowercase = preg_match('@[a-z]@', $passwordSignIn);
         $number    = preg_match('@[0-9]@', $passwordSignIn);
@@ -61,7 +73,11 @@ if(empty($passwordSignIn)) {
             $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
             $responseSignIn['passwordSignIn']['errorMsgSignIn']['specialChars'] = '*Should include at least one special character' . "\r\n";
         } else {
-            $passwordSignIn = testInput($passwordSignIn);
+            if($verificationPassword === false) {
+                $passwordSignIn = testInput($passwordSignIn);
+                $verificationPassword = true;
+            }
+
         }
 }
 
@@ -74,4 +90,12 @@ function testInput($passwordSignIn) {
     return $passwordSignIn;
 }
 
-echo json_encode($responseSignIn);
+
+//Send data back to FE
+if($verificationEmail && $verificationPassword) {
+    $success = 'Success';
+    echo json_encode($success);
+} else {
+    echo json_encode($responseSignIn);
+}
+
