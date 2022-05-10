@@ -15,7 +15,7 @@
                         <h2 class="fw-bold mb-5">Sign In</h2>
                     </div>
 
-                    <form id="myLogIn">
+                    <form id="myLogIn" action="" method="post">
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
@@ -96,38 +96,38 @@
                         <h2 class="fw-bold mb-5">Creat an account</h2>
                     </div>
 
-                    <form id="myForm">
+                    <form id="myFormRegister" action="../../includes/registerFormData.php" method="post">
 
                         <!-- Name input -->
                         <div class="row">
                             <div class="form-outline col-lg-6 mb-4">
-                                <input type="text" id="form3Example1" class="form-control" placeholder="First name">
-                                <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                                <input type="text" id="firstNameRegister" class="form-control" placeholder="First name">
+                                <span class="d-flex text-start text-danger" id="firstNameRegisterError"> </span>
                             </div>
 
                             <div class="form-outline col-lg-6 mb-4">
-                                <input type="text" id="form3Example1" class="form-control" placeholder="Last name">
-                                <!--                                            <label class="form-label" for="form3Example1">First name</label>-->
+                                <input type="text" id="lastNameRegister" class="form-control" placeholder="Last name">
+                                <span class="d-flex text-start text-danger" id="lastNameRegisterError"> </span>
                             </div>
                         </div>
 
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form3Example3" class="form-control" placeholder="Email address">
-                            <!--                                    <label class="form-label" for="form3Example3">Email address</label>-->
+                            <input type="email" id="emailRegister" class="form-control" placeholder="Email address">
+                            <span class="d-flex text-start text-danger" id="emailRegisterError"> </span>
                         </div>
 
                         <!-- Password input -->
                         <div class="row">
                             <div class="form-outline  mb-4">
-                                <input type="password" id="form3Example4" class="form-control" placeholder="Password">
-                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                                <input type="password" id="passwordRegister" class="form-control" placeholder="Password">
+                                <span class="d-flex text-start text-danger" id="passwordRegisterError"> </span>
                             </div>
 
                             <div class="form-outline  mb-4">
-                                <input type="password" id="form3Example4" class="form-control" placeholder="Repeat your password">
-                                <!--                                    <label class="form-label" for="form3Example4">Password</label>-->
+                                <input type="password" id="samePasswordRegister" class="form-control" placeholder="Repeat your password">
+                                <span class="d-flex text-start text-danger" id="samePasswordRegisterError"> </span>
                             </div>
                         </div>
 
@@ -143,9 +143,11 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="button" class="btn btn-primary btn-block">
+                        <button type="button" id="submitBtnRegister" class="btn btn-primary btn-block">
                             Register
                         </button>
+
+                        <span class="d-flex justify-content-center" id="sendRegister"></span>
 
                         <!-- Go to Log in -->
                         <p class="text-center mt-5 mb-0">Have already an account?
@@ -159,4 +161,6 @@
 </section>
 <!-- /Section: Register -->
 
+<script src="../../assets/js/openCloseSignIn.js"></script>
 <script src="../../assets/js/signIn.js"></script>
+<script src="../../assets/js/register.js"></script>
