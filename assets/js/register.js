@@ -16,6 +16,10 @@ const passwordErrorRegister = document.getElementById('passwordRegisterError');
 //Repeat Password
 const samePasswordRegister = document.getElementById('samePasswordRegister');
 const samePasswordRegisterError = document.getElementById('samePasswordRegisterError');
+//Check Mark
+const testCheckMark = document.getElementById('testCheckMark');
+const testCheckMarkError = document.getElementById('testCheckMarkError');
+
 const sendRegister = document.getElementById('sendRegister');
 
 submitBtnRegister.addEventListener('click', function () {
@@ -52,22 +56,36 @@ function submitFormRegister() {
                 if (responseRegister[keys].errorMsgRegister.isPasswordError === true) {
                     for(index in responseRegister[keys].errorMsgRegister) {
                         passwordErrorRegister.innerText = '';
+                        testCheckMarkError.innerText = '';
                         checkPasswordForErrors(responseRegister[keys].errorMsgRegister);
                     }
                 }
             }
 
-            samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
+            // samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
             if (statusRegister === true) {
                 firstNameRegisterError.innerText = '';
                 lasttNameRegisterError.innerText = '';
                 emailErrorRegister.innerText = '';
                 passwordErrorRegister.innerText = '';
                 samePasswordRegisterError.innerText = '';
-                sendRegister.innerText = 'Success';
-            }
-        }
+                testCheckMarkError.innerText = '';
 
+                if(testCheckMark.checked) {
+                    testCheckMarkError.innerText = '';
+                    sendRegister.innerText = 'Success';
+                } else {
+                    testCheckMarkError.innerText = 'You need to check first';
+                }
+
+            }
+
+            if(responseRegister.samePasswordRegister.isErrorRegister === true) {
+                samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
+            }
+
+        }
+        // samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
         // if (statusRegister === true) {
         //     firstNameRegisterError.innerText = '';
         //     lasttNameRegisterError.innerText = '';
@@ -80,7 +98,7 @@ function submitFormRegister() {
 }
 
 function checkPasswordForErrors(errors) {
-
+    testCheckMarkError.innerText = '';
     if(errors.customError) {
 
         passwordErrorRegister.innerText = errors.customError;
@@ -99,5 +117,6 @@ function checkPasswordForErrors(errors) {
         passwordErrorRegister.innerText = errors.number;
 
     }
+
 }
 

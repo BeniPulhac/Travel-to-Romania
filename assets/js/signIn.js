@@ -35,7 +35,7 @@ function submitForm () {
 
                     for (index in responseSignIn[keys].errorMsgSignIn) {
                         passwordErrorSignIn.innerText = '';
-                        checkPasswordForErrors(responseSignIn[keys].errorMsgSignIn);
+                        checkPasswordForErrorsSignIn(responseSignIn[keys].errorMsgSignIn);
                     }
                 }
             }
@@ -55,9 +55,8 @@ function checkForErrors(errors) {
     }
 }
 
-function checkPasswordForErrors(passError) {
+function checkPasswordForErrorsSignIn(passError) {
     if(passError.customError) {
-console.log(passError.customError);
         passwordErrorSignIn.innerText = passError.customError;
 
     // } else if(passError.uppercase) {

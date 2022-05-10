@@ -16,15 +16,30 @@ goToRegister.addEventListener('click', () => {
         emailErrorSignIn.innerText = '';
         passwordErrorSignIn.innerText = '';
         sendSignIn.innerText = '';
+
     }
 });
 
 btn.addEventListener('click', () => {
     const form = document.getElementById('formContent');
+    const formRegister = document.getElementById('formContentRegister');
 
     if (getComputedStyle(form).display === 'none') {
-        form.style.display = 'block';
-        document.getElementById('testBlur').classList.add('blur');
+        if(getComputedStyle(formRegister).display === 'block') {
+            formRegister.style.display = 'none';
+            document.getElementById('testBlur').classList.remove('blur');
+            // myFormRegister.reset();
+            firstNameRegisterError.innerText = '';
+            lasttNameRegisterError.innerText = '';
+            emailErrorRegister.innerText = '';
+            passwordErrorRegister.innerText = '';
+            samePasswordRegisterError.innerText = '';
+            sendRegister.innerText = '';
+        } else {
+            form.style.display = 'block';
+            document.getElementById('testBlur').classList.add('blur');
+        }
+
     } else {
         form.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
@@ -62,18 +77,32 @@ goToLogIn.addEventListener('click', () => {
    if(getComputedStyle(form).display === 'block') {
        form.style.display = 'none';
        btn.click();
+       // myFormRegister.reset();
+       firstNameRegisterError.innerText = '';
+       lasttNameRegisterError.innerText = '';
+       emailErrorRegister.innerText = '';
+       passwordErrorRegister.innerText = '';
+       samePasswordRegisterError.innerText = '';
+       sendRegister.innerText = '';
    }
 });
 
 btnRegister.addEventListener('click', () => {
-    const form = document.getElementById('formContentRegister');
+    const formRegister = document.getElementById('formContentRegister');
 
-    if (getComputedStyle(form).display === 'none') {
-        form.style.display = 'block';
+    if (getComputedStyle(formRegister).display === 'none') {
+        formRegister.style.display = 'block';
         document.getElementById('testBlur').classList.add('blur');
     } else {
-        form.style.display = 'none';
+        formRegister.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
+        // myFormRegister.reset();
+        firstNameRegisterError.innerText = '';
+        lasttNameRegisterError.innerText = '';
+        emailErrorRegister.innerText = '';
+        passwordErrorRegister.innerText = '';
+        samePasswordRegisterError.innerText = '';
+        sendRegister.innerText = '';
     }
 })
 
@@ -87,6 +116,13 @@ btnCloseRegister.addEventListener('click', () => {
     if(toCloseForm.style.display === 'block') {
         toCloseForm.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
+        // myFormRegister.reset();
+        firstNameRegisterError.innerText = '';
+        lasttNameRegisterError.innerText = '';
+        emailErrorRegister.innerText = '';
+        passwordErrorRegister.innerText = '';
+        samePasswordRegisterError.innerText = '';
+        sendRegister.innerText = '';
     }
 })
 

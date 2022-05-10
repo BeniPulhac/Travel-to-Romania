@@ -1,15 +1,17 @@
 <?php
-//$servername = "internship.rankingcoach.com:13306";
-//$username = "l.pulhac";
-//$password = "ZQAWsZfTuw4PboJ";
-//$dbname = "l_pulhac";
-//
-//// Create connection
-//$conn = new mysqli($servername, $username, $password, $dbname);
-//// Check connection
-//if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-//}
+$servername = "internship.rankingcoach.com:13306";
+$username = "l.pulhac";
+$password = "ZQAWsZfTuw4PboJ";
+$dbname = "l_pulhac";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+//include '../dataBase.php';
 
 //------------------------------------------------Register------------------------------------------------
 
@@ -27,6 +29,7 @@ $verificationFirstNameRegister = false;
 $verificationLastNameRegister = false;
 $verificationEmailRegister = false;
 $verificationPasswordRegister = false;
+$verificationSamePasswordRegister = false;
 
 
 $responseRegister = [
@@ -162,17 +165,30 @@ if(empty($samePasswordRegister)) {
         $responseRegister['samePasswordRegister']['isErrorRegister'] = true;
         $responseRegister['samePasswordRegister']['errorMsgRegister'] = 'Passwords not the same';
     } else {
+        if($verificationSamePasswordRegister === false) {
+            $verificationSamePasswordRegister = true;
+        }
         //SUCCESS
     }
 }
 
-//$sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('Dennis', 'Strati', 'd.stratinski@rankingcoach.com', 'asd123Q@')";
+
+//Insert values into DB
+$sql = "INSERT INTO users (first_name, last_name, email, password)
+VALUES ('$firstNameRegister', '$lastNameRegister', '$emailRegister', '$passwordRegister')";
 //mysqli_query($conn, $sql);
 
+
 //Send data back to FE
-if($verificationFirstNameRegister && $verificationLastNameRegister && $verificationEmailRegister  && $verificationPasswordRegister) {
-    $successRegister = 'Success';
-    echo json_encode($successRegister);
+if($verificationFirstNameRegister && $verificationLastNameRegister && $verificationEmailRegister  && $verificationPasswordRegister && $verificationSamePasswordRegister) {
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br />" . $conn->error;
+    }
 } else {
     echo json_encode($responseRegister);
 }
+
+//Close Connection
+$conn->close();
