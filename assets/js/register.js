@@ -1,14 +1,19 @@
 //------------------------------Register------------------------------
 
 const submitBtnRegister = document.getElementById('submitBtnRegister');
+//First Name
 const firstNameRegister = document.getElementById('firstNameRegister');
 const firstNameRegisterError = document.getElementById('firstNameRegisterError');
+//Last Name
 const lastNameRegister = document.getElementById('lastNameRegister');
 const lasttNameRegisterError = document.getElementById('lastNameRegisterError');
+//Email
 const emailRegister = document.getElementById('emailRegister');
 const emailErrorRegister = document.getElementById('emailRegisterError');
+//Password
 const passwordRegister = document.getElementById('passwordRegister');
 const passwordErrorRegister = document.getElementById('passwordRegisterError');
+//Repeat Password
 const samePasswordRegister = document.getElementById('samePasswordRegister');
 const samePasswordRegisterError = document.getElementById('samePasswordRegisterError');
 const sendRegister = document.getElementById('sendRegister');
@@ -33,12 +38,15 @@ function submitFormRegister() {
         let responseRegister = JSON.parse(file.responseText);
 
         let statusRegister = true;
+        passwordErrorRegister.innerText = '';
+
         for (keys in responseRegister) {
             if (responseRegister[keys].isErrorRegister === true) {
                 statusRegister = false;
                 firstNameRegisterError.innerText = responseRegister.firstNameRegister.errorMsgRegister;
                 lasttNameRegisterError.innerText = responseRegister.lastNameRegister.errorMsgRegister;
                 emailErrorRegister.innerText = responseRegister.emailRegister.errorMsgRegister;
+
                 sendRegister.innerText = '';
 
                 if (responseRegister[keys].errorMsgRegister.isPasswordError === true) {
@@ -48,27 +56,35 @@ function submitFormRegister() {
                     }
                 }
             }
+
+            samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
+            if (statusRegister === true) {
+                firstNameRegisterError.innerText = '';
+                lasttNameRegisterError.innerText = '';
+                emailErrorRegister.innerText = '';
+                passwordErrorRegister.innerText = '';
+                samePasswordRegisterError.innerText = '';
+                sendRegister.innerText = 'Success';
+            }
         }
 
-        samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
-
-        if (statusRegister === true) {
-            firstNameRegisterError.innerText = '';
-            lasttNameRegisterError.innerText = '';
-            emailErrorRegister.innerText = '';
-            passwordErrorRegister.innerText = '';
-            samePasswordRegisterError.innerText = '';
-            sendRegister.innerText = 'Success';
-        }
+        // if (statusRegister === true) {
+        //     firstNameRegisterError.innerText = '';
+        //     lasttNameRegisterError.innerText = '';
+        //     emailErrorRegister.innerText = '';
+        //     passwordErrorRegister.innerText = '';
+        //     samePasswordRegisterError.innerText = '';
+        //     sendRegister.innerText = 'Success';
+        // }
     }
 }
 
 function checkPasswordForErrors(errors) {
-    console.log('Im in the function');
+
     if(errors.customError) {
 
         passwordErrorRegister.innerText = errors.customError;
-        console.log(errors.customError);
+
 
     } else if(errors.uppercase) {
 

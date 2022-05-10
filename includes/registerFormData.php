@@ -1,29 +1,26 @@
 <?php
-$servername = "internship.rankingcoach.com:13306";
-$username = "l.pulhac";
-$password = "ZQAWsZfTuw4PboJ";
-$dbname = "l_pulhac";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+//$servername = "internship.rankingcoach.com:13306";
+//$username = "l.pulhac";
+//$password = "ZQAWsZfTuw4PboJ";
+//$dbname = "l_pulhac";
+//
+//// Create connection
+//$conn = new mysqli($servername, $username, $password, $dbname);
+//// Check connection
+//if ($conn->connect_error) {
+//    die("Connection failed: " . $conn->connect_error);
+//}
 
 //------------------------------------------------Register------------------------------------------------
 
 $formDataRegister = $_POST;
 $firstNameRegister = $_POST['firstNameRegister'];
-var_dump($firstNameRegister);
+
 $lastNameRegister = $_POST['lastNameRegister'];
-var_dump($lastNameRegister);
 
 $emailRegister = $_POST['emailRegister'];
-var_dump($emailRegister);
 
 $passwordRegister = $_POST['passwordRegister'];
-var_dump($passwordRegister);
 
 $samePasswordRegister = $_POST['samePasswordRegister'];
 $verificationFirstNameRegister = false;
@@ -160,16 +157,17 @@ if(empty($samePasswordRegister)) {
     $responseRegister['samePasswordRegister']['isErrorRegister'] = true;
     $responseRegister['samePasswordRegister']['errorMsgRegister'] = '*Retype password is required';
 } else {
-    if($passwordRegister === $samePasswordRegister) {
-        //SUCCESS
-    } else {
+    if($passwordRegister !== $samePasswordRegister) {
+
         $responseRegister['samePasswordRegister']['isErrorRegister'] = true;
         $responseRegister['samePasswordRegister']['errorMsgRegister'] = 'Passwords not the same';
+    } else {
+        //SUCCESS
     }
 }
 
-$sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('Dennis', 'Strati', 'd.stratinski@rankingcoach.com', 'asd123Q@')";
-mysqli_query($conn, $sql);
+//$sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('Dennis', 'Strati', 'd.stratinski@rankingcoach.com', 'asd123Q@')";
+//mysqli_query($conn, $sql);
 
 //Send data back to FE
 if($verificationFirstNameRegister && $verificationLastNameRegister && $verificationEmailRegister  && $verificationPasswordRegister) {

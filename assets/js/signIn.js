@@ -57,26 +57,26 @@ function checkForErrors(errors) {
 
 function checkPasswordForErrors(passError) {
     if(passError.customError) {
-
+console.log(passError.customError);
         passwordErrorSignIn.innerText = passError.customError;
 
-    } else if(passError.uppercase) {
-
-        passwordErrorSignIn.innerText = passError.uppercase;
-
-    } else if(passError.lowercase) {
-
-        passwordErrorSignIn.innerText = passError.lowercase;
-
-    } else if(passError.number) {
-
-        passwordErrorSignIn.innerText = passError.number;
-
-    }
+    // } else if(passError.uppercase) {
+    //
+    //     passwordErrorSignIn.innerText = passError.uppercase;
+    //
+    // } else if(passError.lowercase) {
+    //
+    //     passwordErrorSignIn.innerText = passError.lowercase;
+    //
+    // } else if(passError.number) {
+    //
+    //     passwordErrorSignIn.innerText = passError.number;
+    //
+    // }
 
     // else if(passError.specialChars) {
     //
     //     passwordErrorSignIn.innerText = passError.specialChars;
     //
-    // }
+    }
 }

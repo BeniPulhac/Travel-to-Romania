@@ -43,7 +43,7 @@ if(empty($passwordSignIn)) {
 
     $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
     $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-    $responseSignIn['passwordSignIn']['errorMsgSignIn']['customError'] = '*Password is required'. "\r\n";
+    $responseSignIn['passwordSignIn']['errorMsgSignIn']['customError'] = '*Password is required testing'. "\r\n";
 
 } else {
     //Need verification....is the password correct?
