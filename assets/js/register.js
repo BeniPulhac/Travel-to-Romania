@@ -42,21 +42,22 @@ function submitFormRegister() {
     file.onload = function() {
         let responseRegister = file.responseText;
         responseRegister = JSON.parse(responseRegister);
+        emptyFields();
+        console.log(typeof responseRegister);
         // errors
         if (typeof responseRegister == 'object') {
-            emptyFields();
             for (error in responseRegister) {
                 displayErrorMessage(error, responseRegister[error]);
             }
         } else if(typeof responseRegister == 'string') {
-
+            sendRegister.innerText = 'Success';
         }
     }
 }
 
 
 function displayErrorMessage(id, errorMessage) {
-    var errorElement = document.getElementById(id + 'Error');
+    let errorElement = document.getElementById(id + 'Error');
     errorElement.innerText = errorMessage;
 }
 

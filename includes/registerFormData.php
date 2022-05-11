@@ -22,7 +22,7 @@ $emailRegister = $_POST['emailRegister'];
 $passwordRegister = $_POST['passwordRegister'];
 $samePasswordRegister = $_POST['samePasswordRegister'];
 
-$errorsArray =array();
+$errorsArray = array();
 
 if(empty($firstNameRegister)) {
     $errorsArray['firstNameRegister'] = '*First name is required';
@@ -93,15 +93,23 @@ if($_POST['testCheckMark'] == 'false') {
 
 
 if (!empty($errorsArray)) {
+    //Send the errors to the FE
     echo json_encode($errorsArray);
-} else {
-    //create user in DB
-    if (true) {
 
+} else {
+    //Create user in DB
+    $sql = "INSERT INTO users (first_name, last_name, email, password)
+    VALUES ('$firstNameRegister', '$lastNameRegister', '$emailRegister', '$passwordRegister')";
+
+    if ($conn->query($sql) === TRUE) {
+        //If we send the data to the DB we show to FE success response
+        echo json_encode("New record created successfully");
     } else {
-        $errorsArray['sqlError'] = "Internal server error.";
+        //Show the server error
+        echo "Error: " . $sql . "<br />" . $conn->error;
     }
 }
 
+
 //Close Connection
-//$conn->close();
+$conn->close();

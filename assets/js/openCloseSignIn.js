@@ -106,10 +106,17 @@ function emptyErrorsSignIn() {
 }
 
 function emptyErrorsRegister() {
+    firstNameRegister.value = '';
     firstNameRegisterError.innerText = '';
+    lastNameRegister.value = '';
     lasttNameRegisterError.innerText = '';
-    emailErrorRegister.innerText = '';
-    passwordErrorRegister.innerText = '';
+    emailRegister.value = '';
+    emailRegisterError.innerText = '';
+    passwordRegister.value = '';
+    passwordRegisterError.innerText = '';
+    samePasswordRegister.value = '';
     samePasswordRegisterError.innerText = '';
+    testCheckMark.checked = false;
+    testCheckMarkError.innerText = '';
     sendRegister.innerText = '';
 }
