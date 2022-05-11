@@ -51,135 +51,14 @@ function submitFormRegister() {
         } else if(typeof responseRegister == 'string') {
 
         }
-        // let responseRegister = JSON.parse(file.responseText);
-        //
-        // checkingBackEnd(responseRegister);
-
-        // let statusRegister = true;
-        // passwordErrorRegister.innerText = '';
-        //
-        // for (keys in responseRegister) {
-        //     if (responseRegister[keys].isErrorRegister === true) {
-        //         statusRegister = false;
-        //         firstNameRegisterError.innerText = responseRegister.firstNameRegister.errorMsgRegister;
-        //         lasttNameRegisterError.innerText = responseRegister.lastNameRegister.errorMsgRegister;
-        //         emailErrorRegister.innerText = responseRegister.emailRegister.errorMsgRegister;
-        //         samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
-        //         sendRegister.innerText = '';
-        //
-        //         if (responseRegister[keys].errorMsgRegister.isPasswordError === true) {
-        //             for(index in responseRegister[keys].errorMsgRegister) {
-        //                 passwordErrorRegister.innerText = '';
-        //                 testCheckMarkError.innerText = '';
-        //                 checkPasswordForErrors(responseRegister[keys].errorMsgRegister);
-        //             }
-        //         }
-        //     }
-        //
-        //     // samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
-        //     // if (statusRegister === true) {
-        //     //     // emptyFields();
-        //     //     // firstNameRegisterError.innerText = '';
-        //     //     // lasttNameRegisterError.innerText = '';
-        //     //     // emailErrorRegister.innerText = '';
-        //     //     // passwordErrorRegister.innerText = '';
-        //     //     // samePasswordRegisterError.innerText = '';
-        //     //     // testCheckMarkError.innerText = '';
-        //     //     if(testCheckMark.checked) {
-        //     //         // testCheckMarkError.innerText = '';
-        //     //         firstNameRegisterError.innerText = '';
-        //     //         lasttNameRegisterError.innerText = '';
-        //     //         emailErrorRegister.innerText = '';
-        //     //         passwordErrorRegister.innerText = '';
-        //     //         samePasswordRegisterError.innerText = '';
-        //     //         testCheckMarkError.innerText = '';
-        //     //
-        //     //         sendRegister.innerText = 'Success';
-        //     //     } else {
-        //     //         testCheckMarkError.innerText = 'You need to check first';
-        //     //     }
-        //     //
-        //     // }
-        //
-        //     // samePasswordRegisterError.innerText = '';
-        //     // if(responseRegister.samePasswordRegister.isErrorRegister === true) {
-        //     //     // samePasswordRegisterError.innerText = responseRegister.samePasswordRegister.errorMsgRegister;
-        //     // }
-        // }
-        // if (statusRegister === true) {
-        //     // emptyFields();
-        //     // firstNameRegisterError.innerText = '';
-        //     // lasttNameRegisterError.innerText = '';
-        //     // emailErrorRegister.innerText = '';
-        //     // passwordErrorRegister.innerText = '';
-        //     // samePasswordRegisterError.innerText = '';
-        //     // testCheckMarkError.innerText = '';
-        //     if(testCheckMark.checked) {
-        //         // testCheckMarkError.innerText = '';
-        //         firstNameRegisterError.innerText = '';
-        //         lasttNameRegisterError.innerText = '';
-        //         emailErrorRegister.innerText = '';
-        //         passwordErrorRegister.innerText = '';
-        //         samePasswordRegisterError.innerText = '';
-        //         testCheckMarkError.innerText = '';
-        //
-        //         sendRegister.innerText = 'Success';
-        //     } else {
-        //         testCheckMarkError.innerText = 'You need to check first';
-        //     }
-        //
-        // }
     }
 }
+
 
 function displayErrorMessage(id, errorMessage) {
     var errorElement = document.getElementById(id + 'Error');
     errorElement.innerText = errorMessage;
 }
-
-function checkingBackEnd(responseRegister) {
-// console.log(typeof (responseRegister));
-
-    if(responseRegister !== '') {
-        // console.log('The array is empty i should not be here');
-        for(keys in responseRegister) {
-            if(responseRegister[keys] === firstNameRegister) {
-                firstNameRegisterError = '';
-                console.log('The array is empty i should not be here');
-            } else {
-                console.log('Im in the else case');
-                firstNameRegisterError.innerHTML = responseRegister.firstNameRegister;
-            }
-
-            lasttNameRegisterError.innerHTML = responseRegister.lastNameRegister;
-            emailErrorRegister.innerHTML = responseRegister.emailRegister;
-            passwordErrorRegister.innerHTML = responseRegister.passwordRegister;
-            samePasswordRegisterError.innerHTML = responseRegister.samePasswordRegister;
-        }
-    }
-
-}
-
-
-// function checkPasswordForErrors(errors) {
-//     if(errors.customError) {
-//
-//         passwordErrorRegister.innerText = errors.customError;
-//
-//     } else if(errors.uppercase) {
-//
-//         passwordErrorRegister.innerText = errors.uppercase;
-//
-//     } else if(errors.lowercase) {
-//
-//         passwordErrorRegister.innerText = errors.lowercase;
-//
-//     } else if(errors.number) {
-//
-//         passwordErrorRegister.innerText = errors.number;
-//
-//     }
-// }
 
 function emptyFields() {
     firstNameRegisterError.innerText = '';
