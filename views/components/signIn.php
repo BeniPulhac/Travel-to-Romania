@@ -135,8 +135,8 @@
                         <!-- Checkbox -->
                         <div class="form-check d-flex justify-content-center mb-4 ">
                             <div>
-                                <input class="form-check-input me-2" type="checkbox" value="" id="testCheckMark">
-                                <label class="form-check-label" for="form2Example33">
+                                <label class="form-check-label" for="testCheckMark">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="testCheckMark">
                                     I agree all statements in Terms of service
                                 </label>
                                 <span class="d-flex text-start text-danger" id="testCheckMarkError"> </span>

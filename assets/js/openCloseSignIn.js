@@ -13,10 +13,7 @@ goToRegister.addEventListener('click', () => {
         form.style.display = 'none';
         btnRegister.click();
         // myLogIn.reset();
-        emailErrorSignIn.innerText = '';
-        passwordErrorSignIn.innerText = '';
-        sendSignIn.innerText = '';
-
+        emptyErrorsSignIn();
     }
 });
 
@@ -29,12 +26,7 @@ btn.addEventListener('click', () => {
             formRegister.style.display = 'none';
             document.getElementById('testBlur').classList.remove('blur');
             // myFormRegister.reset();
-            firstNameRegisterError.innerText = '';
-            lasttNameRegisterError.innerText = '';
-            emailErrorRegister.innerText = '';
-            passwordErrorRegister.innerText = '';
-            samePasswordRegisterError.innerText = '';
-            sendRegister.innerText = '';
+            emptyErrorsRegister();
         } else {
             form.style.display = 'block';
             document.getElementById('testBlur').classList.add('blur');
@@ -44,9 +36,7 @@ btn.addEventListener('click', () => {
         form.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
         // myLogIn.reset();
-        emailErrorSignIn.innerText = '';
-        passwordErrorSignIn.innerText = '';
-        sendSignIn.innerText = '';
+        emptyErrorsSignIn();
     }
 })
 
@@ -60,9 +50,7 @@ btnClose.addEventListener('click', () => {
         toCloseForm.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
         // myLogIn.reset();
-        emailErrorSignIn.innerText = '';
-        passwordErrorSignIn.innerText = '';
-        sendSignIn.innerText = '';
+        emptyErrorsSignIn();
     }
 })
 
@@ -78,12 +66,7 @@ goToLogIn.addEventListener('click', () => {
        form.style.display = 'none';
        btn.click();
        // myFormRegister.reset();
-       firstNameRegisterError.innerText = '';
-       lasttNameRegisterError.innerText = '';
-       emailErrorRegister.innerText = '';
-       passwordErrorRegister.innerText = '';
-       samePasswordRegisterError.innerText = '';
-       sendRegister.innerText = '';
+       emptyErrorsRegister();
    }
 });
 
@@ -97,12 +80,7 @@ btnRegister.addEventListener('click', () => {
         formRegister.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
         // myFormRegister.reset();
-        firstNameRegisterError.innerText = '';
-        lasttNameRegisterError.innerText = '';
-        emailErrorRegister.innerText = '';
-        passwordErrorRegister.innerText = '';
-        samePasswordRegisterError.innerText = '';
-        sendRegister.innerText = '';
+        emptyErrorsRegister();
     }
 })
 
@@ -117,12 +95,21 @@ btnCloseRegister.addEventListener('click', () => {
         toCloseForm.style.display = 'none';
         document.getElementById('testBlur').classList.remove('blur');
         // myFormRegister.reset();
-        firstNameRegisterError.innerText = '';
-        lasttNameRegisterError.innerText = '';
-        emailErrorRegister.innerText = '';
-        passwordErrorRegister.innerText = '';
-        samePasswordRegisterError.innerText = '';
-        sendRegister.innerText = '';
+        emptyErrorsRegister();
     }
 })
 
+function emptyErrorsSignIn() {
+    emailErrorSignIn.innerText = '';
+    passwordErrorSignIn.innerText = '';
+    sendSignIn.innerText = '';
+}
+
+function emptyErrorsRegister() {
+    firstNameRegisterError.innerText = '';
+    lasttNameRegisterError.innerText = '';
+    emailErrorRegister.innerText = '';
+    passwordErrorRegister.innerText = '';
+    samePasswordRegisterError.innerText = '';
+    sendRegister.innerText = '';
+}
