@@ -3,9 +3,9 @@
 
 const submitBtnSignIn = document.getElementById('submitBtnSignIn');
 const emailSignIn = document.getElementById('emailSignIn');
-const emailErrorSignIn = document.getElementById('emailErrorSignIn');
+const emailSignInError = document.getElementById('emailSignInError');
 const passwordSignIn = document.getElementById('passwordSignIn');
-const passwordErrorSignIn = document.getElementById('passwordErrorSignIn');
+const passwordSignInError = document.getElementById('passwordSignInError');
 const sendSignIn = document.getElementById('sendSignIn');
 
 submitBtnSignIn.addEventListener('click', function () {
@@ -23,59 +23,28 @@ function submitForm () {
 
     xhr.onload = function () {
         let responseSignIn = JSON.parse(xhr.responseText);
+        emptyFieldsSignIn();
 
-        let statusSignIn = true;
-        for (keys in responseSignIn) {
-            if (responseSignIn[keys].isErrorSignIn === true) {
-                statusSignIn = false;
-                checkForErrors(responseSignIn);
-                sendSignIn.innerText = '';
+        //errors
+        if(typeof responseSignIn == 'object') {
+            responseSignIn.innerText = '';
 
-                if(responseSignIn[keys].errorMsgSignIn.isPasswordError === true) {
-
-                    for (index in responseSignIn[keys].errorMsgSignIn) {
-                        passwordErrorSignIn.innerText = '';
-                        checkPasswordForErrorsSignIn(responseSignIn[keys].errorMsgSignIn);
-                    }
-                }
+            for(index in responseSignIn) {
+                displayErrorSignIn(index, responseSignIn[index]);
             }
-        }
-
-        if (statusSignIn === true) {
-            emailErrorSignIn.innerText = '';
-            passwordErrorSignIn.innerText = '';
+        } else if(typeof responseSignIn == 'string') {
             sendSignIn.innerText = 'Success';
         }
     }
 }
 
-function checkForErrors(errors) {
-    if(errors.emailSignIn) {
-        emailErrorSignIn.innerText = errors.emailSignIn.errorMsgSignIn;
-    }
+
+function displayErrorSignIn(id, errorMsg) {
+    let errorElement = document.getElementById(id + 'Error');
+    errorElement.innerText = errorMsg;
 }
 
-function checkPasswordForErrorsSignIn(passError) {
-    if(passError.customError) {
-        passwordErrorSignIn.innerText = passError.customError;
-
-    // } else if(passError.uppercase) {
-    //
-    //     passwordErrorSignIn.innerText = passError.uppercase;
-    //
-    // } else if(passError.lowercase) {
-    //
-    //     passwordErrorSignIn.innerText = passError.lowercase;
-    //
-    // } else if(passError.number) {
-    //
-    //     passwordErrorSignIn.innerText = passError.number;
-    //
-    // }
-
-    // else if(passError.specialChars) {
-    //
-    //     passwordErrorSignIn.innerText = passError.specialChars;
-    //
-    }
+function emptyFieldsSignIn() {
+    emailSignInError.innerText = '';
+    passwordSignInError.innerText = '';
 }

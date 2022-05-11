@@ -21,6 +21,7 @@ $lastNameRegister = $_POST['lastNameRegister'];
 $emailRegister = $_POST['emailRegister'];
 $passwordRegister = $_POST['passwordRegister'];
 $samePasswordRegister = $_POST['samePasswordRegister'];
+$encryptedPassword = md5($passwordRegister);
 
 $errorsArray = array();
 
@@ -92,14 +93,23 @@ if($_POST['testCheckMark'] == 'false') {
 }
 
 
+//Check if we already have the email in DB
+$selectEmail = "SELECT * FROM users WHERE email = '$emailRegister'";
+$select = mysqli_query($conn, $selectEmail);
+if(mysqli_num_rows($select)) {
+    $errorsArray['emailRegister'] = '*This email address is already used!';
+}
+
+
 if (!empty($errorsArray)) {
     //Send the errors to the FE
     echo json_encode($errorsArray);
-
 } else {
-    //Create user in DB
-    $sql = "INSERT INTO users (first_name, last_name, email, password)
-    VALUES ('$firstNameRegister', '$lastNameRegister', '$emailRegister', '$passwordRegister')";
+        //Create user in DB
+        $sql = "INSERT INTO users (first_name, last_name, email, password)
+                VALUES ('$firstNameRegister', '$lastNameRegister', '$emailRegister', '$encryptedPassword')";
+//        mysqli_query($conn, $sql);
+
 
     if ($conn->query($sql) === TRUE) {
         //If we send the data to the DB we show to FE success response

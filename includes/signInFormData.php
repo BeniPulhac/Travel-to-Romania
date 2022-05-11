@@ -1,73 +1,45 @@
 <?php
+$servername = "internship.rankingcoach.com:13306";
+$username = "l.pulhac";
+$password = "ZQAWsZfTuw4PboJ";
+$dbname = "l_pulhac";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+//--------------------------------------------------------------------------------------------------------
 $formDataSignIn = $_POST;
 $emailSignIn = $_POST['emailSignIn'];
 $passwordSignIn = $_POST['passwordSignIn'];
-$verificationEmail = false;
-$verificationPassword = false;
 
-$responseSignIn = [
-    'emailSignIn' => [
-        'isErrorSignIn' => false,
-        'errorMsgSignIn' => '',
-    ],
-    'passwordSignIn' => [
-        'isErrorSignIn' => false,
-        'errorMsgSignIn' => [
-            'isPasswordError' => false,
-            'customError' => '',
-            'uppercase' => '',
-            'lowercase' => '',
-            'number' => '',
-            'specialChars' => '',
-        ]
-    ]
-];
+$errorsSignIn = array();
 
 //------------------------------------------------Sign in------------------------------------------------
 
 if(empty($emailSignIn)) {
-
-    $responseSignIn['emailSignIn']['isErrorSignIn'] = true;
-    $responseSignIn['emailSignIn']['errorMsgSignIn'] = '*Email is required';
-} else {
-    //Need verification from database....is there a username with this email?
-    if($verificationEmail === false) {
-//            $emailSignIn = testInput($emailSignIn);
-            $verificationEmail = true;
-        }
+    $errorsSignIn['emailSignIn'] = '*Email is required';
 }
 
-
 if(empty($passwordSignIn)) {
+    $errorsSignIn['passwordSignIn'] = '*Password is required';
+}
 
-    $responseSignIn['passwordSignIn']['isErrorSignIn'] = true;
-    $responseSignIn['passwordSignIn']['errorMsgSignIn']['isPasswordError'] = true;
-    $responseSignIn['passwordSignIn']['errorMsgSignIn']['customError'] = '*Password is required'. "\r\n";
-
+//Search in DB
+$selectData = "SELECT * FROM users WHERE email = '$emailSignIn' AND password = '$passwordSignIn'";
+$select = mysqli_query($conn, $selectData);
+if(mysqli_num_rows($select)) {
+    $errorsArray['emailSignIn'] = '*This email is not in the database';
+    $errorsArray['passwordSignIn'] = '*This password is not in the database';
 } else {
-    //Need verification....is the password correct?
-    if($verificationPassword === false) {
-//      $passwordSignIn = testInput($passwordSignIn);
-        $verificationPassword = true;
+    if(!empty($errorsSignIn)) {
+        echo json_encode($errorsSignIn);
     }
 }
 
 
-//
-//function testInput($passwordSignIn) {
-//    $passwordSignIn = trim($passwordSignIn);
-//    $passwordSignIn = stripslashes($passwordSignIn);
-//    $passwordSignIn = htmlspecialchars($passwordSignIn);
-//    return $passwordSignIn;
-//}
-
-
-//Send data back to FE
-if($verificationEmail && $verificationPassword) {
-    $success = 'Success';
-    echo json_encode($success);
-} else {
-    echo json_encode($responseSignIn);
-}
-
+//Close Connection
+$conn->close();

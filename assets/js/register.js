@@ -35,22 +35,24 @@ function submitFormRegister() {
     formDataRegister.append('samePasswordRegister', samePasswordRegister.value);
     formDataRegister.append('testCheckMark', testCheckMark.checked);
 
-    let file = new XMLHttpRequest();
-    file.open('POST', '../includes/registerFormData.php', true);
-    file.send(formDataRegister);
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../includes/registerFormData.php', true);
+    xhr.send(formDataRegister);
 
-    file.onload = function() {
-        let responseRegister = file.responseText;
+    xhr.onload = function() {
+        let responseRegister = xhr.responseText;
         responseRegister = JSON.parse(responseRegister);
         emptyFields();
-        console.log(typeof responseRegister);
         // errors
         if (typeof responseRegister == 'object') {
+            sendRegister.innerText = '';
             for (error in responseRegister) {
                 displayErrorMessage(error, responseRegister[error]);
             }
         } else if(typeof responseRegister == 'string') {
-            sendRegister.innerText = 'Success';
+
+                sendRegister.innerText = 'Success';
+
         }
     }
 }
