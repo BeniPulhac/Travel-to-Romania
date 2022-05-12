@@ -22,6 +22,7 @@
                 <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
                 <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
             </div>
+
         </div>
 
         <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

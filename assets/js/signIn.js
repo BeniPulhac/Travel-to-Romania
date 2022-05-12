@@ -2,10 +2,13 @@
 //---------------------------Sign in---------------------------
 
 const submitBtnSignIn = document.getElementById('submitBtnSignIn');
+//Email
 const emailSignIn = document.getElementById('emailSignIn');
 const emailSignInError = document.getElementById('emailSignInError');
+//Password
 const passwordSignIn = document.getElementById('passwordSignIn');
 const passwordSignInError = document.getElementById('passwordSignInError');
+//success
 const sendSignIn = document.getElementById('sendSignIn');
 
 submitBtnSignIn.addEventListener('click', function () {
@@ -30,7 +33,8 @@ function submitForm () {
             responseSignIn.innerText = '';
 
             for(index in responseSignIn) {
-                displayErrorSignIn(index, responseSignIn[index]);
+                emailSignInError.innerText = responseSignIn.emailSignIn;
+                passwordSignInError.innerText = responseSignIn.passwordSignIn;
             }
         } else if(typeof responseSignIn == 'string') {
             sendSignIn.innerText = 'Success';
@@ -38,11 +42,6 @@ function submitForm () {
     }
 }
 
-
-function displayErrorSignIn(id, errorMsg) {
-    let errorElement = document.getElementById(id + 'Error');
-    errorElement.innerText = errorMsg;
-}
 
 function emptyFieldsSignIn() {
     emailSignInError.innerText = '';

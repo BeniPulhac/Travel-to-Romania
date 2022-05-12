@@ -72,7 +72,7 @@ if(empty($passwordRegister)) {
     $uppercase = preg_match('@[A-Z]@', $passwordRegister);
     $lowercase = preg_match('@[a-z]@', $passwordRegister);
     $number    = preg_match('@[0-9]@', $passwordRegister);
-    $specialChars = preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $passwordRegister);
+    $specialChars = preg_match("/[\!'^£$%&*()}{@#~?><>,|=_+¬-]/", $passwordRegister);
 
     if (!($uppercase && $lowercase && $number && $specialChars)) {
         $errorsArray['passwordRegister'] = '*Should include lowercase and uppercase letters, numbers and symbols.';

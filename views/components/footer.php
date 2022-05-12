@@ -10,11 +10,12 @@
                     <h4>Subscribe to our newsletter</h4>
                     <p class="text-muted">Monthly digest of what's new and exciting from us.</p>
                     <div class="d-block d-md-flex w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                        <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
-                        <button class="btn btn-primary mb-2" type="button">Subscribe</button>
+                        <label for="newsletter" class="visually-hidden">Email address</label>
+                        <input id="newsletterEmail" type="email" class="form-control mb-2" placeholder="Email address">
+                        <button class="btn btn-primary mb-2" type="button" id="newsletterBtn">Subscribe</button>
                     </div>
                 </form>
+                <span class=" d-flex text-start text-danger" id="newsletterResponse"> </span>
             </div>
 
             <div class="col-12 col-md-2">
@@ -34,3 +35,5 @@
         </div>
     </div>
 </footer>
+
+<script src="../../assets/js/components/footer.js"></script>

@@ -16,7 +16,14 @@ $formDataSignIn = $_POST;
 $emailSignIn = $_POST['emailSignIn'];
 $passwordSignIn = $_POST['passwordSignIn'];
 
+//to prevent from mysqli injection
+$emailSignIn = stripcslashes($emailSignIn);
+$passwordSignIn = stripcslashes($passwordSignIn);
+$emailSignIn = mysqli_real_escape_string($conn, $emailSignIn);
+$passwordSignIn = mysqli_real_escape_string($conn, $passwordSignIn);
+
 $errorsSignIn = array();
+
 
 //------------------------------------------------Sign in------------------------------------------------
 
@@ -31,14 +38,24 @@ if(empty($passwordSignIn)) {
 //Search in DB
 $selectData = "SELECT * FROM users WHERE email = '$emailSignIn' AND password = '$passwordSignIn'";
 $select = mysqli_query($conn, $selectData);
-if(mysqli_num_rows($select)) {
-    $errorsArray['emailSignIn'] = '*This email is not in the database';
-    $errorsArray['passwordSignIn'] = '*This password is not in the database';
+$row = mysqli_fetch_array($select, MYSQLI_ASSOC);
+$count = mysqli_num_rows($select);
+if($count == 1) {
+    echo json_encode('Login successful');
 } else {
-    if(!empty($errorsSignIn)) {
-        echo json_encode($errorsSignIn);
-    }
+    $errorsSignIn['emailSignIn'] = '*This email is not in the database';
+    $errorsSignIn['passwordSignIn'] = '*This password is not in the database';
+
+    echo json_encode($errorsSignIn);
 }
+
+//var_dump($selectData);
+//
+//if(!empty($errorsSignIn)) {
+//    echo json_encode($errorsSignIn);
+//} else {
+//    echo json_encode('Success');
+//}
 
 
 //Close Connection

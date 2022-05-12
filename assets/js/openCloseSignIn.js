@@ -100,8 +100,10 @@ btnCloseRegister.addEventListener('click', () => {
 })
 
 function emptyErrorsSignIn() {
-    emailErrorSignIn.innerText = '';
-    passwordErrorSignIn.innerText = '';
+    emailSignIn.value = '';
+    emailSignInError.innerText = '';
+    passwordSignIn.value = '';
+    passwordSignInError.innerText = '';
     sendSignIn.innerText = '';
 }
 

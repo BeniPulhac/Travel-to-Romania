@@ -19,7 +19,7 @@
 
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
-<body id="body-width testBlur">
+<body id="body-width">
 <!-----------------------------------Nav Bar----------------------------------------------->
 <?php include 'components/navbar.php';?>
 <!----------------------------------/Nav Bar----------------------------------------------->
