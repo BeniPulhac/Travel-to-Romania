@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-light navbar-custom">
     <div class="container-md fixed-top">
 
         <a class="navbar-brand" href="../../index.php">

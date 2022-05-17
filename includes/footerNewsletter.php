@@ -1,16 +1,8 @@
 <?php
-$servername = "internship.rankingcoach.com:13306";
-$username = "l.pulhac";
-$password = "ZQAWsZfTuw4PboJ";
-$dbname = "l_pulhac";
+include '../dataBase.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+//--------------------------------------------------------------------------------------------------------
+$conn = $GLOBALS['conn'];
 $newsletter = $_POST;
 $newsletterEmail = $_POST['newsletterEmail'];
 //var_dump($newsletterEmail);

@@ -1,0 +1,90 @@
+.head {
+    height: 63rem;
+    background-color: rgba(39, 36, 38, 1);
+    padding-top: 6rem;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1450px) {
+    .head {
+        height: 58rem;
+    }
+}
+
+/*  header input    */
+
+.head-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.h-container-info {
+    display: block;
+    text-align: center;
+    white-space: break-spaces;
+}
+
+.head-title {
+    color: white;
+}
+
+.head-input-value {
+    padding: 2.4rem 0;
+    color: white;
+}
+
+.head-submit-btn {
+    border-radius: 26px;
+    font-size: 22px;
+    font-weight: 400;
+    min-width: 53px;
+    padding: 8px 25px;
+    width: 271px;
+    background-color: rgb(163,235,132);
+    color: black;
+}
+
+/*   header image   */
+.head-image {
+    max-height: 650px;
+    max-width: 1146px;
+}
+
+@media only screen and (max-width: 1450px) {
+    .head-image {
+        width: 1000px;
+    }
+}
+
+/*   section page   */
+.about-page {
+    /*background-color: rgba(248, 248, 249, 1);*/
+    background-color: white;
+    height: 40em;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.about-page-content {
+    height: 40em;
+
+}
+
+.test {
+    flex: 0 0 100%;
+}
+
+@media only screen and (min-width: 992px) {
+    .test {
+        flex: 0 0 30%;
+    }
+}
+
+.prg-align {
+    line-height: 1.8;
+}
