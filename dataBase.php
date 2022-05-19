@@ -14,6 +14,3 @@ if ($conn->connect_error) {
 
 $GLOBALS['conn'] = $conn;
 
-
-//Close Connection
-$conn->close();

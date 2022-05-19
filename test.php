@@ -1,49 +1,60 @@
 <?php
+//-----------------------------Timestamp-----------------------------
+date_default_timezone_set('UTC');
+$timeStart = 1653011947;
+$timeEnd = 1653695947;
+
+
+$star = date("d/m/Y", $timeStart);
+
+echo $star;
+
+
+
+
+
+
 
 //-----------------------------CURL-----------------------------
-
 //                 uploadImagesPosts/post40.jpg
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-//1. Initialize
-$ch = curl_init();
-
-//2. Set options
-//URL to send the request to
-$url = 'http://hungryesuriit.000webhostapp.com/';
-curl_setopt($ch, CURLOPT_URL, $url);
-
-//Return instead of outputting directly
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-//Whether to include the header in the output. Set to false here
-curl_setopt($ch, CURLOPT_HEADER, 0);
-
-//3. Execute the request and fetch the response. Check for errors
-$content = curl_exec($ch);
-
-if($content === FALSE) {
-    echo 'cURL Error: ' . curl_error($ch);
-}
-
-preg_match_all("(uploadImagesPosts/post(\d+).jpg)", $content, $image_match);
-
-
-for ($i = 0; $i < 10; $i++){
-
-    $image_url = $url.$image_match[0][$i];
-
-    echo '<img src = "' . $image_url . '">'."\n";
-
-}
-
-
-//4. Close and free up the curl handle
-curl_close($ch);
-
-
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//
+////1. Initialize
+//$ch = curl_init();
+//
+////2. Set options
+////URL to send the request to
+//$url = 'http://hungryesuriit.000webhostapp.com/';
+//curl_setopt($ch, CURLOPT_URL, $url);
+//
+////Return instead of outputting directly
+//curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//
+////Whether to include the header in the output. Set to false here
+//curl_setopt($ch, CURLOPT_HEADER, 0);
+//
+////3. Execute the request and fetch the response. Check for errors
+//$content = curl_exec($ch);
+//
+//if($content === FALSE) {
+//    echo 'cURL Error: ' . curl_error($ch);
+//}
+//
+//preg_match_all("(uploadImagesPosts/post(\d+).jpg)", $content, $image_match);
+//
+//
+//for ($i = 0; $i < 10; $i++){
+//
+//    $image_url = $url.$image_match[0][$i];
+//
+//    echo '<img src = "' . $image_url . '">'."\n";
+//
+//}
+//
+////4. Close and free up the curl handle
+//curl_close($ch);
 
 ////-------------------------------------Hotels-------------------------------------
 ////Insert into DB

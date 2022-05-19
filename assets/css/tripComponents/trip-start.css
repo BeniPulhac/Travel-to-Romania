@@ -1,0 +1,60 @@
+@import "../general.css";
+@import "../nav-bar2.css";
+
+main {
+    height: 100%;
+}
+
+.head {
+    /*height: auto;*/
+    background-color: rgba(39, 36, 38, 1);
+    padding-top: 5rem;
+    width: 100%;
+    height: 30%;
+}
+
+@media only screen and (max-width: 1450px) {
+    .head {
+        /*height: auto;*/
+    }
+}
+
+.larger-text {
+    font-size: larger;
+}
+
+/*
+            header input
+*/
+
+.head-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.h-container-info {
+    display: block;
+    text-align: center;
+    /*white-space: pre-wrap;*/
+}
+
+/*
+            Section
+*/
+
+.about-page {
+    background-color: rgb(247,247,249);
+    /*white-space: break-spaces;*/
+    height: 70%;
+}
+
+.about-page-content {
+    padding: 2em 0;
+    height: 32em;
+}
+
+.about-page-buttons {
+    margin: auto 0 0 0;
+
+}

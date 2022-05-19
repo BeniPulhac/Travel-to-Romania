@@ -45,10 +45,10 @@
     <section class="about-page d-flex flex-column py-5">
         <div class="about-page-content">
             <div class="about-page-header d-flex justify-content-center pb-4">
-                <h4 class="fw-bold">Where you want to eat?</h4>
+                <h4 class="fw-bold">What would you like to visit?</h4>
             </div>
             <div class="about-page-city container d-flex flex-row pb-5">
-                <label for="hotelInput" class="larger-text fw-bold pe-2">Restaurant: </label>
+                <label for="hotelInput" class="larger-text fw-bold pe-2">Place to visit: </label>
                 <input id="hotelInput" type="text" required>
             </div>
             <div class="about-page-city container d-flex flex-row pb-5">
@@ -56,7 +56,7 @@
                 <input id="hotelInput" type="time" required>
             </div>
             <div class="about-page-city container d-flex flex-row align-items-center">
-                <span class="larger-text fw-bold">You want to eat somewhere else in this city?: </span>
+                <span class="larger-text fw-bold">You want to visit something else?: </span>
 
                 <div class="optionInput ps-3">
                     <div class="form-check">
@@ -73,9 +73,9 @@
         </div>
         <hr>
         <div class="about-page-buttons d-flex flex-row justify-content-between container">
-            <a href="tripHotels.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
+            <a href="tripRestaurants.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
 
-            <a href="tripTouristAttraction.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+            <a href="tripEnd.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
         </div>
     </section>
 </main>

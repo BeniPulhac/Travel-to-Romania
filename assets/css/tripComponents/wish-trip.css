@@ -11,6 +11,8 @@
     }
 }
 
+
+
 /*  header input    */
 
 .head-container {
@@ -61,7 +63,7 @@
 .about-page {
     /*background-color: rgba(248, 248, 249, 1);*/
     background-color: white;
-    height: 40em;
+    height: 70em;
 }
 
 .wrap {

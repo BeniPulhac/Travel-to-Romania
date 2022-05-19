@@ -1,0 +1,17 @@
+@import '../general.css';
+@import '../nav-bar2.css';
+
+/*
+                Header
+*/
+.head {
+    background-color: #d0f1b8;
+}
+
+.trip-end-title {
+    padding: 4em;
+}
+
+/*
+                Body
+*/

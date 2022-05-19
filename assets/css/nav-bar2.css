@@ -1,0 +1,51 @@
+.navbar-custom {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*
+                Boostrap Testing
+*/
+.nav-bar-logo-custom {
+    height: 3em;
+    width: 3em;
+}
+
+.navigation-custom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link-custom {
+    font-size: 1.2rem;
+    color: white !important;
+}
+
+
+.btn-custom {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.nav-icon-custom {
+    width: 2em;
+    height: 2em;
+    display: none;
+}
+
+.burger-menu-custom {
+    border: none !important;
+    outline: none !important;
+}
+
+.burger-menu-custom:focus {
+    box-shadow: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-bar-logo-custom {
+        height: 2em;
+        width: 2em;
+    }
+}

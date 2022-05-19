@@ -84,6 +84,7 @@ if($_POST['testCheckMark'] == 'false') {
 
 //Check if we already have the email in DB
 $selectEmail = "SELECT * FROM users WHERE email = '$emailRegister'";
+
 $select = mysqli_query($conn, $selectEmail);
 if(mysqli_num_rows($select)) {
     $errorsArray['emailRegister'] = '*This email address is already used!';
