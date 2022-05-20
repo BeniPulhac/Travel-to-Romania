@@ -22,6 +22,7 @@
 <!----------------------------------Sign in | Register----------------------------------------------->
 <?php include '../components/signIn.php';?>
 <!----------------------------------/Sign in | Register/----------------------------------------------->
+
 <main id="testBlur">
     <header class="head">
         <div class="head-container">
@@ -30,7 +31,12 @@
                 <div class="head-input">
                     <div class="head-input-date d-flex flex-row">
                         <span class="text-white fw-bold larger-text">Trip between: </span>
-                        <span class="text-white ps-1">output from db</span>
+                        <span class="text-white ps-1">"'Variable' . 'Variable'"</span>
+                    </div>
+
+                    <div class="head-input-date d-flex flex-row">
+                        <span class="text-white fw-bold larger-text">City: </span>
+                        <span class="text-white ps-1" id="txtHint"></span>
                     </div>
 
                     <div class="head-input-places">
@@ -49,7 +55,7 @@
             </div>
             <div class="about-page-city d-flex flex-row container">
                 <label for="cityInput" class="larger-text fw-bold">City: </label>
-                <input id="cityInput" type="text" required>
+                <input id="cityInput" type="text" onkeyup="showHint(this.value)" required>
             </div>
         </div>
         <hr>
@@ -62,8 +68,9 @@
 </main>
 
 <!--<script src="../../assets/js/tripComponents/wishTrip.js"></script>-->
-<!--<script src="../../assets/js/tripComponents/tripEnd.js"></script>-->
+<script src="../../assets/js/tripComponents/tripStart.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
 </body>
 </html>
+

@@ -1,13 +1,13 @@
 <?php
 //-----------------------------Timestamp-----------------------------
-date_default_timezone_set('UTC');
-$timeStart = 1653011947;
-$timeEnd = 1653695947;
-
-
-$star = date("d/m/Y", $timeStart);
-
-echo $star;
+//date_default_timezone_set('UTC');
+//$timeStart = 1653011947;
+//$timeEnd = 1653695947;
+//
+//
+//$star = date("d/m/Y", $timeStart);
+//
+//echo $star;
 
 
 
@@ -199,3 +199,36 @@ echo $star;
 ////Close Connection
 //$conn->close();
 //-------------------------------------/Tourist Attraction/-------------------------------------
+
+//include 'dataBase.php';
+//$conn = $GLOBALS['conn'];
+//
+////Insert into DB
+////read the json file contents
+//$jsonData = file_get_contents('assets/json/hotelsAPI2.json');
+//
+////convert json object to php associative array
+//$data = json_decode($jsonData);
+//
+//$length = count($data);
+////var_dump($length . '<br>');
+////var_dump($data[0]->city);die;
+//
+//for ($i = 0; $i < $length; $i++) {
+//    $city_id = $data[$i]->city;
+//
+////    var_dump($data[$i]->city);
+//
+//    $sql = "INSERT INTO cities(citys_name)
+//    VALUES('$city_id')";
+//
+//    $result = mysqli_query($conn, $sql);
+//    if($result) {
+////        echo "Records inserted successfully.";
+//    }else{
+//        echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+//    }
+//}
+//
+////Close Connection
+//$conn->close();

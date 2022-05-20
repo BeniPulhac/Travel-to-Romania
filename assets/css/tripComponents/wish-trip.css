@@ -1,13 +1,17 @@
 .head {
-    height: 63rem;
-    background-color: rgba(39, 36, 38, 1);
+
+    /*background-color: rgba(39, 36, 38, 1);*/
     padding-top: 6rem;
     width: 100%;
 }
 
+.bkg-color {
+    background-color: rgba(39, 36, 38, 1);
+}
+
 @media only screen and (max-width: 1450px) {
     .head {
-        height: 58rem;
+
     }
 }
 
@@ -36,6 +40,10 @@
     color: white;
 }
 
+.green-color {
+    color: rgb(163,235,132);
+}
+
 .head-submit-btn {
     border-radius: 26px;
     font-size: 22px;
@@ -48,15 +56,15 @@
 }
 
 /*   header image   */
-.head-image {
-    max-height: 650px;
-    max-width: 1146px;
+.positioning-parent-custom {
+    /*position: relative;*/
+    /*height: 100vh;*/
 }
 
-@media only screen and (max-width: 1450px) {
-    .head-image {
-        width: 1000px;
-    }
+.positioning-child-custom {
+    /*position: absolute;*/
+
+    transform: translateY(15%);
 }
 
 /*   section page   */
@@ -64,6 +72,10 @@
     /*background-color: rgba(248, 248, 249, 1);*/
     background-color: white;
     height: 70em;
+}
+
+.padding-top {
+    padding-top: 6em;
 }
 
 .wrap {
@@ -77,12 +89,12 @@
 
 }
 
-.test {
+.position-card {
     flex: 0 0 100%;
 }
 
 @media only screen and (min-width: 992px) {
-    .test {
+    .position-card {
         flex: 0 0 30%;
     }
 }
