@@ -23,52 +23,54 @@ mysqli_free_result($result);
 //  Close Connection
 $conn->close();
 
-if($q !== '' && strlen($q) >= 3) {
+
+if($q !== '' && strlen($q) >= 1) {
     $q = strtolower($q);
-//    $q = utf8_encode($q);
     $len = strlen($q);
 
     for ($i = 0; $i < count($cities); $i++) {
-        if (stristr($q, substr($cities[$i]['citys_name'], 0, $len))) {
-            if ($hint === '') {
-//                var_dump($cities[$i]['citys_name']);die;
-                echo $hint = $cities[$i]['citys_name'];
 
+        if (stristr($q, substr($cities[$i]['citys_name'], 0, $len))) {
+
+            if ($hint === '') {
+                $hint = $cities[$i]['citys_name'];
+
+                echo $hint;
             }
             else {
-               echo $hint .= ", " . $cities[$i]['citys_name'];
+                $hint = '';
+                $hint = $hint[$i] . ", " . $cities[$i]['citys_name'];
 
+                echo $hint;
             }
+        }
+    }
+} else {
+    for ($i = 0; $i < count($cities); $i++) {
+
+        $hint = $cities[$i]['citys_name'];
+        if(!empty($hint)) {
+
+//            echo '<a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3 list-content" aria-current="true">
+//                    <div class="d-flex gap-2 w-100 justify-content-between ">
+//                         <div>
+//                            <h6 class="mb-0">'. $hint .'</h6>
+//                         </div>
+//                      </div>
+//                     </a>';
         }
     }
 }
 
 
 
-//
-//$sql = "SELECT citys_name FROM cities WHERE name LIKE '%$q%'";
-//$select = mysqli_query($conn, $sql);
-////var_dump($sql);die;
-//if(!$select) {
-//    die('Could not fetch data').mysqli_connect_errno();
-//}
-//while($fetch = mysqli_fetch_array($select)) {
-////    var_dump($select);die;
-//    $cities = $select;
-//}
-//
-////  Look all hints from DB if $q is different from ''
-//if($q !== '') {
-//    foreach ($cities as $city) {
-////        var_dump($city);die;
-//        if($hint === '') {
-//            $hint = $city;
-//        } else {
-//            $hint .= ', $city';
-//        }
-//    }
-//}
-//
-////Output 'no suggestion' if no hint was found or output correct values
-//echo $hint === '' ? 'no suggestion' : $hint;
-//
+
+//echo '<a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3 list-content" aria-current="true">
+//                                                        <div class="d-flex gap-2 w-100 justify-content-between ">
+//                                                            <div>
+//                                                                <h6 class="mb-0">List group item heading</h6>
+//                                                                <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+//                                                            </div>
+//<!--                                                            <small class="opacity-50 text-nowrap">now</small>-->
+//                                                        </div>
+////                                                    </a>';

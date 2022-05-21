@@ -19,7 +19,7 @@ function loadData(filter) {
     document.getElementById('insertCard').innerHTML = '';
     var ourRequest = new XMLHttpRequest();
 
-    ourRequest.open('GET', 'assets/json/hotelsTesting.json', true);
+    ourRequest.open('GET', '../json/hotelsTesting.json', true);
     ourRequest.onload = function () {
         if(ourRequest.status == 200){
             var ourData = JSON.parse(ourRequest.responseText);
