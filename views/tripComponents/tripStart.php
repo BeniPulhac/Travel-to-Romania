@@ -34,10 +34,14 @@
                         <span class="text-white ps-1">"'Variable' . 'Variable'"</span>
                     </div>
 
-<!--                    <div class="head-input-date d-flex flex-row">-->
-<!--                        <span class="text-white fw-bold larger-text">City: </span>-->
-<!--                        <span class="text-white ps-1" id="txtHint"></span>-->
-<!--                    </div>-->
+                    <div class="d-flex align-content-start flex-wrap">
+                        <div class="p-2 text-white btn btn-dark btn-outline-success border-5 element-custom">
+                            <i class="fa-solid fa-city"></i>
+                            <span>City:</span>
+                            <span>Output Here</span>
+                        </div>
+
+                    </div>
 
                     <div class="head-input-places">
 
@@ -55,6 +59,31 @@
             </div>
         </div>
 
+
+<!--        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
+<!--            Launch static backdrop modal-->
+<!--        </button>-->
+<!---->
+<!---->
+<!--        <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>-->
+<!--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body">-->
+<!--                        ...-->
+<!--                    </div>-->
+<!--                    <div class="modal-footer">-->
+<!--                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--                        <button type="button" class="btn btn-primary">Understood</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
         <div class="container about-page-content">
             <div class="row">
                 <div class="col-12">
@@ -67,7 +96,7 @@
                                             <div class="row">
                                                 <div class="form-group col-lg-6 d-flex flex-row">
                                                     <label for="cityInput" class="my-auto">City</label>
-                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value)" required>
+                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeydown="showHint(this.value)" required>
                                                 </div>
 
                                                 <div class="col-lg-6">
@@ -89,15 +118,17 @@
 
                                         </div>
 
-                                        <div class="result-body">
+                                        <div class="result-body" id="cityPopup">
                                             <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center">
                                                 <!--                                                    Insert cards with JS-->
                                                 <div class="list-group w-75 mx-auto list-custom pe-0 overflow-auto" id="insertCityList">
-                                                    <?php include '../../includes/tripComponents/tripStartBackend.php'; ?>
+<!--                                                    --><?php //include '../../includes/tripComponents/tripStartBackend.php'; ?>
                                                 </div>
 
-<!--                                                --><?php //include '../../includes/tripComponents/tripStartBackend.php'; ?>
-<!--                                                -->
+                                                <div >
+
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
