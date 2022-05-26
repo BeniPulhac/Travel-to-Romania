@@ -1,4 +1,28 @@
 <?php
+////  Work with objects???maybe
+//include '../classes/placesClass.php';
+//
+//$q = $_REQUEST['q'];
+//$hint = '';
+//$cities = new cities();
+//echo $cities->getCity('test');
+//
+//var_dump($cities->getCity('test'));
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
 include '../../dataBase.php';
 //  Get the parameter from URL
 $q = $_REQUEST['q'];
@@ -74,3 +98,6 @@ if($q !== '' && strlen($q) >= 1) {
 //<!--                                                            <small class="opacity-50 text-nowrap">now</small>-->
 //                                                        </div>
 ////                                                    </a>';
+
+
+
