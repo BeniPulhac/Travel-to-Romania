@@ -69,22 +69,23 @@ if($q !== '' && strlen($q) >= 1) {
             }
         }
     }
-} else {
-    for ($i = 0; $i < count($cities); $i++) {
-
-        $hint = $cities[$i]['citys_name'];
-        if(!empty($hint)) {
-
-//            echo '<a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3 list-content" aria-current="true">
-//                    <div class="d-flex gap-2 w-100 justify-content-between ">
-//                         <div>
-//                            <h6 class="mb-0">'. $hint .'</h6>
-//                         </div>
-//                      </div>
-//                     </a>';
-        }
-    }
 }
+//else {
+//    for ($i = 0; $i < count($cities); $i++) {
+//
+//        $hint = $cities[$i]['citys_name'];
+//        if(!empty($hint)) {
+//
+////            echo '<a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3 list-content" aria-current="true">
+////                    <div class="d-flex gap-2 w-100 justify-content-between ">
+////                         <div>
+////                            <h6 class="mb-0">'. $hint .'</h6>
+////                         </div>
+////                      </div>
+////                     </a>';
+//        }
+//    }
+//}
 
 
 

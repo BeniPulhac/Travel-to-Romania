@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel = "stylesheet" href = "../../assets/css/tripComponents/trip-start.css">
+    <link rel = "stylesheet" href = "../../assets/css/tripComponents/trip-hotels.css">
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body id="body-width">
@@ -55,7 +55,7 @@
                                             <div class="row">
                                                 <div class="form-group col-lg-6 d-flex flex-row">
                                                     <label for="cityInput" class="my-auto">Hotel</label>
-                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value)" required>
+                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHintHotel(this.value)" required>
                                                 </div>
 
                                                 <div class="col-lg-6">
@@ -78,32 +78,34 @@
                                         </div>
 
                                         <div class="result-body">
-                                            <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center">
+                                            <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center" id="insertHotelCard">
                                                 <!--                                                    Insert cards with JS-->
+<!---->
+<!--                                                <div class='card-custom'>-->
+<!--                                                    <a href='#' class='card-custom-a'>-->
+<!--                                                        <div class='card-img card-image-custom'>-->
+<!--                                                            <img class='card-img-top card-image-custom' src='../../assets/images/cities-small.jpg' alt='Card image cap'>-->
+<!--                                                        </div>-->
+<!---->
+<!--                                                        <div class='card-body'>-->
+<!--                                                            <h5 class='card-title'>Title</h5>-->
+<!--                                                            <p class='card-text'>-->
+<!--                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque-->
+<!--                                                            </p>-->
+<!--                                                        </div>-->
+<!---->
+<!--                                                        <div class='card-footer'>-->
+<!--                                                            <p class='card-text '>-->
+<!--                                                                <small class='text-muted d-flex justify-content-between'>-->
+<!--                                                                    <span><i class='fas fa-eye pe-1'></i>1000</span>-->
+<!--                                                                    <span><i class='fas fa-calendar-alt pe-1'></i>Jan 20, 2018</span>-->
+<!--                                                                </small>-->
+<!--                                                            </p>-->
+<!--                                                        </div>-->
+<!--                                                    </a>-->
+<!--                                                </div>-->
 
-                                                <div class='card-custom'>
-                                                    <a href='#' class='card-custom-a'>
-                                                        <div class='card-img card-image-custom'>
-                                                            <img class='card-img-top card-image-custom' src='../../assets/images/cities-small.jpg' alt='Card image cap'>
-                                                        </div>
 
-                                                        <div class='card-body'>
-                                                            <h5 class='card-title'>Title</h5>
-                                                            <p class='card-text'>
-                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque
-                                                            </p>
-                                                        </div>
-
-                                                        <div class='card-footer'>
-                                                            <p class='card-text '>
-                                                                <small class='text-muted d-flex justify-content-between'>
-                                                                    <span><i class='fas fa-eye pe-1'></i>1000</span>
-                                                                    <span><i class='fas fa-calendar-alt pe-1'></i>Jan 20, 2018</span>
-                                                                </small>
-                                                            </p>
-                                                        </div>
-                                                    </a>
-                                                </div>
                                                 <!--                                                -->
                                             </div>
                                         </div>
@@ -126,7 +128,7 @@
 </main>
 
 <!--<script src="../../assets/js/tripComponents/wishTrip.js"></script>-->
-<!--<script src="../../assets/js/tripComponents/tripEnd.js"></script>-->
+<script src="../../assets/js/tripComponents/tripHotels.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
 </body>

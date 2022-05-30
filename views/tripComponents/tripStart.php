@@ -96,7 +96,7 @@
                                             <div class="row">
                                                 <div class="form-group col-lg-6 d-flex flex-row">
                                                     <label for="cityInput" class="my-auto">City</label>
-                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeydown="showHint(this.value)" required>
+                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value)" required>
                                                 </div>
 
                                                 <div class="col-lg-6">
