@@ -1,5 +1,5 @@
 <?php
-include '../classes/placesClass.php';
+require_once '../classes/placesClass.php';
 $q = $_REQUEST['q'];
 //var_dump($q);
 $hotels = new hotels();

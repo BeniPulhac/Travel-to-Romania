@@ -22,10 +22,12 @@ const testCheckMarkError = document.getElementById('testCheckMarkError');
 
 const sendRegister = document.getElementById('sendRegister');
 
+//
 submitBtnRegister.addEventListener('click', function () {
    submitFormRegister();
 });
 
+//
 function submitFormRegister() {
     let formDataRegister = new FormData();
     formDataRegister.append('firstNameRegister', firstNameRegister.value);
