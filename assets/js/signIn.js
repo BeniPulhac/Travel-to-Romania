@@ -1,6 +1,4 @@
-//---------------------------Take input---------------------------
-//---------------------------Sign in---------------------------
-
+//---------------------------Variables---------------------------
 const submitBtnSignIn = document.getElementById('submitBtnSignIn');
 //Email
 const emailSignIn = document.getElementById('emailSignIn');
@@ -9,23 +7,26 @@ const emailSignInError = document.getElementById('emailSignInError');
 const passwordSignIn = document.getElementById('passwordSignIn');
 const passwordSignInError = document.getElementById('passwordSignInError');
 const searchDB = document.getElementById('searchDB');
-//success
+//Success
 const sendSignIn = document.getElementById('sendSignIn');
 const showFormSignOut = document.getElementById('showFormSignOut');
 
+
+//---------------------------Events---------------------------
 submitBtnSignIn.addEventListener('click', function () {
     submitForm();
     // location.reload();
+    // setTimeout(location.reload(), 3000);
 });
-
 
 if(showFormSignOut) {
     showFormSignOut.addEventListener('click', () => {
-        // location.reload();
-        location.href = '../../includes/components/signOut.php';
+        signOut();
     });
 }
 
+
+//---------------------------AJAX Requests---------------------------
 function submitForm () {
     let formDataSignIn = new FormData();
     formDataSignIn.append('emailSignIn', emailSignIn.value);
@@ -49,11 +50,19 @@ function submitForm () {
         } else if(typeof responseSignIn == 'string') {
             sendSignIn.innerText = 'Success';
             location.reload();
+            // setTimeout(location.reload(), 5000);
         }
     }
 }
 
+function signOut() {
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../includes/components/signOut.php');
+    xhr.send();
+    location.reload();
+}
 
+//---------------------------Functions---------------------------
 function emptyFieldsSignIn() {
     emailSignInError.innerText = '';
     passwordSignInError.innerText = '';

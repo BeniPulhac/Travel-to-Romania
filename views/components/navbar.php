@@ -7,9 +7,11 @@
 
         <div class="navigation-custom navbar-light d-none d-md-flex">
             <ul class="nav-ul-custom nav justify-content-end">
-                <li class="nav-item nav-item-custom">
-                    <a class="nav-link nav-link-custom" href="../../views/hotels.php">Hotels</a>
-                </li>
+                <?php if(isset($_SESSION['userid'])) { ?>
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link nav-link-custom" href="../../views/wishTrip.php">Plan trip</a>
+                    </li>
+                <?php }  ?>
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link nav-link-custom" href="../../views/attractions.php">Attractions</a>
                 </li>
@@ -20,9 +22,9 @@
 
             <div class="navigation-btn btn-group">
                 <?php if(isset($_SESSION['userid'])) { ?>
-                <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut">Sign out</button>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut">Sign out</button>
                 <?php } else { ?>
-                <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
                 <?php } ?>
                 <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
             </div>
@@ -30,7 +32,7 @@
         </div>
 
         <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon navbar-dark"></span>
         </button>
 
         <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -39,11 +41,13 @@
             <div class="offcanvas-body">
                 <ul class="nav-ul-custom nav justify-content-end pb-2 d-block">
                     <li class="nav-item nav-item-custom">
-                        <a class="nav-link nav-link-custom" href="../../views/home.php">Home</a>
+                        <a class="nav-link nav-link-custom" href="../../index.php">Home</a>
                     </li>
-                    <li class="nav-item nav-item-custom">
-                        <a class="nav-link nav-link-custom" href="../../views/hotels.php"><?php echo "Hotels" ?></a>
-                    </li>
+                    <?php if(isset($_SESSION['userid'])) { ?>
+                        <li class="nav-item nav-item-custom">
+                            <a class="nav-link nav-link-custom" href="../../views/wishTrip.php">Plan trip</a>
+                        </li>
+                    <?php }  ?>
                     <li class="nav-item nav-item-custom ">
                         <a class="nav-link nav-link-custom" href="../../views/attractions.php">Attractions</a>
                     </li>
@@ -53,7 +57,11 @@
                 </ul>
 
                 <div class="navigation-btn btn-group">
-                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                    <?php if(isset($_SESSION['userid'])) { ?>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut">Sign out</button>
+                    <?php } else { ?>
+                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                    <?php } ?>
                     <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
                 </div>
             </div>

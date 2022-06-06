@@ -123,36 +123,3 @@ $today = date('Y/m/d');
     </section>
 </main>
 
-<script src="../assets/js/tripComponents/wishTrip.js"></script>
-<!--<script src="../assets/js/tripComponents/tripEnd.js"></script>-->
-<script src="../assets/js/bootstrap.js"></script>
-<script src="../assets/js/jquery.js"></script>
-</body>
-</html>
-
-<?php
-//$_SESSION['tripStart'] = $tripStart;
-include '../dataBase.php';
-$conn = $GLOBALS['conn'];
-$tripStart = $_GET['tripStart'];
-$tripEnd = $_GET['tripEnd'];
-$submitDates = $_GET['submitDates'];
-
-//$tripStart = '';
-//$tripEnd = '';
-
-//  Insert in db
-$sql = "INSERT INTO trip(trip_start, trip_end)
-        VALUES('$tripStart', '$tripEnd')";
-
-if ($conn->query($sql) === TRUE) {
-    //  If we send the data to the DB we show to FE success response
-    echo json_encode("New record created successfully");
-} else {
-    //  Show the server error
-    echo "Error: " . $sql . "<br />" . $conn->error;
-}
-
-//  Close Connection
-$conn->close();
-?>
