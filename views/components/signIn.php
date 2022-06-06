@@ -27,6 +27,7 @@
                         <div class="form-outline mb-4">
                             <input type="password" id="passwordSignIn" class="form-control" placeholder="Password">
                             <span class=" d-flex text-start text-danger" id="passwordSignInError"> </span>
+                            <span class="d-flex text-start text-danger" id="searchDB"></span>
                         </div>
 
                         <!-- Checkbox -->

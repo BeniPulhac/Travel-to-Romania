@@ -9,7 +9,12 @@
 
 
             <div class="navigation-btn btn-group">
-                <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                <?php if(isset($_SESSION['userid'])) { ?>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut">Sign out</button>
+                <?php } else { ?>
+                    <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>
+                <?php } ?>
+<!--                <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm">Sign in</button>-->
                 <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
             </div>
 

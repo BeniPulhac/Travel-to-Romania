@@ -35,26 +35,32 @@ class FormModel extends Model
                 'check' => false,
             ],
             'textAreaForm' => [
-              'error' => '',
-              'check' => false,
+                'error' => '',
+                'check' => false,
             ],
-            'formCheck' => false,
+            'formCheck' => [
+                'error' => '',
+                'check' => false,
+            ]
         ];
 
         if(empty($email)) {
             $errorsArray['emailForm']['check'] = true;
             $errorsArray['emailForm']['error'] = '*Email is required';
+
         } else {
 
             if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $errorsArray['emailForm']['check'] = true;
                 $errorsArray['emailForm']['error'] = '*Invalid email format';
+
             }
         }
 
         if(empty($subject)) {
             $errorsArray['subjectForm']['check'] = true;
             $errorsArray['subjectForm']['error'] = '*Last name is required';
+
         } else {
             $uppercase = preg_match('@[A-Z]@', $subject);
             $lowercase = preg_match('@[a-z]@', $subject);
@@ -62,16 +68,22 @@ class FormModel extends Model
             if(!($uppercase || $lowercase)) {
                 $errorsArray['subjectForm']['check'] = true;
                 $errorsArray['subjectForm']['error'] = '*Use only A-Z lower and uppercase letters';
+
             }
         }
 
         if(empty($text)) {
             $errorsArray['textAreaForm']['check'] = true;
             $errorsArray['textAreaForm']['error'] = '*Please add a text';
+
         }
 
-        if($errorsArray['emailForm']['check'] === false || $errorsArray['subjectForm']['check'] === false || $errorsArray['textAreaForm']['check'] === false) {
-            $errorsArray['formCheck'] = true;
+        if($errorsArray['emailForm']['check'] === false && $errorsArray['subjectForm']['check'] === false && $errorsArray['textAreaForm']['check'] === false) {
+            $errorsArray['formCheck']['check'] = true;
+            $errorsArray['formCheck']['error'] = 'Success';
+        } else {
+            $errorsArray['formCheck']['check'] = false;
+            $errorsArray['formCheck']['error'] = '';
         }
 
         return $errorsArray;

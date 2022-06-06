@@ -12,6 +12,7 @@ $passwordRegister = $_POST['passwordRegister'];
 $samePasswordRegister = $_POST['samePasswordRegister'];
 $encryptedPassword = md5($passwordRegister);
 
+
 $errorsArray = array();
 
 if(empty($firstNameRegister)) {

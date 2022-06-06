@@ -28,32 +28,19 @@ function formHandling() {
     xhr.open('POST', '../../views/formTemporary/formOutput.php', true);
     xhr.onload = function() {
         let response = xhr.responseText;
+        console.log( response);
         response = JSON.parse(response);
 
         emptyFormFields();
 
-        for(keys in response) {
-            if(response['formCheck'] === false) {
+        if(response['formCheck']['check'] === false) {
+            for(keys in response) {
                 displayErrors(keys, response[keys]);
-            } else {
-                emptyFormFields();
-                formSuccess.innerHTML = 'Success';
             }
+        } else {
+            emptyFormFields();
+            formSuccess.innerHTML = response['formCheck']['error'];
         }
-
-
-        // for(keys in response) {
-        //
-        //     if(response['formCheck'] === false) {
-        //         delete response['formCheck'];
-        //         displayErrors(keys, response[keys])
-        //     } else {
-        //         emptyFormFields();
-        //         formSuccess.innerHTML = 'Success';
-        //     }
-        //
-        // }
-
     }
     xhr.send(formData);
 }
@@ -66,7 +53,7 @@ function emptyFormFields() {
 }
 
 function displayErrors(id, errorMsg) {
-    console.log(errorMsg['error']);
+    // console.log(errorMsg['error']);
     let errorElement = document.getElementById(id + 'Error');
     errorElement.innerHTML = errorMsg['error'];
 }

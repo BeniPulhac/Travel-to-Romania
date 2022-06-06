@@ -38,7 +38,7 @@ function submitFormRegister() {
     formDataRegister.append('testCheckMark', testCheckMark.checked);
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '../includes/registerFormData.php', true);
+    xhr.open('POST', '../../includes/registerFormData.php', true);
     xhr.send(formDataRegister);
 
     xhr.onload = function() {
@@ -54,6 +54,7 @@ function submitFormRegister() {
         } else if(typeof responseRegister == 'string') {
 
                 sendRegister.innerText = 'Success';
+                setTimeout(emptyFieldsRegisterValue, 3000);
 
         }
     }
@@ -72,4 +73,14 @@ function emptyFields() {
     passwordRegisterError.innerText = '';
     samePasswordRegisterError.innerText = '';
     testCheckMarkError.innerText = '';
+}
+
+function emptyFieldsRegisterValue() {
+    firstNameRegister.value = '';
+    lastNameRegister.value = '';
+    emailRegister.value = '';
+    passwordRegister.value = '';
+    samePasswordRegister.value = '';
+    testCheckMark.checked = 0;
+    sendRegister.innerText = '';
 }

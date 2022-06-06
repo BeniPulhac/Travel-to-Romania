@@ -1,4 +1,6 @@
 <?php
+session_start();
+//session_destroy();
 include '../dataBase.php';
 
 //--------------------------------------------------------------------------------------------------------
@@ -7,6 +9,7 @@ $formDataSignIn = $_POST;
 $emailSignIn = $_POST['emailSignIn'];
 $passwordSignIn = $_POST['passwordSignIn'];
 
+
 //to prevent from mysqli injection
 $emailSignIn = stripcslashes($emailSignIn);
 $passwordSignIn = stripcslashes($passwordSignIn);
@@ -14,36 +17,60 @@ $emailSignIn = mysqli_real_escape_string($conn, $emailSignIn);
 $passwordSignIn = mysqli_real_escape_string($conn, $passwordSignIn);
 
 $errorsSignIn = array();
-$passwordSignIn = md5($passwordSignIn);
+$passwordSignInEncripted = md5($passwordSignIn);
 
 //------------------------------------------------Sign in------------------------------------------------
+//  Verify input
+//if(empty($emailSignIn)) {
+//    $errorsSignIn['emailSignInEmpty'] = '*Email is required';
+//} else {
+//    if(!filter_var($emailSignIn, FILTER_VALIDATE_EMAIL)) {
+//        $errorsSignIn['emailSignInValid'] = '*Invalid email format';
+//    }
+//}
+//
+//if(empty($passwordSignIn)) {
+//    $errorsSignIn['passwordSignInEmpty'] = '*Password is required';
+//}
+
 
 //Search in DB
-$selectData = "SELECT * FROM users WHERE email = '$emailSignIn' AND password = '$passwordSignIn'";
+$selectData = "SELECT * FROM users WHERE email = '$emailSignIn' AND password = '$passwordSignInEncripted'";
 $select = mysqli_query($conn, $selectData);
 $row = mysqli_fetch_array($select, MYSQLI_ASSOC);
-//var_dump($passwordSignIn);die;
+
+
+
 $count = mysqli_num_rows($select);
+
+
 
 if($count == 1) {
     echo json_encode('Login successful');
+
+    $_SESSION['userid'] = $row['id'];
+    $_SESSION['email'] = $row['email'];
+//    header('location: ../index.php');
+
 } else {
 
-
     if(empty($emailSignIn)) {
-        $errorsSignIn['emailSignIn'] = '*Email is required';
+        $errorsSignIn['emailSignInEmpty'] = '*Email is required';
     } else {
-        $errorsSignIn['emailSignIn'] = '*This email is not in the database';
+        if(!filter_var($emailSignIn, FILTER_VALIDATE_EMAIL)) {
+            $errorsSignIn['emailSignInValid'] = '*Invalid email format';
+        }
     }
 
     if(empty($passwordSignIn)) {
-        $errorsSignIn['passwordSignIn'] = '*Password is required';
-    } else {
-        $errorsSignIn['passwordSignIn'] = '*This password is not in the database';
+        $errorsSignIn['passwordSignInEmpty'] = '*Password is required';
     }
+
+    $errorsSignIn['emailSignIn'] = '*The email or password is not in the database';
 
     echo json_encode($errorsSignIn);
 }
+
 
 
 //Close Connection

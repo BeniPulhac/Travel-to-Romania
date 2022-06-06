@@ -11,7 +11,7 @@ class View
         $this->model = $model;
     }
 
-    public static function output($viewPath, $emailData){
+    public static function output($viewPath, $emailData) {
         require_once $viewPath;
     }
 }

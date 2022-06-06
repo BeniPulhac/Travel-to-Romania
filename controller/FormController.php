@@ -29,11 +29,10 @@ class FormController extends Controller
         $text = $_POST['textAreaForm'];
 
         $response = $formModel->checkErrors($subject, $email, $text);
-        if($response['formCheck'] === true) {
+        if($response['formCheck']['check'] === true) {
             $formModel->sendEmail($subject, $email, $text);
         }
 
         return $response;
     }
 }
-

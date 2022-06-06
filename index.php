@@ -1,4 +1,5 @@
 <?php
+session_start();
 //--------------------- Load the main page ---------------------
 include 'views/home.php';
 //-------------------- /Load the main page ---------------------
