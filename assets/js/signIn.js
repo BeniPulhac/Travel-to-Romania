@@ -7,6 +7,10 @@ const emailSignInError = document.getElementById('emailSignInError');
 const passwordSignIn = document.getElementById('passwordSignIn');
 const passwordSignInError = document.getElementById('passwordSignInError');
 const searchDB = document.getElementById('searchDB');
+
+//Checkbox
+const signInCheck = document.getElementById('signInCheck');
+
 //Success
 const sendSignIn = document.getElementById('sendSignIn');
 const showFormSignOut = document.getElementById('showFormSignOut');
@@ -31,6 +35,7 @@ function submitForm () {
     let formDataSignIn = new FormData();
     formDataSignIn.append('emailSignIn', emailSignIn.value);
     formDataSignIn.append('passwordSignIn', passwordSignIn.value);
+    formDataSignIn.append('signInCheck', signInCheck.checked);
 
 
     let xhr = new XMLHttpRequest();
@@ -38,7 +43,9 @@ function submitForm () {
     xhr.send(formDataSignIn);
 
     xhr.onload = function () {
-        let responseSignIn = JSON.parse(xhr.responseText);
+        let responseSignIn = xhr.responseText;
+        console.log(responseSignIn);
+        responseSignIn = JSON.parse(responseSignIn);
         emptyFieldsSignIn();
 
         //errors
@@ -89,4 +96,3 @@ function errorsSigninDisplay(response) {
     }
 
 }
-

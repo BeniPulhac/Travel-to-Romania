@@ -41,6 +41,10 @@ body {
 /*
                 Log In
 */
+.sign-up-custom {
+    z-index: 999999;
+}
+
 .container-log-in {
     margin: 20px auto;
     padding: 1em;

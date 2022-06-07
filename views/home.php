@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,7 @@
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body id="body-width">
+
 <!-----------------------------------Nav Bar----------------------------------------------->
     <?php include 'components/navbar.php'?>
 <!----------------------------------/Nav Bar----------------------------------------------->
@@ -255,34 +257,8 @@
     <?php include 'components/footer.php'?>
 <!--------------------------------------------/footer-------------------------------------------->
 </div>
-
-<script src="../assets/js/main.js"></script>
-<script src="../assets/js/bootstrap.js"></script>
 <script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="card-custom card m-auto">-->
-<!--    <div class="row g-0">-->
-<!--        <div class="card-image-custom col-md-4"></div>-->
-<!--        <div class="col-md-8">-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title">Card title 4</h5>-->
-<!--                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--                <a href="#" class="search-card-btn-custom btn btn-primary">Go somewhere</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->

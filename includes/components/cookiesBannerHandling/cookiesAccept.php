@@ -1,7 +1,12 @@
 <?php
-//$toggleCookies = ['isCookies' => 'Yes'];
-//setrawcookie('bannerCookies', json_encode($toggleCookies), time() + 3600, "/");
-$cookiesAccept = json_decode($_COOKIE['bannerCookies']);
-$cookiesAccept->isCookies = 'Yes';
-setrawcookie('bannerCookies', json_encode($cookiesAccept), time() + 3600, "/");
+
+    if(isset($_POST['action'])) {
+        if($_POST['action'] == 'accept') {
+            $toggleCookies = ['isCookies' => 'Yes'];
+            setrawcookie('bannerCookies', json_encode($toggleCookies), time() + 86400 * 30, "/");
+        } elseif($_POST['action'] == 'decline') {
+            $toggleCookies = ['isCookies' => 'No'];
+            setrawcookie('bannerCookies', json_encode($toggleCookies), time() + 86400, "/");
+        }
+    }
 

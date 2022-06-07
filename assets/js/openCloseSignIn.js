@@ -17,6 +17,29 @@ goToRegister.addEventListener('click', () => {
     }
 });
 
+function showForm() {
+    const form = document.getElementById('formContent');
+    const formRegister = document.getElementById('formContentRegister');
+
+    if (getComputedStyle(form).display === 'none') {
+        if(getComputedStyle(formRegister).display === 'block') {
+            formRegister.style.display = 'none';
+            document.getElementById('testBlur').classList.remove('blur');
+            // myFormRegister.reset();
+            emptyErrorsRegister();
+        } else {
+            form.style.display = 'block';
+            document.getElementById('testBlur').classList.add('blur');
+        }
+
+    } else {
+        form.style.display = 'none';
+        document.getElementById('testBlur').classList.remove('blur');
+        // myLogIn.reset();
+        emptyErrorsSignIn();
+    }
+}
+
 if(btn) {
     btn.addEventListener('click', () => {
         const form = document.getElementById('formContent');

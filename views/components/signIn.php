@@ -33,8 +33,8 @@
                         <!-- Checkbox -->
                         <div class="form-check d-flex justify-content-center mb-4 ">
                             <div>
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33">
-                                <label class="form-check-label" for="form2Example33">
+                                <input class="form-check-input me-2" type="checkbox" id="signInCheck" name="signInCheck">
+                                <label class="form-check-label" for="signInCheck">
                                     Remember Me
                                 </label>
                             </div>

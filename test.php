@@ -1,6 +1,7 @@
 <?php
 
 
+
 $to      = 'nobody@example.com';
 $subject = 'the subject';
 $message = 'hello';
@@ -9,23 +10,6 @@ $headers = 'From: webmaster@example.com'       . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($to, $subject, $message, $headers);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //-----------------------------Timestamp-----------------------------
 //date_default_timezone_set('UTC');
