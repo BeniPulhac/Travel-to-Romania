@@ -1,16 +1,13 @@
 <?php
 session_start();
 
-
 include '../dataBase.php';
 
 //--------------------------------------------------------------------------------------------------------
 $conn = $GLOBALS['conn'];
-//$cookiesCheck = $_COOKIE['bannerCookies'];
 $formDataSignIn = $_POST;
 $emailSignIn = $_POST['emailSignIn'];
 $passwordSignIn = $_POST['passwordSignIn'];
-$signInCheck = $_POST['signInCheck'];
 
 
 //to prevent from mysqli injection
@@ -37,10 +34,6 @@ if($count == 1) {
 
     $_SESSION['userid'] = $row['id'];
     $_SESSION['email'] = $row['email'];
-
-    if($signInCheck == true) {
-        setrawcookie('remember_me', $row['email'], time() + 86400 * 14, "/");
-    }
 
 } else {
 

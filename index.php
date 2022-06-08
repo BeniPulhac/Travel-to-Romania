@@ -1,5 +1,5 @@
 <?php
-//setrawcookie('remember_me', 'beny.liviu19@gmail.com', time() + 8640 * 30, "/");die;
+
 session_start();
 include 'dataBase.php';
 $conn = $GLOBALS['conn'];
@@ -13,7 +13,6 @@ if(!isset($_SESSION['userid']) && isset($_COOKIE['remember_me'])) {
     $_SESSION['userid'] = $row['id'];
 
 }
-//setcookie('testing', 'test', time() - 3600, "/");
 
 
 //--------------------- Load the main page ---------------------

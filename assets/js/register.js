@@ -1,12 +1,12 @@
 //------------------------------Register------------------------------
-
+//  Variables
 const submitBtnRegister = document.getElementById('submitBtnRegister');
 //First Name
 const firstNameRegister = document.getElementById('firstNameRegister');
 const firstNameRegisterError = document.getElementById('firstNameRegisterError');
 //Last Name
 const lastNameRegister = document.getElementById('lastNameRegister');
-const lasttNameRegisterError = document.getElementById('lastNameRegisterError');
+const lastNameRegisterError = document.getElementById('lastNameRegisterError');
 //Email
 const emailRegister = document.getElementById('emailRegister');
 const emailRegisterError = document.getElementById('emailRegisterError');
@@ -22,12 +22,12 @@ const testCheckMarkError = document.getElementById('testCheckMarkError');
 
 const sendRegister = document.getElementById('sendRegister');
 
-//
+//  Events
 submitBtnRegister.addEventListener('click', function () {
    submitFormRegister();
 });
 
-//
+//  Ajax
 function submitFormRegister() {
     let formDataRegister = new FormData();
     formDataRegister.append('firstNameRegister', firstNameRegister.value);
@@ -45,6 +45,7 @@ function submitFormRegister() {
         let responseRegister = xhr.responseText;
         responseRegister = JSON.parse(responseRegister);
         emptyFields();
+
         // errors
         if (typeof responseRegister == 'object') {
             sendRegister.innerText = '';
@@ -60,7 +61,7 @@ function submitFormRegister() {
     }
 }
 
-
+//  Functions
 function displayErrorMessage(id, errorMessage) {
     let errorElement = document.getElementById(id + 'Error');
     errorElement.innerText = errorMessage;
@@ -68,7 +69,7 @@ function displayErrorMessage(id, errorMessage) {
 
 function emptyFields() {
     firstNameRegisterError.innerText = '';
-    lasttNameRegisterError.innerText = '';
+    lastNameRegisterError.innerText = '';
     emailRegisterError.innerText = '';
     passwordRegisterError.innerText = '';
     samePasswordRegisterError.innerText = '';

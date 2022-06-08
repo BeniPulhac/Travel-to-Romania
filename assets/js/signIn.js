@@ -19,8 +19,6 @@ const showFormSignOut = document.getElementById('showFormSignOut');
 //---------------------------Events---------------------------
 submitBtnSignIn.addEventListener('click', function () {
     submitForm();
-    // location.reload();
-    // setTimeout(location.reload(), 3000);
 });
 
 if(showFormSignOut) {
@@ -35,7 +33,6 @@ function submitForm () {
     let formDataSignIn = new FormData();
     formDataSignIn.append('emailSignIn', emailSignIn.value);
     formDataSignIn.append('passwordSignIn', passwordSignIn.value);
-    formDataSignIn.append('signInCheck', signInCheck.checked);
 
 
     let xhr = new XMLHttpRequest();
@@ -56,20 +53,41 @@ function submitForm () {
             }
         } else if(typeof responseSignIn == 'string') {
             sendSignIn.innerText = 'Success';
-            location.reload();
-            // setTimeout(location.reload(), 5000);
+
+            if(signInCheck.checked) {
+                setRememberMeCookie(formDataSignIn.get("emailSignIn"));
+            } else {
+                location.reload();
+            }
         }
     }
 }
 
+//---------------------------Functions---------------------------
 function signOut() {
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '../../includes/components/signOut.php');
     xhr.send();
-    location.reload();
+    xhr.onload = function () {
+        if(xhr.status == 200) {
+            location.reload();
+        }
+    }
 }
 
-//---------------------------Functions---------------------------
+function setRememberMeCookie(email) {
+    let formData = new FormData();
+    formData.append('email',email);
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../includes/components/rememberMe.php');
+    xhr.onload = function () {
+        if(xhr.status == 200) {
+            location.reload();
+        }
+    }
+    xhr.send(formData);
+}
+
 function emptyFieldsSignIn() {
     emailSignInError.innerText = '';
     passwordSignInError.innerText = '';

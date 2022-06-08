@@ -47,12 +47,12 @@ if(isset($_COOKIE['bannerCookies'])) {
             </div>
 
             <div class="cookie-consent-banner__actions">
-                <button type="button" class="cookie-consent-banner__cta" id="cookiesOk">
+                <button type="button" class="cookie-consent-banner__cta" id="cookiesOk" onclick="cookiesSet('accept')">
                     OK
                 </button>
 
                 <button type="button" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary"
-                        id="cookiesDecline">
+                        id="cookiesDecline" onclick="cookiesSet('decline')">
                     Decline
                 </button>
             </div>

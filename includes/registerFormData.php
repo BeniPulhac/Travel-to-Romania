@@ -85,24 +85,31 @@ if($_POST['testCheckMark'] == 'false') {
 
 //Check if we already have the email in DB
 $selectEmail = "SELECT * FROM users WHERE email = '$emailRegister'";
-
 $select = mysqli_query($conn, $selectEmail);
 if(mysqli_num_rows($select)) {
     $errorsArray['emailRegister'] = '*This email address is already used!';
 }
 
-
 if (!empty($errorsArray)) {
     //Send the errors to the FE
     echo json_encode($errorsArray);
 } else {
-        //Create user in DB
-        $sql = "INSERT INTO users (first_name, last_name, email, password)
-                VALUES ('$firstNameRegister', '$lastNameRegister', '$emailRegister', '$encryptedPassword')";
-//        mysqli_query($conn, $sql);
+    $token = md5($emailRegister).rand(10,9999);
+//    $time = date('Y-m-d, H:i:s', time());
 
+        //Create user in DB
+        $sql = "INSERT INTO users (first_name, last_name, email, password, email_verification)
+                VALUES ('$firstNameRegister', '$lastNameRegister', '$emailRegister', '$encryptedPassword', '$token')";
 
     if ($conn->query($sql) === TRUE) {
+        $to = $emailRegister;
+        $subject = 'Email Verification';
+        $message = "<a href = 'https://l_pulhac.internship.rankingcoach.com/includes/components/verifyEmail.php?token=$token'>Register Account</a>";
+        $headers = 'MIME-Version: 1.0';
+        $headers .= 'Content-type: text/html; charset=iso-8859-1';
+        $headers .= 'From: Travel to Romania <travelToRomania@example.com>';
+        mail($to, $subject, $message, $headers);
+
         //If we send the data to the DB we show to FE success response
         echo json_encode("New record created successfully");
     } else {
