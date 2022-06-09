@@ -31,7 +31,7 @@
                         </div>
 
                         <!-- Checkbox -->
-                        <div class="form-check d-flex justify-content-center mb-4 ">
+                        <div class="form-check d-flex align-items-center mb-4 ">
                             <div>
                                 <input class="form-check-input me-2" type="checkbox" id="signInCheck" name="signInCheck">
                                 <label class="form-check-label" for="signInCheck">
@@ -40,8 +40,8 @@
                             </div>
 
                             <!-- Simple link -->
-                            <div class="col ms-auto">
-                                <a href="#!" class="d-flex justify-content-end">Forgot password?</a>
+                            <div class="col ms-auto text-end">
+                                <button type="button" class="btn btn-link" id="forgetPassword" name="forgetPassword">Forgot password?</button>
                             </div>
                         </div>
 
@@ -81,6 +81,75 @@
     </div>
 </section>
 <!-- /Section: Sign in -->
+
+<!-- Section: Send Email -->
+<section class="sign-up-custom text-center text-lg-start" id="sendEmailTab">
+    <div class="container py-4 d-flex justify-content-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="cascading-right-custom radius-pop-up">
+                <div class="card-body p-5 shadow-5 text-center">
+                    <h3><i class="fa fa-lock"></i></h3>
+                    <h2 class="text-center">Forgot Password?</h2>
+                    <p>You can reset your password here.</p>
+                    <div class="container panel-body">
+
+                        <form id="SendTokenForm" role="form" autocomplete="off" class="form" method="post">
+
+                            <div class="form-group py-2 d-flex flex-column">
+                                <div class="input-group">
+                                    <input id="emailSentToken" name="emailSentToken" placeholder=" email address" class="form-control"  type="email">
+                                </div>
+                                <span class="text-danger" id="emailSentError"></span>
+                            </div>
+                            <div class="form-group py-2">
+                                <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Send Email" type="button" id="sendPassword">
+                            </div>
+
+                                <span class="text-success" id="resetPassSuccess"></span>
+<!--                            <input type="hidden" class="hide" name="token" id="token" value="">-->
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: /Send Email -->
+
+<!-- Section: Change password -->
+<!--<section class="sign-up-custom text-center text-lg-start" id="changePasswordTab">-->
+<!--    <div class="container py-4 d-flex justify-content-center">-->
+<!--        <div class="col-lg-6 mb-5 mb-lg-0">-->
+<!--            <div class="cascading-right-custom radius-pop-up">-->
+<!--                <div class="card-body p-5 shadow-5 text-center">-->
+<!--                    <h3><i class="fa-solid fa-shuffle"></i></h3>-->
+<!--                    <h2 class="text-center">Input new password</h2>-->
+<!--                    <div class="container panel-body">-->
+<!---->
+<!--                        <form id="changePasswordForm" role="form" autocomplete="off" class="form" method="post">-->
+<!---->
+<!--                            <div class="form-group py-2">-->
+<!--                                <div class="d-flex flex-column">-->
+<!--                                    <input id="passwordChange" name="password" placeholder="New password" class="form-control py-2 my-2"  type="password">-->
+<!--                                    <input id="passwordChangeRetype" name="passwordRetype" placeholder="Retype password" class="form-control py-2 my-2"  type="password">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="form-group py-2">-->
+<!--                                <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="button" id="changePasswordBtn">-->
+<!--                            </div>-->
+<!---->
+<!--                            <span class="text-success" id="resetPassSuccess"></span>-->
+<!--                        </form>-->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!-- Section: /Change password -->
+
 <!-- Section: Register -->
 <section class="sign-up-custom text-center text-lg-start" id="formContentRegister">
     <div class="container py-4 d-flex justify-content-center">
@@ -166,3 +235,4 @@
 <script src="../../assets/js/openCloseSignIn.js"></script>
 <script src="../../assets/js/signIn.js"></script>
 <script src="../../assets/js/register.js"></script>
+<script src="../../assets/js/components/forgetPassword.js"></script>

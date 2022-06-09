@@ -5,6 +5,14 @@
 const btn = document.getElementById('showForm');
 const goToRegister = document.getElementById('goToRegister');
 const myLogIn = document.getElementById('myLogIn');
+const formContent = document.getElementById('formContent');
+const forgetPassword = document.getElementById('forgetPassword');
+const sendEmailTab = document.getElementById('sendEmailTab');
+const sendPassword = document.getElementById('sendPassword');
+const changePasswordTab = document.getElementById('changePasswordTab');
+const changePasswordBtn = document.getElementById('changePasswordBtn');
+const btnRegister = document.getElementById('showRegister');
+const goToLogIn = document.getElementById('goToLogIn');
 
 goToRegister.addEventListener('click', () => {
     const form = document.getElementById('formContent');
@@ -62,7 +70,7 @@ if(btn) {
             // myLogIn.reset();
             emptyErrorsSignIn();
         }
-    })
+    });
 }
 
 
@@ -78,12 +86,31 @@ btnClose.addEventListener('click', () => {
         // myLogIn.reset();
         emptyErrorsSignIn();
     }
-})
+});
+
+//----------------------Send Password-----------------------
+forgetPassword.addEventListener('click', () => {
+    formContent.style.display = 'none';
+    sendEmailTab.style.display = 'block';
+    // sendPassword.addEventListener('click', ()=>{
+    //     setTimeout(function () {
+    //         sendEmailTab.style.display = 'none';
+    //         document.getElementById('testBlur').classList.remove('blur');
+    //     }, 3000);
+    // });
+});
+
+//----------------------Change Password-----------------------
+changePasswordBtn.addEventListener('click', ()=> {
+    if(changePasswordTab.style.display == 'block') {
+        changePasswordTab.style.display = 'none'
+        document.getElementById('testBlur').classList.remove('blur');
+    }
+});
 
 //----------------------Register-----------------------
 //-----------------Display/Close Form-----------------
-const btnRegister = document.getElementById('showRegister');
-const goToLogIn = document.getElementById('goToLogIn');
+
 
 goToLogIn.addEventListener('click', () => {
     const form = document.getElementById('formContentRegister');
@@ -108,7 +135,7 @@ btnRegister.addEventListener('click', () => {
         // myFormRegister.reset();
         emptyErrorsRegister();
     }
-})
+});
 
 //---------------------Close Form---------------------
 
@@ -123,7 +150,7 @@ btnCloseRegister.addEventListener('click', () => {
         // myFormRegister.reset();
         emptyErrorsRegister();
     }
-})
+});
 
 function emptyErrorsSignIn() {
     emailSignIn.value = '';
@@ -137,7 +164,7 @@ function emptyErrorsRegister() {
     firstNameRegister.value = '';
     firstNameRegisterError.innerText = '';
     lastNameRegister.value = '';
-    lasttNameRegisterError.innerText = '';
+    lastNameRegisterError.innerText = '';
     emailRegister.value = '';
     emailRegisterError.innerText = '';
     passwordRegister.value = '';

@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include 'dataBase.php';
 $conn = $GLOBALS['conn'];

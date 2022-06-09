@@ -1,5 +1,6 @@
 //---------------------------Variables---------------------------
 const submitBtnSignIn = document.getElementById('submitBtnSignIn');
+
 //Email
 const emailSignIn = document.getElementById('emailSignIn');
 const emailSignInError = document.getElementById('emailSignInError');
@@ -27,7 +28,6 @@ if(showFormSignOut) {
     });
 }
 
-
 //---------------------------AJAX Requests---------------------------
 function submitForm () {
     let formDataSignIn = new FormData();
@@ -41,7 +41,7 @@ function submitForm () {
 
     xhr.onload = function () {
         let responseSignIn = xhr.responseText;
-        console.log(responseSignIn);
+        // console.log(responseSignIn);
         responseSignIn = JSON.parse(responseSignIn);
         emptyFieldsSignIn();
 
@@ -112,5 +112,4 @@ function errorsSigninDisplay(response) {
             searchDB.innerText = response.emailSignIn;
         }
     }
-
 }
