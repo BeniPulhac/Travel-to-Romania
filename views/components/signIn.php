@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="../../assets/css/bootstrap.css">
 <!-- Section: Sign in -->
-<section class="sign-up-custom text-center text-lg-start" id="formContent">
+<section class="sign-up-custom text-center text-lg-start hide-element" id="formSignIn">
     <div class="container py-4 d-flex justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="cascading-right-custom radius-pop-up">
                 <div class="card-body p-5 shadow-5 text-center">
                     <div class="closing d-flex justify-content-end">
-                        <button class="btn" id="closeForm">
+                        <button type="button" class="btn" onclick="closeForms()">
                             <i class='fa fa-close fa-xl'></i>
                         </button>
                     </div>
@@ -72,7 +72,7 @@
                         <span class="d-flex justify-content-center" id="sendSignIn"></span>
                         <!-- Go to Register -->
                         <p class="text-center mt-5 mb-0">You don't have an account?
-                            <a type="button" id="goToRegister" class="fw-bold text-body"><u>Register</u></a>
+                            <a type="button" onclick="toggleSignInRegister()" class="fw-bold text-body"><u>Register</u></a>
                         </p>
                     </form>
                 </div>
@@ -83,7 +83,7 @@
 <!-- /Section: Sign in -->
 
 <!-- Section: Send Email -->
-<section class="sign-up-custom text-center text-lg-start" id="sendEmailTab">
+<section class="sign-up-custom text-center text-lg-start hide-element" id="sendEmailTab">
     <div class="container py-4 d-flex justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="cascading-right-custom radius-pop-up">
@@ -117,47 +117,14 @@
 </section>
 <!-- Section: /Send Email -->
 
-<!-- Section: Change password -->
-<!--<section class="sign-up-custom text-center text-lg-start" id="changePasswordTab">-->
-<!--    <div class="container py-4 d-flex justify-content-center">-->
-<!--        <div class="col-lg-6 mb-5 mb-lg-0">-->
-<!--            <div class="cascading-right-custom radius-pop-up">-->
-<!--                <div class="card-body p-5 shadow-5 text-center">-->
-<!--                    <h3><i class="fa-solid fa-shuffle"></i></h3>-->
-<!--                    <h2 class="text-center">Input new password</h2>-->
-<!--                    <div class="container panel-body">-->
-<!---->
-<!--                        <form id="changePasswordForm" role="form" autocomplete="off" class="form" method="post">-->
-<!---->
-<!--                            <div class="form-group py-2">-->
-<!--                                <div class="d-flex flex-column">-->
-<!--                                    <input id="passwordChange" name="password" placeholder="New password" class="form-control py-2 my-2"  type="password">-->
-<!--                                    <input id="passwordChangeRetype" name="passwordRetype" placeholder="Retype password" class="form-control py-2 my-2"  type="password">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="form-group py-2">-->
-<!--                                <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="button" id="changePasswordBtn">-->
-<!--                            </div>-->
-<!---->
-<!--                            <span class="text-success" id="resetPassSuccess"></span>-->
-<!--                        </form>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!-- Section: /Change password -->
-
 <!-- Section: Register -->
-<section class="sign-up-custom text-center text-lg-start" id="formContentRegister">
+<section class="sign-up-custom text-center text-lg-start hide-element"  id="formRegister">
     <div class="container py-4 d-flex justify-content-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="cascading-right-custom radius-pop-up">
                 <div class="card-body p-5 shadow-5 text-center">
                     <div class="closing d-flex justify-content-end">
-                        <button class="btn" id="closeFormRegister">
+                        <button type="button" class="btn" onclick="closeForms()">
                             <i class='fa fa-close fa-xl'></i>
                         </button>
                     </div>
@@ -222,7 +189,7 @@
 
                         <!-- Go to Log in -->
                         <p class="text-center mt-5 mb-0">Have already an account?
-                            <a type="button" id="goToLogIn" class="fw-bold text-body"><u>Login here</u></a>
+                            <a type="button" onclick="toggleSignInRegister()" class="fw-bold text-body"><u>Login here</u></a>
                         </p>
                     </form>
                 </div>
@@ -232,7 +199,6 @@
 </section>
 <!-- /Section: Register -->
 
-<script src="../../assets/js/openCloseSignIn.js"></script>
 <script src="../../assets/js/signIn.js"></script>
 <script src="../../assets/js/register.js"></script>
 <script src="../../assets/js/components/forgetPassword.js"></script>

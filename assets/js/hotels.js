@@ -114,13 +114,13 @@ function creatCard(myFile) {
     cardBody.appendChild(thirdSpan);
 
     //
-    const btn = document.createElement('a');
-    btn.setAttribute('class', 'card-btn-custom btn btn-primary');
-    btn.innerHTML = "Hotel's site";
+    const cardBtn = document.createElement('a');
+    cardBtn.setAttribute('class', 'card-btn-custom btn btn-primary');
+    cardBtn.innerHTML = "Hotel's site";
 
     if(myFile.site) {
-        btn.setAttribute('href', myFile.site);
-        cardBody.appendChild(btn);
+        cardBtn.setAttribute('href', myFile.site);
+        cardBody.appendChild(cardBtn);
     }
 
     //

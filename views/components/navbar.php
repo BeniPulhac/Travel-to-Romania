@@ -34,7 +34,7 @@
                         <?php if(isset($_SESSION['userid'])) : ?>
                             <button class="dropdown-item"  onclick="signOut()">Sign out</button>
                         <?php else : ?>
-                            <button class="dropdown-item" id="showForm" >Sign in</button>
+                            <button type="button" class="dropdown-item" onclick="showSignIn()">Sign in</button>
                         <?php endif; ?>
                     </ul>
                 </div>
@@ -71,11 +71,13 @@
                     <?php if(isset($_SESSION['userid'])) { ?>
                         <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut" onclick="signOut()">Sign out</button>
                     <?php } else { ?>
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showForm" onclick="showForm()">Sign in</button>
+                        <button type="button" class="btn btn-light rounded-pill shadow-sm bg-body me-1" onclick="showSignIn()">Sign in</button>
                     <?php } ?>
-                    <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>
+<!--                    <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>-->
                 </div>
             </div>
         </div>
     </div>
 </nav>
+
+<!--<script src="../../assets/js/navbar.js"></script>-->

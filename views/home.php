@@ -257,8 +257,9 @@
     <?php include 'components/footer.php'?>
 <!--------------------------------------------/footer-------------------------------------------->
 </div>
+<script src="../assets/js/navbar.js"></script>
+<script src="../assets/js/openCloseForms.js"></script>
 <script src="../assets/js/jquery.js"></script>
 <script src="../assets/js/bootstrap.js"></script>
-<script src="../assets/js/main.js"></script>
 </body>
 </html>

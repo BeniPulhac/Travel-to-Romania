@@ -4,10 +4,6 @@ const emailSentToken = document.getElementById('emailSentToken');
 const emailSentError = document.getElementById('emailSentError');
 const resetPassSuccess = document.getElementById('resetPassSuccess');
 
-//Change password
-const passwordChange = document.getElementById('passwordChange');
-const passwordChangeRetype = document.getElementById('passwordChangeRetype');
-
 //  Events
 sendPassword.addEventListener('click', () => {
    sendEmailAJAX();
@@ -31,7 +27,15 @@ function sendEmailAJAX() {
             resetPassSuccess.innerHTML = '';
             emailSentError.innerText = response.emailError;
         } else if(typeof response == 'string') {
-            resetPassSuccess.innerHTML = response;
+            if(response == 'Email sent. Check your email') {
+                resetPassSuccess.classList.add('text-success');
+                resetPassSuccess.classList.remove('text-danger');
+                resetPassSuccess.innerHTML = response;
+            } else {
+                resetPassSuccess.classList.remove('text-success');
+                resetPassSuccess.classList.add('text-danger');
+                resetPassSuccess.innerHTML = response;
+            }
         }
     }
 

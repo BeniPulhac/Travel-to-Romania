@@ -22,7 +22,7 @@ ul {
 ------------------Sign up------------------
 */
 .sign-up-custom {
-    display: none;
+    /*display: none;*/
     position: fixed;
     top: 50%;
     left: 50%;
@@ -34,6 +34,10 @@ ul {
 .blur   {
     filter: blur(2px);
     opacity: 0.7;
+}
+
+.hide-element {
+    display: none;
 }
 
 .cascading-right-custom {

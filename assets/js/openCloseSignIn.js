@@ -1,3 +1,4 @@
+//  Not in use
 
 //----------------------Sign in----------------------
 //-----------------Display/Close Form-----------------
@@ -6,11 +7,9 @@ const btn = document.getElementById('showForm');
 const goToRegister = document.getElementById('goToRegister');
 const myLogIn = document.getElementById('myLogIn');
 const formContent = document.getElementById('formContent');
-const forgetPassword = document.getElementById('forgetPassword');
+// const forgetPassword = document.getElementById('forgetPassword');
 const sendEmailTab = document.getElementById('sendEmailTab');
 const sendPassword = document.getElementById('sendPassword');
-const changePasswordTab = document.getElementById('changePasswordTab');
-const changePasswordBtn = document.getElementById('changePasswordBtn');
 const btnRegister = document.getElementById('showRegister');
 const goToLogIn = document.getElementById('goToLogIn');
 
@@ -25,53 +24,53 @@ goToRegister.addEventListener('click', () => {
     }
 });
 
-function showForm() {
-    const form = document.getElementById('formContent');
-    const formRegister = document.getElementById('formContentRegister');
-
-    if (getComputedStyle(form).display === 'none') {
-        if(getComputedStyle(formRegister).display === 'block') {
-            formRegister.style.display = 'none';
-            document.getElementById('testBlur').classList.remove('blur');
-            // myFormRegister.reset();
-            emptyErrorsRegister();
-        } else {
-            form.style.display = 'block';
-            document.getElementById('testBlur').classList.add('blur');
-        }
-
-    } else {
-        form.style.display = 'none';
-        document.getElementById('testBlur').classList.remove('blur');
-        // myLogIn.reset();
-        emptyErrorsSignIn();
-    }
-}
-
-if(btn) {
-    btn.addEventListener('click', () => {
-        const form = document.getElementById('formContent');
-        const formRegister = document.getElementById('formContentRegister');
-
-        if (getComputedStyle(form).display === 'none') {
-            if(getComputedStyle(formRegister).display === 'block') {
-                formRegister.style.display = 'none';
-                document.getElementById('testBlur').classList.remove('blur');
-                // myFormRegister.reset();
-                emptyErrorsRegister();
-            } else {
-                form.style.display = 'block';
-                document.getElementById('testBlur').classList.add('blur');
-            }
-
-        } else {
-            form.style.display = 'none';
-            document.getElementById('testBlur').classList.remove('blur');
-            // myLogIn.reset();
-            emptyErrorsSignIn();
-        }
-    });
-}
+// function showForm() {
+//     const form = document.getElementById('formContent');
+//     const formRegister = document.getElementById('formContentRegister');
+//
+//     if (getComputedStyle(form).display === 'none') {
+//         if(getComputedStyle(formRegister).display === 'block') {
+//             formRegister.style.display = 'none';
+//             document.getElementById('testBlur').classList.remove('blur');
+//             // myFormRegister.reset();
+//             emptyErrorsRegister();
+//         } else {
+//             form.style.display = 'block';
+//             document.getElementById('testBlur').classList.add('blur');
+//         }
+//
+//     } else {
+//         form.style.display = 'none';
+//         document.getElementById('testBlur').classList.remove('blur');
+//         // myLogIn.reset();
+//         emptyErrorsSignIn();
+//     }
+// }
+//
+// if(btn) {
+//     btn.addEventListener('click', () => {
+//         const form = document.getElementById('formContent');
+//         const formRegister = document.getElementById('formContentRegister');
+//
+//         if (getComputedStyle(form).display === 'none') {
+//             if(getComputedStyle(formRegister).display === 'block') {
+//                 formRegister.style.display = 'none';
+//                 document.getElementById('testBlur').classList.remove('blur');
+//                 // myFormRegister.reset();
+//                 emptyErrorsRegister();
+//             } else {
+//                 form.style.display = 'block';
+//                 document.getElementById('testBlur').classList.add('blur');
+//             }
+//
+//         } else {
+//             form.style.display = 'none';
+//             document.getElementById('testBlur').classList.remove('blur');
+//             // myLogIn.reset();
+//             emptyErrorsSignIn();
+//         }
+//     });
+// }
 
 
 // -----------------Close Form-----------------
@@ -100,14 +99,6 @@ forgetPassword.addEventListener('click', () => {
     // });
 });
 
-//----------------------Change Password-----------------------
-changePasswordBtn.addEventListener('click', ()=> {
-    if(changePasswordTab.style.display == 'block') {
-        changePasswordTab.style.display = 'none'
-        document.getElementById('testBlur').classList.remove('blur');
-    }
-});
-
 //----------------------Register-----------------------
 //-----------------Display/Close Form-----------------
 
@@ -124,7 +115,7 @@ goToLogIn.addEventListener('click', () => {
 });
 
 btnRegister.addEventListener('click', () => {
-    const formRegister = document.getElementById('formContentRegister');
+    // const formRegister = document.getElementById('formContentRegister');
 
     if (getComputedStyle(formRegister).display === 'none') {
         formRegister.style.display = 'block';
