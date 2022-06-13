@@ -20,8 +20,6 @@ $errors = [
     'passwordMatch' => '',
     'token' => '',
     'status' => '',
-    'test1' => '',
-    'test2' => ''
 ];
 
 //Handle password Errors
@@ -33,11 +31,10 @@ if(empty($passwordChange)) {
 
     if(mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        $errors['test1'] = $selector;
-        $errors['test2'] = $row['pwdResetSelector'];
+
         if($selector === $row['pwdResetSelector']) {
             if($row['pwdResetExpires'] < date('U') ) {
-                $errors['token'] = 'Token expired';
+                $errors['token'] = '*Token expired';
                 $sql2 = "DELETE FROM pwdReset WHERE pwdResetSelector = '$selector'";
                 $result2 = mysqli_query($conn, $sql2);
             } else {
@@ -45,13 +42,13 @@ if(empty($passwordChange)) {
                 $passwordChange = md5($passwordChange);
                 $sql3 = "UPDATE users SET password = '$passwordChange' WHERE email = '$email'";
                 $result3 = mysqli_query($conn, $sql3);
-                $errors['status'] = 'success';
+                $errors['status'] = 'Success';
             }
         } else {
-            $errors['token'] = 'Token used is not for this password';
+            $errors['token'] = '*Token used is not for this password';
         }
     } else {
-        $errors['passwordChange'] = 'There is no token in database for this password';
+        $errors['passwordChange'] = '*There is no token in database for this password';
     }
 }
 

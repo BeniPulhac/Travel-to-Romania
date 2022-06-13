@@ -38,8 +38,9 @@ if($check === false) {
 function sendEmailToken($email, $conn) {
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
-    $url = "https://l_pulhac.internship.rankingcoach.com/resetPassword.php?selector=" . $selector . "&token=" . bin2hex($token);
     $expires = date('U') + 1800;
+    $url = "https://l_pulhac.internship.rankingcoach.com/resetPassword.php?selector=" . $selector . "&token=" . bin2hex($token) . "&validate=" . $expires;
+
 
     //If we have token already, delete it
     $sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?";
@@ -63,6 +64,7 @@ function sendEmailToken($email, $conn) {
         mysqli_stmt_bind_param($stmt, "ssss", $email, $selector, $hashedToken, $expires);
         mysqli_stmt_execute($stmt);
     }
+
 
     mysqli_stmt_close($stmt);
     //Close Connection

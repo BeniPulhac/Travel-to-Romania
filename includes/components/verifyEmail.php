@@ -4,6 +4,7 @@
 <?php
 include '../../dataBase.php';
 
+//  Make it so when the form user status is 0 he cant log in !!!!!!
 
 $conn = $GLOBALS['conn'];
 

@@ -58,9 +58,30 @@ function sendTokenToView(toggle) {
 
 //  Functions
 function emptyFieldsResetPwd() {
-
+    passwordChangeError.innerText = '';
+    passwordChange2Error.innerText = '';
 }
 
 function displayErrorsResetPwd(response) {
+    if(response.passwordChange != '') {
+        passwordChangeError.innerText = response.passwordChange;
+    }
 
+    if(response.passwordChange2 != '') {
+        passwordChange2Error.innerText = response.passwordChange2;
+    }
+
+    if(response.passwordMatch != '') {
+        passwordChange2Error.innerText = response.passwordMatch;
+    }
+
+    if(response.token != '') {
+        passwordChange2Error.innerText = '';
+        passwordChange.innerText = response.token;
+    }
+
+    if(response.status != '') {
+        emptyFieldsResetPwd();
+        resetPwdResponse.innerText = response.status;
+    }
 }
