@@ -6,12 +6,6 @@ forgetPassword.addEventListener('click', function() {
     }
 }, false);
 
-// sendPassword.addEventListener('click', function() {
-//     if(!sendEmailTab.classList.contains('hide-element')) {
-//         sendEmailTab.classList.toggle('hide-element');
-//         blur.classList.toggle('blur');
-//     }
-// }, false);
 
 //  Functions
 //  Toggle SignIn - Register
@@ -44,12 +38,6 @@ function closeForms() {
     }
 }
 
-//  Forget Password
-// function forgetPassword() {
-//     if(sendEmailTab.classList.contains('hide-element')) {
-//         sendEmailTab.classList.toggle('hide-element');
-//     }
-// }
 
 //  Clear Forms
 function emptyErrorsSignIn() {

@@ -5,9 +5,11 @@ const emailSentError = document.getElementById('emailSentError');
 const resetPassSuccess = document.getElementById('resetPassSuccess');
 
 //  Events
-sendPassword.addEventListener('click', () => {
-   sendEmailAJAX();
-});
+if(sendEmailTab) {
+    sendPassword.addEventListener('click', () => {
+        sendEmailAJAX();
+    });
+}
 
 //  Ajax
 function sendEmailAJAX() {
@@ -31,6 +33,7 @@ function sendEmailAJAX() {
                 resetPassSuccess.classList.add('text-success');
                 resetPassSuccess.classList.remove('text-danger');
                 resetPassSuccess.innerHTML = response;
+
             } else {
                 resetPassSuccess.classList.remove('text-success');
                 resetPassSuccess.classList.add('text-danger');

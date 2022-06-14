@@ -7,14 +7,14 @@
 
 <?php
 
-$selector = $_GET['selector'];
+$userid = $_GET['userid'];
 $token = $_GET['token'];
 $validate = $_GET['validate'];
 
-if(empty($selector) || empty($token)) {
+if(empty($userid) || empty($token)) {
     echo 'Could not validate your request!'; //Need to change this to appear nice in the website
 } else {
-    if($validate > date('U') ) {
+    if($validate < date('U') ) {
         ?>
 
         <section class="sign-up-custom text-center text-lg-start" id="changePasswordTab">
@@ -30,7 +30,7 @@ if(empty($selector) || empty($token)) {
 
                                     <div class="form-group py-2">
                                         <div class="d-flex flex-column">
-                                            <input type="hidden" name="selector" value="<?php echo $selector ?>" id="selectorInput">
+                                            <input type="hidden" name="selector" value="<?php echo $userid ?>" id="selectorInput">
                                             <input type="hidden" name="token" value="<?php echo $token ?>" id="tokenInput">
                                             <input id="passwordChange" name="passwordChange" placeholder="New password" class="form-control py-2 my-2"  type="password">
                                             <span id="passwordChangeError" class="text-danger"></span>
@@ -51,11 +51,11 @@ if(empty($selector) || empty($token)) {
                 </div>
             </div>
         </section>
-
+        <script src="assets/js/resetPassword.js"></script>
     <?php
     } else { ?>
 
-        <section class="sign-up-custom text-center text-lg-start d-block" id="sendEmailTab">
+        <section class="sign-up-custom text-center text-lg-start d-block" id="sendEmailTab2">
             <div class="container py-4 d-flex justify-content-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="cascading-right-custom radius-pop-up">
@@ -65,19 +65,19 @@ if(empty($selector) || empty($token)) {
                             <p>You can reset your password here.</p>
                             <div class="container panel-body">
 
-                                <form id="SendTokenForm" role="form" autocomplete="off" class="form" method="post">
+                                <form id="SendTokenForm2" role="form" autocomplete="off" class="form" method="post">
 
                                     <div class="form-group py-2 d-flex flex-column">
                                         <div class="input-group">
-                                            <input id="emailSentToken" name="emailSentToken" placeholder=" email address" class="form-control"  type="email">
+                                            <input id="emailSentToken2" name="emailSentToken" placeholder=" email address" class="form-control"  type="email">
                                         </div>
-                                        <span class="text-danger" id="emailSentError"></span>
+                                        <span class="text-danger" id="emailSentError2"></span>
                                     </div>
                                     <div class="form-group py-2">
-                                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Send Email" type="button" id="sendPassword">
+                                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Send Email" type="button" id="sendPassword2">
                                     </div>
 
-                                    <span class="text-danger" id="resetPassSuccess">*The token had expired, please introduce the email again for a new token</span>
+                                    <span class="text-danger" id="resetPassSuccess2">*The token had expired, please introduce the email again for a new token</span>
                                 </form>
 
                             </div>
@@ -86,7 +86,7 @@ if(empty($selector) || empty($token)) {
                 </div>
             </div>
         </section>
-
+        <script src="assets/js/components/forgetPassword2.js"></script>
    <?php }
 }
 ?>
@@ -127,4 +127,5 @@ if(empty($selector) || empty($token)) {
 <!--</section>-->
 <!-- Section: /Send Email -->
 
-<script src="assets/js/resetPassword.js"></script>
+
+
