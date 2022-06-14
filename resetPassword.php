@@ -77,7 +77,7 @@ if(empty($selector) || empty($token)) {
                                         <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Send Email" type="button" id="sendPassword">
                                     </div>
 
-                                    <span class="text-success" id="resetPassSuccess"></span>
+                                    <span class="text-danger" id="resetPassSuccess">*The token had expired, please introduce the email again for a new token</span>
                                 </form>
 
                             </div>

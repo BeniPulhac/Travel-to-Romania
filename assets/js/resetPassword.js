@@ -12,9 +12,11 @@ const resetPwdResponse = document.getElementById('resetPwdResponse');
 
 
 //  Events
-changePasswordBtn.addEventListener('click', () => {
-    resetPassword();
-}, false);
+if(changePasswordTab) {
+    changePasswordBtn.addEventListener('click', () => {
+        resetPassword();
+    }, false);
+}
 
 
 //  Ajax
@@ -41,18 +43,18 @@ function resetPassword() {
                 }
             } else if(typeof response == 'string') {
                 // I need to make another ajax request to resetPassword view to send true if token is good or flase if token is bad
-                let toggle = false;
-                 sendTokenToView(toggle);
+                // let toggle = false;
+                 sendTokenToView();
             }
         }
     }
     xhr.send(form);
 }
 
-function sendTokenToView(toggle) {
+function sendTokenToView() {
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '../../resetPassword.php', true);
-    xhr.send(toggle);
+    xhr.send();
 }
 
 
@@ -60,6 +62,7 @@ function sendTokenToView(toggle) {
 function emptyFieldsResetPwd() {
     passwordChangeError.innerText = '';
     passwordChange2Error.innerText = '';
+    resetPwdResponse.innerText = '';
 }
 
 function displayErrorsResetPwd(response) {

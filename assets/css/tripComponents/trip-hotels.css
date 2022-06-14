@@ -106,6 +106,9 @@ main {
 }
 
 .card-custom-a {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
     text-decoration: none;
     color: black;
 }

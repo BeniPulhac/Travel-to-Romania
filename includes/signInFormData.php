@@ -30,10 +30,15 @@ $count = mysqli_num_rows($select);
 
 
 if($count == 1) {
-    echo json_encode('Login successful');
+    if($row['status'] == 1) {
+        echo json_encode('Login successful');
 
-    $_SESSION['userid'] = $row['id'];
-    $_SESSION['email'] = $row['email'];
+        $_SESSION['userid'] = $row['id'];
+        $_SESSION['email'] = $row['email'];
+    } else {
+        $errorsSignIn['emailSignInValid'] = '*You must validate the account through email first';
+        echo json_encode($errorsSignIn);
+    }
 
 } else {
 

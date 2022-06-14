@@ -69,7 +69,7 @@
                                 <i class="fab fa-github"></i>
                             </button>
                         </div>
-                        <span class="d-flex justify-content-center" id="sendSignIn"></span>
+                        <span class="d-flex justify-content-center text-success" id="sendSignIn"></span>
                         <!-- Go to Register -->
                         <p class="text-center mt-5 mb-0">You don't have an account?
                             <a type="button" onclick="toggleSignInRegister()" class="fw-bold text-body"><u>Register</u></a>
@@ -185,7 +185,7 @@
                             Register
                         </button>
 
-                        <span class="d-flex justify-content-center" id="sendRegister"></span>
+                        <span class="d-flex justify-content-center text-success" id="sendRegister"></span>
 
                         <!-- Go to Log in -->
                         <p class="text-center mt-5 mb-0">Have already an account?

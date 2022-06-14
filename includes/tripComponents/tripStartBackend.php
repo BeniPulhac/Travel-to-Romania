@@ -63,7 +63,7 @@ if($q !== '' && strlen($q) >= 1) {
             }
             else {
                 $hint = '';
-                $hint = $hint[$i] . ", " . $cities[$i]['citys_name'];
+                $hint =  ", " . $cities[$i]['citys_name'];
 
                 echo $hint;
             }

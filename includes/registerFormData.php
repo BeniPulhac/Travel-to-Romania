@@ -105,9 +105,9 @@ if (!empty($errorsArray)) {
         $to = $emailRegister;
         $subject = 'Email Verification';
         $message = "<a href = 'https://l_pulhac.internship.rankingcoach.com/includes/components/verifyEmail.php?token=$token'>Register Account</a>";
-        $headers = 'MIME-Version: 1.0';
+        $headers = "From: Travel to Romania <beny.liviu19@gmail.com>\r\n";
+        $headers .= "Replay-To: beny.liviu19@gmail.com\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1';
-        $headers .= 'From: Travel to Romania <travelToRomania@example.com>';
         mail($to, $subject, $message, $headers);
 
         //If we send the data to the DB we show to FE success response
