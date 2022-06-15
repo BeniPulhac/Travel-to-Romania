@@ -33,17 +33,24 @@ function resetPassword() {
     xhr.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
             let response = xhr.responseText;
-            console.log(response);
             response = JSON.parse(response);
             emptyFieldsResetPwd();
 
             if(typeof response == 'object') {
                 for(keys in response) {
                     displayErrorsResetPwd(response);
+
+                    setTimeout(function () {
+                        if(response.status == 'Success') {
+                            if(!changePasswordTab.classList.contains('hide-element')) {
+                                changePasswordTab.classList.toggle('hide-element');
+                                blurReset.classList.toggle('blur');
+                            }
+                        }
+                    }, 3000);
+
                 }
             } else if(typeof response == 'string') {
-                // I need to make another ajax request to resetPassword view to send true if token is good or flase if token is bad
-                // let toggle = false;
                  sendTokenToView();
             }
         }

@@ -34,6 +34,12 @@ function sendEmailAJAX() {
                 resetPassSuccess.classList.remove('text-danger');
                 resetPassSuccess.innerHTML = response;
 
+                setTimeout(function () {
+                    if(!sendEmailTab.classList.contains('hide-element')) {
+                        sendEmailTab.classList.toggle('hide-element');
+                        blur.classList.toggle('blur');
+                    }
+                }, 3000);
             } else {
                 resetPassSuccess.classList.remove('text-success');
                 resetPassSuccess.classList.add('text-danger');

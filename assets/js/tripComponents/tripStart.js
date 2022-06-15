@@ -57,8 +57,8 @@ function creatCityList(response) {
     const aLink = document.createElement('a');
     aLink.setAttribute('class', 'list-group-item list-group-item-action d-flex gap-3 py-3 list-content cursor-pointer');
     aLink.setAttribute('aria-current', 'true');
-    aLink.setAttribute('id', 'getElement' + counting);
-
+    aLink.setAttribute('id', 'getElement' + counting); //in loc de id sa folosesc un onclick="function(numele orasului)"
+    aLink.setAttribute('type', 'button');
     insertCityList.appendChild(aLink);
 
     //
