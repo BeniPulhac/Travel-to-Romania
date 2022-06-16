@@ -50,7 +50,7 @@
     font-weight: 400;
     min-width: 53px;
     padding: 8px 25px;
-    width: 271px;
+    width: auto;
     background-color: rgb(163,235,132);
     color: black;
 }

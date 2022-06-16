@@ -36,35 +36,45 @@ switch ($dates) {
         $errors['tripEnd'] = '*End date cant be before the start date';
         echo json_encode($errors);
         break;
+
     default :
+        $success = false;
         $sql = "SELECT start_date, end_date FROM trips WHERE userid=" . $userid;
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
 
         if($count >= 1) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $row['start_date'] = strtotime($row['start_date']);
-                $row['end_date'] = strtotime($row['end_date']);
+             $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-                if(($tripStart >= $row['start_date']) && ($tripStart <= $row['end_date'])) {
-                    $errors['tripCheck'] = '*Cant creat this trip';
-                    echo json_encode($errors);
-                    break;
-                } else {
-                    $tripStart = date("Y:m:d", $tripStart);
-                    $tripEnd = date("Y:m:d", $tripEnd);
+             foreach ($row as $item) {
+                 $item['start_date'] = strtotime($item['start_date']);
+                 $item['end_date'] = strtotime($item['end_date']);
 
-                    $sql1 = "INSERT INTO trips (userid, start_date, end_date)
-            VALUES ('$userid', '$tripStart', '$tripEnd')";
-                    $result1 = mysqli_query($conn, $sql1);
+                 if(($tripStart >= $item['start_date'] && $tripStart <= $item['end_date']) && ($tripEnd >= $item['start_date'] && $tripEnd <= $item['end_date'])) {
+                     $errors['tripCheck'] = '*Cant creat this trip';
+                 }
+             }
 
-                    if($result1) {
-                        echo json_encode('Success');
-                    } else {
-                        echo json_encode("Error: " . $sql1 . "<br>" . mysqli_error($conn));
-                    }
-                }
+            $tripStart = date("Y:m:d", $tripStart);
+            $tripEnd = date("Y:m:d", $tripEnd);
+
+        if($errors['tripCheck'] == '') {
+
+            $sql1 = "INSERT INTO trips (userid, start_date, end_date) VALUES ('$userid', '$tripStart', '$tripEnd')";
+            $result1 = mysqli_query($conn, $sql1);
+            $success = true;
+
+            if(!$result1) {
+
+                echo json_encode("Error: " . $sql1 . "<br>" . mysqli_error($conn));
             }
+        }}
+
+        if($success === true) {
+            echo json_encode('Success');
+        } else {
+            echo json_encode($errors);
         }
 }
+
 mysqli_close($conn);

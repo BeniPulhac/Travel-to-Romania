@@ -34,14 +34,14 @@ $today = date('Y/m/d');
 ?>
 <main id="testBlur">
     <header class="head bkg-color">
-        <div class="px-4 pt-5 my-5 text-center border-bottom positioning-parent-custom">
+        <div class="px-4 pt-5 my-5 text-center border-bottom positioning-parent-custom container">
             <div class="positioning-content-header">
                 <h1 class="display-4 fw-bold text-white">Plan your trip here</h1>
-                <div class="col-lg-6 mx-auto">
+                <div class="mx-auto">
 
-                    <form class="head-input d-block" action="" method="get" id="resetTripDates">
-                        <div class="head-input-value d-flex flex-row  justify-content-center">
-                            <div class="container">
+                    <form class="head-input" action="" method="get" id="resetTripDates">
+                        <div class="head-input-value d-flex flex-md-row flex-column justify-content-evenly">
+                            <div class=" d-flex justify-content-center py-1">
                                 <div class="start d-flex flex-row align-items-center">
                                     <label for="tripStart" class="fw-bold green-color px-1">Trip Start: </label>
                                     <input id="tripStart" type="date" required pattern="\d{2}-\d{2}-\d{4}" name="tripStart" min="<?php echo date("Y-m-d", time()); ?>">
@@ -49,7 +49,7 @@ $today = date('Y/m/d');
                                 <span id="tripStartError" class="text-danger"></span>
                             </div>
 
-                            <div class="container">
+                            <div class=" d-flex justify-content-center py-1">
                                 <div class="end d-flex flex-row align-items-center">
                                     <label for="tripEnd" class="fw-bold green-color px-1">Trip End: </label>
                                     <input id="tripEnd" type="date" required pattern="\d{2}-\d{2}-\d{4}" name="tripEnd" min="<?php echo date("Y-m-d", time()); ?>">
@@ -58,7 +58,7 @@ $today = date('Y/m/d');
                             </div>
 
                         </div>
-                        <div class="head-submit">
+                        <div class="container">
                             <input type="button" class="head-submit-btn" id="tripSubmitDates" value="Submit Dates" name="submitDates">
                             <span id="tripSubmitDatesError" class="text-danger"></span>
                         </div>

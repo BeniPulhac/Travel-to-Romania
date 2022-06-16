@@ -26,7 +26,6 @@ function tripSubmitDatesAjax() {
     xhr.onload = function () {
         if (this.readyState == 4 && this.status == 200) {
             let response = xhr.responseText;
-            console.log(response);
             response = JSON.parse(response);
             tripDatesEmptyFields();
 
@@ -34,7 +33,8 @@ function tripSubmitDatesAjax() {
                 tripDates(response);
             } else if(typeof response == 'string') {
                 if(response === 'Success') {
-                    window.location.href = '../../../views/tripComponents/tripStart.php';
+                    tripDatesEmptyFields();
+                    // window.location.href = '../../../views/tripComponents/tripStart.php';
                 } else {
                     tripSubmitDatesError.innerText = response;
                 }
