@@ -23,10 +23,8 @@ function showHint(str) {
 
 
                 if(typeof response == 'object') {
-                    console.log('Im object');
                    for(key in response) {
                         console.log('working');
-
                    }
                 } else {
                     if(typeof response == 'string') {
@@ -54,7 +52,7 @@ function showHint(str) {
 function creatCityList(response) {
     counting++;
     //
-    const aLink = document.createElement('a');
+    const aLink = document.createElement('button');
     aLink.setAttribute('class', 'list-group-item list-group-item-action d-flex gap-3 py-3 list-content cursor-pointer');
     aLink.setAttribute('aria-current', 'true');
     aLink.setAttribute('id', 'getElement' + counting); //in loc de id sa folosesc un onclick="function(numele orasului)"

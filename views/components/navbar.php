@@ -5,13 +5,13 @@
             <img src="../../assets/images/logo.png" alt="Logo" class="d-inline-block align-text-top nav-bar-logo-custom">
         </a>
 
-        <div class="navigation-custom navbar-light d-none d-md-flex">
+        <div class="navigation-custom navbar-light d-none d-md-flex flex-row">
             <ul class="nav-ul-custom nav justify-content-end">
-                <?php if(isset($_SESSION['userid'])) { ?>
+                <?php if(isset($_SESSION['userid'])) : ?>
                     <li class="nav-item nav-item-custom">
                         <a class="nav-link nav-link-custom" href="../../views/wishTrip.php">Plan trip</a>
                     </li>
-                <?php }  ?>
+                <?php endif;  ?>
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link nav-link-custom" href="../../views/attractions.php">Attractions</a>
                 </li>
@@ -19,26 +19,31 @@
                     <a class="nav-link nav-link-custom" href="../../views/about.php">About</a>
                 </li>
             </ul>
-
-
             <div class="navigation-btn btn-group">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn-light rounded-pill shadow-sm bg-body me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php if(isset($_SESSION['userid'])) : ?>
+                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
+                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
                         <i class="fa fa-home"></i>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <button class="dropdown-item">Account</button>
-                        <button class="dropdown-item">Settings</button>
-                        <div class="dropdown-divider"></div>
-
-                        <?php if(isset($_SESSION['userid'])) : ?>
-                            <button class="dropdown-item"  onclick="signOut()">Sign out</button>
-                        <?php else : ?>
-                            <button type="button" class="dropdown-item" onclick="showSignIn()">Sign in</button>
-                        <?php endif; ?>
-                    </ul>
-                </div>
+                <?php else : ?>
+                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" onclick="showSignIn()">Sign in</button>
+                <?php endif; ?>
             </div>
+
+<!--            <div class="navigation-btn btn-group">-->
+<!--                <div class="dropdown">-->
+<!--                    <button class="btn btn-secondary dropdown-toggle btn-light rounded-pill shadow-sm bg-body me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                        <i class="fa fa-home"></i>-->
+<!--                    </button>-->
+<!--                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--                        <button class="dropdown-item">Account</button>-->
+<!--                        <button class="dropdown-item">Settings</button>-->
+<!--                        <div class="dropdown-divider"></div>-->
+<!---->
+<!--                       -->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
 
@@ -69,7 +74,10 @@
 
                 <div class="navigation-btn btn-group">
                     <?php if(isset($_SESSION['userid'])) { ?>
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut" onclick="signOut()">Sign out</button>
+                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
+                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
+                            <i class="fa fa-home"></i>
+                        </button>
                     <?php } else { ?>
                         <button type="button" class="btn btn-light rounded-pill shadow-sm bg-body me-1" onclick="showSignIn()">Sign in</button>
                     <?php } ?>
