@@ -60,8 +60,8 @@ $today = date('Y/m/d');
                         </div>
                         <div class="container">
                             <input type="button" class="head-submit-btn" id="tripSubmitDates" value="Submit Dates" name="submitDates">
-                            <span id="tripSubmitDatesError" class="text-danger"></span>
                         </div>
+                        <span id="tripSubmitDatesError" class="text-danger pt-2"></span>
                     </form>
 
                 </div>

@@ -29,22 +29,6 @@
                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" onclick="showSignIn()">Sign in</button>
                 <?php endif; ?>
             </div>
-
-<!--            <div class="navigation-btn btn-group">-->
-<!--                <div class="dropdown">-->
-<!--                    <button class="btn btn-secondary dropdown-toggle btn-light rounded-pill shadow-sm bg-body me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                        <i class="fa fa-home"></i>-->
-<!--                    </button>-->
-<!--                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
-<!--                        <button class="dropdown-item">Account</button>-->
-<!--                        <button class="dropdown-item">Settings</button>-->
-<!--                        <div class="dropdown-divider"></div>-->
-<!---->
-<!--                       -->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-
         </div>
 
         <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">

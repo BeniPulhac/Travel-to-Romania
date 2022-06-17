@@ -8,22 +8,13 @@
         <div class="navigation-custom navbar-light d-none d-md-flex">
 
             <div class="navigation-btn btn-group">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn-light rounded-pill shadow-sm bg-body me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <?php if(isset($_SESSION['userid'])) : ?>
+                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
                         <i class="fa fa-home"></i>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <button class="dropdown-item">Account</button>
-                        <button class="dropdown-item">Settings</button>
-                        <div class="dropdown-divider"></div>
-
-                        <?php if(isset($_SESSION['userid'])) : ?>
-                            <button class="dropdown-item" id="showFormSignOut">Sign out</button>
-                        <?php else : ?>
-                            <button class="dropdown-item" id="showForm">Sign in</button>
-                        <?php endif; ?>
-                    </ul>
-                </div>
+                <?php else : ?>
+                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" onclick="showSignIn()">Sign in</button>
+                <?php endif; ?>
             </div>
 
         </div>
@@ -53,10 +44,11 @@
 
                 <div class="navigation-btn btn-group">
                     <?php if(isset($_SESSION['userid'])) { ?>
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1" id="showFormSignOut" onclick="signOut()">Sign out</button>
-                    <?php } else { ?>
-                        <button class="btn btn-light rounded-pill shadow-sm bg-body me-1"  onclick="showForm()">Sign in</button>
+                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
+                            <i class="fa fa-home"></i>
+                        </button>
                     <?php } ?>
+
 <!--                    <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>-->
                 </div>
             </div>

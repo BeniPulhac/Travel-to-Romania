@@ -64,17 +64,23 @@ switch ($dates) {
             $result1 = mysqli_query($conn, $sql1);
             $success = true;
 
-            if(!$result1) {
-
+            if($result1) {
+                $sql2 = "SELECT id FROM trips WHERE userid = '$userid' AND start_date = '$tripStart' AND end_date = '$tripEnd'";
+                $result2 = mysqli_query($conn, $sql2);
+                $row2 = mysqli_fetch_assoc($result2);
+//                $_SESSION['tripId'] = $row2;
+            } else {
                 echo json_encode("Error: " . $sql1 . "<br>" . mysqli_error($conn));
             }
         }}
 
-        if($success === true) {
-            echo json_encode('Success');
+        if($success === true && !empty($row2)) {
+            echo json_encode(['Success' => true, 'project_id' => $row2]);
         } else {
             echo json_encode($errors);
         }
 }
+
+
 
 mysqli_close($conn);

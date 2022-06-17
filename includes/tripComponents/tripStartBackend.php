@@ -1,5 +1,4 @@
 <?php
-
 include '../../dataBase.php';
 //  Get the parameter from URL
 $q = $_REQUEST['q'];
@@ -9,19 +8,14 @@ $conn = $GLOBALS['conn'];
 $cities = array();
 $hint = '';
 
-//  Write query
+//  Query
 $sql = "SELECT citys_name FROM cities";
-
-//  Make query & get result
 $result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//  Fetch the resulting rows as an array
-$cities = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//  Free result from memory
+//  Free result from memory and Close connection
 mysqli_free_result($result);
-
-//  Close Connection
 $conn->close();
 
 
@@ -29,18 +23,18 @@ if($q !== '' && strlen($q) >= 1) {
     $q = strtolower($q);
     $len = strlen($q);
 
-    for ($i = 0; $i < count($cities); $i++) {
+    for ($i = 0; $i < count($row); $i++) {
 
-        if (stristr($q, substr($cities[$i]['citys_name'], 0, $len))) {
+        if (stristr($q, substr($row[$i]['citys_name'], 0, $len))) {
 
             if ($hint === '') {
-                $hint = $cities[$i]['citys_name'];
+                $hint = $row[$i]['citys_name'];
 
                 echo $hint;
             }
             else {
                 $hint = '';
-                $hint =  ", " . $cities[$i]['citys_name'];
+                $hint =  ", " . $row[$i]['citys_name'];
 
                 echo $hint;
             }

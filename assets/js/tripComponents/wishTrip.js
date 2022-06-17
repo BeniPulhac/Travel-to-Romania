@@ -30,13 +30,11 @@ function tripSubmitDatesAjax() {
             tripDatesEmptyFields();
 
             if(typeof response == 'object') {
-                tripDates(response);
-            } else if(typeof response == 'string') {
-                if(response === 'Success') {
+                if(response.Success == true) {
                     tripDatesEmptyFields();
-                    // window.location.href = '../../../views/tripComponents/tripStart.php';
+                    window.location.href = '../../../views/tripComponents/tripStart.php?project_id=' + response.project_id.id;
                 } else {
-                    tripSubmitDatesError.innerText = response;
+                    tripDates(response);
                 }
             }
 
@@ -56,7 +54,7 @@ function tripDates(response) {
     }
 
     if(response['tripCheck']) {
-        tripStartError.innerText = response['tripCheck'];
+        tripSubmitDatesError.innerText = response['tripCheck'];
     }
 }
 

@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
+$row = $GLOBALS['project_id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +35,7 @@
                 <div class="head-input">
                     <div class="head-input-date d-flex flex-row">
                         <span class="text-white fw-bold larger-text">Trip between: </span>
-                        <span class="text-white ps-1">"'Variable' . 'Variable'"</span>
+                        <span class="text-white ps-2 align-self-center"><?php echo $row['start_date'] ?> / <?php echo $row['end_date'] ?></span>
                     </div>
 
                     <div class="d-flex align-content-start flex-wrap">
