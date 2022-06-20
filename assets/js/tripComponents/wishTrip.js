@@ -32,7 +32,7 @@ function tripSubmitDatesAjax() {
             if(typeof response == 'object') {
                 if(response.Success == true) {
                     tripDatesEmptyFields();
-                    window.location.href = '../../../views/tripComponents/tripStart.php?project_id=' + response.project_id.id;
+                    window.location.href = '../../../views/tripComponents/tripStart.php';
                 } else {
                     tripDates(response);
                 }

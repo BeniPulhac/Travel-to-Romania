@@ -1,7 +1,10 @@
 <?php
 session_start();
 include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
-$row = $GLOBALS['project_id'];
+if(isset($GLOBALS['end_date'])) {
+    $endDate = $GLOBALS['end_date'];
+}
+$startDate = $GLOBALS['start_date'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +38,7 @@ $row = $GLOBALS['project_id'];
                 <div class="head-input">
                     <div class="head-input-date d-flex flex-row">
                         <span class="text-white fw-bold larger-text">Trip between: </span>
-                        <span class="text-white ps-2 align-self-center"><?php echo $row['start_date'] ?> / <?php echo $row['end_date'] ?></span>
+                        <span class="text-white ps-2 align-self-center"><?php echo $startDate;  if(isset($endDate)) : echo " / " . $endDate; endif; ?></span>
                     </div>
 
                     <div class="d-flex align-content-start flex-wrap">
@@ -64,28 +67,28 @@ $row = $GLOBALS['project_id'];
         </div>
 
 
-<!--        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
-<!--            Launch static backdrop modal-->
-<!--        </button>-->
-<!---->
-<!---->
-<!--        <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
-<!--            <div class="modal-dialog">-->
-<!--                <div class="modal-content">-->
-<!--                    <div class="modal-header">-->
-<!--                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>-->
-<!--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--                    </div>-->
-<!--                    <div class="modal-body">-->
-<!--                        ...-->
-<!--                    </div>-->
-<!--                    <div class="modal-footer">-->
-<!--                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-<!--                        <button type="button" class="btn btn-primary">Understood</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+<!--                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
+<!--                    Launch static backdrop modal-->
+<!--                </button>-->
+
+
+                <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
         <div class="container about-page-content">
@@ -124,15 +127,10 @@ $row = $GLOBALS['project_id'];
 
                                         <div class="result-body" id="cityPopup">
                                             <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center">
-                                                <!--                                                    Insert cards with JS-->
-                                                <div class="list-group w-75 mx-auto list-custom pe-0 overflow-auto" id="insertCityList">
-<!--                                                    --><?php //include '../../includes/tripComponents/tripStartBackend.php'; ?>
+
+                                                <div class="list-group w-75 mx-auto list-custom pe-0 " id="insertCityList">
+                                                    <!--                                                    --><?php //include '../../includes/tripComponents/tripStartBackend.php'; ?>
                                                 </div>
-
-                                                <div >
-
-                                                </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -144,18 +142,17 @@ $row = $GLOBALS['project_id'];
             </div>
         </div>
 
-<div class="about-page-footer">
-    <div class="about-page-buttons d-flex flex-row justify-content-between container">
-        <a href="../wishTrip.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
+        <div class="about-page-footer">
+            <div class="about-page-buttons d-flex flex-row justify-content-between container">
+                <a href="../wishTrip.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
 
-        <a href="tripHotels.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
-    </div>
-</div>
+                <a href="tripHotels.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+            </div>
+        </div>
 
     </section>
 </main>
 
-<!--<script src="../../assets/js/tripComponents/wishTrip.js"></script>-->
 <script src="../../assets/js/tripComponents/tripStart.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>

@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
+if(isset($GLOBALS['end_date'])) {
+    $endDate = $GLOBALS['end_date'];
+}
+$startDate = $GLOBALS['start_date'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +37,7 @@
                 <div class="head-input">
                     <div class="head-input-date d-flex flex-row">
                         <span class="text-white fw-bold larger-text">Trip between: </span>
-                        <span class="text-white ps-1">output from db</span>
+                        <span class="text-white ps-2 align-self-center"><?php echo $startDate;  if(isset($endDate)) : echo " / " . $endDate; endif; ?></span>
                     </div>
 
                     <div class="head-input-places">

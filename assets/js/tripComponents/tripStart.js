@@ -2,11 +2,9 @@
 const txtHint = document.getElementById('txtHint');
 const insertCityList = document.getElementById('insertCityList');
 const cityPopup = document.getElementById('cityPopup');
-// let getElement = document.getElementById('getElement');
-let counting = 0;
+let count = 0;
 
-//  Function
-
+//  Ajax
 function showHint(str) {
     if(str.length === 0) {
         txtHint.innerText = '';
@@ -19,27 +17,15 @@ function showHint(str) {
             xhr.onload = function() {
 
                 let response = xhr.responseText;
-                // response = JSON.parse(response);
+                response = JSON.parse(response);
 
 
                 if(typeof response == 'object') {
-                   for(key in response) {
-                        console.log('working');
-                   }
-                } else {
-                    if(typeof response == 'string') {
+                   let cities = response.city.split(", ");
+                    insertCityList.innerHTML = '';
 
-                        const myArray = response.split(", ");
-
-                        insertCityList.innerHTML = '';
-                        for(let i = 0; i < myArray.length; i++) {
-                            creatCityList(myArray[i]);
-                            clickListElement(myArray[i], counting);
-
-                            // console.log(counting);
-                        }
-                        counting = 0;
-                        // txtHint.innerText = 'No hotels in this city';
+                   for(keys in cities) {
+                       creatCityList(cities[keys], count);
                     }
                 }
             }
@@ -47,74 +33,41 @@ function showHint(str) {
     }
 }
 
-
-
+//  Functions
 function creatCityList(response) {
-    counting++;
+    count++
     //
     const aLink = document.createElement('button');
-    aLink.setAttribute('class', 'list-group-item list-group-item-action d-flex gap-3 py-3 list-content cursor-pointer');
+    aLink.setAttribute('class', 'list-group-item list-group-item-action d-flex gap-3 py-3 list-content cursor-pointer ');
     aLink.setAttribute('aria-current', 'true');
-    aLink.setAttribute('id', 'getElement' + counting); //in loc de id sa folosesc un onclick="function(numele orasului)"
+    // aLink.setAttribute('onclick', 'creatCityPopup('+count+')');
     aLink.setAttribute('type', 'button');
+    aLink.setAttribute('data-bs-toggle', 'modal');
+    aLink.setAttribute('data-bs-target', '#staticBackdrop');
     insertCityList.appendChild(aLink);
 
     //
     const element = document.createElement('div');
-    element.setAttribute('class', 'gap-2 w-100 justify-content-between');
+    element.setAttribute('class', 'gap-2 w-100 justify-content-between ');
     aLink.appendChild(element);
 
     //
     const cityName = document.createElement('h6');
+    cityName.setAttribute('class', 'popup');
     cityName.innerHTML = response;
-    // cityName.innerHTML = '<p>New text!</p>';
     element.appendChild(cityName);
 
+    //
+    const span = document.createElement('span');
+    span.setAttribute('class', 'popuptext');
+    span.setAttribute('id', 'myPopup'+count);
+    span.innerHTML = 'Hello';
+    cityName.appendChild(span);
 }
 
-function clickListElement(myArray, counting) {
-    // console.log(myArray);
-    // console.log(counting);
-
-    for(i = 0; i < counting; i++) {
-        // getElement = document.getElementById('getElement' + counting);
-        let testSomething = 'getElement' + counting;
-
-        testSomething.addEventListener
-        // console.log(testSomething);
-
-
-        let getElement = document.getElementById('getElement' + counting);
-
-        getElement.addEventListener('click', function() {
-            creatCityPopup(myArray);
-        });
-    }
+function creatCityPopup(count) {
+    let popup = document.getElementById('myPopup' + count);
+    popup.classList.toggle('show');
 }
 
-function creatCityPopup(myArray) {
-
-    cityPopup.innerHTML = '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">\n' +
-        '            Launch static backdrop modal\n' +
-        '        </button>\n' +
-        '\n' +
-        '        \n' +
-        '        <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">\n' +
-        '            <div class="modal-dialog">\n' +
-        '                <div class="modal-content">\n' +
-        '                    <div class="modal-header">\n' +
-        '                        <h5 class="modal-title" id="staticBackdropLabel">' +  myArray + '</h5>\n' +
-        '                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>\n' +
-        '                    </div>\n' +
-        '                    <div class="modal-body">\n' +
-        '                        ...\n' +
-        '                    </div>\n' +
-        '                    <div class="modal-footer">\n' +
-        '                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>\n' +
-        '                        <button type="button" class="btn btn-primary">Understood</button>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '        </div>';
-}
-
+//  La click pe link trebuie facut un ajax request care face querry sa iau niste date din bd ca sa le afisez in popup, doaca totu ii ok apelez o functie care creaza popup-ul

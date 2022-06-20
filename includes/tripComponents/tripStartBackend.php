@@ -1,12 +1,16 @@
 <?php
 include '../../dataBase.php';
-//  Get the parameter from URL
-$q = $_REQUEST['q'];
 
 //  Variables
 $conn = $GLOBALS['conn'];
-$cities = array();
-$hint = '';
+$q = $_REQUEST['q'];
+
+//  Response
+$cities = [
+    'city' => '',
+    'dateStart' => '',
+    'dateEnd' => ''
+];
 
 //  Query
 $sql = "SELECT citys_name FROM cities";
@@ -19,25 +23,21 @@ mysqli_free_result($result);
 $conn->close();
 
 
+//  Error handling
 if($q !== '' && strlen($q) >= 1) {
     $q = strtolower($q);
-    $len = strlen($q);
+    $length = strlen($q);
 
-    for ($i = 0; $i < count($row); $i++) {
-
-        if (stristr($q, substr($row[$i]['citys_name'], 0, $len))) {
-
-            if ($hint === '') {
-                $hint = $row[$i]['citys_name'];
-
-                echo $hint;
-            }
-            else {
-                $hint = '';
-                $hint =  ", " . $row[$i]['citys_name'];
-
-                echo $hint;
+    foreach ($row as $item) {
+        if(stristr($q, substr($item['citys_name'], 0, $length))) {
+            if($cities['city'] === '') {
+                $cities['city'] = $item['citys_name'];
+            } else {
+                $cities['city'] .= ", " . $item['citys_name'];
             }
         }
     }
 }
+
+
+echo json_encode($cities);
