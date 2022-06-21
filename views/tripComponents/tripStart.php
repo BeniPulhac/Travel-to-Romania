@@ -66,31 +66,6 @@ $startDate = $GLOBALS['start_date'];
             </div>
         </div>
 
-
-<!--                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
-<!--                    Launch static backdrop modal-->
-<!--                </button>-->
-
-
-                <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
         <div class="container about-page-content">
             <div class="row">
                 <div class="col-12">
@@ -103,7 +78,7 @@ $startDate = $GLOBALS['start_date'];
                                             <div class="row">
                                                 <div class="form-group col-lg-6 d-flex flex-row">
                                                     <label for="cityInput" class="my-auto">City</label>
-                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value)" required>
+                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value);" >
                                                 </div>
 
                                                 <div class="col-lg-6">
@@ -121,8 +96,32 @@ $startDate = $GLOBALS['start_date'];
                                             </div>
                                         </div>
 
-                                        <div class="show-city text-center" id="txtHint">
+                                        <div class="container" id="insertModal">
+                                            <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="display: none">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="cityPopupTitle"></h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body d-flex flex-column align-items-center align-self-center text-center">
+                                                            <form method="post" class="">
+                                                                <input type="hidden" name="cityStartDate" id="cityStartDate" value="<?php echo $startDate; ?>">
+                                                                <input type="hidden" name="cityEndDate" id="cityEndDate" value="<?php echo $endDate; ?>">
+                                                                <label for="cityDate" class="fw-bold pe-2">First day in this city</label>
+                                                                <input type="date" id="cityDateFirst" name="cityDateFirst" class="my-1">
+                                                                <label for="cityDate" class="fw-bold pe-2">Last day in this city</label>
+                                                                <input type="date" id="cityDateLast" name="cityDateLast" class="my-1">
+                                                            </form>
+                                                            <span id="modalBodyErrors" class="text-danger"></span>
 
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-outline-success border-3" id="modalFooterOk">Understood</button>
+                                                        </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="result-body" id="cityPopup">
