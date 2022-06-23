@@ -39,7 +39,7 @@ switch ($dates) {
 
     default :
         $success = false;
-        $sql = "SELECT start_date, end_date FROM trips WHERE userid=" . $userid;
+        $sql = "SELECT start_date, end_date, id FROM trips WHERE userid=" . $userid;
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
 
@@ -50,9 +50,18 @@ switch ($dates) {
                 $item['start_date'] = strtotime($item['start_date']);
                 $item['end_date'] = strtotime($item['end_date']);
 
-                if(($tripStart >= $item['start_date'] && $tripStart <= $item['end_date']) && ($tripEnd >= $item['start_date'] && $tripEnd <= $item['end_date'])) {
+                if($tripStart == $item['start_date'] && $tripEnd == $item['end_date']) {
+                    echo json_encode(['Success' => true, 'project_id' => $item['id']]);
+                    return;
+                } elseif(($tripStart >= $item['start_date'] && $tripStart < $item['end_date']) ||
+                    ($tripEnd > $item['start_date'] && $tripEnd <= $item['end_date'])) {
                     $errors['tripCheck'] = '*Cant creat this trip';
                 }
+
+//                if(($tripStart >= $item['start_date'] && $tripStart < $item['end_date']) ||
+//                    ($tripEnd > $item['start_date'] && $tripEnd <= $item['end_date'])) {
+//                    $errors['tripCheck'] = '*Cant creat this trip';
+//                }
             }
 
             $tripStart = date("Y:m:d", $tripStart);
@@ -73,7 +82,8 @@ switch ($dates) {
                 } else {
                     echo json_encode("Error: " . $sql1 . "<br>" . mysqli_error($conn));
                 }
-            }} else {
+            }
+        } else {
             $tripStart = date("Y:m:d", $tripStart);
             $tripEnd = date("Y:m:d", $tripEnd);
 
@@ -95,7 +105,7 @@ switch ($dates) {
         }
 
         if($success === true && !empty($row2)) {
-            echo json_encode(['Success' => true, 'project_id' => $row2]);
+            echo json_encode(['Success' => true, 'project_id' => $row2['id']]);
         } else {
             echo json_encode($errors);
         }

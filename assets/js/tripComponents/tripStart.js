@@ -7,6 +7,8 @@ const cityEndDate = document.getElementById('cityEndDate');
 const cityDateFirst = document.getElementById('cityDateFirst');
 const cityDateLast = document.getElementById('cityDateLast');
 const modalBodyErrors = document.getElementById('modalBodyErrors');
+const cityHeaderInsert = document.getElementById('cityHeaderInsert');
+const tripId = document.getElementById('tripId');
 let count = 0;
 
 //  Events
@@ -48,6 +50,7 @@ function cityPopupBackend() {
     formData.append('cityPopupTitle', cityPopupTitle.innerHTML);
     formData.append('cityDateFirst', cityDateFirst.value);
     formData.append('cityDateLast', cityDateLast.value);
+    formData.append('tripId', tripId.value);
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '../../../includes/tripComponents/cityDate.php', true);
@@ -57,9 +60,26 @@ function cityPopupBackend() {
 
 
         if(typeof response == 'object') {
+            modalBodyErrors.classList.add('text-danger');
+            modalBodyErrors.classList.remove('text-success');
             modalBodyErrors.innerHTML = response['tripDay'];
-        } else if(typeof response == 'string') {
 
+            if(response.Success == 'Yes') {
+                modalBodyErrors.classList.remove('text-danger');
+                modalBodyErrors.classList.add('text-success');
+                modalBodyErrors.innerHTML = 'Success';
+
+                // cityHeaderCreat();
+
+                setTimeout(function () {
+                    $('#staticBackdrop').modal('hide');
+                    location.reload();
+                }, 1000);
+            }else if(response.Success == 'No') {
+                modalBodyErrors.classList.add('text-danger');
+                modalBodyErrors.classList.remove('text-success');
+                modalBodyErrors.innerHTML = '*Cant add another city in the same day/s'
+            }
         }
     }
     xhr.send(formData);
@@ -68,6 +88,9 @@ function cityPopupBackend() {
 
 //  Functions
 function cityPopupDates(count) {
+    cityDateFirst.value = '';
+    cityDateLast.value = '';
+    modalBodyErrors.innerHTML = '';
     //take the name of the city
     let cityName = document.getElementById('myPopup'+count).innerHTML;
     //format dates
@@ -117,4 +140,56 @@ function creatCityList(response) {
     cityName.setAttribute('id', 'myPopup'+count);
     cityName.innerHTML = response;
     element.appendChild(cityName);
+}
+
+function cityHeaderCreat() {
+    const cityHeader = document.createElement('button');
+    cityHeader.setAttribute('class', 'p-2 text-white btn btn-dark btn-outline-success border-5 element-custom m-1');
+    cityHeader.setAttribute('type', 'button');
+    cityHeader.setAttribute('onclick', 'deleteCityAjax()');
+    cityHeaderInsert.appendChild(cityHeader);
+
+    //
+    const divCity = document.createElement('div');
+    cityHeader.appendChild(divCity);
+
+    //
+    const cityIcon = document.createElement('i');
+    cityIcon.setAttribute('class', 'fa-solid fa-city');
+    divCity.appendChild(cityIcon);
+
+    //
+    const cityText = document.createElement('span');
+    cityText.innerText = 'City: ';
+    divCity.appendChild(cityText);
+
+    //
+    const cityName = document.createElement('span');
+    cityName.setAttribute('id', 'cityHeaderName');
+    cityName.innerText = cityPopupTitle.innerText;
+    divCity.appendChild(cityName);
+
+    //
+    const divDays = document.createElement('div');
+    cityHeader.appendChild(divDays);
+
+    //
+    const daysIcon = document.createElement('i');
+    daysIcon.setAttribute('class', 'fas fa-calendar-alt');
+    divDays.appendChild(daysIcon);
+
+    //
+    const daysText = document.createElement('span');
+    daysText.innerText = 'Days: ';
+    divDays.appendChild(daysText);
+
+    //
+    const cityStart = document.createElement('span');
+    cityStart.setAttribute('id', 'headerStart');
+    divDays.appendChild(cityStart);
+
+    //
+    const cityEnd = document.createElement('span');
+    cityEnd.setAttribute('id', 'headerEnd');
+    divDays.appendChild(cityEnd);
 }

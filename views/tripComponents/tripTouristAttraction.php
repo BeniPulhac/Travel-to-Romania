@@ -1,10 +1,7 @@
 <?php
 session_start();
 include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
-if(isset($GLOBALS['end_date'])) {
-    $endDate = $GLOBALS['end_date'];
-}
-$startDate = $GLOBALS['start_date'];
+$trip_id = $trip_id ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,23 +27,7 @@ $startDate = $GLOBALS['start_date'];
 <?php include '../components/signIn.php';?>
 <!----------------------------------/Sign in | Register/----------------------------------------------->
 <main id="testBlur">
-    <header class="head">
-        <div class="head-container">
-            <div class="h-container-info py-5">
-                <h1 class="text-white fw-bold">Your Trip</h1>
-                <div class="head-input">
-                    <div class="head-input-date d-flex flex-row">
-                        <span class="text-white fw-bold larger-text">Trip between: </span>
-                        <span class="text-white ps-2 align-self-center"><?php echo $startDate;  if(isset($endDate)) : echo " / " . $endDate; endif; ?></span>
-                    </div>
-
-                    <div class="head-input-places">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include 'tripHeader.php';?>
 
 
     <section class="about-page d-flex flex-column py-5">
@@ -80,9 +61,9 @@ $startDate = $GLOBALS['start_date'];
         </div>
         <hr>
         <div class="about-page-buttons d-flex flex-row justify-content-between container">
-            <a href="tripRestaurants.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
+            <a href="tripRestaurants.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
 
-            <a href="tripEnd.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+            <a href="tripEnd.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
         </div>
     </section>
 </main>

@@ -1,10 +1,13 @@
 <?php
 session_start();
 include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
-if(isset($GLOBALS['end_date'])) {
-    $endDate = $GLOBALS['end_date'];
+$trip_id = $trip_id ?? null;
+if(isset($startDate)) {
+    $startDate = $startDate;
 }
-$startDate = $GLOBALS['start_date'];
+if(isset($endDate)) {
+    $endDate = $endDate;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,32 +34,7 @@ $startDate = $GLOBALS['start_date'];
 <!----------------------------------/Sign in | Register/----------------------------------------------->
 
 <main id="testBlur">
-    <header class="head">
-        <div class="head-container">
-            <div class="h-container-info py-5">
-                <h1 class="text-white fw-bold">Your Trip</h1>
-                <div class="head-input">
-                    <div class="head-input-date d-flex flex-row">
-                        <span class="text-white fw-bold larger-text">Trip between: </span>
-                        <span class="text-white ps-2 align-self-center"><?php echo $startDate;  if(isset($endDate)) : echo " / " . $endDate; endif; ?></span>
-                    </div>
-
-                    <div class="d-flex align-content-start flex-wrap">
-                        <div class="p-2 text-white btn btn-dark btn-outline-success border-5 element-custom">
-                            <i class="fa-solid fa-city"></i>
-                            <span>City:</span>
-                            <span>Output Here</span>
-                        </div>
-
-                    </div>
-
-                    <div class="head-input-places">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include 'tripHeader.php';?>
 
 
     <section class="about-page d-flex flex-column py-5">
@@ -142,10 +120,10 @@ $startDate = $GLOBALS['start_date'];
         </div>
 
         <div class="about-page-footer">
-            <div class="about-page-buttons d-flex flex-row justify-content-between container">
-                <a href="../wishTrip.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
+            <div class="about-page-buttons d-flex flex-row justify-content-end container">
+<!--                <a href="../wishTrip.php?tripId=--><?php //= $trip_id ?? null ?><!--" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>-->
 
-                <a href="tripHotels.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+                <a href="tripHotels.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
             </div>
         </div>
 

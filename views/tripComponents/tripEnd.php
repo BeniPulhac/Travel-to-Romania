@@ -40,16 +40,7 @@ $start = date("d F - D", $timeStart);
 
 ?>
 <main id="testBlur">
-    <header class="head">
-        <div class="container">
-            <h1 class="text-center fw-bold trip-end-title">The trip resume</h1>
-            <div class="button-back d-flex justify-content-center">
-                <a href="tripTouristAttraction.php" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
-            </div>
-
-        </div>
-
-    </header>
+    <?php include 'tripHeader.php';?>
 
     <section class="about-page d-flex flex-column">
         <div class="container">
