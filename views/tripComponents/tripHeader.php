@@ -16,12 +16,18 @@ $cities = $cities ?? null;
                 </div>
 
                 <div class="d-flex align-content-start flex-wrap" id="cityHeaderInsert">
-                    <?php foreach ($cities as $city) :  ?>
-                        <button class="p-2 text-white btn btn-dark btn-outline-success border-5 element-custom m-1" type="button" onclick="deleteCityAjax();">
+                    <?php
+                    $count = 0;
+                    foreach ($cities as $city) :
+                        $count++;
+                        ?>
+                        <div class="p-2 text-white border border-5 border-success m-1">
                             <div>
                                 <i class="fa-solid fa-city"></i>
                                 <span>City: <?php echo $city->name?></span>
+                                <button type="button" class="btn-close btn-close-white" onclick="deleteCityAjax(<?php echo $count ?>);" aria-label='Close'></button>
                             </div>
+
                             <div>
                                 <i class="fas fa-calendar-alt"></i>
                                 <?php
@@ -31,10 +37,11 @@ $cities = $cities ?? null;
                                 $end = date("d", $city->end_date);
                                 ?>
                                 <span><?= $start . '-' . $end ?></span>
+                                <input type="hidden" id="cityHeaderStart<?php echo $count ?>" value="<?php echo $start ?>">
+                                <input type="hidden" id="cityHeaderEnd<?php echo $count ?>" value="<?php echo $end ?>">
                             </div>
-                        </button>
+                        </div>
                     <?php endforeach; ?>
-                    <!--                        Insert city Header-->
                 </div>
 
                 <div class="head-input-places">

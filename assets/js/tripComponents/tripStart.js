@@ -69,8 +69,6 @@ function cityPopupBackend() {
                 modalBodyErrors.classList.add('text-success');
                 modalBodyErrors.innerHTML = 'Success';
 
-                // cityHeaderCreat();
-
                 setTimeout(function () {
                     $('#staticBackdrop').modal('hide');
                     location.reload();
@@ -85,6 +83,19 @@ function cityPopupBackend() {
     xhr.send(formData);
 }
 
+function deleteCityAjax(headerCount) {
+    let cityHeaderStart = document.getElementById('cityHeaderStart'+headerCount).value;
+    let cityHeaderEnd = document.getElementById('cityHeaderEnd'+headerCount).value;
+
+    let formData = new FormData();
+    formData.append('cityHeaderStart', cityHeaderStart);
+    formData.append('cityHeaderEnd', cityHeaderEnd);
+    formData.append('tripId', tripId.value);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../../includes/tripComponents/deleteCityHeader.php', true);
+    xhr.send(formData);
+}
 
 //  Functions
 function cityPopupDates(count) {

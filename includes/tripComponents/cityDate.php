@@ -5,7 +5,7 @@ $cityDateFirst = $_POST['cityDateFirst'];
 $cityDateLast = $_POST['cityDateLast'];
 $cityPopupTitle = $_POST['cityPopupTitle'];
 $tripId = $_POST['tripId'];
-$nr = 0;
+
 
 
 $cities = [];
