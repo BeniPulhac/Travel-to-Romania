@@ -8,6 +8,9 @@ if(isset($startDate)) {
 if(isset($endDate)) {
     $endDate = $endDate;
 }
+if (!isset($_SESSION['userid'])) {
+    header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,16 +63,16 @@ if(isset($endDate)) {
                                                 </div>
 
                                                 <div class="col-lg-6">
-                                                    <div class="result-actions d-flex justify-content-end">
-                                                        <div class="result-sorting">
-                                                            <span>Sort By:</span>
-                                                            <select class="form-control border-0" id="selectOptions">
-                                                                <option value="1">Relevance</option>
-                                                                <option value="2">Names (A-Z)</option>
-                                                                <option value="3">Names (Z-A)</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+<!--                                                    <div class="result-actions d-flex justify-content-end">-->
+<!--                                                        <div class="result-sorting">-->
+<!--                                                            <span>Sort By:</span>-->
+<!--                                                            <select class="form-control border-0" id="selectOptions">-->
+<!--                                                                <option value="1">Relevance</option>-->
+<!--                                                                <option value="2">Names (A-Z)</option>-->
+<!--                                                                <option value="3">Names (Z-A)</option>-->
+<!--                                                            </select>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
                                                 </div>
                                             </div>
                                         </div>

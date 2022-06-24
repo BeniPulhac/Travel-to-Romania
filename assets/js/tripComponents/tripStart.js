@@ -91,9 +91,18 @@ function deleteCityAjax(headerCount) {
     formData.append('cityHeaderStart', cityHeaderStart);
     formData.append('cityHeaderEnd', cityHeaderEnd);
     formData.append('tripId', tripId.value);
+    formData.append('count', headerCount);
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '../../../includes/tripComponents/deleteCityHeader.php', true);
+    xhr.onload = function () {
+        let response = xhr.responseText;
+        response = JSON.parse(response);
+
+        if (response.Success == 'Yes') {
+            location.reload();
+        }
+    }
     xhr.send(formData);
 }
 

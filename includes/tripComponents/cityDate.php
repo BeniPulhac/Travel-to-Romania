@@ -44,6 +44,12 @@ switch ([$cityDateFirst, $cityDateLast]) {
                             echo json_encode(['Success' => 'No']);
                             return;
                         }
+
+                        if(($new_city->start_date == $existingCity->start_date) ||
+                            ($new_city->end_date == $existingCity->end_date)) {
+                            echo json_encode(['Success' => 'No']);
+                            return;
+                        }
                     }
 
                     $cities = json_decode($row->city);

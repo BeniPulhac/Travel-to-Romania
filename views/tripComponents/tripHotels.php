@@ -5,6 +5,9 @@ if(isset($GLOBALS['end_date'])) {
     $endDate = $GLOBALS['end_date'];
 }
 $trip_id = $trip_id ?? null;
+if (!isset($_SESSION['userid'])) {
+    header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

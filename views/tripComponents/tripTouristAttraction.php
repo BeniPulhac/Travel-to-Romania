@@ -2,6 +2,9 @@
 session_start();
 include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
 $trip_id = $trip_id ?? null;
+if (!isset($_SESSION['userid'])) {
+    header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

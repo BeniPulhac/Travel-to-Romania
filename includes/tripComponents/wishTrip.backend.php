@@ -57,11 +57,6 @@ switch ($dates) {
                     ($tripEnd > $item['start_date'] && $tripEnd <= $item['end_date'])) {
                     $errors['tripCheck'] = '*Cant creat this trip';
                 }
-
-//                if(($tripStart >= $item['start_date'] && $tripStart < $item['end_date']) ||
-//                    ($tripEnd > $item['start_date'] && $tripEnd <= $item['end_date'])) {
-//                    $errors['tripCheck'] = '*Cant creat this trip';
-//                }
             }
 
             $tripStart = date("Y:m:d", $tripStart);
