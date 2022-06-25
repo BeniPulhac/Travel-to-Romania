@@ -22,7 +22,7 @@
             <div class="navigation-btn btn-group">
                 <?php if(isset($_SESSION['userid'])) : ?>
                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
-                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
+                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" id="goToAccount">
                         <i class="fa fa-home"></i>
                     </button>
                 <?php else : ?>

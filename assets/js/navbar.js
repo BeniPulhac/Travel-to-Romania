@@ -2,11 +2,18 @@
 const formSignIn = document.getElementById('formSignIn');
 const formRegister = document.getElementById('formRegister');
 const sendEmailTab = document.getElementById('sendEmailTab');
-// const sendEmailTab2 = document.getElementById('sendEmailTab2');
 const forgetPassword = document.getElementById('forgetPassword');
 const sendPassword = document.getElementById('sendPassword');
 const sendPassword2 = document.getElementById('sendPassword2');
 const blur = document.getElementById('testBlur');
+const goToAccount = document.getElementById('goToAccount');
+
+//  Events
+if (goToAccount) {
+    goToAccount.addEventListener('click', () => {
+        location.href = "../../views/account.php";
+    }, true);
+}
 
 //  Functions
 function showSignIn() {
