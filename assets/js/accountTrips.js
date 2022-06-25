@@ -97,34 +97,16 @@ function creatTripElements(elements) {
    cityContent.setAttribute('id', 'insertCityName')
    accountCityContent.appendChild(cityContent);
 
-   let cities = JSON.parse(elements.city);
-   for(let city in cities) {
-      displayCities(cities, city);
-   }
-}
-
-function displayCities(cities, count) {
-
-   console.log(cities[count].name)
-
-
-   let insertCityName = document.getElementById('insertCityName');
-   // cities = JSON.parse(cities);
-
-
+   let city = JSON.parse(elements.city)
+   for (let key in city) {
       const spanTest = document.createElement('span')
-      spanTest.innerHTML = cities[count].name;
-      insertCityName.appendChild(spanTest);
+      spanTest.innerHTML = city[key].name;
+      cityContent.appendChild(spanTest);
+   }
+
+
 
 }
-
-
-
-
-
-
-
-
 
 
 
