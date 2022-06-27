@@ -3,7 +3,7 @@ include '../../dataBase.php';
 
 //  Variables
 $conn = $GLOBALS['conn'];
-$q = $_REQUEST['q'];
+$q = $_REQUEST['q'] ?? null;
 
 //  Response
 $cities = [
@@ -37,7 +37,7 @@ if($q !== '' && strlen($q) >= 1) {
             }
         }
     }
+    echo json_encode($cities);
 }
 
 
-echo json_encode($cities);

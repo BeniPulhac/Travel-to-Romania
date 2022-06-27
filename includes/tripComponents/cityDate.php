@@ -26,7 +26,8 @@ switch ([$cityDateFirst, $cityDateLast]) {
         $count = mysqli_num_rows($result);
 
         while($row = mysqli_fetch_object($result)) {
-
+            $test = json_decode($row->city);
+//            var_dump($test);die;
             if ($count == 1) {
                 if (empty($row->city)) {
                     $cities[] = $new_city;

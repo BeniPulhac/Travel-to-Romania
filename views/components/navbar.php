@@ -22,7 +22,7 @@
             <div class="navigation-btn btn-group">
                 <?php if(isset($_SESSION['userid'])) : ?>
                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
-                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" id="goToAccount">
+                     <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="goToAccount()">
                         <i class="fa fa-home"></i>
                     </button>
                 <?php else : ?>
@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button class="burger-menu-custom navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" id="offCanvasMenu">
             <span class="navbar-toggler-icon navbar-dark"></span>
         </button>
 
@@ -59,7 +59,7 @@
                 <div class="navigation-btn btn-group">
                     <?php if(isset($_SESSION['userid'])) { ?>
                         <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
-                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
+                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" onclick="goToAccount()">
                             <i class="fa fa-home"></i>
                         </button>
                     <?php } else { ?>

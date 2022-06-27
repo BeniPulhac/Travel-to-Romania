@@ -6,17 +6,17 @@ const forgetPassword = document.getElementById('forgetPassword');
 const sendPassword = document.getElementById('sendPassword');
 const sendPassword2 = document.getElementById('sendPassword2');
 const blur = document.getElementById('testBlur');
-const goToAccount = document.getElementById('goToAccount');
+
+const offCanvasMenu = document.getElementById('offCanvasMenu');
 
 //  Events
-if (goToAccount) {
-    goToAccount.addEventListener('click', () => {
-        location.href = "../../views/account.php";
-    }, true);
+function goToAccount() {
+    location.href = "../../views/account.php";
 }
 
 //  Functions
 function showSignIn() {
+    offCanvasMenu.click();
     if (formSignIn.classList.contains('hide-element')) {
         formSignIn.classList.toggle('hide-element');
         blur.classList.toggle('blur');

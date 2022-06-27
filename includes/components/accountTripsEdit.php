@@ -2,9 +2,11 @@
 
 include '../../dataBase.php';
 $conn = $GLOBALS['conn'];
-$userId = $_POST['userId'];
+$tripId = $_POST['tripId'];
+$cityIndex = $_POST['cityIndex'];
+$cityDate = $_POST['cityDate'];
 
-$sql = "SELECT * FROM trips WHERE userid='$userId'";
+$sql = "SELECT * FROM trips WHERE id='$tripId'";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0) {
