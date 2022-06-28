@@ -1,15 +1,15 @@
-<div class="d-flex flex-column flex-shrink-0 bg-light position-fixed" style="width: 4.5rem;">
+<div class="d-flex flex-column  bg-light position-fixed" style="width: 4.5rem;">
     <form class="nav nav-pills nav-flush flex-column mb-auto text-center" method="post">
 
-            <button type="button" name="home" id="home" class="nav-link active py-3 border-bottom">
+            <button type="submit" name="home" id="home" class="nav-link active py-3 border-bottom">
                 <i class="fa fa-home fa-lg"></i>
             </button>
 
-            <button type="button" name="trips" id="trips" class="nav-link py-3 border-bottom">
+            <button type="submit" name="trips" id="trips" class="nav-link py-3 border-bottom">
                 <i class="fa-solid fa-compass fa-lg"></i>
             </button>
 
-            <button type="button" name="settings" id="settings" class="nav-link py-3 border-bottom">
+            <button type="submit" name="settings" id="settings" class="nav-link py-3 border-bottom">
                 <i class="fa-solid fa-gear fa-lg"></i>
             </button>
 

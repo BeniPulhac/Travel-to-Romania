@@ -54,3 +54,9 @@ ul {
         margin-right: 0;
     }
 }
+
+.about-page {
+    background-color: rgb(247,247,249);
+    min-height: 80vh;
+    padding: 2em 0;
+}

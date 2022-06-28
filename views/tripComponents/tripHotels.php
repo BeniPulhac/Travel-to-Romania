@@ -8,6 +8,9 @@ $trip_id = $trip_id ?? null;
 if (!isset($_SESSION['userid'])) {
     header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
 }
+include '../../includes/components/accountTrips.php';
+$tripRow = $row ?? null;
+$cities = json_decode($tripRow['city']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +40,12 @@ if (!isset($_SESSION['userid'])) {
 
 
     <section class="about-page d-flex flex-column py-5">
+        <div class="about-page-header pb-5">
+            <div class="about-page-header d-flex justify-content-center">
+                <h4 class="fw-bold">Where you want stay?</h4>
+            </div>
+        </div>
+
         <div class="container about-page-content">
             <div class="row">
                 <div class="col-12">
@@ -44,66 +53,56 @@ if (!isset($_SESSION['userid'])) {
                         <div class="card-body">
                             <div class="row search-body">
                                 <div class="col-lg-12">
-                                    <div class="search-result">
-                                        <div class="result-header">
-                                            <div class="row">
-                                                <div class="form-group col-lg-6 d-flex flex-row">
-                                                    <label for="cityInput" class="my-auto">Hotel</label>
-                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHintHotel(this.value)" required>
-                                                </div>
+                                    <?php foreach ($cities as $city) : ?>
+<!--                                    -->
+                                        <div class="accordion py-2" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        <b><?= $city->name ?></b>
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <div class="search-result">
+                                                            <div class="result-header">
+                                                                <div class="row">
+                                                                    <div class="form-group col-lg-6 d-flex flex-row">
+                                                                        <label for="hotelInput" class="my-auto">Hotel</label>
+                                                                        <input type="text" id="hotelInput" class="form-control mx-sm-3" onkeyup="showHintHotel(this.value)" required>
+                                                                    </div>
 
-                                                <div class="col-lg-6">
-                                                    <div class="result-actions d-flex justify-content-end">
-                                                        <div class="result-sorting">
-                                                            <span>Sort By:</span>
-                                                            <select class="form-control border-0" id="selectOptions">
-                                                                <option value="1">Relevance</option>
-                                                                <option value="2">Names (A-Z)</option>
-                                                                <option value="3">Names (Z-A)</option>
-                                                            </select>
+                                                                    <div class="col-lg-6">
+                                                                        <div class="result-actions d-flex justify-content-end">
+                                                                            <div class="result-sorting">
+                                                                                <span>Sort By:</span>
+                                                                                <select class="form-control border-0" id="selectOptions">
+                                                                                    <option value="1">Relevance</option>
+                                                                                    <option value="2">Names (A-Z)</option>
+                                                                                    <option value="3">Names (Z-A)</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="show-city text-center" id="txtHint">
+
+                                                            </div>
+
+                                                            <div class="result-body">
+                                                                <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center" id="insertHotelCard">
+
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="show-city text-center" id="txtHint">
-
-                                        </div>
-
-                                        <div class="result-body">
-                                            <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center" id="insertHotelCard">
-                                                <!--                                                    Insert cards with JS-->
-<!---->
-<!--                                                <div class='card-custom'>-->
-<!--                                                    <a href='#' class='card-custom-a'>-->
-<!--                                                        <div class='card-img card-image-custom'>-->
-<!--                                                            <img class='card-img-top card-image-custom' src='../../assets/images/cities-small.jpg' alt='Card image cap'>-->
-<!--                                                        </div>-->
-<!---->
-<!--                                                        <div class='card-body'>-->
-<!--                                                            <h5 class='card-title'>Title</h5>-->
-<!--                                                            <p class='card-text'>-->
-<!--                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque-->
-<!--                                                            </p>-->
-<!--                                                        </div>-->
-<!---->
-<!--                                                        <div class='card-footer'>-->
-<!--                                                            <p class='card-text '>-->
-<!--                                                                <small class='text-muted d-flex justify-content-between'>-->
-<!--                                                                    <span><i class='fas fa-eye pe-1'></i>1000</span>-->
-<!--                                                                    <span><i class='fas fa-calendar-alt pe-1'></i>Jan 20, 2018</span>-->
-<!--                                                                </small>-->
-<!--                                                            </p>-->
-<!--                                                        </div>-->
-<!--                                                    </a>-->
-<!--                                                </div>-->
-
-
-                                                <!--                                                -->
-                                            </div>
-                                        </div>
-                                    </div>
+<!--                                    -->
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -112,18 +111,20 @@ if (!isset($_SESSION['userid'])) {
             </div>
         </div>
 
+        <div class="border-top my-auto">
+            <div class="about-page-buttons d-flex flex-row justify-content-between container pt-4">
+                <button  type="button" id="tripHotelsBack" class="btn btn-outline-success btn-lg active">Back</button>
 
-        <div class="about-page-buttons d-flex flex-row justify-content-between container">
-            <a href="tripStart.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
-
-            <a href="tripRestaurants.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+                <button  type="button" id="tripHotelsNext" class="btn btn-outline-success btn-lg active">Next</button>
+            </div>
         </div>
+
     </section>
 </main>
 
-<!--<script src="../../assets/js/tripComponents/wishTrip.js"></script>-->
 <script src="../../assets/js/tripComponents/tripHotels.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/components/pageMove.js"></script>
 </body>
 </html>

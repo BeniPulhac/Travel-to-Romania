@@ -5,13 +5,13 @@ const accountTrips = document.getElementById('accountTrips');
 let count1 = 0;
 
 //  Events
-trips.addEventListener('click', () => {
-   tripsAjax();
-})
+// trips.addEventListener('click', () => {
+//    tripsAjax();
+// })
 
-modalFooterOk.addEventListener('click', () => {
-   accountCityEditAjax();
-}, false);
+// modalFooterOk.addEventListener('click', () => {
+//    accountCityEditAjax();
+// }, false);
 
 //  Ajax
 function tripsAjax() {

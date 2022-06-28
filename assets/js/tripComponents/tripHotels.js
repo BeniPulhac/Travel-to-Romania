@@ -18,8 +18,6 @@ function showHintHotel(str) {
             let response = xhr.responseText;
             response = JSON.parse(response);
 
-            console.log(response);
-            txtHint.innerText = str;
 
             if(typeof response == 'object') {
                 for(i = 0; i < response.length; i++) {

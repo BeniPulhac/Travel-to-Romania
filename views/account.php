@@ -2,8 +2,13 @@
 session_start();
 if (!isset($_SESSION['userid'])) {
     header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
+} else {
+    $userId = $_SESSION['userid'];
 }
-
+include '../dataBase.php';
+$conn = $GLOBALS['conn'];
+include '../includes/components/accountTrips.php';
+$tripRow = $row ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,23 +44,64 @@ if (!isset($_SESSION['userid'])) {
         <input type="hidden" id="sessionId" value="<?php echo $_SESSION['userid'] ?>">
         <?php include 'components/accountSubMenu.php'; ?>
 
-<!--        <div class="container w-75">-->
-<!--            <h2>Your Trips</h2>-->
-<!--            <p>Click on the button to toggle between showing and hiding content.</p>-->
-<!--        </div>-->
-
+        <?php if(isset($_POST['trips'])) : ?>
         <div class="container w-75" id="accountTrips">
             <div class="container border-bottom mb-4">
                 <h2>Your Trips</h2>
                 <p >Click on the button to toggle between showing and hiding content.</p>
             </div>
-<!--            Insert data from Data Base-->
-            <?php include 'components/modalDate.php'; ?>
-        </div>
 
-        <div class="container" id="accountSettings">
+            <?php if($tripRow != null) : ?>
+            <?php foreach ($tripRow as $trip) :
+                $startTrip = strtotime($trip['start_date']);
+                $startTrip = date('d/m/Y', $startTrip);
 
+                $endTrip = strtotime($trip['end_date']);
+                $endTrip = date('d/m/Y', $endTrip);
+
+                $date1 = date_create($trip['start_date']);
+                $date2 = date_create($trip['end_date']);
+                $diff = date_diff($date1, $date2);
+                $diff = $diff->format('%d');
+
+                $cities = json_decode($trip['city']);
+                ?>
+            <div class="container pb-4">
+                <div class="container border p-1 text-center">
+                    <h5>Your trip is between: <?= $startTrip . '-' . $endTrip ?></h5>
+                </div>
+                <div class="d-flex account-days">
+                    <?php
+                    $currentDay = strtotime($trip['start_date']);
+                    for ($i = 1; $i <= $diff; $i++) { ?>
+                        <div class=" border day-div">
+                            <div class="day border-bottom">
+                                <span><?= 'Day: ' . $i ?></span>
+                            </div>
+                            <?php foreach ($cities as $city) : ?>
+                                <?php if($currentDay >= strtotime($city->start_date) && $currentDay <= strtotime($city->end_date)) : ?>
+                                    <div class="">
+                                        City: <?= $city->name ?>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php $currentDay += 86400; } ?>
+                </div>
+            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
+        <?php
+        elseif(isset($_POST['settings'])) :
+        ?>
+        <div class="container w-75" id="accountSettings">
+            <div class="container border-bottom mb-4">
+                <h2>Your Settings</h2>
+            </div>
+        </div>
+        <?php endif; ?>
+
     </section>
 </main>
 <script src="../assets/js/jquery.js"></script>

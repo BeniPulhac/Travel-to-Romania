@@ -59,24 +59,10 @@ if (!isset($_SESSION['userid'])) {
                                             <div class="row">
                                                 <div class="form-group col-lg-6 d-flex flex-row">
                                                     <label for="cityInput" class="my-auto">City</label>
-                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value);" >
-                                                </div>
-
-                                                <div class="col-lg-6">
-<!--                                                    <div class="result-actions d-flex justify-content-end">-->
-<!--                                                        <div class="result-sorting">-->
-<!--                                                            <span>Sort By:</span>-->
-<!--                                                            <select class="form-control border-0" id="selectOptions">-->
-<!--                                                                <option value="1">Relevance</option>-->
-<!--                                                                <option value="2">Names (A-Z)</option>-->
-<!--                                                                <option value="3">Names (Z-A)</option>-->
-<!--                                                            </select>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
+                                                    <input type="text" id="cityInput" class="form-control mx-sm-3" onkeyup="showHint(this.value);">
                                                 </div>
                                             </div>
                                         </div>
-
 
                                         <div class="container" id="insertModal">
                                             <?php include '../components/modalDate.php'; ?>
@@ -90,8 +76,8 @@ if (!isset($_SESSION['userid'])) {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,11 +85,9 @@ if (!isset($_SESSION['userid'])) {
             </div>
         </div>
 
-        <div class="about-page-footer">
-            <div class="about-page-buttons d-flex flex-row justify-content-end container">
-<!--                <a href="../wishTrip.php?tripId=--><?php //= $trip_id ?? null ?><!--" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>-->
-
-                <a href="tripHotels.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+        <div class="my-auto border-top">
+            <div class="about-page-buttons d-flex flex-row justify-content-end container pt-4">
+                <button type="button" id="tripStartNext" class="btn btn-outline-success btn-lg active">Next</button>
             </div>
         </div>
 
@@ -113,6 +97,8 @@ if (!isset($_SESSION['userid'])) {
 <script src="../../assets/js/tripComponents/tripStart.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/components/pageMove.js"></script>
+
 </body>
 </html>
 

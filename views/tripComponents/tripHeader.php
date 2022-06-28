@@ -21,11 +21,12 @@ $cities = $cities ?? null;
                     foreach ($cities as $city) :
                         $count++;
                         ?>
-                        <div class="p-2 text-white border border-5 border-success m-1">
+                        <div class="p-2 text-white border border-5 border-success m-1" id="cityHeaderHidden">
                             <div>
                                 <i class="fa-solid fa-city"></i>
                                 <span>City: <?php echo $city->name?></span>
                                 <button type="button" class="btn-close btn-close-white" onclick="deleteCityAjax(<?php echo $count ?>);" aria-label='Close'></button>
+
                             </div>
 
                             <div>

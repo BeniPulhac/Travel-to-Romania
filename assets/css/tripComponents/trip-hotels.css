@@ -47,25 +47,9 @@ main {
             Section
 */
 
-.about-page {
-    background-color: rgb(247,247,249);
-    /*white-space: break-spaces;*/
-    min-height: 30em;
-    padding: 2em 0;
-    /*height: 32em;*/
-}
-
 .about-page-content {
     height: auto;
 }
-
-.about-page-footer {
-    margin: auto 0 0 0;
-    border-top: 1px solid black;
-    padding-top: 1.5em;
-}
-
-
 
 .card-hover {
     transition: border-color .2s ease-in-out,background-color .2s ease-in-out,box-shadow .2s ease-in-out!important;

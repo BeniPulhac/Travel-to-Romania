@@ -32,3 +32,11 @@ main {
     min-height: 70vh;
     padding: 2em 0;
 }
+
+.account-days {
+    overflow-x: scroll;
+}
+
+.day-div {
+    min-width: 25%;
+}
