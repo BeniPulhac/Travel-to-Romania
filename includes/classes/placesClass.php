@@ -26,59 +26,64 @@ abstract class placesClass
 
     }
 
-    protected function getPlaces($tableName, $q)
+    protected function getPlaces($tableName, $q, $cityName)
     {
-        if(isset($q)) {
-            include '../../dataBase.php';
-            $conn = $GLOBALS['conn'];
 
-            $tableName = strtolower($tableName);
+        include '../../dataBase.php';
+        $conn = $GLOBALS['conn'];
 
-            switch ($tableName) {
-                case 'hotels': $sql = "SELECT * FROM hotels WHERE city LIKE '%" . $q . "%' LIMIT 100";
+        $tableName = strtolower($tableName);
+
+        switch ($tableName) {
+            case 'hotels':
+
+                if ($q == null) {
+                    $sql = "SElECT * FROM hotels WHERE city LIKE '%" . $cityName . "%'LIMIT 50";
                     $result = mysqli_query($conn, $sql);
-                    $hotels = mysqli_fetch_all($result);
-                    mysqli_free_result($result);
+                    $rowHotel = mysqli_fetch_all($result);
 
+                    return $rowHotel;
+                } else {
+                    $sql1 = "SELECT * FROM hotels WHERE (name LIKE '%" . $q . "%' OR query LIKE '%" . $q . "%') AND city LIKE '%" . $cityName . "%' LIMIT 50";
+                    $result1 = mysqli_query($conn, $sql1);
+                    $hotels = mysqli_fetch_all($result1);
+                    mysqli_free_result($result1);
 
                     return $hotels;
+                }
+             break;
 
-//            break;
+            case 'restaurants': $sql = "SELECT * FROM restaurants";
+                $result = mysqli_query($conn, $sql);
+                $restaurants = mysqli_fetch_object($result);
+                mysqli_free_result($result);
 
-                case 'restaurants': $sql = "SELECT * FROM restaurants";
-                    $result = mysqli_query($conn, $sql);
-                    $restaurants = mysqli_fetch_object($result);
-                    mysqli_free_result($result);
+                echo gettype($restaurants);
+                return $restaurants;
+            break;
 
-                    echo gettype($restaurants);
-                    return $restaurants;
-//            break;
+            case 'attractions': $sql = "SELECT * FROM attractions";
+                $result = mysqli_query($conn, $sql);
+                $attractions = mysqli_fetch_object($result);
+                mysqli_free_result($result);
 
-                case 'attractions': $sql = "SELECT * FROM attractions";
-                    $result = mysqli_query($conn, $sql);
-                    $attractions = mysqli_fetch_object($result);
-                    mysqli_free_result($result);
+                return $attractions;
+             break;
 
-                    return $attractions;
-//            break;
-
-                default: echo 'No table selected';
-            }
-            $conn->close();
+            default: echo 'No table selected';
         }
+        $conn->close();
 
     }
-
-
 }
 
 
 class hotels extends placesClass
 {
-    public function getHotels($tableName, $q)
+    public function getHotels($tableName, $q, $cityName)
     {
         if($tableName == 'hotels') {
-            return parent::getPlaces($tableName, $q);
+            return parent::getPlaces($tableName, $q, $cityName);
         } else {
             return 'The class hotels can return only places of type Hotels!';
         }

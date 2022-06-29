@@ -1,46 +1,79 @@
 //  Variables
-const txtHint = document.getElementById('txtHint');
-const insertHotelCard = document.getElementById('insertHotelCard');
+// const cityNameHidden = document.getElementById('tripHotelCityNameHidden').value;
+// const modalOk = document.getElementById('modalFooterOk' + cityNameHidden).value;
 
 
-//  Function
+//  Events
 
-function showHintHotel(str) {
+
+//  Ajax
+function showHintHotel(str, cityName, startDate, endDate) {
+    let insertHotelCard = document.getElementById('insertHotelCard' + cityName);
     insertHotelCard.innerHTML = '';
-    if(str.length === 0) {
-        txtHint.innerText = '';
-    } else {
+    let formData = new FormData();
+        if (str == 'empty') {
+            formData.append('cityName', cityName);
+        } else {
+            formData.append('inputString', str);
+            formData.append('cityName', cityName);
+        }
+
+
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', '../../../includes/tripComponents/tripHotelsBackend.php?q=' + str);
-        xhr.send();
+        xhr.open('POST', '../../../includes/tripComponents/tripHotelsBackend.php');
         xhr.onload = function() {
 
             let response = xhr.responseText;
             response = JSON.parse(response);
 
 
-            if(typeof response == 'object') {
-                for(i = 0; i < response.length; i++) {
 
-                    creatHotelCard(response[i]);
+            if(typeof response == 'object') {
+
+                for(i = 0; i < response.length; i++) {
+                    creatHotelCard(insertHotelCard, response[i], startDate, endDate);
                 }
+                // insertHotelCard.innerHTML = '';
             } else {
                 if(typeof response == 'string') {
                     for(i = 0; i < response.length; i++) {
-                        txtHint.innerText = 'No hotels in this city';
+                        // txtHint.innerText = 'No hotels in this city';
                     }
                 }
             }
         }
-    }
-
+        xhr.send(formData);
 }
 
-function creatHotelCard(response) {
-// console.log(response);
+function saveHotelAjax(tripId, cityName) {
+    const cityPopupTitleHotel = document.getElementById('cityPopupTitle' + cityName).innerText;
+    const cityDateFirst = document.getElementById('cityDateFirst'+ cityName).value;
+    const cityDateLast = document.getElementById('cityDateLast' + cityName).value;
+
+    let formData = new FormData();
+    formData.append('tripId', tripId);
+    formData.append('cityName', cityName);
+    formData.append('hotelName', cityPopupTitleHotel);
+    formData.append('startDate', cityDateFirst);
+    formData.append('endDate', cityDateLast);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../../includes/tripComponents/saveHotelDB.php', true);
+    xhr.onload = function () {
+        location.reload();
+        // let response = xhr.responseText;
+        // response = JSON.parse(response);
+    }
+    xhr.send(formData);
+}
+
+//  Functions
+function creatHotelCard(insertHotelCard, response, startDate, endDate) {
+    let name = response[2];
+    let cityName = response[5];
 
     //
-    const container = document.createElement('giv')
+    const container = document.createElement('div')
     container.setAttribute('class', 'container');
     insertHotelCard.appendChild(container);
 
@@ -52,13 +85,12 @@ function creatHotelCard(response) {
     //
     const aLink = document.createElement('a');
     aLink.setAttribute('class', 'card-custom-a');
-    if(response[3] != '') {
-        aLink.setAttribute('href', response[3]); //Need to creat a pop up for this
-        card.appendChild(aLink);
-    } else {
-        aLink.setAttribute('href', '#'); //Need to creat a pop up for this
-        card.appendChild(aLink);
-    }
+    aLink.setAttribute('type', 'button');
+    aLink.setAttribute('onclick', 'modalHotel("' + name + '","' + cityName + '", "' + startDate + '", "' + endDate + '")');
+    aLink.setAttribute('data-bs-toggle', 'modal');
+    aLink.setAttribute('data-bs-target', '#staticBackdrop' + cityName);
+    card.appendChild(aLink);
+
 
     //
     const divImg = document.createElement('div');
@@ -148,3 +180,32 @@ function creatHotelCard(response) {
     cardFooterSpan2.appendChild(spanCalendarText);
 }
 
+function modalHotel(name, cityName, startDate, endDate) {
+    const cityPopupTitle = document.getElementById('cityPopupTitle' + cityName);
+    const cityStartDate = document.getElementById('cityStartDate' + cityName).value;
+    const cityEndDate = document.getElementById('cityEndDate' + cityName).value;
+    const cityDateFirst = document.getElementById('cityDateFirst'+ cityName);
+    const cityDateLast = document.getElementById('cityDateLast' + cityName);
+
+
+    // let changeStart = cityStartDate.split("-");
+    // let startDate = changeStart[2] + '-' + changeStart[1] + '-' + changeStart[0];
+    // let changeEnd = cityEndDate.split("-");
+    // let endDate = changeEnd[2] + '-' + changeEnd[1] + '-' + changeEnd[0];
+
+    //set min-max to the calendar
+    cityDateFirst.setAttribute('min', startDate);
+    cityDateFirst.setAttribute('max', endDate);
+    cityDateLast.setAttribute('min', startDate);
+    cityDateLast.setAttribute('max', endDate);
+
+    //set last day to be after first day
+    cityDateFirst.onchange = () => {
+        cityDateLast.setAttribute('min', cityDateFirst.value);
+        if(cityDateLast.value < cityDateFirst.value) {
+            cityDateLast.value = '';
+        }
+    }
+
+    cityPopupTitle.innerHTML = name;
+}

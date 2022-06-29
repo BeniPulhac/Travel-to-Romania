@@ -38,7 +38,6 @@ $cities = json_decode($tripRow['city']);
 <main id="testBlur">
     <?php include 'tripHeader.php';?>
 
-
     <section class="about-page d-flex flex-column py-5">
         <div class="about-page-header pb-5">
             <div class="about-page-header d-flex justify-content-center">
@@ -53,23 +52,26 @@ $cities = json_decode($tripRow['city']);
                         <div class="card-body">
                             <div class="row search-body">
                                 <div class="col-lg-12">
+                                    <?php $countCity = 0; ?>
                                     <?php foreach ($cities as $city) : ?>
+                                        <?php $countCity++; ?>
+
 <!--                                    -->
                                         <div class="accordion py-2" id="accordionExample">
                                             <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <h2 class="accordion-header" id="heading<?= $countCity ?>">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $countCity ?>" aria-expanded="false" aria-controls="collapse<?= $countCity ?>" onclick="showHintHotel('empty','<?= $city->name ?>','<?= date("Y-m-d", $city->start_date) ?>','<?= date("Y-m-d", $city->end_date) ?>')">
                                                         <b><?= $city->name ?></b>
                                                     </button>
                                                 </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div id="collapse<?= $countCity ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $countCity ?>" data-bs-parent="#accordionExample">
                                                     <div class="accordion-body">
                                                         <div class="search-result">
                                                             <div class="result-header">
                                                                 <div class="row">
                                                                     <div class="form-group col-lg-6 d-flex flex-row">
                                                                         <label for="hotelInput" class="my-auto">Hotel</label>
-                                                                        <input type="text" id="hotelInput" class="form-control mx-sm-3" onkeyup="showHintHotel(this.value)" required>
+                                                                        <input type="text" id="hotel-input-<?= $city->name ?>" class="form-control mx-sm-3" onchange="showHintHotel(this.value,'<?= $city->name ?>','<?= date("Y-m-d", $city->start_date) ?>','<?= date("Y-m-d", $city->end_date) ?>')">
                                                                     </div>
 
                                                                     <div class="col-lg-6">
@@ -92,7 +94,10 @@ $cities = json_decode($tripRow['city']);
                                                             </div>
 
                                                             <div class="result-body">
-                                                                <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center" id="insertHotelCard">
+
+                                                                <?php include '../components/modalTripHotel.php'; ?>
+
+                                                                <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center" id="insertHotelCard<?= $city->name ?>">
 
                                                                 </div>
                                                             </div>
