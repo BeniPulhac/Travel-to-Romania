@@ -15,7 +15,7 @@ $cities = $cities ?? null;
                     <span class="text-white ps-2 align-self-center"><?php echo $startDate;  if(isset($endDate)) : echo " / " . $endDate; endif; ?></span>
                 </div>
 
-                <div class="d-flex align-content-start flex-wrap" id="cityHeaderInsert">
+                <div class="d-flex align-content-start flex-wrap border-top border-success py-2" id="cityHeaderInsert">
                     <?php
                     $count = 0;
                     foreach ($cities as $city) :
@@ -45,8 +45,26 @@ $cities = $cities ?? null;
                     <?php endforeach; ?>
                 </div>
 
-                <div class="head-input-places">
+                <div class="d-flex align-content-start flex-wrap border-top border-success py-2" id="hotelHeaderInsert">
+                    <?php include '../../includes/tripComponents/displayHotelsHeader.backend.php'; ?>
+                    <?php $rowHotels = $row ?? null; ?>
+                    <?php foreach ($rowHotels as $hotel) : ?>
+                        <div class="p-2 text-white border border-5 border-success m-1">
+                            <form method="post">
+                                <i class="fa-solid fa-hotel"></i>
+                                <span>Hotel: <?= $hotel['name']; ?></span>
+                                <button type="button" class="btn-close btn-close-white" onclick="deleteHotelAjax(<?= $hotel['id'] ?> , <?= $hotel['trip_id'] ?>)" aria-label="Close"></button>
+                            </form>
 
+                            <div>
+                                <i class="fas fa-calendar-alt"></i>
+                                <?php $hotelStart = date("d",$hotel['start_date']) ?>
+                                <?php $hotelEnd = date("d", $hotel['end_date']) ?>
+
+                                <span><?= $hotelStart . '-' . $hotelEnd ?></span>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
