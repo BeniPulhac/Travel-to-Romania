@@ -30,6 +30,38 @@ function showHintRestaurants(str, cityName, startDate, endDate) {
         xhr.send(formData);
 }
 
+function saveRestaurantAjax(tripId, cityName) {
+    const cityPopupTitleHotel = document.getElementById('cityPopupTitle' + cityName).innerText;
+    const cityDateFirst = document.getElementById('cityDateFirst'+ cityName).value;
+    const cityDateLast = document.getElementById('cityDateLast' + cityName).value;
+
+    let formData = new FormData();
+    formData.append('tripId', tripId);
+    formData.append('cityName', cityName);
+    formData.append('hotelName', cityPopupTitleHotel);
+    formData.append('startDate', cityDateFirst);
+    formData.append('endDate', cityDateLast);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../../includes/tripComponents/saveRestaurantDB.php', true);
+    xhr.onload = function () {
+        location.reload();
+    }
+    xhr.send(formData);
+}
+
+function deleteRestaurantAjax (hotelId, tripId) {
+    let formData = new FormData();
+    formData.append('hotelId', hotelId);
+    formData.append('tripId', tripId);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../../includes/tripComponents/deleteRestaurantsHeader.backend.php', true);
+    xhr.onload = function () {
+        location.reload();
+    }
+    xhr.send(formData);
+}
 
 //  Functions
 function creatRestaurantCard(insertRestaurantCard, response, startDate, endDate) {
@@ -50,7 +82,7 @@ function creatRestaurantCard(insertRestaurantCard, response, startDate, endDate)
     const aLink = document.createElement('a');
     aLink.setAttribute('class', 'card-custom-a');
     aLink.setAttribute('type', 'button');
-    aLink.setAttribute('onclick', 'modalHotel("' + name + '","' + cityName + '", "' + startDate + '", "' + endDate + '")');
+    aLink.setAttribute('onclick', 'modalRestaurant("' + name + '","' + cityName + '", "' + startDate + '", "' + endDate + '")');
     aLink.setAttribute('data-bs-toggle', 'modal');
     aLink.setAttribute('data-bs-target', '#staticBackdrop' + cityName);
     card.appendChild(aLink);
@@ -142,4 +174,34 @@ function creatRestaurantCard(insertRestaurantCard, response, startDate, endDate)
     const spanCalendarText = document.createElement('span');
     // spanCalendarText.innerText = response['date'];
     cardFooterSpan2.appendChild(spanCalendarText);
+}
+
+function modalRestaurant (name, cityName, startDate, endDate) {
+    const cityPopupTitle = document.getElementById('cityPopupTitle' + cityName);
+    const cityStartDate = document.getElementById('cityStartDate' + cityName).value;
+    const cityEndDate = document.getElementById('cityEndDate' + cityName).value;
+    const cityDateFirst = document.getElementById('cityDateFirst'+ cityName);
+    const cityDateLast = document.getElementById('cityDateLast' + cityName);
+
+
+    // let changeStart = cityStartDate.split("-");
+    // let startDate = changeStart[2] + '-' + changeStart[1] + '-' + changeStart[0];
+    // let changeEnd = cityEndDate.split("-");
+    // let endDate = changeEnd[2] + '-' + changeEnd[1] + '-' + changeEnd[0];
+
+    //set min-max to the calendar
+    cityDateFirst.setAttribute('min', startDate);
+    cityDateFirst.setAttribute('max', endDate);
+    cityDateLast.setAttribute('min', startDate);
+    cityDateLast.setAttribute('max', endDate);
+
+    //set last day to be after first day
+    cityDateFirst.onchange = () => {
+        cityDateLast.setAttribute('min', cityDateFirst.value);
+        if(cityDateLast.value < cityDateFirst.value) {
+            cityDateLast.value = '';
+        }
+    }
+
+    cityPopupTitle.innerHTML = name;
 }

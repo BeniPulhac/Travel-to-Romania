@@ -127,6 +127,7 @@ $cities = json_decode($tripRow['city']);
 </main>
 
 <script src="../../assets/js/tripComponents/tripRestaurant.js"></script>
+<script src="../../assets/js/tripComponents/tripHotels.js"></script>
 <script src="../../assets/js/tripComponents/tripStart.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
