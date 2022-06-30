@@ -15,6 +15,6 @@ $resultRestaurants = $restaurants->getRestaurants('restaurants');
 
 
 //  Attractions
-$attactions = new attractions();
-$resultAttractions = $attactions->getAttactions('attractions');
+$attractions = new attractions();
+$resultAttractions = $attractions->getAttractions('attractions');
 

@@ -5,7 +5,7 @@ const sendEmailTab = document.getElementById('sendEmailTab');
 const forgetPassword = document.getElementById('forgetPassword');
 const sendPassword = document.getElementById('sendPassword');
 const sendPassword2 = document.getElementById('sendPassword2');
-const blur = document.getElementById('testBlur');
+// const blur = document.getElementById('testBlur');
 
 const offCanvasMenu = document.getElementById('offCanvasMenu');
 

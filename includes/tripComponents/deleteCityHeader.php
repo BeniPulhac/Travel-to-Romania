@@ -40,7 +40,11 @@ if(mysqli_num_rows($result) > 0) {
                 $deleteCityRestaurants = "DELETE FROM trip_restaurants WHERE trip_id = '$tripId' AND city = '$cityToBeDeletedName'";
                 $executeDeleteCityRestaurants = mysqli_query($conn, $deleteCityRestaurants);
 
-                if ($executeUpdateCities && $executeDeleteCityHotels && $executeDeleteCityRestaurants) {
+                // delete attractions
+                $deleteCityAttractions = "DELETE FROM trip_attractions WHERE trip_id = '$tripId' AND city = '$cityToBeDeletedName'";
+                $executeDeleteCityAttractions = mysqli_query($conn, $deleteCityAttractions);
+
+                if ($executeUpdateCities && $executeDeleteCityHotels && $executeDeleteCityRestaurants && $executeDeleteCityAttractions) {
 
                     echo json_encode(['Success' => 'Yes']);
                 } else {

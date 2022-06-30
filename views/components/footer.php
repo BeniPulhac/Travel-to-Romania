@@ -24,7 +24,7 @@
                     <li class="nav-item mb-2"><a href="../../views/home.php" class="nav-link p-0 text-muted ps-2">Home</a></li>
                     <li class="nav-item mb-2"><a href="../../views/hotels.php" class="nav-link p-0 text-muted ps-2">Hotels</a></li>
                     <li class="nav-item mb-2"><a href="../../views/attractions.php" class="nav-link p-0 text-muted ps-2">Attractions</a></li>
-                    <li class="nav-item mb-2"><a href="../../views/contact.php" class="nav-link p-0 text-muted ps-2">Contact</a></li>
+<!--                    <li class="nav-item mb-2"><a href="../../views/contact.php" class="nav-link p-0 text-muted ps-2">Contact</a></li>-->
                     <li class="nav-item mb-2"><a href="../../views/about.php" class="nav-link p-0 text-muted ps-2">About</a></li>
                 </ul>
             </div>

@@ -37,6 +37,12 @@ main {
     overflow-x: scroll;
 }
 
+@media only screen and (max-width: 768px) {
+    .account-days {
+        display: block !important;
+    }
+}
+
 .day-div {
     min-width: 25%;
 }

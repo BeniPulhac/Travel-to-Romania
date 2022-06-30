@@ -78,7 +78,7 @@ $cities = $cities ?? null;
                     <div class="p-2 text-white border border-5 border-success m-1" id="restaurantHeaderHidden">
                         <form method="post">
                             <i class="fa-solid fa-utensils"></i>
-                            <span>Hotel: <?= $restaurant['name']; ?></span>
+                            <span>Restaurants: <?= $restaurant['name']; ?></span>
                             <button type="button" class="btn-close btn-close-white" onclick="deleteRestaurantAjax(<?= $restaurant['id'] ?>, <?= $restaurant['trip_id'] ?>)" aria-label="Delete Restaurant"></button>
                         </form>
 
@@ -92,6 +92,29 @@ $cities = $cities ?? null;
                     </div>
                     <?php endforeach;?>
                 </div>
+                    <!---->
+                    <div class="d-flex align-content-start flex-wrap border-top border-success py-2" id="hotelHeaderInsert">
+                        <?php include '../../includes/tripComponents/displayAttractionsHeader.backend.php';?>
+                        <?php $rowAttractions = $row ?? null; ?>
+                        <?php foreach ($rowAttractions as $attractions) : ?>
+
+                            <div class="p-2 text-white border border-5 border-success m-1" id="attractionsHeaderHidden">
+                                <form method="post">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Attractions: <?= $attractions['name']; ?></span>
+                                    <button type="button" class="btn-close btn-close-white" onclick="deleteAttractionAjax(<?= $attractions['id'] ?>, <?= $attractions['trip_id'] ?>)" aria-label="Delete Restaurant"></button>
+                                </form>
+
+                                <div>
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <?php $attractionStart = date("d",$attractions['start_date']) ?>
+                                    <?php $attractionEnd = date("d", $attractions['end_date']) ?>
+
+                                    <span><?= $attractionStart . '-' . $attractionEnd ?></span>
+                                </div>
+                            </div>
+                        <?php endforeach;?>
+                    </div>
                     <?php endif; ?>
             </div>
         </div>

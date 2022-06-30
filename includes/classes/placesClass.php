@@ -75,12 +75,22 @@ abstract class placesClass
 
             break;
 
-            case 'attractions': $sql = "SELECT * FROM attractions";
-                $result = mysqli_query($conn, $sql);
-                $attractions = mysqli_fetch_object($result);
-                mysqli_free_result($result);
+            case 'attractions':
+                if ($q == null) {
+                    $sql = "SELECT * FROM attractions WHERE city= '$cityName' LIMIT 50";
+                    $result = mysqli_query($conn, $sql);
+                    $rowAttractions = mysqli_fetch_all($result);
+                    mysqli_free_result($result);
 
-                return $attractions;
+                    return $rowAttractions;
+                } else {
+                    $sql1 = "SELECT * FROM attractions WHERE (name LIKE '%" . $q . "%' OR query LIKE '%" . $q . "%') AND city LIKE '%" . $cityName . "%' LIMIT 50";
+                    $result1 = mysqli_query($conn, $sql1);
+                    $attractions = mysqli_fetch_all($result1);
+                    mysqli_free_result($result1);
+
+                    return $attractions;
+                }
              break;
 
             default: echo 'No table selected';
@@ -119,10 +129,10 @@ class restaurants extends placesClass
 
 class attractions extends placesClass
 {
-    public function getAttactions($tableName)
+    public function getAttractions($tableName, $q, $cityName)
     {
         if($tableName == 'attractions') {
-            return parent::getPlaces($tableName);
+            return parent::getPlaces($tableName, $q, $cityName);
         } else {
             return 'The class attractions can return only places of type attractions!';
         }

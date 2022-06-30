@@ -17,9 +17,9 @@ $trip_id ?? null;
                 <form method="post" class="">
                     <input type="hidden" name="cityStartDate" id="cityStartDate<?= $cityName ?>" value="<?php echo $startDate; ?>">
                     <input type="hidden" name="cityEndDate" id="cityEndDate<?= $cityName ?>" value="<?php echo $endDate; ?>">
-                    <label for="cityDate" class="fw-bold pe-2">First day in this city</label>
+                    <label for="cityDate" class="fw-bold pe-2">First day when you eat here</label>
                     <input type="date" id="cityDateFirst<?= $cityName ?>" name="cityDateFirst" class="my-1">
-                    <label for="cityDate" class="fw-bold pe-2">Last day in this city</label>
+                    <label for="cityDate" class="fw-bold pe-2">Last day when you eat here</label>
                     <input type="date" id="cityDateLast<?= $cityName ?>" name="cityDateLast" class="my-1">
                 </form>
                 <span id="modalBodyErrors<?= $cityName ?>" class="text-danger"></span>

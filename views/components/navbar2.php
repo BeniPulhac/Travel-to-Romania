@@ -9,7 +9,8 @@
 
             <div class="navigation-btn btn-group">
                 <?php if(isset($_SESSION['userid'])) : ?>
-                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
+                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
+                    <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="goToAccount2()">
                         <i class="fa fa-home"></i>
                     </button>
                 <?php else : ?>
@@ -29,11 +30,13 @@
             <div class="offcanvas-body">
                 <ul class="nav-ul-custom nav justify-content-end pb-2 d-block">
                     <li class="nav-item nav-item-custom">
-                        <a class="nav-link nav-link-custom" href="../../views/home.php">Home</a>
+                        <a class="nav-link nav-link-custom" href="../../index.php">Home</a>
                     </li>
-                    <li class="nav-item nav-item-custom">
-                        <a class="nav-link nav-link-custom" href="../../views/hotels.php"><?php echo "Hotels" ?></a>
-                    </li>
+                    <?php if(isset($_SESSION['userid'])) { ?>
+                        <li class="nav-item nav-item-custom">
+                            <a class="nav-link nav-link-custom" href="../../views/wishTrip.php">Plan trip</a>
+                        </li>
+                    <?php }  ?>
                     <li class="nav-item nav-item-custom ">
                         <a class="nav-link nav-link-custom" href="../../views/attractions.php">Attractions</a>
                     </li>
@@ -44,14 +47,18 @@
 
                 <div class="navigation-btn btn-group">
                     <?php if(isset($_SESSION['userid'])) { ?>
-                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1">
+                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1"  onclick="signOut()">Sign out</button>
+                        <button type="button" class="btn btn-light rounded-pill shadow bg-body me-1" onclick="goToAccount2()">
                             <i class="fa fa-home"></i>
                         </button>
+                    <?php } else { ?>
+                        <button type="button" class="btn btn-light rounded-pill shadow-sm bg-body me-1" onclick="showSignIn()">Sign in</button>
                     <?php } ?>
-
-<!--                    <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>-->
+                    <!--                    <button class="btn btn-light rounded-pill shadow bg-body d-none" id="showRegister">Register</button>-->
                 </div>
             </div>
         </div>
     </div>
 </nav>
+
+<script src="../../assets/js/tripComponents/navbar2.js"></script>

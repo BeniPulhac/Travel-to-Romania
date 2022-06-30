@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../assets/css/bootstrap.css">
 <!-- Section: Sign in -->
 <section class="sign-up-custom text-center text-lg-start hide-element" id="formSignIn">
-    <div class="container py-4 d-flex justify-content-center">
+    <div class="container py-4 d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="cascading-right-custom radius-pop-up">
                 <div class="card-body p-5 shadow-5 text-center">
@@ -84,13 +84,21 @@
 
 <!-- Section: Send Email -->
 <section class="sign-up-custom text-center text-lg-start hide-element" id="sendEmailTab">
-    <div class="container py-4 d-flex justify-content-center">
+    <div class="container py-4 d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="cascading-right-custom radius-pop-up">
+
                 <div class="card-body p-5 shadow-5 text-center">
+
+                    <div class="closing d-flex justify-content-end">
+                        <button type="button" class="btn" onclick="closeForms()">
+                            <i class='fa fa-close fa-xl'></i>
+                        </button>
+                    </div>
                     <h3><i class="fa fa-lock"></i></h3>
                     <h2 class="text-center">Forgot Password?</h2>
                     <p>You can reset your password here.</p>
+
                     <div class="container panel-body">
 
                         <form id="SendTokenForm" role="form" autocomplete="off" class="form" method="post">
@@ -119,7 +127,7 @@
 
 <!-- Section: Register -->
 <section class="sign-up-custom text-center text-lg-start hide-element"  id="formRegister">
-    <div class="container py-4 d-flex justify-content-center">
+    <div class="container py-4 d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="cascading-right-custom radius-pop-up">
                 <div class="card-body p-5 shadow-5 text-center">

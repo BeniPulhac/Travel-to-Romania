@@ -9,6 +9,9 @@ include '../dataBase.php';
 $conn = $GLOBALS['conn'];
 include '../includes/components/accountTrips.php';
 $tripRow = $row ?? null;
+$rowHotels = $rowHotels ?? null;
+$rowRestaurants = $rowRestaurants ?? null;
+$rowAttractions = $rowAttractions ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +56,7 @@ $tripRow = $row ?? null;
 
             <?php if($tripRow != null) : ?>
             <?php foreach ($tripRow as $trip) :
+
                 $startTrip = strtotime($trip['start_date']);
                 $startTrip = date('d/m/Y', $startTrip);
 
@@ -70,6 +74,8 @@ $tripRow = $row ?? null;
                 <div class="container border p-1 text-center">
                     <h5>Your trip is between: <?= $startTrip . '-' . $endTrip ?></h5>
                 </div>
+
+<!--                In small screen <768px i need to remove d-flex-->
                 <div class="d-flex account-days">
                     <?php
                     $currentDay = strtotime($trip['start_date']);
@@ -80,8 +86,36 @@ $tripRow = $row ?? null;
                             </div>
                             <?php foreach ($cities as $city) : ?>
                                 <?php if($currentDay >= strtotime($city->start_date) && $currentDay <= strtotime($city->end_date)) : ?>
-                                    <div class="">
-                                        City: <?= $city->name ?>
+                                    <div class="py-1 ps-2">
+                                        <span class="fw-bold">City:</span>
+                                        <?= $city->name ?>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+
+                            <?php foreach ($rowHotels as $rowHotel) : ?>
+                            <?php if ($currentDay >= $rowHotel['start_date'] && $currentDay <= $rowHotel['end_date']) : ?>
+                                <div class="py-1 ps-2">
+                                    <span class="fw-bold">Hotel:</span>
+                                    <?= $rowHotel['name'] ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+
+                            <?php foreach ($rowRestaurants as $rowRestaurant) : ?>
+                                <?php if ($currentDay >= $rowRestaurant['start_date'] && $currentDay <= $rowRestaurant['end_date']) : ?>
+                                    <div class="py-1 ps-2">
+                                        <span class="fw-bold">Restaurant:</span>
+                                        <?= $rowRestaurant['name'] ?>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+
+                            <?php foreach ($rowAttractions as $rowAttraction) : ?>
+                                <?php if ($currentDay >= $rowAttraction['start_date'] && $currentDay <= $rowAttraction['end_date']) : ?>
+                                    <div class="py-1 ps-2">
+                                        <span class="fw-bold">Place to visit:</span>
+                                        <?= $rowAttraction['name'] ?>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
@@ -89,9 +123,11 @@ $tripRow = $row ?? null;
                     <?php $currentDay += 86400; } ?>
                 </div>
             </div>
+
             <?php endforeach; ?>
             <?php endif; ?>
         </div>
+
         <?php
         elseif(isset($_POST['settings'])) :
         ?>
@@ -104,6 +140,7 @@ $tripRow = $row ?? null;
 
     </section>
 </main>
+
 <script src="../assets/js/jquery.js"></script>
 <script src="../assets/js/bootstrap.js"></script>
 <!--<script src="../assets/js/tripComponents/tripStart.js"></script>-->

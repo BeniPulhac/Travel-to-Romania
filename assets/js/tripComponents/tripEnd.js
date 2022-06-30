@@ -1,7 +1,7 @@
-//  Variables
-const backToWishTrip = document.getElementById('backToWishTrip');
+const tripSubmitDates = document.getElementById('tripSubmitDates');
+const tripEndTripId = document.getElementById('tripEndTripId');
 
-//  Events
-backToWishTrip.addEventListener('click', function () {
-   location.href = '../../../views/wishTrip.php';
+tripSubmitDates.addEventListener('click', () => {
+   console.log('ceva')
+   location.href = '../../../views/tripComponents/tripTouristAttraction.php?tripId=' + tripEndTripId.value;
 });

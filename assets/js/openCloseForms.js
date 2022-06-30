@@ -25,6 +25,7 @@ function toggleSignInRegister() {
 
 //  Close Forms
 function closeForms() {
+    offCanvasMenu.click();
     if(!formSignIn.classList.contains('hide-element')) {
         emptyErrorsSignIn();
         emptyErrorsRegister();
@@ -35,8 +36,25 @@ function closeForms() {
         emptyErrorsRegister();
         formRegister.classList.toggle('hide-element');
         blur.classList.toggle('blur');
+    } else if(!sendEmailTab.classList.toggle('hide-element')) {
+        emptyErrorsSignIn();
+        emptyErrorsRegister();
+        sendEmailTab.classList.toggle('hide-element');
+        blur.classList.toggle('blur');
     }
 }
+
+//
+const popups = [...document.getElementsByClassName('popup')];
+
+window.addEventListener('click', ({ target }) => {
+    const popup = target.closest('.popup');
+    const clickedOnClosedPopup = popup && !popup.classList.contains('show');
+
+    popups.forEach(p => p.classList.remove('show'));
+
+    if (clickedOnClosedPopup) popup.classList.add('show');
+});
 
 
 //  Clear Forms

@@ -1,36 +1,36 @@
 //  Ajax
-function showHintRestaurants(str, cityName, startDate, endDate) {
-    let insertRestaurantCard = document.getElementById('insertRestaurantCard' + cityName);
-    insertRestaurantCard.innerText = '';
+function showHintAttractions (str, cityName, startDate, endDate) {
+    let insertAttractionsCard = document.getElementById('insertAttractionsCard' + cityName);
+    insertAttractionsCard.innerText = '';
 
     let formData = new FormData();
-        if(str == 'empty') {
-            formData.append('cityName', cityName);
-        } else {
-            formData.append('InputString', str);
-            formData.append('cityName', cityName);
-        }
+    if (str == 'empty') {
+        formData.append('cityName', cityName);
+    } else {
+        formData.append('InputString', str);
+        formData.append('cityName', cityName);
+    }
 
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", '../../../includes/tripComponents/tripRestaurantBackend.php');
-        xhr.onload = function () {
-            let response = xhr.responseText;
-            response = JSON.parse(response);
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", '../../../includes/tripComponents/tripAttractionBackend.php');
+    xhr.onload = function () {
+        let response = xhr.responseText;
+        response = JSON.parse(response);
 
-            if (typeof response == 'object') {
-                for (let index in response) {
-                    creatRestaurantCard(insertRestaurantCard, response[index], startDate, endDate);
-                }
-            } else if (typeof response == 'string') {
-                for (let i = 0; i < response.length; i++) {
-                    // txtHint.innerText = 'No restaurants in this city';
-                }
+        if (typeof response == 'object') {
+            for (let index in response) {
+                creatAttractionCard(insertAttractionsCard, response[index], startDate, endDate);
+            }
+        } else if (typeof response == 'string') {
+            for (let i = 0; i < response.length; i++) {
+                // txtHint.innerText = 'No restaurants in this city';
             }
         }
-        xhr.send(formData);
+    }
+    xhr.send(formData);
 }
 
-function saveRestaurantAjax(tripId, cityName) {
+function saveAttractionsAjax(tripId, cityName) {
     const cityPopupTitleHotel = document.getElementById('cityPopupTitle' + cityName).innerText;
     const cityDateFirst = document.getElementById('cityDateFirst'+ cityName).value;
     const cityDateLast = document.getElementById('cityDateLast' + cityName).value;
@@ -43,20 +43,20 @@ function saveRestaurantAjax(tripId, cityName) {
     formData.append('endDate', cityDateLast);
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '../../../includes/tripComponents/saveRestaurantDB.php', true);
+    xhr.open('POST', '../../../includes/tripComponents/saveAttractionDB.php', true);
     xhr.onload = function () {
         location.reload();
     }
     xhr.send(formData);
 }
 
-function deleteRestaurantAjax (hotelId, tripId) {
+function deleteAttractionAjax(hotelId, tripId) {
     let formData = new FormData();
     formData.append('hotelId', hotelId);
     formData.append('tripId', tripId);
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '../../../includes/tripComponents/deleteRestaurantsHeader.backend.php', true);
+    xhr.open('POST', '../../../includes/tripComponents/deleteAttractionsHeader.backend.php', true);
     xhr.onload = function () {
         location.reload();
     }
@@ -64,14 +64,14 @@ function deleteRestaurantAjax (hotelId, tripId) {
 }
 
 //  Functions
-function creatRestaurantCard(insertRestaurantCard, response, startDate, endDate) {
+function creatAttractionCard(insertAttractionsCard, response, startDate, endDate) {
     let name = response[2];
     let cityName = response[5];
 
     //
     const container = document.createElement('div')
     container.setAttribute('class', 'container');
-    insertRestaurantCard.appendChild(container);
+    insertAttractionsCard.appendChild(container);
 
     //
     const card = document.createElement('div');
@@ -82,7 +82,7 @@ function creatRestaurantCard(insertRestaurantCard, response, startDate, endDate)
     const aLink = document.createElement('a');
     aLink.setAttribute('class', 'card-custom-a');
     aLink.setAttribute('type', 'button');
-    aLink.setAttribute('onclick', 'modalRestaurant("' + name + '","' + cityName + '", "' + startDate + '", "' + endDate + '")');
+    aLink.setAttribute('onclick', 'modalAttractions("' + name + '","' + cityName + '", "' + startDate + '", "' + endDate + '")');
     aLink.setAttribute('data-bs-toggle', 'modal');
     aLink.setAttribute('data-bs-target', '#staticBackdrop' + cityName);
     card.appendChild(aLink);
@@ -176,7 +176,7 @@ function creatRestaurantCard(insertRestaurantCard, response, startDate, endDate)
     cardFooterSpan2.appendChild(spanCalendarText);
 }
 
-function modalRestaurant (name, cityName, startDate, endDate) {
+function modalAttractions (name, cityName, startDate, endDate) {
     const cityPopupTitle = document.getElementById('cityPopupTitle' + cityName);
     const cityStartDate = document.getElementById('cityStartDate' + cityName).value;
     const cityEndDate = document.getElementById('cityEndDate' + cityName).value;

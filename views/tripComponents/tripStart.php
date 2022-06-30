@@ -94,6 +94,7 @@ if (!isset($_SESSION['userid'])) {
     </section>
 </main>
 
+<script src="../../assets/js/tripComponents/tripAttractions.js"></script>
 <script src="../../assets/js/tripComponents/tripRestaurant.js"></script>
 <script src="../../assets/js/tripComponents/tripHotels.js"></script>
 <script src="../../assets/js/tripComponents/tripStart.js"></script>

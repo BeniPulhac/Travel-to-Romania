@@ -8,8 +8,37 @@
     background-color: #d0f1b8;
 }
 
+.bkg-color {
+    background-color: rgba(39, 36, 38, 1);
+}
+
 .trip-end-title {
-    padding: 4em;
+    min-height: 15em;
+}
+
+.head-submit-btn {
+    border-radius: 26px;
+    font-size: 22px;
+    font-weight: 400;
+    min-width: 53px;
+    padding: 8px 25px;
+    width: auto;
+    background-color: rgb(163,235,132);
+    color: black;
+}
+
+.account-days {
+    overflow-x: scroll;
+}
+
+@media only screen and (max-width: 768px) {
+    .account-days {
+        display: block !important;
+    }
+}
+
+.day-div {
+    min-width: 25%;
 }
 
 /*
