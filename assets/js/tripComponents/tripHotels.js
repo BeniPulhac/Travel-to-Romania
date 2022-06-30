@@ -67,6 +67,19 @@ function saveHotelAjax(tripId, cityName) {
     xhr.send(formData);
 }
 
+function deleteHotelAjax (hotelId, tripId) {
+    let formData = new FormData();
+    formData.append('hotelId', hotelId);
+    formData.append('tripId', tripId);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '../../../includes/tripComponents/deleteHotelHeader.backend.php', true);
+    xhr.onload = function () {
+        location.reload();
+    }
+    xhr.send(formData);
+}
+
 //  Functions
 function creatHotelCard(insertHotelCard, response, startDate, endDate) {
     let name = response[2];

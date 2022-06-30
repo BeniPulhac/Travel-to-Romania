@@ -22,6 +22,8 @@ $cities = $cities ?? null;
                         $count++;
                         ?>
                         <div class="p-2 text-white border border-5 border-success m-1" id="cityHeaderHidden">
+<!--                        <div class="p-2 text-white border border-5 border-success m-1" id="restaurantHeaderHidden">-->
+
                             <div>
                                 <i class="fa-solid fa-city"></i>
                                 <span>City: <?php echo $city->name?></span>
@@ -49,7 +51,8 @@ $cities = $cities ?? null;
                     <?php include '../../includes/tripComponents/displayHotelsHeader.backend.php'; ?>
                     <?php $rowHotels = $row ?? null; ?>
                     <?php foreach ($rowHotels as $hotel) : ?>
-                        <div class="p-2 text-white border border-5 border-success m-1">
+
+                        <div class="p-2 text-white border border-5 border-success m-1" id="hotelHeaderHidden">
                             <form method="post">
                                 <i class="fa-solid fa-hotel"></i>
                                 <span>Hotel: <?= $hotel['name']; ?></span>

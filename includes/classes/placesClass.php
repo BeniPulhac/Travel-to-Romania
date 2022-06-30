@@ -41,6 +41,7 @@ abstract class placesClass
                     $sql = "SElECT * FROM hotels WHERE city LIKE '%" . $cityName . "%'LIMIT 50";
                     $result = mysqli_query($conn, $sql);
                     $rowHotel = mysqli_fetch_all($result);
+                    mysqli_free_result($result);
 
                     return $rowHotel;
                 } else {
@@ -53,13 +54,25 @@ abstract class placesClass
                 }
              break;
 
-            case 'restaurants': $sql = "SELECT * FROM restaurants";
-                $result = mysqli_query($conn, $sql);
-                $restaurants = mysqli_fetch_object($result);
-                mysqli_free_result($result);
+            case 'restaurants':
 
-                echo gettype($restaurants);
-                return $restaurants;
+                if ($q == null) {
+                    $sql = "SELECT * FROM restaurants WHERE city LIKE '%" . $cityName . "%'LIMIT 50";
+                    $result = mysqli_query($conn, $sql);
+                    $rowRestaurants = mysqli_fetch_all($result);
+
+                    return $rowRestaurants;
+                } else {
+                    $sql1 = "SELECT * FROM restaurants WHERE (name LIKE '%" . $q . "%' OR query LIKE '%" . $q . "%') AND city LIKE '%" . $cityName . "%' LIMIT 50";
+                    $result1 = mysqli_query($conn, $sql1);
+                    $restaurants = mysqli_fetch_all($result1);
+                    mysqli_free_result($result1);
+
+
+                    return $restaurants;
+                }
+
+
             break;
 
             case 'attractions': $sql = "SELECT * FROM attractions";
@@ -93,10 +106,10 @@ class hotels extends placesClass
 
 class restaurants extends placesClass
 {
-    public function getRestaurants($tableName)
+    public function getRestaurants($tableName, $q, $cityName)
     {
         if($tableName == 'restaurants') {
-            return parent::getPlaces($tableName);
+            return parent::getPlaces($tableName, $q, $cityName);
         } else {
             return 'The class restaurants can return only places of type Restaurants!';
         }

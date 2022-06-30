@@ -1,10 +1,16 @@
 <?php
 session_start();
 include '../../includes/tripComponents/tripStartDisplayDates.backend.php';
+if(isset($GLOBALS['end_date'])) {
+    $endDate = $GLOBALS['end_date'];
+}
 $trip_id = $trip_id ?? null;
 if (!isset($_SESSION['userid'])) {
     header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
 }
+include '../../includes/components/accountTrips.php';
+$tripRow = $row ?? null;
+$cities = json_decode($tripRow['city']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,46 +40,96 @@ if (!isset($_SESSION['userid'])) {
 
 
     <section class="about-page d-flex flex-column py-5">
-<!--        <div class="about-page-content">-->
-<!--            <div class="about-page-header d-flex justify-content-center pb-4">-->
-<!--                <h4 class="fw-bold">Where you want to eat?</h4>-->
-<!--            </div>-->
-<!--            <div class="about-page-city container d-flex flex-row pb-5">-->
-<!--                <label for="hotelInput" class="larger-text fw-bold pe-2">Restaurant: </label>-->
-<!--                <input id="hotelInput" type="text" required>-->
-<!--            </div>-->
-<!--            <div class="about-page-city container d-flex flex-row pb-5">-->
-<!--                <label for="hotelInput" class="larger-text fw-bold pe-2">What time: </label>-->
-<!--                <input id="hotelInput" type="time" required>-->
-<!--            </div>-->
-<!--            <div class="about-page-city container d-flex flex-row align-items-center">-->
-<!--                <span class="larger-text fw-bold">You want to eat somewhere else in this city?: </span>-->
-<!---->
-<!--                <div class="optionInput ps-3">-->
-<!--                    <div class="form-check">-->
-<!--                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">-->
-<!---->
-<!--                        <label class="form-check-label" for="flexRadioDefault1">Yes</label>-->
-<!--                    </div>-->
-<!--                    <div class="form-check">-->
-<!--                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>-->
-<!--                        <label class="form-check-label" for="flexRadioDefault2">No</label>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-        <hr>
-        <div class="about-page-buttons d-flex flex-row justify-content-between container">
-            <a href="tripHotels.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Back</a>
+        <div class="about-page-header pb-5">
+            <div class="about-page-header d-flex justify-content-center">
+                <h4 class="fw-bold">Where you want to eat?</h4>
+            </div>
 
-            <a href="tripTouristAttraction.php?tripId=<?= $trip_id ?>" class="btn btn-outline-success btn-lg active" role="button" aria-pressed="true">Next</a>
+            <div class="container about-page-content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-margin">
+                            <div class="card-body">
+                                <div class="row search-body">
+                                    <div class="col-lg-12">
+                                        <?php $countCity = 0; ?>
+                                        <?php foreach ($cities as $city) : ?>
+                                            <?php $countCity++; ?>
+
+                                            <!--                                    -->
+                                            <div class="accordion py-2" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="heading<?= $countCity ?>">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $countCity ?>" aria-expanded="false" aria-controls="collapse<?= $countCity ?>" onclick="showHintRestaurants('empty','<?= $city->name ?>','<?= date("Y-m-d", $city->start_date) ?>','<?= date("Y-m-d", $city->end_date) ?>')">
+                                                            <b><?= $city->name ?></b>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapse<?= $countCity ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $countCity ?>" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <div class="search-result">
+                                                                <div class="result-header">
+                                                                    <div class="row">
+                                                                        <div class="form-group col-lg-6 d-flex flex-row">
+                                                                            <label for="restaurantInput" class="my-auto">Restaurants</label>
+                                                                            <input type="text" id="restaurantInput" class="restaurantInput form-control mx-sm-3" onchange="showHintRestaurants(this.value,'<?= $city->name ?>','<?= date("Y-m-d", $city->start_date) ?>','<?= date("Y-m-d", $city->end_date) ?>')">
+                                                                        </div>
+
+                                                                        <div class="col-lg-6">
+                                                                            <div class="result-actions d-flex justify-content-end">
+                                                                                <div class="result-sorting">
+                                                                                    <span>Sort By:</span>
+                                                                                    <select class="form-control border-0" id="selectOptions">
+                                                                                        <option value="1">Relevance</option>
+                                                                                        <option value="2">Names (A-Z)</option>
+                                                                                        <option value="3">Names (Z-A)</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="show-city text-center" id="txtHint">
+
+                                                                </div>
+
+                                                                <div class="result-body">
+
+                                                                    <?php include '../components/modalTripRestaurant.php'; ?>
+
+                                                                    <div class="row-custom row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 m-auto align-content-center" id="insertRestaurantCard<?= $city->name ?>">
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--                                    -->
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+
+            <div class="border-top my-auto">
+                <div class="about-page-buttons d-flex flex-row justify-content-between container pt-4">
+                    <button  type="button" id="tripRestaurantsBack" class="btn btn-outline-success btn-lg active">Back</button>
+
+                    <button  type="button" id="tripRestaurantsNext" class="btn btn-outline-success btn-lg active">Next</button>
+                </div>
+            </div>
     </section>
 </main>
 
-<!--<script src="../../assets/js/tripComponents/wishTrip.js"></script>-->
-<!--<script src="../../assets/js/tripComponents/tripEnd.js"></script>-->
+<script src="../../assets/js/tripComponents/tripRestaurant.js"></script>
+<script src="../../assets/js/tripComponents/tripStart.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/components/pageMove.js"></script>
 </body>
 </html>

@@ -12,9 +12,11 @@ const tripId = document.getElementById('tripId');
 let count = 0;
 
 //  Events
-modalFooterOk.addEventListener('click', () => {
-    cityPopupBackend();
-}, false);
+if (modalFooterOk) {
+    modalFooterOk.addEventListener('click', () => {
+        cityPopupBackend();
+    }, false);
+}
 
 //  Ajax
 function showHint(str) {

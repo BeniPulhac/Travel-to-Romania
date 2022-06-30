@@ -24,13 +24,19 @@ if(mysqli_num_rows($result) > 0) {
 
             if($startDate == $start && $endDate == $end) {
 
+                $cityToBeDeletedName = $cities[$count]->name;
                 unset($cities[$count]);
                 $cities2 = array_values($cities);
 
                 $cities2 = json_encode($cities2, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
                 $sql1 = "UPDATE trips SET city = '$cities2' WHERE id = '$tripId'";
+                $executeUpdateCities = mysqli_query($conn, $sql1);
 
-                if ( mysqli_query($conn, $sql1)) {
+                // delete hotels
+                $deleteCityHotels = "DELETE FROM trip_hotels WHERE trip_id = '$tripId' AND city = '$cityToBeDeletedName'";
+                $executeDeleteCityHotels = mysqli_query($conn, $deleteCityHotels);
+
+                if ($executeUpdateCities && $executeDeleteCityHotels) {
                     echo json_encode(['Success' => 'Yes']);
                 } else {
                     echo json_encode(['Success' => 'Error:' . mysqli_error($conn)]);

@@ -71,7 +71,7 @@ $cities = json_decode($tripRow['city']);
                                                                 <div class="row">
                                                                     <div class="form-group col-lg-6 d-flex flex-row">
                                                                         <label for="hotelInput" class="my-auto">Hotel</label>
-                                                                        <input type="text" id="hotel-input-<?= $city->name ?>" class="form-control mx-sm-3" onchange="showHintHotel(this.value,'<?= $city->name ?>','<?= date("Y-m-d", $city->start_date) ?>','<?= date("Y-m-d", $city->end_date) ?>')">
+                                                                        <input type="text" id="hotelInput" class="hotelInput form-control mx-sm-3" onchange="showHintHotel(this.value,'<?= $city->name ?>','<?= date("Y-m-d", $city->start_date) ?>','<?= date("Y-m-d", $city->end_date) ?>')">
                                                                     </div>
 
                                                                     <div class="col-lg-6">
@@ -128,6 +128,7 @@ $cities = json_decode($tripRow['city']);
 </main>
 
 <script src="../../assets/js/tripComponents/tripHotels.js"></script>
+<script src="../../assets/js/tripComponents/tripStart.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/jquery.js"></script>
 <script src="../../assets/js/components/pageMove.js"></script>
