@@ -22,7 +22,7 @@ $cities = $cities ?? null;
                         $count++;
                         ?>
                         <div class="p-2 text-white border border-5 border-success m-1" id="cityHeaderHidden">
-<!--                        <div class="p-2 text-white border border-5 border-success m-1" id="restaurantHeaderHidden">-->
+                        <div class="p-2 text-white border border-5 border-success m-1" id="restaurantHeaderHidden">
 
                             <div>
                                 <i class="fa-solid fa-city"></i>

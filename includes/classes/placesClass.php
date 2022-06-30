@@ -57,9 +57,10 @@ abstract class placesClass
             case 'restaurants':
 
                 if ($q == null) {
-                    $sql = "SELECT * FROM restaurants WHERE city LIKE '%" . $cityName . "%'LIMIT 50";
+                    $sql = "SELECT * FROM restaurants WHERE city= '$cityName' LIMIT 50";
                     $result = mysqli_query($conn, $sql);
                     $rowRestaurants = mysqli_fetch_all($result);
+                    mysqli_free_result($result);
 
                     return $rowRestaurants;
                 } else {
@@ -67,7 +68,6 @@ abstract class placesClass
                     $result1 = mysqli_query($conn, $sql1);
                     $restaurants = mysqli_fetch_all($result1);
                     mysqli_free_result($result1);
-
 
                     return $restaurants;
                 }

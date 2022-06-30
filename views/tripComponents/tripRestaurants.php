@@ -24,7 +24,7 @@ $cities = json_decode($tripRow['city']);
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel = "stylesheet" href = "../../assets/css/tripComponents/trip-start.css">
+    <link rel = "stylesheet" href = "../../assets/css/tripComponents/trip-restaurants.css">
     <script src="https://kit.fontawesome.com/03c4305000.js" crossorigin="anonymous"></script>
 </head>
 <body id="body-width">

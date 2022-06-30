@@ -2,14 +2,31 @@
 include 'dataBase.php';
 $conn = $GLOBALS['conn'];
 
-$sql = "SELECT citys_name FROM cities";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//$sql = "SELECT citys_name FROM cities";
+//$result = mysqli_query($conn, $sql);
+//$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//
+//foreach ($row as $index) {
+//    $variabila = utf8_encode($index['citys_name']);
+//    print_r($index);
+//}
 
-foreach ($row as $index) {
-    $variabila = utf8_encode($index['citys_name']);
-    print_r($index);
-}
+//$sql = "SELECT DISTINCT city FROM attractions";
+//$result = mysqli_query($conn, $sql);
+//$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//
+//foreach ($row as $city) {
+//    $cityName = $city['city'];
+//
+//    $getCity = "SELECT * FROM cities WHERE citys_name = '$cityName'";
+//    $executeGetCity = mysqli_query($conn, $getCity);
+//    if ($executeGetCity->num_rows > 0) {
+//        echo 'city exists';
+//    } else {
+//        $insertCity = "INSERT INTO cities (citys_name) VALUES ('$cityName')";
+//        $executeInsertCity = mysqli_query($conn, $insertCity);
+//    }
+//}
 
 
 
