@@ -32,9 +32,11 @@
         <div class="hero-img vh-100"></div>
 
         <div class="head-container-custom container">
-            <h1 class="head-title-custom w-75 pt-5">Do you want to travel <span class="head-title-2">to Romania?</span></h1>
+            <h1 class="head-title-custom w-75">Do you want to travel <span class="head-title-2">to Romania?</span></h1>
 
-            <p class="head-para-custom w-md-75"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum inventore maiores omnis pariatur rerum sequi voluptas. Accusamus accusantium, aliquam aut commodi eligendi, excepturi explicabo, facere fugit molestiae quas quod!</span></p>
+            <div class="head-para-custom-bg">
+                <p class="head-para-custom w-md-75"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum inventore maiores omnis pariatur rerum sequi voluptas. Accusamus accusantium, aliquam aut commodi eligendi, excepturi explicabo, facere fugit molestiae quas quod!</span></p>
+            </div>
         </div>
     </header>
     <!--------------------------------------------/header-------------------------------------------->

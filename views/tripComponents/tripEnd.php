@@ -8,7 +8,7 @@ $trip_id = $trip_id ?? null;
 if (!isset($_SESSION['userid'])) {
     header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
 }
-include '../../includes/components/accountTrips.php';
+include '../../includes/components/displayTripFinal.php';
 $tripRow = $row ?? null;
 $rowHotels = $rowHotels ?? null;
 $rowRestaurants = $rowRestaurants ?? null;
@@ -78,7 +78,7 @@ $rowAttractions = $rowAttractions ?? null;
                         </div>
 
                         <!--                In small screen <768px i need to remove d-flex-->
-                        <div class="d-flex account-days">
+                        <div class="d-flex flex-column flex-md-row account-days">
                             <?php
                             $currentDay = strtotime($tripRow['start_date']);
                             for ($i = 1; $i <= $diff; $i++) { ?>

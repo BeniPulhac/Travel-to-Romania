@@ -1,17 +1,6 @@
 
 <!-------------------------------Course 11: PHP MVC------------------------------->
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Course 11: PHP MVC</title>
 
-    <link rel="stylesheet" href="../../assets/css/general.css">
-</head>
-<body>
 <div class="container d-flex justify-content-center my-5 pt-5">
 
     <form>
@@ -40,13 +29,8 @@
         </div>
 
         <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4" id="submitForm">Send</button>
+        <button type="button" class="btn btn-primary btn-block mb-4" id="submitForm" onclick="formHandling()">Send</button>
     </form>
 </div>
 
-
-<script src="../../assets/js/bootstrap.js"></script>
-<script src="../../assets/js/jquery.js"></script>
 <script src="../../assets/js/components/contactForm.js"></script>
-</body>
-</html>

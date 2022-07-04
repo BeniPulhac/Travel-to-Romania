@@ -6,7 +6,7 @@ $trip_id ?? null;
 ?>
 
 
-<div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop<?= $cityName ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="display: none">
+<div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop<?= str_replace(" ","_", $cityName) ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="display: none">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

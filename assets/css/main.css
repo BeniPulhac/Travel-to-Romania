@@ -38,7 +38,7 @@ body {
 }
 
 .head-title-custom {
-    font-size: 3rem;
+    font-size: 3.75rem;
     font-weight: 600;
     /*background-image: conic-gradient(#553c9a 30%, #ee4b2b 40%, #ee4b2b 70%, #00c2cb 80%, #553c9a);*/
     /*color: transparent;*/
@@ -47,17 +47,29 @@ body {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid black;
+    padding-bottom: 24px;
+    padding-top: 64px;
+    margin: auto;
+    text-align: center;
 }
 
 .head-title-2 {
     text-align: center;
 }
 
+.head-para-custom-bg{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
 .head-para-custom {
-    text-align: right;
+    text-align: center;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-weight: 400;
     margin: auto;
+    color: white;
 }
 
 /*!*

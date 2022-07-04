@@ -16,7 +16,7 @@
                     <a class="nav-link nav-link-custom" href="../../views/attractions.php">Attractions</a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link nav-link-custom" href="../../views/about.php">About</a>
+                    <a class="nav-link nav-link-custom" href="../../views/about.php">Contact</a>
                 </li>
             </ul>
             <div class="navigation-btn btn-group">

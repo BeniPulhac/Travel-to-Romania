@@ -5,4 +5,6 @@ $trip_id = $trip_id ?? null;
 
 $sql = "SELECT * FROM trip_hotels WHERE trip_id = '$trip_id' ORDER BY start_date";
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$rowHotel = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+

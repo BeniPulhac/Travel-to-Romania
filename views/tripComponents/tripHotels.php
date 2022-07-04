@@ -8,7 +8,7 @@ $trip_id = $trip_id ?? null;
 if (!isset($_SESSION['userid'])) {
     header("Location: https://l_pulhac.internship.rankingcoach.com/index.php");
 }
-include '../../includes/components/accountTrips.php';
+//include '../../includes/components/accountTrips.php';
 $tripRow = $row ?? null;
 $cities = json_decode($tripRow['city']);
 ?>

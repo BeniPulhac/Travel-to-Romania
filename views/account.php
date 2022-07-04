@@ -76,7 +76,7 @@ $rowAttractions = $rowAttractions ?? null;
                 </div>
 
 <!--                In small screen <768px i need to remove d-flex-->
-                <div class="d-flex account-days">
+                <div class="d-flex flex-column flex-md-row account-days">
                     <?php
                     $currentDay = strtotime($trip['start_date']);
                     for ($i = 1; $i <= $diff; $i++) { ?>
@@ -123,6 +123,8 @@ $rowAttractions = $rowAttractions ?? null;
                     <?php $currentDay += 86400; } ?>
                 </div>
             </div>
+
+            <a class="btn btn-primary ms-3 mb-4" href="/views/tripComponents/tripStart.php?tripId=<?= $trip['id'] ?>">Edit trip</a>
 
             <?php endforeach; ?>
             <?php endif; ?>

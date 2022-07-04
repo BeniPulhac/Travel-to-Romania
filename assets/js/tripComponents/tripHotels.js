@@ -101,7 +101,7 @@ function creatHotelCard(insertHotelCard, response, startDate, endDate) {
     aLink.setAttribute('type', 'button');
     aLink.setAttribute('onclick', 'modalHotel("' + name + '","' + cityName + '", "' + startDate + '", "' + endDate + '")');
     aLink.setAttribute('data-bs-toggle', 'modal');
-    aLink.setAttribute('data-bs-target', '#staticBackdrop' + cityName);
+    aLink.setAttribute('data-bs-target', '#staticBackdrop' + cityName.replace(/ /g,"_"));
     card.appendChild(aLink);
 
 

@@ -49,7 +49,7 @@ $cities = $cities ?? null;
 <!---->
                 <div class="d-flex align-content-start flex-wrap border-top border-success py-2" id="hotelHeaderInsert">
                     <?php include '../../includes/tripComponents/displayHotelsHeader.backend.php'; ?>
-                    <?php $rowHotels = $row ?? null; ?>
+                    <?php $rowHotels = $rowHotel ?? null; ?>
                     <?php foreach ($rowHotels as $hotel) : ?>
 
                         <div class="p-2 text-white border border-5 border-success m-1" id="hotelHeaderHidden">
@@ -72,7 +72,7 @@ $cities = $cities ?? null;
 <!---->
                 <div class="d-flex align-content-start flex-wrap border-top border-success py-2" id="hotelHeaderInsert">
                     <?php include '../../includes/tripComponents/displayRestaurantsHeader.backend.php';?>
-                    <?php $rowRestaurants = $row ?? null; ?>
+                    <?php $rowRestaurants = $rowRestaurants ?? null; ?>
                     <?php foreach ($rowRestaurants as $restaurant) : ?>
 
                     <div class="p-2 text-white border border-5 border-success m-1" id="restaurantHeaderHidden">
@@ -95,7 +95,7 @@ $cities = $cities ?? null;
                     <!---->
                     <div class="d-flex align-content-start flex-wrap border-top border-success py-2" id="hotelHeaderInsert">
                         <?php include '../../includes/tripComponents/displayAttractionsHeader.backend.php';?>
-                        <?php $rowAttractions = $row ?? null; ?>
+                        <?php $rowAttractions = $rowAttractions ?? null; ?>
                         <?php foreach ($rowAttractions as $attractions) : ?>
 
                             <div class="p-2 text-white border border-5 border-success m-1" id="attractionsHeaderHidden">

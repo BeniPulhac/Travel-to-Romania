@@ -9,12 +9,12 @@ const textAreaForm = document.getElementById('textAreaForm');
 const textAreaFormError = document.getElementById('textAreaFormError');
 
 const formSuccess = document.getElementById('formSuccess');
-const submitForm = document.getElementById('submitForm');
+// const submitForm = document.getElementById('submitForm');
 
 //  Events
-submitForm.addEventListener('click', function() {
-    formHandling();
-});
+// submitForm.addEventListener('click', function() {
+//     formHandling();
+// });
 
 
 //  Functions
@@ -28,8 +28,8 @@ function formHandling() {
     xhr.open('POST', '../../views/formTemporary/formOutput.php', true);
     xhr.onload = function() {
         let response = xhr.responseText;
-        console.log( response);
         response = JSON.parse(response);
+        console.log(response)
 
         emptyFormFields();
 

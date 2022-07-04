@@ -15,11 +15,15 @@ class FormModel extends Model
 
     public function sendEmail($subject, $email, $text)
     {
-        $headers = 'From: webmaster@example.com' . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
+        $to = 'beny.liviu19@gmail.com';
+//        $headers = "From: Travel to Romania <beny.liviu19@gmail.com>\r\n";
+//        $headers .= "Replay-To: beny.liviu19@gmail.com\r\n";
+//        $headers .= 'Content-type: text/html; charset=iso-8859-1';
 
-        mail($email, $subject, $text, $headers);
+        $headers = 'To: <'.$to.'>, <kelly@example.com>' . "\r\n";
+        $headers .= 'From: '.$email.' <birthday@example.com>' . "\r\n";
+
+        mail($to, $subject, $text, $headers);
     }
 
     public function checkErrors($subject, $email, $text)
